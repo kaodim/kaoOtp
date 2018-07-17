@@ -15,6 +15,7 @@
 		2766F75E20FDC3E700B8A2AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2766F75C20FDC3E700B8A2AF /* LaunchScreen.storyboard */; };
 		2766F76920FDC3E700B8A2AF /* OtpFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F76820FDC3E700B8A2AF /* OtpFlowTests.swift */; };
 		2766F77420FDC3E700B8A2AF /* OtpFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F77320FDC3E700B8A2AF /* OtpFlowUITests.swift */; };
+		2766F78320FDC88200B8A2AF /* OtpHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2766F78220FDC88200B8A2AF /* OtpHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2766F76F20FDC3E700B8A2AF /* OtpFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtpFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2766F77320FDC3E700B8A2AF /* OtpFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpFlowUITests.swift; sourceTree = "<group>"; };
 		2766F77520FDC3E700B8A2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2766F78220FDC88200B8A2AF /* OtpHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		2766F74420FDC3E300B8A2AF = {
 			isa = PBXGroup;
 			children = (
+				2766F78120FDC7FE00B8A2AF /* Sources */,
 				2766F74F20FDC3E300B8A2AF /* OtpFlow */,
 				2766F76720FDC3E700B8A2AF /* OtpFlowTests */,
 				2766F77220FDC3E700B8A2AF /* OtpFlowUITests */,
@@ -126,6 +129,14 @@
 				2766F77520FDC3E700B8A2AF /* Info.plist */,
 			);
 			path = OtpFlowUITests;
+			sourceTree = "<group>";
+		};
+		2766F78120FDC7FE00B8A2AF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2766F78220FDC88200B8A2AF /* OtpHeaderView.xib */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2766F75E20FDC3E700B8A2AF /* LaunchScreen.storyboard in Resources */,
+				2766F78320FDC88200B8A2AF /* OtpHeaderView.xib in Resources */,
 				2766F75B20FDC3E700B8A2AF /* Assets.xcassets in Resources */,
 				2766F75620FDC3E300B8A2AF /* Main.storyboard in Resources */,
 			);
