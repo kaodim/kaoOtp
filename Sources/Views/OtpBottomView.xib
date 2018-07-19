@@ -17,7 +17,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34Z-3y-uY1" userLabel="line">
@@ -28,8 +28,11 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmb-rI-bdv">
-                    <rect key="frame" x="25" y="10" width="325" height="30"/>
+                    <rect key="frame" x="25" y="10" width="325" height="36"/>
                     <color key="backgroundColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="JoX-CJ-ThW"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="Next">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,8 +45,8 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nmb-rI-bdv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="NQf-JH-HYF"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nmb-rI-bdv" secondAttribute="bottom" constant="12" id="NTb-YB-wVu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="34Z-3y-uY1" secondAttribute="trailing" id="O2Q-fS-FMZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nmb-rI-bdv" secondAttribute="bottom" constant="12" id="QL4-or-4dQ"/>
                 <constraint firstItem="34Z-3y-uY1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="R6Y-vg-ZlR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nmb-rI-bdv" secondAttribute="trailing" constant="25" id="WmD-zQ-L0a"/>
                 <constraint firstItem="34Z-3y-uY1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dQ9-Qa-yPV"/>
@@ -51,7 +54,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="24.5" y="-263"/>
+            <point key="canvasLocation" x="24.5" y="-260"/>
         </view>
     </objects>
 </document>

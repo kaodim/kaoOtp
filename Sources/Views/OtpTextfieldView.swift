@@ -12,26 +12,27 @@ import UIKit
 class OtpTextfieldView: UIView {
 
     @IBOutlet private weak var cardView: UIView!
-    @IBOutlet private weak var countrySelectionView: OtpCountrySelectionView!
+    @IBOutlet private weak var countrySelectionContentView: UIView!
     @IBOutlet private weak var dropDownIcon: UIImageView!
     @IBOutlet private weak var phoneTextfield: UITextField!
 
+    private lazy var otpCountrySelectionView: OtpCountrySelectionView = {
+        let view = OtpCountrySelectionView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     private var contentView: UIView!
     private var selectedCountry: CountryPhone! {
         didSet {
-            countrySelectionView.configure(countryPhone: selectedCountry)
+            otpCountrySelectionView.configure(countryPhone: selectedCountry)
         }
     }
-    var phoneExtensionAttr: CustomLabelAttributes = CustomLabelAttributes() {
+
+    var didTapShowList: (() -> Void)?
+    var didChangedText: ((_ text: String?) -> Void)?
+    var textfieldDelegate: UITextFieldDelegate? {
         didSet {
-            countrySelectionView.countryPhoneExtensionAttr = phoneExtensionAttr
-        }
-    }
-    var phoneTextfieldAttr: CustomTextfieldAttributes! {
-        didSet {
-            phoneTextfield.font = phoneTextfieldAttr.font
-            phoneTextfield.textColor = phoneTextfieldAttr.color
-            phoneTextfield.placeholder = phoneTextfieldAttr.placeholder
+            phoneTextfield.delegate = textfieldDelegate
         }
     }
 
@@ -60,9 +61,43 @@ class OtpTextfieldView: UIView {
         addSubview(contentView)
         cardView.layer.borderWidth = 1
         cardView.layer.borderColor = UIColor(red:0.9, green:0.91, blue:0.91, alpha:1).cgColor
+        phoneTextfield.becomeFirstResponder()
+        countrySelectionContentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showCountryOption)))
+        dropDownIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showCountryOption)))
     }
 
-    func configure(text: String?) {
-        phoneTextfield.text = text
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        countrySelectionContentView.addSubview(otpCountrySelectionView)
+        NSLayoutConstraint.activate([
+            otpCountrySelectionView.leadingAnchor.constraint(equalTo: countrySelectionContentView.leadingAnchor),
+            otpCountrySelectionView.trailingAnchor.constraint(equalTo: countrySelectionContentView.trailingAnchor),
+            otpCountrySelectionView.topAnchor.constraint(equalTo: countrySelectionContentView.topAnchor),
+            otpCountrySelectionView.bottomAnchor.constraint(equalTo: countrySelectionContentView.bottomAnchor)
+            ])
+    }
+
+    @IBAction private func textDidChanged(_ sender: UITextField) {
+        didChangedText?(sender.text)
+    }
+
+    func configure(countryPhone: CountryPhone) {
+        selectedCountry = countryPhone
+    }
+
+    func configure(params: TextfieldViewParams) {
+        phoneTextfield.text = params.text
+        otpCountrySelectionView.countryPhoneExtensionAttr = params.phoneExtensionAttr
+        phoneTextfield.font = params.phoneTextfieldAttr.font
+        phoneTextfield.textColor = params.phoneTextfieldAttr.color
+        phoneTextfield.placeholder = params.phoneTextfieldAttr.placeholder
+    }
+
+    func configure(dropUpDownImage: UIImage?) {
+        dropDownIcon.image = dropUpDownImage
+    }
+
+    @objc func showCountryOption() {
+        didTapShowList?()
     }
 }

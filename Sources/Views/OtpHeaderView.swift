@@ -15,18 +15,6 @@ class OtpHeaderView: UIView {
     @IBOutlet private weak var messageLabel: UILabel!
 
     private var contentView: UIView!
-    var titleLabelAttr: CustomLabelAttributes! {
-        didSet {
-            titleLabel.font = titleLabelAttr.font
-            titleLabel.textColor = titleLabelAttr.color
-        }
-    }
-    var messageLabelAttr: CustomLabelAttributes! {
-        didSet {
-            messageLabel.font = messageLabelAttr.font
-            messageLabel.textColor = messageLabelAttr.color
-        }
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,8 +41,13 @@ class OtpHeaderView: UIView {
         addSubview(contentView)
     }
 
-    func configure(title: String, message: String) {
-        titleLabel.text = title
-        messageLabel.text = message
+    func configure(headerViewParams: HeaderViewParams) {
+        titleLabel.text = headerViewParams.title
+        titleLabel.font = headerViewParams.titleAttr.font
+        titleLabel.textColor = headerViewParams.titleAttr.color
+        messageLabel.text = headerViewParams.message
+        messageLabel.font = headerViewParams.messageAttr.font
+        messageLabel.textColor = headerViewParams.messageAttr.color
+
     }
 }

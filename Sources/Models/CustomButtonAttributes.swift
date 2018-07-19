@@ -10,7 +10,15 @@ import Foundation
 import UIKit
 
 struct CustomButtonAttributes {
-    let font: UIFont = .systemFont(ofSize: 14)
-    let color: UIColor = .red
-    let disableColor: UIColor = .gray
+    let font: UIFont
+    let color: UIColor
+    let disableColor: UIColor
+}
+
+extension CustomButtonAttributes {
+    init() {
+        self.font = .systemFont(ofSize: 14)
+        self.color = .red
+        self.disableColor = .gray
+    }
 }

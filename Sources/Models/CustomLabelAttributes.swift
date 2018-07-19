@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 
 struct CustomLabelAttributes {
-    let font: UIFont = .systemFont(ofSize: 14)
-    let color: UIColor = .black
+    let font: UIFont
+    let color: UIColor
+}
+
+extension CustomLabelAttributes {
+    init() {
+        self.font = .systemFont(ofSize: 14)
+        self.color = .black
+    }
 }

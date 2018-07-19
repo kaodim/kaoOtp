@@ -10,7 +10,15 @@ import Foundation
 import UIKit
 
 struct CustomTextfieldAttributes {
-    let font: UIFont = .systemFont(ofSize: 14)
-    let color: UIColor = .black
-    let placeholder: String = ""
+    let font: UIFont
+    let color: UIColor
+    let placeholder: String
+}
+
+extension CustomTextfieldAttributes {
+    init() {
+        self.font = .systemFont(ofSize: 14)
+        self.color = .black
+        self.placeholder = ""
+    }
 }

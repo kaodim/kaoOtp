@@ -28,6 +28,12 @@
 		2766F79920FDEE6B00B8A2AF /* OtpBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F79820FDEE6B00B8A2AF /* OtpBottomView.swift */; };
 		2766F79B20FDEFB700B8A2AF /* CustomButtonAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F79A20FDEFB700B8A2AF /* CustomButtonAttributes.swift */; };
 		2766F79F20FDF6B900B8A2AF /* PhoneEnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F79E20FDF6B900B8A2AF /* PhoneEnteringViewController.swift */; };
+		2766F7A420FEE6F600B8A2AF /* PhoneEnterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7A320FEE6F600B8A2AF /* PhoneEnterProtocol.swift */; };
+		2766F7A620FEE82400B8A2AF /* CustomDropUpDownImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7A520FEE82400B8A2AF /* CustomDropUpDownImage.swift */; };
+		2766F7A820FEEC0900B8A2AF /* HeaderViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7A720FEEC0900B8A2AF /* HeaderViewParams.swift */; };
+		2766F7AA20FEEFC100B8A2AF /* TextfieldViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7A920FEEFC100B8A2AF /* TextfieldViewParams.swift */; };
+		2766F7AE20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7AD20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift */; };
+		279BC564210036BF0009D775 /* ButtonViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC563210036BF0009D775 /* ButtonViewParams.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,12 @@
 		2766F79820FDEE6B00B8A2AF /* OtpBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpBottomView.swift; sourceTree = "<group>"; };
 		2766F79A20FDEFB700B8A2AF /* CustomButtonAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonAttributes.swift; sourceTree = "<group>"; };
 		2766F79E20FDF6B900B8A2AF /* PhoneEnteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEnteringViewController.swift; sourceTree = "<group>"; };
+		2766F7A320FEE6F600B8A2AF /* PhoneEnterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEnterProtocol.swift; sourceTree = "<group>"; };
+		2766F7A520FEE82400B8A2AF /* CustomDropUpDownImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropUpDownImage.swift; sourceTree = "<group>"; };
+		2766F7A720FEEC0900B8A2AF /* HeaderViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewParams.swift; sourceTree = "<group>"; };
+		2766F7A920FEEFC100B8A2AF /* TextfieldViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldViewParams.swift; sourceTree = "<group>"; };
+		2766F7AD20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionCell.swift; sourceTree = "<group>"; };
+		279BC563210036BF0009D775 /* ButtonViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewParams.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +170,7 @@
 		2766F78120FDC7FE00B8A2AF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2766F7A020FED49300B8A2AF /* Protocols */,
 				2766F79D20FDF62800B8A2AF /* ViewController */,
 				2766F79120FDE67D00B8A2AF /* Models */,
 				2766F78A20FDE0D800B8A2AF /* Views */,
@@ -168,6 +181,7 @@
 		2766F78A20FDE0D800B8A2AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2766F7AC20FEF6D500B8A2AF /* Cells */,
 				2766F78220FDC88200B8A2AF /* OtpHeaderView.xib */,
 				2766F78B20FDE10200B8A2AF /* OtpHeaderView.swift */,
 				2766F78420FDDB1100B8A2AF /* OtpTextfieldView.xib */,
@@ -187,6 +201,10 @@
 				2766F79420FDE83A00B8A2AF /* CustomLabelAttributes.swift */,
 				2766F79620FDEB1500B8A2AF /* CustomTextfieldAttributes.swift */,
 				2766F79A20FDEFB700B8A2AF /* CustomButtonAttributes.swift */,
+				2766F7A520FEE82400B8A2AF /* CustomDropUpDownImage.swift */,
+				2766F7A720FEEC0900B8A2AF /* HeaderViewParams.swift */,
+				2766F7A920FEEFC100B8A2AF /* TextfieldViewParams.swift */,
+				279BC563210036BF0009D775 /* ButtonViewParams.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +215,22 @@
 				2766F79E20FDF6B900B8A2AF /* PhoneEnteringViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2766F7A020FED49300B8A2AF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2766F7A320FEE6F600B8A2AF /* PhoneEnterProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2766F7AC20FEF6D500B8A2AF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2766F7AD20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2766F7A620FEE82400B8A2AF /* CustomDropUpDownImage.swift in Sources */,
 				2766F79520FDE83A00B8A2AF /* CustomLabelAttributes.swift in Sources */,
 				2766F75920FDC3E300B8A2AF /* OtpFlow.xcdatamodeld in Sources */,
 				2766F79320FDE6A300B8A2AF /* CountryPhone.swift in Sources */,
@@ -342,9 +377,14 @@
 				2766F79720FDEB1500B8A2AF /* CustomTextfieldAttributes.swift in Sources */,
 				2766F79B20FDEFB700B8A2AF /* CustomButtonAttributes.swift in Sources */,
 				2766F79920FDEE6B00B8A2AF /* OtpBottomView.swift in Sources */,
+				2766F7A420FEE6F600B8A2AF /* PhoneEnterProtocol.swift in Sources */,
+				279BC564210036BF0009D775 /* ButtonViewParams.swift in Sources */,
+				2766F7A820FEEC0900B8A2AF /* HeaderViewParams.swift in Sources */,
 				2766F75320FDC3E300B8A2AF /* ViewController.swift in Sources */,
+				2766F7AA20FEEFC100B8A2AF /* TextfieldViewParams.swift in Sources */,
 				2766F78E20FDE43E00B8A2AF /* OtpTextfieldView.swift in Sources */,
 				2766F79020FDE5E900B8A2AF /* OtpCountrySelectionView.swift in Sources */,
+				2766F7AE20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift in Sources */,
 				2766F75120FDC3E300B8A2AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
