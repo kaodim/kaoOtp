@@ -61,7 +61,6 @@ class OtpTextfieldView: UIView {
         addSubview(contentView)
         cardView.layer.borderWidth = 1
         cardView.layer.borderColor = UIColor(red:0.9, green:0.91, blue:0.91, alpha:1).cgColor
-        phoneTextfield.becomeFirstResponder()
         countrySelectionContentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showCountryOption)))
         dropDownIcon.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showCountryOption)))
     }
@@ -95,6 +94,10 @@ class OtpTextfieldView: UIView {
 
     func configure(dropUpDownImage: UIImage?) {
         dropDownIcon.image = dropUpDownImage
+    }
+
+    func textfieldBecomeResponder() {
+        phoneTextfield.becomeFirstResponder()
     }
 
     @objc func showCountryOption() {

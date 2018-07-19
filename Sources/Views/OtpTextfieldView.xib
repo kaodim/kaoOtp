@@ -45,7 +45,7 @@
                             <rect key="frame" x="121" y="14" width="214" height="17"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <connections>
                                 <action selector="textDidChanged:" destination="-1" eventType="editingChanged" id="hXl-D4-Zid"/>
                             </connections>

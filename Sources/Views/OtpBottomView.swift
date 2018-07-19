@@ -53,13 +53,14 @@ class OtpBottomView: UIView {
         didTapNext?()
     }
 
-    func configure(buttonViewParams: ButtonViewParams) {
-        nextButton.setTitle(buttonViewParams.text, for: .normal)
-        nextButtonAttr = buttonViewParams.attributes
+    func configure(customButtonAttributes: CustomButtonAttributes) {
+        nextButtonAttr = customButtonAttributes
+        nextButton.setTitle(customButtonAttributes.text, for: .normal)
     }
 
     func enableNextButton(enable: Bool = true) {
         nextButton.isEnabled = enable
+        nextButton.setTitle(enable ? nextButtonAttr.text : nextButtonAttr.disableText, for: .normal)
         nextButton.backgroundColor = enable ? nextButtonAttr.color : nextButtonAttr.disableColor
     }
 }

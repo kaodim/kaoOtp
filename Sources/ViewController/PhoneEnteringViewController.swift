@@ -110,6 +110,11 @@ class PhoneEnteringViewController: UIViewController {
         reloadData()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        textFieldView.textfieldBecomeResponder()
+    }
+
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     }
@@ -135,8 +140,8 @@ class PhoneEnteringViewController: UIViewController {
         if let textfieldParams = phoneEnterDataSource?.textFieldAttribute(in: self) {
             textFieldView.configure(params: textfieldParams)
         }
-        if let buttonParams = phoneEnterDataSource?.bottomViewButtonText(in: self) {
-            bottomView.configure(buttonViewParams: buttonParams)
+        if let customButtonAttributes = phoneEnterDataSource?.bottomViewButtonText(in: self) {
+            bottomView.configure(customButtonAttributes: customButtonAttributes)
         }
         configureTableView()
         configureBottomButton()
@@ -187,6 +192,7 @@ extension PhoneEnteringViewController: UITableViewDelegate, UITableViewDataSourc
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCountry = countryList[indexPath.row]
+        configureTableView()
     }
 }
 

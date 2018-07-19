@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 protocol PhoneEnterDataSource: class {
+
     func supportedCountryPhones(in view: PhoneEnteringViewController) -> [CountryPhone]
 
     func selectedCountryPhone(in view: PhoneEnteringViewController) -> CountryPhone?
@@ -18,7 +19,7 @@ protocol PhoneEnterDataSource: class {
 
     func textFieldAttribute(in view: PhoneEnteringViewController) -> TextfieldViewParams
 
-    func bottomViewButtonText(in view: PhoneEnteringViewController) -> ButtonViewParams
+    func bottomViewButtonText(in view: PhoneEnteringViewController) -> CustomButtonAttributes
 
     func dropDownUpImages(in view: PhoneEnteringViewController) -> CustomDropUpDownImage
 }
@@ -31,6 +32,7 @@ extension PhoneEnterDataSource {
 }
 
 protocol PhoneEnterDelegate: class {
+    
     func nextButtonTapped(in view: PhoneEnteringViewController, phoneNumber: String, countryPhone: CountryPhone)
 }
 

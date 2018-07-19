@@ -31,6 +31,11 @@ class ViewController: PhoneEnteringViewController {
             list.append(countryPhone)
         }
     }
+
+    private func presentSecondView() {
+        let view = SecondViewController()
+        navigationController?.pushViewController(view, animated: true)
+    }
 }
 
 extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
@@ -38,6 +43,7 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
     func nextButtonTapped(in view: PhoneEnteringViewController, phoneNumber: String, countryPhone: CountryPhone) {
         print(countryPhone.phoneExtension + " " + phoneNumber)
         print("next please....")
+        presentSecondView()
     }
 
     func supportedCountryPhones(in view: PhoneEnteringViewController) -> [CountryPhone] {
@@ -55,12 +61,13 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
 
     func textFieldAttribute(in view: PhoneEnteringViewController) -> TextfieldViewParams {
         let phoneExtensionAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 14), color: .red)
-        let textfieldAttr = CustomTextfieldAttributes(font: .boldSystemFont(ofSize: 14), color: .blue, placeholder: "Enter phone number")
+        let textfieldAttr = CustomTextfieldAttributes(font: .boldSystemFont(ofSize: 14), color: .blue, placeholder: "Enter phone number", lineColor: .clear, disableLineColor: .clear)
         return TextfieldViewParams(text: nil, phoneExtensionAttr: phoneExtensionAttr, phoneTextfieldAttr: textfieldAttr)
     }
 
-    func bottomViewButtonText(in view: PhoneEnteringViewController) -> ButtonViewParams {
-        return ButtonViewParams(text: "NEXT", attributes: CustomButtonAttributes())
+    func bottomViewButtonText(in view: PhoneEnteringViewController) -> CustomButtonAttributes {
+        let customFont: UIFont = .boldSystemFont(ofSize: 14)
+        return CustomButtonAttributes(text: "NEXT", font: customFont, color: .red, disableColor: .gray, disableText: "NOPE")
     }
 
     func dropDownUpImages(in view: PhoneEnteringViewController) -> CustomDropUpDownImage {

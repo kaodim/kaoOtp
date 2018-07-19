@@ -33,7 +33,12 @@
 		2766F7A820FEEC0900B8A2AF /* HeaderViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7A720FEEC0900B8A2AF /* HeaderViewParams.swift */; };
 		2766F7AA20FEEFC100B8A2AF /* TextfieldViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7A920FEEFC100B8A2AF /* TextfieldViewParams.swift */; };
 		2766F7AE20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7AD20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift */; };
-		279BC564210036BF0009D775 /* ButtonViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC563210036BF0009D775 /* ButtonViewParams.swift */; };
+		279BC56A210062770009D775 /* OtpPinTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC569210062770009D775 /* OtpPinTextfield.swift */; };
+		279BC56C2100649D0009D775 /* OtpPinEnterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279BC56B2100649D0009D775 /* OtpPinEnterView.xib */; };
+		279BC56E21006A350009D775 /* OtpPinEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC56D21006A350009D775 /* OtpPinEnterView.swift */; };
+		279BC5722100764A0009D775 /* PhoneVerifyingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC5712100764A0009D775 /* PhoneVerifyingViewController.swift */; };
+		279BC57421007AC90009D775 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC57321007AC90009D775 /* SecondViewController.swift */; };
+		279BC57621008C0E0009D775 /* PhoneVerifyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC57521008C0E0009D775 /* PhoneVerifyProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +91,12 @@
 		2766F7A720FEEC0900B8A2AF /* HeaderViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewParams.swift; sourceTree = "<group>"; };
 		2766F7A920FEEFC100B8A2AF /* TextfieldViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldViewParams.swift; sourceTree = "<group>"; };
 		2766F7AD20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionCell.swift; sourceTree = "<group>"; };
-		279BC563210036BF0009D775 /* ButtonViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewParams.swift; sourceTree = "<group>"; };
+		279BC569210062770009D775 /* OtpPinTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpPinTextfield.swift; sourceTree = "<group>"; };
+		279BC56B2100649D0009D775 /* OtpPinEnterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpPinEnterView.xib; sourceTree = "<group>"; };
+		279BC56D21006A350009D775 /* OtpPinEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpPinEnterView.swift; sourceTree = "<group>"; };
+		279BC5712100764A0009D775 /* PhoneVerifyingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerifyingViewController.swift; sourceTree = "<group>"; };
+		279BC57321007AC90009D775 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		279BC57521008C0E0009D775 /* PhoneVerifyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerifyProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,7 @@
 			children = (
 				2766F75020FDC3E300B8A2AF /* AppDelegate.swift */,
 				2766F75220FDC3E300B8A2AF /* ViewController.swift */,
+				279BC57321007AC90009D775 /* SecondViewController.swift */,
 				2766F75420FDC3E300B8A2AF /* Main.storyboard */,
 				2766F75A20FDC3E700B8A2AF /* Assets.xcassets */,
 				2766F75C20FDC3E700B8A2AF /* LaunchScreen.storyboard */,
@@ -181,6 +192,7 @@
 		2766F78A20FDE0D800B8A2AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				279BC56621005EE20009D775 /* Textfields */,
 				2766F7AC20FEF6D500B8A2AF /* Cells */,
 				2766F78220FDC88200B8A2AF /* OtpHeaderView.xib */,
 				2766F78B20FDE10200B8A2AF /* OtpHeaderView.swift */,
@@ -190,6 +202,8 @@
 				2766F78F20FDE5E900B8A2AF /* OtpCountrySelectionView.swift */,
 				2766F78820FDDFDD00B8A2AF /* OtpBottomView.xib */,
 				2766F79820FDEE6B00B8A2AF /* OtpBottomView.swift */,
+				279BC56B2100649D0009D775 /* OtpPinEnterView.xib */,
+				279BC56D21006A350009D775 /* OtpPinEnterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,7 +218,6 @@
 				2766F7A520FEE82400B8A2AF /* CustomDropUpDownImage.swift */,
 				2766F7A720FEEC0900B8A2AF /* HeaderViewParams.swift */,
 				2766F7A920FEEFC100B8A2AF /* TextfieldViewParams.swift */,
-				279BC563210036BF0009D775 /* ButtonViewParams.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				2766F79E20FDF6B900B8A2AF /* PhoneEnteringViewController.swift */,
+				279BC5712100764A0009D775 /* PhoneVerifyingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -221,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				2766F7A320FEE6F600B8A2AF /* PhoneEnterProtocol.swift */,
+				279BC57521008C0E0009D775 /* PhoneVerifyProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -231,6 +246,14 @@
 				2766F7AD20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		279BC56621005EE20009D775 /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				279BC569210062770009D775 /* OtpPinTextfield.swift */,
+			);
+			path = Textfields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +367,7 @@
 				2766F78320FDC88200B8A2AF /* OtpHeaderView.xib in Resources */,
 				2766F75B20FDC3E700B8A2AF /* Assets.xcassets in Resources */,
 				2766F75620FDC3E300B8A2AF /* Main.storyboard in Resources */,
+				279BC56C2100649D0009D775 /* OtpPinEnterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,17 +392,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279BC57421007AC90009D775 /* SecondViewController.swift in Sources */,
 				2766F7A620FEE82400B8A2AF /* CustomDropUpDownImage.swift in Sources */,
 				2766F79520FDE83A00B8A2AF /* CustomLabelAttributes.swift in Sources */,
 				2766F75920FDC3E300B8A2AF /* OtpFlow.xcdatamodeld in Sources */,
+				279BC5722100764A0009D775 /* PhoneVerifyingViewController.swift in Sources */,
+				279BC56E21006A350009D775 /* OtpPinEnterView.swift in Sources */,
+				279BC56A210062770009D775 /* OtpPinTextfield.swift in Sources */,
 				2766F79320FDE6A300B8A2AF /* CountryPhone.swift in Sources */,
 				2766F79F20FDF6B900B8A2AF /* PhoneEnteringViewController.swift in Sources */,
+				279BC57621008C0E0009D775 /* PhoneVerifyProtocol.swift in Sources */,
 				2766F78C20FDE10200B8A2AF /* OtpHeaderView.swift in Sources */,
 				2766F79720FDEB1500B8A2AF /* CustomTextfieldAttributes.swift in Sources */,
 				2766F79B20FDEFB700B8A2AF /* CustomButtonAttributes.swift in Sources */,
 				2766F79920FDEE6B00B8A2AF /* OtpBottomView.swift in Sources */,
 				2766F7A420FEE6F600B8A2AF /* PhoneEnterProtocol.swift in Sources */,
-				279BC564210036BF0009D775 /* ButtonViewParams.swift in Sources */,
 				2766F7A820FEEC0900B8A2AF /* HeaderViewParams.swift in Sources */,
 				2766F75320FDC3E300B8A2AF /* ViewController.swift in Sources */,
 				2766F7AA20FEEFC100B8A2AF /* TextfieldViewParams.swift in Sources */,

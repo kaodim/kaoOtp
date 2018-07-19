@@ -13,6 +13,8 @@ struct CustomTextfieldAttributes {
     let font: UIFont
     let color: UIColor
     let placeholder: String
+    let lineColor: UIColor
+    let disableLineColor: UIColor
 }
 
 extension CustomTextfieldAttributes {
@@ -20,5 +22,7 @@ extension CustomTextfieldAttributes {
         self.font = .systemFont(ofSize: 14)
         self.color = .black
         self.placeholder = ""
+        self.lineColor = .black
+        self.disableLineColor = .lightGray
     }
 }
