@@ -19,6 +19,8 @@ protocol PhoneVerifyDataSource: class {
     func resendButtonAttribute(in view: PhoneVerifyingViewController) -> CustomButtonAttributes
 
     func bottomViewButtonText(in view: PhoneVerifyingViewController) -> CustomButtonAttributes
+
+    func resendCodeDelay(in view: PhoneVerifyingViewController) -> Int
 }
 
 protocol PhoneVerifyDelegate: class {

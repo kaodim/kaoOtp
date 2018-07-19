@@ -45,6 +45,9 @@ class PhoneVerifyingViewController: UIViewController {
         }
     }
 
+    private var countdownTimer: Timer!
+    private var countdown: Int = 0
+
     public weak var phoneVerifyDataSource: PhoneVerifyDataSource?
     public weak var phoneVerifyDelegate: PhoneVerifyDelegate?
     
@@ -113,6 +116,22 @@ class PhoneVerifyingViewController: UIViewController {
         configureBottomButton()
     }
 
+    func startResendTimer() {
+        countdown = phoneVerifyDataSource?.resendCodeDelay(in: self) ?? 0
+        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateResendButton), userInfo: nil, repeats: true)
+    }
+
+    @objc private func updateResendButton() {
+        pinEnterView.enableResetButton(enable: false, countDownStr: timeFormatted(countdown))
+
+        if countdown != 0 {
+            countdown -= 1
+        } else {
+            pinEnterView.enableResetButton()
+            countdownTimer.invalidate()
+        }
+    }
+
     private func configureBottomButton() {
         if !pins.isEmpty {
             bottomView.enableNextButton()
@@ -121,12 +140,19 @@ class PhoneVerifyingViewController: UIViewController {
         }
     }
 
+    private func timeFormatted(_ totalSeconds: Int) -> String {
+        let seconds: Int = totalSeconds % 60
+        let minutes: Int = (totalSeconds / 60) % 60
+        return String(format: "%01d:%02d", minutes, seconds)
+    }
+
     // MARK: - Callback
     private func nextButtonTapped() {
         phoneVerifyDelegate?.verifyTapped(in: self, pins: pins)
     }
 
     private func resendCode() {
+        startResendTimer()
         phoneVerifyDelegate?.resendCodeTapped(in: self)
     }
 

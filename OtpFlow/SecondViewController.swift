@@ -17,6 +17,11 @@ class SecondViewController: PhoneVerifyingViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        super.startResendTimer()
+    }
 }
 
 extension SecondViewController: PhoneVerifyDataSource, PhoneVerifyDelegate {
@@ -31,12 +36,17 @@ extension SecondViewController: PhoneVerifyDataSource, PhoneVerifyDelegate {
     }
 
     func resendButtonAttribute(in view: PhoneVerifyingViewController) -> CustomButtonAttributes {
-        return CustomButtonAttributes()
+        let customFont: UIFont = .boldSystemFont(ofSize: 14)
+        return CustomButtonAttributes(text: "Resend code", font: customFont, color: .blue, disableColor: .lightGray, disableText: "Resend code in")
     }
 
     func bottomViewButtonText(in view: PhoneVerifyingViewController) -> CustomButtonAttributes {
         let customFont: UIFont = .boldSystemFont(ofSize: 14)
         return CustomButtonAttributes(text: "Verify number", font: customFont, color: .red, disableColor: .gray, disableText: "Verified?")
+    }
+
+    func resendCodeDelay(in view: PhoneVerifyingViewController) -> Int {
+        return 15
     }
 
     func verifyTapped(in view: PhoneVerifyingViewController, pins: String) {
@@ -50,6 +60,4 @@ extension SecondViewController: PhoneVerifyDataSource, PhoneVerifyDelegate {
     func changeNumberTapped(in view: PhoneVerifyingViewController) {
         print("changeNumberTapped")
     }
-
-
 }

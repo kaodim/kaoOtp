@@ -12,12 +12,12 @@ import UIKit
 class OtpPinEnterView: UIView {
 
     @IBOutlet private weak var pinStackviews: UIStackView!
-    @IBOutlet private weak var resetButton: UIButton!
+    @IBOutlet private weak var resetLabel: UILabel!
 
     private var contentView: UIView!
     private var resetButtonAttr = CustomButtonAttributes() {
         didSet {
-            resetButton.titleLabel?.font = resetButtonAttr.font
+            resetLabel.font = resetButtonAttr.font
         }
     }
     private var textfieldAttr = CustomTextfieldAttributes() {
@@ -59,6 +59,8 @@ class OtpPinEnterView: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
         configurePinTextfield()
+        resetLabel.text = ""
+        resetLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapResend)))
     }
 
     private func configurePinTextfield() {
@@ -73,7 +75,7 @@ class OtpPinEnterView: UIView {
         }
     }
 
-    @IBAction private func didTapResend() {
+    @objc private func didTapResend() {
         tapResend?()
     }
 
@@ -92,15 +94,14 @@ class OtpPinEnterView: UIView {
     }
 
     func configure(customButtonAttributes: CustomButtonAttributes, textfieldAttribute: CustomTextfieldAttributes) {
-        resetButton.setTitle(customButtonAttributes.text, for: .normal)
         resetButtonAttr = customButtonAttributes
         textfieldAttr = textfieldAttribute
     }
 
-    func enableResetButton(enable: Bool = true) {
-        resetButton.isUserInteractionEnabled = false
-        resetButton.setTitle(enable ? resetButtonAttr.text : resetButtonAttr.disableText , for: .normal)
-        resetButton.backgroundColor = enable ? resetButtonAttr.color : resetButtonAttr.disableColor
+    func enableResetButton(enable: Bool = true, countDownStr: String = "") {
+        resetLabel.isUserInteractionEnabled = enable
+        resetLabel.text = enable ? resetButtonAttr.text : (resetButtonAttr.disableText + " \(countDownStr)")
+        resetLabel.textColor = enable ? resetButtonAttr.color : resetButtonAttr.disableColor
     }
 }
 
@@ -123,6 +124,8 @@ extension OtpPinEnterView: UITextFieldDelegate, OtpPinTextFieldDelegate {
                     return false
             }
             pinTextfield.becomeFirstResponder()
+        } else {
+            pinReset?()
         }
         return false
     }
