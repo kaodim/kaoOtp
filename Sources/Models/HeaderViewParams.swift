@@ -13,4 +13,8 @@ struct HeaderViewParams {
     let titleAttr: CustomLabelAttributes
     let message: String
     let messageAttr: CustomLabelAttributes
+    let phoneNumberText: String
+    let phoneNumberTextAttr: CustomLabelAttributes
+    let updateNumberText: String
+    let updateNumberTextAttr: CustomLabelAttributes
 }

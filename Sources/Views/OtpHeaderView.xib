@@ -31,7 +31,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="asdadsa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZC-lM-yax">
-                    <rect key="frame" x="15" y="52" width="345" height="49"/>
+                    <rect key="frame" x="15" y="52" width="54" height="49"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
                 <constraint firstItem="iyc-KT-3OU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="QWS-cv-bg2"/>
                 <constraint firstItem="FZC-lM-yax" firstAttribute="top" secondItem="iyc-KT-3OU" secondAttribute="bottom" constant="6" id="U1G-7X-8rD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FZC-lM-yax" secondAttribute="bottom" id="v2y-lD-cq4"/>
-                <constraint firstItem="FZC-lM-yax" firstAttribute="trailing" secondItem="iyc-KT-3OU" secondAttribute="trailing" id="yOM-Wv-npA"/>
+                <constraint firstItem="FZC-lM-yax" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="iyc-KT-3OU" secondAttribute="trailing" id="yOM-Wv-npA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

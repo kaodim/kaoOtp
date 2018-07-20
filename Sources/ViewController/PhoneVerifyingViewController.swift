@@ -19,6 +19,7 @@ class PhoneVerifyingViewController: UIViewController {
 
     private lazy var headerView: OtpHeaderView = {
         let view = OtpHeaderView()
+        view.didTapUpdateNumber = changeNumber
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

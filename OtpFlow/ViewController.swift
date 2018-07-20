@@ -56,7 +56,7 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
 
     func headerViewText(in view: PhoneEnteringViewController) -> HeaderViewParams {
         let titleAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 20), color: .red)
-        return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "This is as part of our effort to provide a safe and secure service, we will send you a 6-digit code for verification.", messageAttr: CustomLabelAttributes())
+        return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "This is as part of our effort to provide a safe and secure service, we will send you a 6-digit code for verification.", messageAttr: CustomLabelAttributes(), phoneNumberText: "", phoneNumberTextAttr: CustomLabelAttributes(), updateNumberText: "", updateNumberTextAttr: CustomLabelAttributes())
     }
 
     func textFieldAttribute(in view: PhoneEnteringViewController) -> TextfieldViewParams {

@@ -28,7 +28,9 @@ extension SecondViewController: PhoneVerifyDataSource, PhoneVerifyDelegate {
 
     func headerViewText(in view: PhoneVerifyingViewController) -> HeaderViewParams {
         let titleAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 20), color: .red)
-        return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "Enter the 6-digit code sent to you at +601938301133 Change you number", messageAttr: CustomLabelAttributes())
+        let phoneAttr = CustomLabelAttributes(font: .systemFont(ofSize: 14), color: .brown)
+        let updateAttr = CustomLabelAttributes(font: .systemFont(ofSize: 14), color: .blue)
+        return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "Enter the 6-digit code sent to you at", messageAttr: CustomLabelAttributes(), phoneNumberText: "+601938301133", phoneNumberTextAttr: phoneAttr, updateNumberText: "Change you number", updateNumberTextAttr: updateAttr)
     }
 
     func pinTextFieldAttribute(in view: PhoneVerifyingViewController) -> CustomTextfieldAttributes {
