@@ -1,0 +1,758 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2766F75120FDC3E300B8A2AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F75020FDC3E300B8A2AF /* AppDelegate.swift */; };
+		2766F75320FDC3E300B8A2AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F75220FDC3E300B8A2AF /* ViewController.swift */; };
+		2766F75620FDC3E300B8A2AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2766F75420FDC3E300B8A2AF /* Main.storyboard */; };
+		2766F75920FDC3E300B8A2AF /* OtpFlow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2766F75720FDC3E300B8A2AF /* OtpFlow.xcdatamodeld */; };
+		2766F75B20FDC3E700B8A2AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2766F75A20FDC3E700B8A2AF /* Assets.xcassets */; };
+		2766F75E20FDC3E700B8A2AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2766F75C20FDC3E700B8A2AF /* LaunchScreen.storyboard */; };
+		2766F76920FDC3E700B8A2AF /* OtpFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F76820FDC3E700B8A2AF /* OtpFlowTests.swift */; };
+		2766F77420FDC3E700B8A2AF /* OtpFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F77320FDC3E700B8A2AF /* OtpFlowUITests.swift */; };
+		2766F78320FDC88200B8A2AF /* OtpHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2766F78220FDC88200B8A2AF /* OtpHeaderView.xib */; };
+		2766F78520FDDB1100B8A2AF /* OtpTextfieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2766F78420FDDB1100B8A2AF /* OtpTextfieldView.xib */; };
+		2766F78720FDDCA800B8A2AF /* OtpCountrySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2766F78620FDDCA800B8A2AF /* OtpCountrySelectionView.xib */; };
+		2766F78920FDDFDD00B8A2AF /* OtpBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2766F78820FDDFDD00B8A2AF /* OtpBottomView.xib */; };
+		2766F78C20FDE10200B8A2AF /* OtpHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F78B20FDE10200B8A2AF /* OtpHeaderView.swift */; };
+		2766F78E20FDE43E00B8A2AF /* OtpTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F78D20FDE43E00B8A2AF /* OtpTextfieldView.swift */; };
+		2766F79020FDE5E900B8A2AF /* OtpCountrySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F78F20FDE5E900B8A2AF /* OtpCountrySelectionView.swift */; };
+		2766F79320FDE6A300B8A2AF /* CountryPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F79220FDE6A300B8A2AF /* CountryPhone.swift */; };
+		2766F79520FDE83A00B8A2AF /* CustomLabelAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F79420FDE83A00B8A2AF /* CustomLabelAttributes.swift */; };
+		2766F79720FDEB1500B8A2AF /* CustomTextfieldAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F79620FDEB1500B8A2AF /* CustomTextfieldAttributes.swift */; };
+		2766F79920FDEE6B00B8A2AF /* OtpBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F79820FDEE6B00B8A2AF /* OtpBottomView.swift */; };
+		2766F79B20FDEFB700B8A2AF /* CustomButtonAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F79A20FDEFB700B8A2AF /* CustomButtonAttributes.swift */; };
+		2766F79F20FDF6B900B8A2AF /* PhoneEnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F79E20FDF6B900B8A2AF /* PhoneEnteringViewController.swift */; };
+		2766F7A420FEE6F600B8A2AF /* PhoneEnterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7A320FEE6F600B8A2AF /* PhoneEnterProtocol.swift */; };
+		2766F7A620FEE82400B8A2AF /* CustomDropUpDownImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7A520FEE82400B8A2AF /* CustomDropUpDownImage.swift */; };
+		2766F7A820FEEC0900B8A2AF /* HeaderViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7A720FEEC0900B8A2AF /* HeaderViewParams.swift */; };
+		2766F7AA20FEEFC100B8A2AF /* TextfieldViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7A920FEEFC100B8A2AF /* TextfieldViewParams.swift */; };
+		2766F7AE20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2766F7AD20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift */; };
+		279BC56A210062770009D775 /* OtpPinTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC569210062770009D775 /* OtpPinTextfield.swift */; };
+		279BC56C2100649D0009D775 /* OtpPinEnterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279BC56B2100649D0009D775 /* OtpPinEnterView.xib */; };
+		279BC56E21006A350009D775 /* OtpPinEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC56D21006A350009D775 /* OtpPinEnterView.swift */; };
+		279BC5722100764A0009D775 /* PhoneVerifyingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC5712100764A0009D775 /* PhoneVerifyingViewController.swift */; };
+		279BC57421007AC90009D775 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC57321007AC90009D775 /* SecondViewController.swift */; };
+		279BC57621008C0E0009D775 /* PhoneVerifyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BC57521008C0E0009D775 /* PhoneVerifyProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2766F76520FDC3E700B8A2AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2766F74520FDC3E300B8A2AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2766F74C20FDC3E300B8A2AF;
+			remoteInfo = OtpFlow;
+		};
+		2766F77020FDC3E700B8A2AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2766F74520FDC3E300B8A2AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2766F74C20FDC3E300B8A2AF;
+			remoteInfo = OtpFlow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2766F74D20FDC3E300B8A2AF /* OtpFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtpFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2766F75020FDC3E300B8A2AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2766F75220FDC3E300B8A2AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2766F75520FDC3E300B8A2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2766F75820FDC3E300B8A2AF /* OtpFlow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OtpFlow.xcdatamodel; sourceTree = "<group>"; };
+		2766F75A20FDC3E700B8A2AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2766F75D20FDC3E700B8A2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2766F75F20FDC3E700B8A2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2766F76420FDC3E700B8A2AF /* OtpFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtpFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2766F76820FDC3E700B8A2AF /* OtpFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpFlowTests.swift; sourceTree = "<group>"; };
+		2766F76A20FDC3E700B8A2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2766F76F20FDC3E700B8A2AF /* OtpFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtpFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2766F77320FDC3E700B8A2AF /* OtpFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpFlowUITests.swift; sourceTree = "<group>"; };
+		2766F77520FDC3E700B8A2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2766F78220FDC88200B8A2AF /* OtpHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpHeaderView.xib; sourceTree = "<group>"; };
+		2766F78420FDDB1100B8A2AF /* OtpTextfieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpTextfieldView.xib; sourceTree = "<group>"; };
+		2766F78620FDDCA800B8A2AF /* OtpCountrySelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpCountrySelectionView.xib; sourceTree = "<group>"; };
+		2766F78820FDDFDD00B8A2AF /* OtpBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpBottomView.xib; sourceTree = "<group>"; };
+		2766F78B20FDE10200B8A2AF /* OtpHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpHeaderView.swift; sourceTree = "<group>"; };
+		2766F78D20FDE43E00B8A2AF /* OtpTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpTextfieldView.swift; sourceTree = "<group>"; };
+		2766F78F20FDE5E900B8A2AF /* OtpCountrySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionView.swift; sourceTree = "<group>"; };
+		2766F79220FDE6A300B8A2AF /* CountryPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPhone.swift; sourceTree = "<group>"; };
+		2766F79420FDE83A00B8A2AF /* CustomLabelAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelAttributes.swift; sourceTree = "<group>"; };
+		2766F79620FDEB1500B8A2AF /* CustomTextfieldAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfieldAttributes.swift; sourceTree = "<group>"; };
+		2766F79820FDEE6B00B8A2AF /* OtpBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpBottomView.swift; sourceTree = "<group>"; };
+		2766F79A20FDEFB700B8A2AF /* CustomButtonAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonAttributes.swift; sourceTree = "<group>"; };
+		2766F79E20FDF6B900B8A2AF /* PhoneEnteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEnteringViewController.swift; sourceTree = "<group>"; };
+		2766F7A320FEE6F600B8A2AF /* PhoneEnterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEnterProtocol.swift; sourceTree = "<group>"; };
+		2766F7A520FEE82400B8A2AF /* CustomDropUpDownImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropUpDownImage.swift; sourceTree = "<group>"; };
+		2766F7A720FEEC0900B8A2AF /* HeaderViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewParams.swift; sourceTree = "<group>"; };
+		2766F7A920FEEFC100B8A2AF /* TextfieldViewParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldViewParams.swift; sourceTree = "<group>"; };
+		2766F7AD20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionCell.swift; sourceTree = "<group>"; };
+		279BC569210062770009D775 /* OtpPinTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpPinTextfield.swift; sourceTree = "<group>"; };
+		279BC56B2100649D0009D775 /* OtpPinEnterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpPinEnterView.xib; sourceTree = "<group>"; };
+		279BC56D21006A350009D775 /* OtpPinEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpPinEnterView.swift; sourceTree = "<group>"; };
+		279BC5712100764A0009D775 /* PhoneVerifyingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerifyingViewController.swift; sourceTree = "<group>"; };
+		279BC57321007AC90009D775 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		279BC57521008C0E0009D775 /* PhoneVerifyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerifyProtocol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2766F74A20FDC3E300B8A2AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2766F76120FDC3E700B8A2AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2766F76C20FDC3E700B8A2AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2766F74420FDC3E300B8A2AF = {
+			isa = PBXGroup;
+			children = (
+				2766F78120FDC7FE00B8A2AF /* Sources */,
+				2766F74F20FDC3E300B8A2AF /* OtpFlow */,
+				2766F76720FDC3E700B8A2AF /* OtpFlowTests */,
+				2766F77220FDC3E700B8A2AF /* OtpFlowUITests */,
+				2766F74E20FDC3E300B8A2AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2766F74E20FDC3E300B8A2AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2766F74D20FDC3E300B8A2AF /* OtpFlow.app */,
+				2766F76420FDC3E700B8A2AF /* OtpFlowTests.xctest */,
+				2766F76F20FDC3E700B8A2AF /* OtpFlowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2766F74F20FDC3E300B8A2AF /* OtpFlow */ = {
+			isa = PBXGroup;
+			children = (
+				2766F75020FDC3E300B8A2AF /* AppDelegate.swift */,
+				2766F75220FDC3E300B8A2AF /* ViewController.swift */,
+				279BC57321007AC90009D775 /* SecondViewController.swift */,
+				2766F75420FDC3E300B8A2AF /* Main.storyboard */,
+				2766F75A20FDC3E700B8A2AF /* Assets.xcassets */,
+				2766F75C20FDC3E700B8A2AF /* LaunchScreen.storyboard */,
+				2766F75F20FDC3E700B8A2AF /* Info.plist */,
+				2766F75720FDC3E300B8A2AF /* OtpFlow.xcdatamodeld */,
+			);
+			path = OtpFlow;
+			sourceTree = "<group>";
+		};
+		2766F76720FDC3E700B8A2AF /* OtpFlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				2766F76820FDC3E700B8A2AF /* OtpFlowTests.swift */,
+				2766F76A20FDC3E700B8A2AF /* Info.plist */,
+			);
+			path = OtpFlowTests;
+			sourceTree = "<group>";
+		};
+		2766F77220FDC3E700B8A2AF /* OtpFlowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2766F77320FDC3E700B8A2AF /* OtpFlowUITests.swift */,
+				2766F77520FDC3E700B8A2AF /* Info.plist */,
+			);
+			path = OtpFlowUITests;
+			sourceTree = "<group>";
+		};
+		2766F78120FDC7FE00B8A2AF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2766F7A020FED49300B8A2AF /* Protocols */,
+				2766F79D20FDF62800B8A2AF /* ViewController */,
+				2766F79120FDE67D00B8A2AF /* Models */,
+				2766F78A20FDE0D800B8A2AF /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2766F78A20FDE0D800B8A2AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				279BC56621005EE20009D775 /* Textfields */,
+				2766F7AC20FEF6D500B8A2AF /* Cells */,
+				2766F78220FDC88200B8A2AF /* OtpHeaderView.xib */,
+				2766F78B20FDE10200B8A2AF /* OtpHeaderView.swift */,
+				2766F78420FDDB1100B8A2AF /* OtpTextfieldView.xib */,
+				2766F78D20FDE43E00B8A2AF /* OtpTextfieldView.swift */,
+				2766F78620FDDCA800B8A2AF /* OtpCountrySelectionView.xib */,
+				2766F78F20FDE5E900B8A2AF /* OtpCountrySelectionView.swift */,
+				2766F78820FDDFDD00B8A2AF /* OtpBottomView.xib */,
+				2766F79820FDEE6B00B8A2AF /* OtpBottomView.swift */,
+				279BC56B2100649D0009D775 /* OtpPinEnterView.xib */,
+				279BC56D21006A350009D775 /* OtpPinEnterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2766F79120FDE67D00B8A2AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2766F79220FDE6A300B8A2AF /* CountryPhone.swift */,
+				2766F79420FDE83A00B8A2AF /* CustomLabelAttributes.swift */,
+				2766F79620FDEB1500B8A2AF /* CustomTextfieldAttributes.swift */,
+				2766F79A20FDEFB700B8A2AF /* CustomButtonAttributes.swift */,
+				2766F7A520FEE82400B8A2AF /* CustomDropUpDownImage.swift */,
+				2766F7A720FEEC0900B8A2AF /* HeaderViewParams.swift */,
+				2766F7A920FEEFC100B8A2AF /* TextfieldViewParams.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2766F79D20FDF62800B8A2AF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2766F79E20FDF6B900B8A2AF /* PhoneEnteringViewController.swift */,
+				279BC5712100764A0009D775 /* PhoneVerifyingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2766F7A020FED49300B8A2AF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2766F7A320FEE6F600B8A2AF /* PhoneEnterProtocol.swift */,
+				279BC57521008C0E0009D775 /* PhoneVerifyProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2766F7AC20FEF6D500B8A2AF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2766F7AD20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		279BC56621005EE20009D775 /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				279BC569210062770009D775 /* OtpPinTextfield.swift */,
+			);
+			path = Textfields;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2766F74C20FDC3E300B8A2AF /* OtpFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2766F77820FDC3E700B8A2AF /* Build configuration list for PBXNativeTarget "OtpFlow" */;
+			buildPhases = (
+				2766F74920FDC3E300B8A2AF /* Sources */,
+				2766F74A20FDC3E300B8A2AF /* Frameworks */,
+				2766F74B20FDC3E300B8A2AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OtpFlow;
+			productName = OtpFlow;
+			productReference = 2766F74D20FDC3E300B8A2AF /* OtpFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2766F76320FDC3E700B8A2AF /* OtpFlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2766F77B20FDC3E700B8A2AF /* Build configuration list for PBXNativeTarget "OtpFlowTests" */;
+			buildPhases = (
+				2766F76020FDC3E700B8A2AF /* Sources */,
+				2766F76120FDC3E700B8A2AF /* Frameworks */,
+				2766F76220FDC3E700B8A2AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2766F76620FDC3E700B8A2AF /* PBXTargetDependency */,
+			);
+			name = OtpFlowTests;
+			productName = OtpFlowTests;
+			productReference = 2766F76420FDC3E700B8A2AF /* OtpFlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2766F76E20FDC3E700B8A2AF /* OtpFlowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2766F77E20FDC3E700B8A2AF /* Build configuration list for PBXNativeTarget "OtpFlowUITests" */;
+			buildPhases = (
+				2766F76B20FDC3E700B8A2AF /* Sources */,
+				2766F76C20FDC3E700B8A2AF /* Frameworks */,
+				2766F76D20FDC3E700B8A2AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2766F77120FDC3E700B8A2AF /* PBXTargetDependency */,
+			);
+			name = OtpFlowUITests;
+			productName = OtpFlowUITests;
+			productReference = 2766F76F20FDC3E700B8A2AF /* OtpFlowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2766F74520FDC3E300B8A2AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Auyotoc;
+				TargetAttributes = {
+					2766F74C20FDC3E300B8A2AF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					2766F76320FDC3E700B8A2AF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 2766F74C20FDC3E300B8A2AF;
+					};
+					2766F76E20FDC3E700B8A2AF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 2766F74C20FDC3E300B8A2AF;
+					};
+				};
+			};
+			buildConfigurationList = 2766F74820FDC3E300B8A2AF /* Build configuration list for PBXProject "OtpFlow" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2766F74420FDC3E300B8A2AF;
+			productRefGroup = 2766F74E20FDC3E300B8A2AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2766F74C20FDC3E300B8A2AF /* OtpFlow */,
+				2766F76320FDC3E700B8A2AF /* OtpFlowTests */,
+				2766F76E20FDC3E700B8A2AF /* OtpFlowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2766F74B20FDC3E300B8A2AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2766F78920FDDFDD00B8A2AF /* OtpBottomView.xib in Resources */,
+				2766F75E20FDC3E700B8A2AF /* LaunchScreen.storyboard in Resources */,
+				2766F78520FDDB1100B8A2AF /* OtpTextfieldView.xib in Resources */,
+				2766F78720FDDCA800B8A2AF /* OtpCountrySelectionView.xib in Resources */,
+				2766F78320FDC88200B8A2AF /* OtpHeaderView.xib in Resources */,
+				2766F75B20FDC3E700B8A2AF /* Assets.xcassets in Resources */,
+				2766F75620FDC3E300B8A2AF /* Main.storyboard in Resources */,
+				279BC56C2100649D0009D775 /* OtpPinEnterView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2766F76220FDC3E700B8A2AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2766F76D20FDC3E700B8A2AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2766F74920FDC3E300B8A2AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279BC57421007AC90009D775 /* SecondViewController.swift in Sources */,
+				2766F7A620FEE82400B8A2AF /* CustomDropUpDownImage.swift in Sources */,
+				2766F79520FDE83A00B8A2AF /* CustomLabelAttributes.swift in Sources */,
+				2766F75920FDC3E300B8A2AF /* OtpFlow.xcdatamodeld in Sources */,
+				279BC5722100764A0009D775 /* PhoneVerifyingViewController.swift in Sources */,
+				279BC56E21006A350009D775 /* OtpPinEnterView.swift in Sources */,
+				279BC56A210062770009D775 /* OtpPinTextfield.swift in Sources */,
+				2766F79320FDE6A300B8A2AF /* CountryPhone.swift in Sources */,
+				2766F79F20FDF6B900B8A2AF /* PhoneEnteringViewController.swift in Sources */,
+				279BC57621008C0E0009D775 /* PhoneVerifyProtocol.swift in Sources */,
+				2766F78C20FDE10200B8A2AF /* OtpHeaderView.swift in Sources */,
+				2766F79720FDEB1500B8A2AF /* CustomTextfieldAttributes.swift in Sources */,
+				2766F79B20FDEFB700B8A2AF /* CustomButtonAttributes.swift in Sources */,
+				2766F79920FDEE6B00B8A2AF /* OtpBottomView.swift in Sources */,
+				2766F7A420FEE6F600B8A2AF /* PhoneEnterProtocol.swift in Sources */,
+				2766F7A820FEEC0900B8A2AF /* HeaderViewParams.swift in Sources */,
+				2766F75320FDC3E300B8A2AF /* ViewController.swift in Sources */,
+				2766F7AA20FEEFC100B8A2AF /* TextfieldViewParams.swift in Sources */,
+				2766F78E20FDE43E00B8A2AF /* OtpTextfieldView.swift in Sources */,
+				2766F79020FDE5E900B8A2AF /* OtpCountrySelectionView.swift in Sources */,
+				2766F7AE20FEF6EE00B8A2AF /* OtpCountrySelectionCell.swift in Sources */,
+				2766F75120FDC3E300B8A2AF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2766F76020FDC3E700B8A2AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2766F76920FDC3E700B8A2AF /* OtpFlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2766F76B20FDC3E700B8A2AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2766F77420FDC3E700B8A2AF /* OtpFlowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2766F76620FDC3E700B8A2AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2766F74C20FDC3E300B8A2AF /* OtpFlow */;
+			targetProxy = 2766F76520FDC3E700B8A2AF /* PBXContainerItemProxy */;
+		};
+		2766F77120FDC3E700B8A2AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2766F74C20FDC3E300B8A2AF /* OtpFlow */;
+			targetProxy = 2766F77020FDC3E700B8A2AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2766F75420FDC3E300B8A2AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2766F75520FDC3E300B8A2AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2766F75C20FDC3E700B8A2AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2766F75D20FDC3E700B8A2AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2766F77620FDC3E700B8A2AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2766F77720FDC3E700B8A2AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2766F77920FDC3E700B8A2AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H63JK63G6G;
+				INFOPLIST_FILE = OtpFlow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.augustius.OtpFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2766F77A20FDC3E700B8A2AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H63JK63G6G;
+				INFOPLIST_FILE = OtpFlow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.augustius.OtpFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2766F77C20FDC3E700B8A2AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H63JK63G6G;
+				INFOPLIST_FILE = OtpFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.augustius.OtpFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OtpFlow.app/OtpFlow";
+			};
+			name = Debug;
+		};
+		2766F77D20FDC3E700B8A2AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H63JK63G6G;
+				INFOPLIST_FILE = OtpFlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.augustius.OtpFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OtpFlow.app/OtpFlow";
+			};
+			name = Release;
+		};
+		2766F77F20FDC3E700B8A2AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H63JK63G6G;
+				INFOPLIST_FILE = OtpFlowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.augustius.OtpFlowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OtpFlow;
+			};
+			name = Debug;
+		};
+		2766F78020FDC3E700B8A2AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H63JK63G6G;
+				INFOPLIST_FILE = OtpFlowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.augustius.OtpFlowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OtpFlow;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2766F74820FDC3E300B8A2AF /* Build configuration list for PBXProject "OtpFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2766F77620FDC3E700B8A2AF /* Debug */,
+				2766F77720FDC3E700B8A2AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2766F77820FDC3E700B8A2AF /* Build configuration list for PBXNativeTarget "OtpFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2766F77920FDC3E700B8A2AF /* Debug */,
+				2766F77A20FDC3E700B8A2AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2766F77B20FDC3E700B8A2AF /* Build configuration list for PBXNativeTarget "OtpFlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2766F77C20FDC3E700B8A2AF /* Debug */,
+				2766F77D20FDC3E700B8A2AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2766F77E20FDC3E700B8A2AF /* Build configuration list for PBXNativeTarget "OtpFlowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2766F77F20FDC3E700B8A2AF /* Debug */,
+				2766F78020FDC3E700B8A2AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2766F75720FDC3E300B8A2AF /* OtpFlow.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2766F75820FDC3E300B8A2AF /* OtpFlow.xcdatamodel */,
+			);
+			currentVersion = 2766F75820FDC3E300B8A2AF /* OtpFlow.xcdatamodel */;
+			path = OtpFlow.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2766F74520FDC3E300B8A2AF /* Project object */;
+}
