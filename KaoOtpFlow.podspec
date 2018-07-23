@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'KaoOtpFlow'
   s.version          = '0.1.3'
-  s.summary          = 'Kaodim custom otp view'
+  s.summary          = 'Kaodim custom otp views'
  
   s.description      = <<-DESC
 KaoOtpFlow provide complete ui for otp and allow you to inject your own endpoint 
