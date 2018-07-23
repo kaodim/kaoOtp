@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'KaoOtpFlow'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'Kaodim custom otp view'
  
   s.description      = <<-DESC
