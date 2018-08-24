@@ -133,6 +133,18 @@ extension SecondViewController: PhoneVerifyDataSource, PhoneVerifyDelegate {
 }
 
 ~~~~
+---
+## Instalation
+---
+~~~~
+pod 'KaoDesignIos'
+~~~~
+---
 
-
+## Notes : Don't forget to specify code below to your podfile (since it's a private library) 
+---
+~~~~
+source 'https://auyotoc@bitbucket.org/kaodim/kaococoapods.git'
+source 'https://github.com/CocoaPods/Specs.git'
+~~~~
 
