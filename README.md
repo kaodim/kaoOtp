@@ -137,7 +137,7 @@ extension SecondViewController: PhoneVerifyDataSource, PhoneVerifyDelegate {
 ## Instalation
 ---
 ~~~~
-pod 'KaoDesignIos'
+pod 'KaoOtpFlow'
 ~~~~
 ---
 
