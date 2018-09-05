@@ -103,7 +103,7 @@ open class PhoneVerifyingViewController: UIViewController {
         }
     }
 
-    func reloadData() {
+    public func reloadData() {
         if let headerParams = phoneVerifyDataSource?.headerViewText(in: self) {
             headerView.configure(headerViewParams: headerParams)
         }
@@ -117,7 +117,7 @@ open class PhoneVerifyingViewController: UIViewController {
         configureBottomButton()
     }
 
-    func startResendTimer() {
+    public func startResendTimer() {
         countdown = phoneVerifyDataSource?.resendCodeDelay(in: self) ?? 0
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateResendButton), userInfo: nil, repeats: true)
     }

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpPinEnterView" customModule="OtpFlow" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpPinEnterView" customModule="KaoOtpFlow" customModuleProvider="target">
             <connections>
                 <outlet property="pinStackviews" destination="ZeZ-Z8-9e4" id="Cdg-2Z-b5u"/>
                 <outlet property="resetLabel" destination="bf3-wr-uSN" id="0lU-PD-5Ii"/>
@@ -24,7 +24,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZeZ-Z8-9e4">
                     <rect key="frame" x="0.0" y="41" width="260" height="38"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCG-rM-j0r" customClass="OtpPinTextfield" customModule="OtpFlow" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCG-rM-j0r" customClass="OtpPinTextfield" customModule="KaoOtpFlow">
                             <rect key="frame" x="0.0" y="0.0" width="30" height="38"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -38,7 +38,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Bc-C5-IJm" customClass="OtpPinTextfield" customModule="OtpFlow" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Bc-C5-IJm" customClass="OtpPinTextfield" customModule="KaoOtpFlow">
                             <rect key="frame" x="46" y="0.0" width="30" height="38"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="tdL-6O-qbz"/>
@@ -55,7 +55,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFx-g0-DFS" customClass="OtpPinTextfield" customModule="OtpFlow" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFx-g0-DFS" customClass="OtpPinTextfield" customModule="KaoOtpFlow">
                             <rect key="frame" x="92" y="0.0" width="30" height="38"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="Mye-qa-PbJ"/>
@@ -72,7 +72,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdp-Fx-99p" customClass="OtpPinTextfield" customModule="OtpFlow" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdp-Fx-99p" customClass="OtpPinTextfield" customModule="KaoOtpFlow">
                             <rect key="frame" x="138" y="0.0" width="30" height="38"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="fS6-nD-d6U"/>
@@ -89,7 +89,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cw3-UK-yjX" customClass="OtpPinTextfield" customModule="OtpFlow" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cw3-UK-yjX" customClass="OtpPinTextfield" customModule="KaoOtpFlow">
                             <rect key="frame" x="184" y="0.0" width="30" height="38"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="gDc-cM-IoM"/>
@@ -106,7 +106,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIx-Vf-FD8" customClass="OtpPinTextfield" customModule="OtpFlow" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIx-Vf-FD8" customClass="OtpPinTextfield" customModule="KaoOtpFlow">
                             <rect key="frame" x="230" y="0.0" width="30" height="38"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="6z9-tJ-2Bi"/>

@@ -14,7 +14,7 @@ protocol OtpPinTextFieldDelegate : UITextFieldDelegate {
 }
 
 @IBDesignable
-class OtpPinTextfield: UITextField {
+public class OtpPinTextfield: UITextField {
 
     @IBInspectable public var underLineWidth: CGFloat = 0.0 {
         didSet {
@@ -57,7 +57,7 @@ class OtpPinTextfield: UITextField {
         underLineLayer.backgroundColor = underLineColor.cgColor
     }
 
-    override func deleteBackward() {
+    override public func deleteBackward() {
         super.deleteBackward()
 
         // If conforming to our extension protocol
