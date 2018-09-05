@@ -96,7 +96,7 @@ open class PhoneVerifyingViewController: UIViewController {
         if let keyboardFrame: NSValue = notif.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            let viewHeight = UIScreen.main.bounds.height - keyboardHeight
+            let viewHeight = self.view.frame.height - keyboardHeight
             NSLayoutConstraint.activate([
                 contentView.heightAnchor.constraint(equalToConstant: viewHeight)
                 ])
