@@ -47,7 +47,13 @@ class OtpTextfieldView: UIView {
     }
 
     private func loadFromNib() -> UIView {
-        let nib = UINib(nibName: "OtpTextfieldView", bundle: Bundle.main)
+        let nib:UINib!
+        let podBundle = Bundle(for: self.classForCoder)
+        if let bundleURL = podBundle.url(forResource: "OtpCustomPod", withExtension: "bundle"), let bundle = Bundle(url: bundleURL) {
+            nib = UINib(nibName: "OtpTextfieldView", bundle: bundle)
+        } else {
+            nib = UINib(nibName: "OtpTextfieldView", bundle: Bundle.main)
+        }
         guard let view = nib.instantiate(withOwner: self, options: nil)[0] as? UIView else {
             fatalError("Nib not found.")
         }
