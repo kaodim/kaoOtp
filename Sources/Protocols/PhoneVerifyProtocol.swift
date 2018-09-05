@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-protocol PhoneVerifyDataSource: class {
+public protocol PhoneVerifyDataSource: class {
 
     func headerViewText(in view: PhoneVerifyingViewController) -> HeaderViewParams
 
@@ -23,7 +23,7 @@ protocol PhoneVerifyDataSource: class {
     func resendCodeDelay(in view: PhoneVerifyingViewController) -> Int
 }
 
-protocol PhoneVerifyDelegate: class {
+public protocol PhoneVerifyDelegate: class {
 
     func verifyTapped(in view: PhoneVerifyingViewController, pins: String)
 

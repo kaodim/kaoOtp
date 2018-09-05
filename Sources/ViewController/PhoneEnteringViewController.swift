@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PhoneEnteringViewController: UIViewController {
+open class PhoneEnteringViewController: UIViewController {
 
     private lazy var contentView: UIView = {
         let view = UIView()
@@ -68,7 +68,7 @@ class PhoneEnteringViewController: UIViewController {
     public weak var phoneEnterDelegate: PhoneEnterDelegate?
 
     // MARK: - View Cycle
-    override func viewDidLayoutSubviews() {
+    override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         NSLayoutConstraint.activate([
             contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -98,7 +98,7 @@ class PhoneEnteringViewController: UIViewController {
             ])
     }
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow , object: nil)
@@ -110,7 +110,7 @@ class PhoneEnteringViewController: UIViewController {
         reloadData()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         textFieldView.textfieldBecomeResponder()
     }
@@ -180,17 +180,17 @@ class PhoneEnteringViewController: UIViewController {
 // MARK: - UITableViewDataSource, UITableViewDelegate
 extension PhoneEnteringViewController: UITableViewDelegate, UITableViewDataSource {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countryList.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = OtpCountrySelectionCell.init(style: .default, reuseIdentifier: "OtpCountrySelectionCell")
         cell.configure(countryPhone: countryList[indexPath.row])
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCountry = countryList[indexPath.row]
         configureTableView()
     }
@@ -199,7 +199,7 @@ extension PhoneEnteringViewController: UITableViewDelegate, UITableViewDataSourc
 // MARK: - UITextFieldDelegate
 extension PhoneEnteringViewController: UITextFieldDelegate {
 
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
             return false
         }

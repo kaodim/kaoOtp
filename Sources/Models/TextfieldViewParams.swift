@@ -8,8 +8,14 @@
 
 import Foundation
 
-struct TextfieldViewParams {
+public struct TextfieldViewParams {
     let text: String?
     var phoneExtensionAttr: CustomLabelAttributes
     var phoneTextfieldAttr: CustomTextfieldAttributes
+
+    public init(text: String? = nil, phoneExtensionAttr: CustomLabelAttributes = CustomLabelAttributes(), phoneTextfieldAttr: CustomTextfieldAttributes = CustomTextfieldAttributes()) {
+        self.text = text
+        self.phoneExtensionAttr = phoneExtensionAttr
+        self.phoneTextfieldAttr = phoneTextfieldAttr
+    }
 }

@@ -9,20 +9,18 @@
 import Foundation
 import UIKit
 
-struct CustomButtonAttributes {
+public struct CustomButtonAttributes {
     let text: String
     let font: UIFont
     let color: UIColor
     let disableColor: UIColor
     let disableText: String
-}
 
-extension CustomButtonAttributes {
-    init() {
-        self.text = ""
-        self.font = .systemFont(ofSize: 14)
-        self.color = .red
-        self.disableColor = .gray
-        self.disableText = ""
+    public init(text: String = "", font: UIFont = .systemFont(ofSize: 14), color: UIColor = .red, disableColor: UIColor = .gray, disableText: String = "") {
+        self.text = text
+        self.font = font
+        self.color = color
+        self.disableColor = disableColor
+        self.disableText = disableText
     }
 }

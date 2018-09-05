@@ -9,20 +9,18 @@
 import Foundation
 import UIKit
 
-struct CustomTextfieldAttributes {
+public struct CustomTextfieldAttributes {
     let font: UIFont
     let color: UIColor
     let placeholder: String
     let lineColor: UIColor
     let disableLineColor: UIColor
-}
 
-extension CustomTextfieldAttributes {
-    init() {
-        self.font = .systemFont(ofSize: 14)
-        self.color = .black
-        self.placeholder = ""
-        self.lineColor = .black
-        self.disableLineColor = .lightGray
+    public init(font: UIFont = .systemFont(ofSize: 14), color: UIColor = .black, placeholder: String = "", lineColor: UIColor = .black, disableLineColor: UIColor = .lightGray) {
+        self.font = font
+        self.color = color
+        self.placeholder = placeholder
+        self.lineColor = lineColor
+        self.disableLineColor = disableLineColor
     }
 }

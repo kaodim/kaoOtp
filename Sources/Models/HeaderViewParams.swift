@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-struct HeaderViewParams {
+public struct HeaderViewParams {
     let title: String
     let titleAttr: CustomLabelAttributes
     let message: String
@@ -17,4 +18,15 @@ struct HeaderViewParams {
     let phoneNumberTextAttr: CustomLabelAttributes
     let updateNumberText: String
     let updateNumberTextAttr: CustomLabelAttributes
+
+    public init(title: String, titleAttr: CustomLabelAttributes = CustomLabelAttributes(), message: String = "", messageAttr: CustomLabelAttributes = CustomLabelAttributes() , phoneNumberText: String = "", phoneNumberTextAttr: CustomLabelAttributes = CustomLabelAttributes(), updateNumberText: String = "", updateNumberTextAttr: CustomLabelAttributes = CustomLabelAttributes()) {
+        self.title = title
+        self.titleAttr = titleAttr
+        self.message = message
+        self.messageAttr = messageAttr
+        self.phoneNumberText = phoneNumberText
+        self.phoneNumberTextAttr = phoneNumberTextAttr
+        self.updateNumberText = updateNumberText
+        self.updateNumberTextAttr = updateNumberTextAttr
+    }
 }

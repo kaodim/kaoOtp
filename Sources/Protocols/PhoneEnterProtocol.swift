@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol PhoneEnterDataSource: class {
+public protocol PhoneEnterDataSource: class {
 
     func supportedCountryPhones(in view: PhoneEnteringViewController) -> [CountryPhone]
 
@@ -31,7 +31,7 @@ extension PhoneEnterDataSource {
     }
 }
 
-protocol PhoneEnterDelegate: class {
+public protocol PhoneEnterDelegate: class {
     
     func nextButtonTapped(in view: PhoneEnteringViewController, phoneNumber: String, countryPhone: CountryPhone)
 }

@@ -9,15 +9,13 @@
 import Foundation
 import UIKit
 
-struct CustomDropUpDownImage {
+public struct CustomDropUpDownImage {
     let dropUp: UIImage?
     let dropDown: UIImage?
-}
 
-extension CustomDropUpDownImage {
-    init() {
-        self.dropUp = nil
-        self.dropDown = nil
+    public init(dropUp: UIImage? = nil, dropDown: UIImage? = nil) {
+        self.dropUp = dropUp
+        self.dropDown = dropDown
     }
 }
 

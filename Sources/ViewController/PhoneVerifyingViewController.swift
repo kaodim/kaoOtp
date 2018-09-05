@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PhoneVerifyingViewController: UIViewController {
+open class PhoneVerifyingViewController: UIViewController {
 
     private lazy var contentView: UIView = {
         let view = UIView()
@@ -53,7 +53,7 @@ class PhoneVerifyingViewController: UIViewController {
     public weak var phoneVerifyDelegate: PhoneVerifyDelegate?
     
     // MARK: - View Cycle
-    override func viewDidLayoutSubviews() {
+    override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         NSLayoutConstraint.activate([
             contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -77,7 +77,7 @@ class PhoneVerifyingViewController: UIViewController {
             ])
     }
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow , object: nil)
