@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpTextfieldView" customModule="OtpFlow" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpTextfieldView" customModule="KaoOtpFlow" customModuleProvider="target">
             <connections>
                 <outlet property="cardView" destination="jow-Wg-f05" id="HE7-10-ZnE"/>
                 <outlet property="countrySelectionContentView" destination="3Q3-aW-imh" id="Y1l-Uc-HV1"/>
@@ -35,14 +35,14 @@
                             </constraints>
                         </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oQ6-KT-kdo">
-                            <rect key="frame" x="108" y="16" width="8" height="14"/>
+                            <rect key="frame" x="108" y="16" width="14" height="14"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="14" id="kG5-Qz-cs0"/>
-                                <constraint firstAttribute="width" constant="8" id="w3j-vN-Cfh"/>
+                                <constraint firstAttribute="width" constant="14" id="w3j-vN-Cfh"/>
                             </constraints>
                         </imageView>
                         <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4z1-jN-TL2">
-                            <rect key="frame" x="121" y="14" width="214" height="17"/>
+                            <rect key="frame" x="127" y="14" width="208" height="17"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>

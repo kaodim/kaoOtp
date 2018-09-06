@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpPinEnterView" customModule="KaoOtpFlow" customModuleProvider="target">
             <connections>
+                <outlet property="pinStacktouchView" destination="Hwq-ir-AKu" id="e8P-BC-KxQ"/>
                 <outlet property="pinStackviews" destination="ZeZ-Z8-9e4" id="Cdg-2Z-b5u"/>
                 <outlet property="resetLabel" destination="bf3-wr-uSN" id="0lU-PD-5Ii"/>
             </connections>
@@ -128,6 +129,10 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="Mg5-dt-u1J"/>
                     </constraints>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hwq-ir-AKu">
+                    <rect key="frame" x="0.0" y="41" width="260" height="38"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-wr-uSN">
                     <rect key="frame" x="0.0" y="90" width="340" height="15"/>
                     <constraints>
@@ -141,12 +146,16 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ZeZ-Z8-9e4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0UI-Bq-GGa"/>
+                <constraint firstItem="Hwq-ir-AKu" firstAttribute="leading" secondItem="ZeZ-Z8-9e4" secondAttribute="leading" id="JPx-JB-bMk"/>
                 <constraint firstItem="bf3-wr-uSN" firstAttribute="top" secondItem="ZeZ-Z8-9e4" secondAttribute="bottom" constant="11" id="RvN-Pt-8Qs"/>
                 <constraint firstItem="bf3-wr-uSN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ehL-AS-pNI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZeZ-Z8-9e4" secondAttribute="trailing" id="fpe-fz-Vx8"/>
+                <constraint firstItem="Hwq-ir-AKu" firstAttribute="bottom" secondItem="ZeZ-Z8-9e4" secondAttribute="bottom" id="oGw-Wf-C99"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bf3-wr-uSN" secondAttribute="trailing" id="r0K-kK-xZS"/>
                 <constraint firstItem="ZeZ-Z8-9e4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="41" id="r4Z-Z7-6zn"/>
+                <constraint firstItem="Hwq-ir-AKu" firstAttribute="top" secondItem="ZeZ-Z8-9e4" secondAttribute="top" id="sVI-MP-gre"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bf3-wr-uSN" secondAttribute="bottom" id="sw4-01-KJ5"/>
+                <constraint firstItem="Hwq-ir-AKu" firstAttribute="trailing" secondItem="ZeZ-Z8-9e4" secondAttribute="trailing" id="wNV-Ok-ias"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

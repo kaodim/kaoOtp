@@ -63,17 +63,19 @@ open class PhoneEnteringViewController: UIViewController {
     }
     private var dropUpDownIcon: CustomDropUpDownImage?
     private var phoneNumber: String = ""
+    private var bottomConstraint: NSLayoutConstraint!
 
     public weak var phoneEnterDataSource: PhoneEnterDataSource?
     public weak var phoneEnterDelegate: PhoneEnterDelegate?
 
     // MARK: - View Cycle
-    override open func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    private func configureLayout() {
+        bottomConstraint = contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         NSLayoutConstraint.activate([
             contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            contentView.topAnchor.constraint(equalTo: view.topAnchor)
+            contentView.topAnchor.constraint(equalTo: view.topAnchor),
+            bottomConstraint
             ])
         NSLayoutConstraint.activate([
             headerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -100,37 +102,47 @@ open class PhoneEnteringViewController: UIViewController {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow , object: nil)
         view.addSubview(contentView)
         contentView.addSubview(headerView)
         contentView.addSubview(textFieldView)
         contentView.addSubview(tableView)
         contentView.addSubview(bottomView)
+        configureLayout()
         reloadData()
     }
 
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        textFieldView.textfieldBecomeResponder()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow , object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide , object: nil)
+        beginEditing()
     }
 
-    deinit {
+    override open func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     @objc private func keyboardWillShow(_ notif: Notification) {
         if let keyboardFrame: NSValue = notif.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            let viewHeight = self.view.frame.height - keyboardHeight
-            NSLayoutConstraint.activate([
-                contentView.heightAnchor.constraint(equalToConstant: viewHeight)
-                ])
+            bottomConstraint.constant = -keyboardHeight
+            animateLayout()
         }
     }
 
-    func reloadData() {
+    @objc private func keyboardWillHide(_ notif: Notification) {
+        bottomConstraint.constant = 0
+        animateLayout()
+    }
+
+    public func beginEditing(_ begin: Bool = true) {
+        textFieldView.textfieldBecomeResponder(begin)
+    }
+
+    public func reloadData() {
         countryList = phoneEnterDataSource?.supportedCountryPhones(in: self) ?? []
         selectedCountry = phoneEnterDataSource?.selectedCountryPhone(in: self) ?? countryList.first
         dropUpDownIcon = phoneEnterDataSource?.dropDownUpImages(in: self)
@@ -152,6 +164,12 @@ open class PhoneEnteringViewController: UIViewController {
             bottomView.enableNextButton()
         } else {
             bottomView.enableNextButton(enable: false)
+        }
+    }
+
+    private func animateLayout() {
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
         }
     }
 

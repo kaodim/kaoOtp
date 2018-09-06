@@ -11,6 +11,7 @@ import UIKit
 
 class OtpPinEnterView: UIView {
 
+    @IBOutlet private weak var pinStacktouchView: UIView!
     @IBOutlet private weak var pinStackviews: UIStackView!
     @IBOutlet private weak var resetLabel: UILabel!
 
@@ -31,6 +32,7 @@ class OtpPinEnterView: UIView {
         }
     }
 
+    var lastActiveTextfield: OtpPinTextfield?
     var tapResend: (() -> Void)?
     var pinCompleted: ((_ pins:String) -> Void)?
     var pinReset: (() -> Void)?
@@ -67,6 +69,7 @@ class OtpPinEnterView: UIView {
         configurePinTextfield()
         resetLabel.text = ""
         resetLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapResend)))
+        pinStacktouchView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapStackview)))
     }
 
     private func configurePinTextfield() {
@@ -83,6 +86,10 @@ class OtpPinEnterView: UIView {
 
     @objc private func didTapResend() {
         tapResend?()
+    }
+
+    @objc private func didTapStackview() {
+        lastActiveTextfield?.becomeFirstResponder()
     }
 
     private func verifyPinComplete() {
@@ -112,6 +119,10 @@ class OtpPinEnterView: UIView {
 }
 
 extension OtpPinEnterView: UITextFieldDelegate, OtpPinTextFieldDelegate {
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        lastActiveTextfield = textField as? OtpPinTextfield
+    }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard

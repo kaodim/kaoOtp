@@ -95,15 +95,21 @@ class OtpTextfieldView: UIView {
         otpCountrySelectionView.countryPhoneExtensionAttr = params.phoneExtensionAttr
         phoneTextfield.font = params.phoneTextfieldAttr.font
         phoneTextfield.textColor = params.phoneTextfieldAttr.color
-        phoneTextfield.placeholder = params.phoneTextfieldAttr.placeholder
+        phoneTextfield.attributedPlaceholder = NSAttributedString(string: params.phoneTextfieldAttr.placeholder,
+                                                                  attributes: [NSAttributedStringKey.foregroundColor: params.phoneTextfieldAttr.placeholderColor]
+        )
     }
 
     func configure(dropUpDownImage: UIImage?) {
         dropDownIcon.image = dropUpDownImage
     }
 
-    func textfieldBecomeResponder() {
-        phoneTextfield.becomeFirstResponder()
+    func textfieldBecomeResponder(_ becomeFirst: Bool = true) {
+        if becomeFirst {
+            phoneTextfield.becomeFirstResponder()
+        } else {
+            phoneTextfield.resignFirstResponder()
+        }
     }
 
     @objc func showCountryOption() {
