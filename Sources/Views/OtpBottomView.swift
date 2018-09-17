@@ -17,6 +17,9 @@ class OtpBottomView: UIView {
     var nextButtonAttr = CustomButtonAttributes() {
         didSet {
             nextButton.titleLabel?.font = nextButtonAttr.font
+            setBackgroundColor(color: nextButtonAttr.highlightedColor, forState: .highlighted)
+            setBackgroundColor(color: nextButtonAttr.disableColor, forState: .disabled)
+            setBackgroundColor(color: nextButtonAttr.color, forState: .normal)
         }
     }
     var didTapNext: (() -> Void)?
@@ -50,9 +53,18 @@ class OtpBottomView: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
-        nextButton.layer.cornerRadius = nextButton.bounds.height/2
+        nextButton.layer.cornerRadius = 4
         nextButton.layer.masksToBounds = true
         nextButton.clipsToBounds = true
+    }
+
+    private func setBackgroundColor(color: UIColor, forState: UIControlState) {
+        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
+        UIGraphicsGetCurrentContext()!.setFillColor(color.cgColor)
+        UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
+        let colorImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        nextButton.setBackgroundImage(colorImage, for: forState)
     }
 
     @IBAction private func nextTapped() {
@@ -67,6 +79,5 @@ class OtpBottomView: UIView {
     func enableNextButton(enable: Bool = true) {
         nextButton.isEnabled = enable
         nextButton.setTitle(enable ? nextButtonAttr.text : nextButtonAttr.disableText, for: .normal)
-        nextButton.backgroundColor = enable ? nextButtonAttr.color : nextButtonAttr.disableColor
     }
 }

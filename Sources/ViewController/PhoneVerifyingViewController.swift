@@ -139,8 +139,11 @@ open class PhoneVerifyingViewController: UIViewController {
     }
 
     public func startResendTimer() {
-        countdown = phoneVerifyDataSource?.resendCodeDelay(in: self) ?? 0
-        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateResendButton), userInfo: nil, repeats: true)
+        if countdownTimer == nil {
+            phoneVerifyDelegate?.resendCodeTapped(in: self)
+            countdown = phoneVerifyDataSource?.resendCodeDelay(in: self) ?? 0
+            countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateResendButton), userInfo: nil, repeats: true)
+        }
     }
 
     @objc private func updateResendButton() {
@@ -151,6 +154,7 @@ open class PhoneVerifyingViewController: UIViewController {
         } else {
             pinEnterView.enableResetButton()
             countdownTimer.invalidate()
+            countdownTimer = nil
         }
     }
 
@@ -181,7 +185,6 @@ open class PhoneVerifyingViewController: UIViewController {
 
     private func resendCode() {
         startResendTimer()
-        phoneVerifyDelegate?.resendCodeTapped(in: self)
     }
 
     private func changeNumber() {
