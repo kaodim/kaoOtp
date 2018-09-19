@@ -1,0 +1,1466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		070ECDDF4C61A7B513D288A05F5DDCC2 /* PhoneVerifyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA482109F28A4E25F128F5BDF0888479 /* PhoneVerifyProtocol.swift */; };
+		07FFCEEC24AB23E3F954ADE898E83E55 /* CustomTextfieldAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AF436404887EDEB9D0950CC3BDA361 /* CustomTextfieldAttributes.swift */; };
+		08661A7A18EC1C335CCC59E5203B4A92 /* Pods-OtpFlowUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E21D6D44EF85D893483BEEEE8C42A95 /* Pods-OtpFlowUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B0CF607CB01BBD66EB156279EF20F3C /* OtpCountrySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E26DEDDE23CD98D670A90B1403C588A /* OtpCountrySelectionView.swift */; };
+		0C47055CA0C68FF072FE8D36E40D1E97 /* Pods-OtpFlow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E8C0B2906CD6897ED0D178B298FC30 /* Pods-OtpFlow-dummy.m */; };
+		1908B3B8ACFD3104D632CBDAACE1B296 /* CountryPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132CE0AFAD30807734B755C96A04C8DA /* CountryPhone.swift */; };
+		1D77B88198759DF34116E28CC23B24C1 /* KaoOtpFlow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53B6BAFA6377FCCCF3866EA631B31E24 /* KaoOtpFlow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2372091CA25EA68459A907120C3BF039 /* MaterialTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4833702864B5C633765785B5BE9B0A7C /* MaterialTextField.framework */; };
+		265A924FCE6CFAC1AB5E580D5B10E8A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
+		2F1D42464BF4D7582CC963AF7647DAE9 /* Pods-OtpFlow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A65C908EE0CC3309EF18E81CCB1D512 /* Pods-OtpFlow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		377905A52B7DEDFDA8EF68E23C29DB01 /* KaoOtpFlow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C81F6BF8F1C1261DA6F86233D35E6 /* KaoOtpFlow-dummy.m */; };
+		398DF7FB67D4362196E2D67346EDF3AF /* UIColor+MaterialTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BFBB4594D62769FC571577961AFB7 /* UIColor+MaterialTextField.m */; };
+		41694FCCB9F1B9F3C699AF9639498CA7 /* UITextField+MFClearButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 26391C4A6106D949424FE4082846322E /* UITextField+MFClearButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46347005FBEC752494E4ACBA7153DB38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
+		49B388EB32DABDBC8AFDE62D889B3332 /* OtpCountrySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0354A512068C4963B6B0957E891D04D9 /* OtpCountrySelectionView.xib */; };
+		58F6013BB939AA3B6C8FC55B36603539 /* OtpCountrySelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF205BAE1680AD747AD618BEE7BD564D /* OtpCountrySelectionCell.swift */; };
+		58FCA707584C19ECBD07775AA4D317C2 /* OtpTextfieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05526733ECD70A2B25A7DCDE741952DA /* OtpTextfieldView.xib */; };
+		59B57151535BADB76FB63A58202EF3FB /* UITextField+MFClearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D882C6EEC5ECECC8F05752BBD5F93F1 /* UITextField+MFClearButton.m */; };
+		5E2B7E33A8202D7D9AA1120BEB8DAE92 /* OtpCountrySelectionView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 0354A512068C4963B6B0957E891D04D9 /* OtpCountrySelectionView.xib */; };
+		5ED428D536A4180C2E1FEFEC783C0003 /* OtpCustomPod.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */; };
+		6573C49443F8A54D509ABCBB922AFB70 /* OtpPinEnterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8871406132AC8B557584C8AFC91BF0 /* OtpPinEnterView.xib */; };
+		68F6A96CF8C10E2B418B9EA0EFAABEBF /* MaterialTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 474AF08ED2371BD60AF5BA1EF5C94C38 /* MaterialTextField-dummy.m */; };
+		69C2257F71954DB343D7BFD227C58418 /* CustomDropUpDownImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8006B59431F934E540AE00D59B71F0 /* CustomDropUpDownImage.swift */; };
+		6D09CD64F00CF9A558E4EFA95B854ED3 /* CustomLabelAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9307E5075163C66E916482EC19B872B /* CustomLabelAttributes.swift */; };
+		758D9AA78AC3DB71A355B5030EFF9EF5 /* OtpTextfieldView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 05526733ECD70A2B25A7DCDE741952DA /* OtpTextfieldView.xib */; };
+		763226E0595257B4A15322833B88734A /* OtpBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6AC5D9FB5CD440652C26B51AC27F17 /* OtpBottomView.swift */; };
+		76D9B37EEB2954E171D088B7A96DD7B8 /* PhoneEnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FFCECC33E458A0C7986BA7B9B91A4 /* PhoneEnteringViewController.swift */; };
+		7750A46EA99C8669A9DDA05566C9E93D /* OtpHeaderView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C96E73A39725DDC12A7B38B155BC6 /* OtpHeaderView.xib */; };
+		77659D4AFE01088EB066D56FC305D711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
+		7F16CC869E3017DAE2C445A3514DF170 /* OtpBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1450D5C0006FF8E3A447374C90AA1C55 /* OtpBottomView.xib */; };
+		831CE1E7B65E08B36162165111C01F55 /* Pods-OtpFlowUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 722E6413BCD1969849FB5D6DBE388AC7 /* Pods-OtpFlowUITests-dummy.m */; };
+		84336EF4CFAA2D4F9A2FC68FC87B4C97 /* MFTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6E140560DAC7653A469A96387210A /* MFTextField.m */; };
+		85449D219DAE906A2C89DC9F965BBB8A /* TextfieldViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD925F50FF3F20AC522CCD7BF09FA73 /* TextfieldViewParams.swift */; };
+		8DB3FE712E5F9E8FD3B4D165949E9582 /* UIFont+MaterialTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9771597A36DEC27560C556CEFABF1C95 /* UIFont+MaterialTextField.m */; };
+		978C28D670DEA3D8491B4BBE9A634600 /* OtpTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0F30E42E8AB287FECD4A237232FA0 /* OtpTextfieldView.swift */; };
+		98E9DB32EC7C65C76E9B87402B32ECF1 /* CustomButtonAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF95F7A7AF187560711991BDCB9C8003 /* CustomButtonAttributes.swift */; };
+		9C9F1D90B855D3F326F8A876A95D252C /* UIColor+MaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED61CD87BDC8D055E6E414FCC5849D2 /* UIColor+MaterialTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EF69B942B6AF2AA81AD87F3847251A9 /* PhoneEnterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA488ABADD2621932DC383E4480B1307 /* PhoneEnterProtocol.swift */; };
+		A51990633261FFB0D1DD64EC305FB3CB /* OtpBottomView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 1450D5C0006FF8E3A447374C90AA1C55 /* OtpBottomView.xib */; };
+		B0204C26B5722558C2640803D74B9772 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
+		B1218369DB5CFAAE8E80B2E8E733A54B /* MaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE7EEB7ADAA4C8E7E8F5C577C57F366 /* MaterialTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5020381C5F8D8EE61D78FEA8EB9E923 /* Pods-OtpFlowTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C079FC2D670311E5B73C4E85BE8796 /* Pods-OtpFlowTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8DCE5634A2906BD8216AB0511E5E522 /* OtpPinEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3D02EFCFBB3FFC122227FB2A0E68D /* OtpPinEnterView.swift */; };
+		C8EC9108266150C2E3D42A59960D1B48 /* OtpHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0EA7854EB4652112838DA6244BBC6 /* OtpHeaderView.swift */; };
+		C9184EBB86EAC2197452EBD90E2900B3 /* OtpPinEnterView.xib in Sources */ = {isa = PBXBuildFile; fileRef = DC8871406132AC8B557584C8AFC91BF0 /* OtpPinEnterView.xib */; };
+		C9A4017C2E7B57905C666E41D776FFD8 /* OtpPinTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967E657DE7891EEF8FB60BD2E631DE3F /* OtpPinTextfield.swift */; };
+		CB344AD72F4FABC84FC63983703E0CB0 /* MaterialTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 348F4EB5BECF54F444DE858EDABA74FF /* MaterialTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB4CB855A1A1A6A24D14EAB903EC20C7 /* Pods-OtpFlowTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64CD0B6FA48A521630F29A5D7E781590 /* Pods-OtpFlowTests-dummy.m */; };
+		CE25D136A7C7D74DE90BBF05A69B9BDB /* HeaderViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E76D28B5F5FFDCC49CB7AE1EF98F3 /* HeaderViewParams.swift */; };
+		DD071F04EC02B6707C19E9E3AE66596D /* OtpHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C96E73A39725DDC12A7B38B155BC6 /* OtpHeaderView.xib */; };
+		DDE66A5732E2DA019159DEC598C7B819 /* UIImage+MFTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D7762A19D060900BD42D2494BE0E9 /* UIImage+MFTint.m */; };
+		DF4648EB6AD3E8743ABF6FBE88E0F980 /* PhoneVerifyingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A52FAA53DD8AD3D175EE714608F6E72 /* PhoneVerifyingViewController.swift */; };
+		E10B36C76D72E8079EF7CC91059D0726 /* UIImage+MFTint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0123BD2AD2CF2EDD72982FF8DB2A2A23 /* UIImage+MFTint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ED9B7E74C67A8F4B1ED0D040B6840672 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
+		F17E363A8A6274624190EFFD7444D869 /* MFTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B15DD26FDB68ACB4BB03CAAC4408D76 /* MFTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F638EABE30CBEEFF9C115D5F7D988828 /* UIFont+MaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A9C9746525BC00488A31C405A2070E /* UIFont+MaterialTextField.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DB53A1EAB3816B812B76B6107B7620B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DADE24C21A144C751FFD5ABFC04B70D;
+			remoteInfo = MaterialTextField;
+		};
+		51D87700244BF581614CE14BFB1BE97B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AFBAAB008E10B836721A697EE9790FD;
+			remoteInfo = "Pods-OtpFlow";
+		};
+		90C626A5BCAE86BF73AFD7BC504E4C37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E84326AD8E7E8D4698B8A08CADA7D50E;
+			remoteInfo = KaoOtpFlow;
+		};
+		A228B9180122432A89DBAC270E8C8047 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AFBAAB008E10B836721A697EE9790FD;
+			remoteInfo = "Pods-OtpFlow";
+		};
+		EC77D0937389259490D8872B6F3FCDBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 948995507FC668E25DAAE62543BF7017;
+			remoteInfo = "KaoOtpFlow-OtpCustomPod";
+		};
+		FB90A44CF0AB218FB8EFCA5ED0C22248 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DADE24C21A144C751FFD5ABFC04B70D;
+			remoteInfo = MaterialTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0123BD2AD2CF2EDD72982FF8DB2A2A23 /* UIImage+MFTint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MFTint.h"; path = "MaterialTextField/UIImage+MFTint.h"; sourceTree = "<group>"; };
+		02E8C0B2906CD6897ED0D178B298FC30 /* Pods-OtpFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OtpFlow-dummy.m"; sourceTree = "<group>"; };
+		0354A512068C4963B6B0957E891D04D9 /* OtpCountrySelectionView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpCountrySelectionView.xib; sourceTree = "<group>"; };
+		05526733ECD70A2B25A7DCDE741952DA /* OtpTextfieldView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpTextfieldView.xib; sourceTree = "<group>"; };
+		0E21D6D44EF85D893483BEEEE8C42A95 /* Pods-OtpFlowUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OtpFlowUITests-umbrella.h"; sourceTree = "<group>"; };
+		0E6C96E73A39725DDC12A7B38B155BC6 /* OtpHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpHeaderView.xib; sourceTree = "<group>"; };
+		0FA990E9AEF1F7F78731D057D0512713 /* Pods-OtpFlowUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OtpFlowUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		132CE0AFAD30807734B755C96A04C8DA /* CountryPhone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountryPhone.swift; sourceTree = "<group>"; };
+		13B29EDAFC87715E1B475DD8182ABB95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1450D5C0006FF8E3A447374C90AA1C55 /* OtpBottomView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpBottomView.xib; sourceTree = "<group>"; };
+		19244EDA4595113F08F55EEFFC5E79AE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1AE6E140560DAC7653A469A96387210A /* MFTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MFTextField.m; path = MaterialTextField/MFTextField.m; sourceTree = "<group>"; };
+		1F2C81F6BF8F1C1261DA6F86233D35E6 /* KaoOtpFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KaoOtpFlow-dummy.m"; sourceTree = "<group>"; };
+		1F6AC5D9FB5CD440652C26B51AC27F17 /* OtpBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpBottomView.swift; sourceTree = "<group>"; };
+		20C40790EF895D7BD8FC71B716C9517B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		26391C4A6106D949424FE4082846322E /* UITextField+MFClearButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+MFClearButton.h"; path = "MaterialTextField/UITextField+MFClearButton.h"; sourceTree = "<group>"; };
+		28AF436404887EDEB9D0950CC3BDA361 /* CustomTextfieldAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomTextfieldAttributes.swift; sourceTree = "<group>"; };
+		2A65C908EE0CC3309EF18E81CCB1D512 /* Pods-OtpFlow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OtpFlow-umbrella.h"; sourceTree = "<group>"; };
+		2D882C6EEC5ECECC8F05752BBD5F93F1 /* UITextField+MFClearButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+MFClearButton.m"; path = "MaterialTextField/UITextField+MFClearButton.m"; sourceTree = "<group>"; };
+		323F077AFDBDC38B81663F73F82AF62F /* Pods-OtpFlow-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlow-resources.sh"; sourceTree = "<group>"; };
+		337074971EF4EAE296EB2F2DF71466DA /* MaterialTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MaterialTextField.xcconfig; sourceTree = "<group>"; };
+		348F4EB5BECF54F444DE858EDABA74FF /* MaterialTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaterialTextField-umbrella.h"; sourceTree = "<group>"; };
+		3527CEA07752F7F956256C3A36EECEDA /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MaterialTextField.framework; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		371B5B2BE4A1DBB23C5566C6DD96695A /* Pods-OtpFlowUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OtpFlowUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E26DEDDE23CD98D670A90B1403C588A /* OtpCountrySelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionView.swift; sourceTree = "<group>"; };
+		3ED61CD87BDC8D055E6E414FCC5849D2 /* UIColor+MaterialTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+MaterialTextField.h"; path = "MaterialTextField/UIColor+MaterialTextField.h"; sourceTree = "<group>"; };
+		4688CA8D3E8A223ADB32D21A05356F5C /* Pods_OtpFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlowTests.framework; path = "Pods-OtpFlowTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		472C8760967760B11AF4D18944C67C23 /* Pods-OtpFlowTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OtpFlowTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		474AF08ED2371BD60AF5BA1EF5C94C38 /* MaterialTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MaterialTextField-dummy.m"; sourceTree = "<group>"; };
+		4833702864B5C633765785B5BE9B0A7C /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48570B0A3C5BE894F0EF2CD8CECB4F1B /* Pods-OtpFlowUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OtpFlowUITests.modulemap"; sourceTree = "<group>"; };
+		48595B8D21550EDE9A107585FE165EEC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		48D0F30E42E8AB287FECD4A237232FA0 /* OtpTextfieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpTextfieldView.swift; sourceTree = "<group>"; };
+		4B15DD26FDB68ACB4BB03CAAC4408D76 /* MFTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MFTextField.h; path = MaterialTextField/MFTextField.h; sourceTree = "<group>"; };
+		4B1E76D28B5F5FFDCC49CB7AE1EF98F3 /* HeaderViewParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeaderViewParams.swift; sourceTree = "<group>"; };
+		4E1FFCECC33E458A0C7986BA7B9B91A4 /* PhoneEnteringViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneEnteringViewController.swift; sourceTree = "<group>"; };
+		51F604C0666C1F156B250050DF323724 /* Pods-OtpFlowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowTests.release.xcconfig"; sourceTree = "<group>"; };
+		53B6BAFA6377FCCCF3866EA631B31E24 /* KaoOtpFlow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KaoOtpFlow-umbrella.h"; sourceTree = "<group>"; };
+		5943568C2CC63B22DAB0ED66E5E92F84 /* Pods-OtpFlowTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowTests-resources.sh"; sourceTree = "<group>"; };
+		624357B8BD87272A7DF6A3FB639386BC /* Pods_OtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlow.framework; path = "Pods-OtpFlow.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63864FF412A343FC808EF80C8FDB54EE /* Pods-OtpFlow-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OtpFlow-acknowledgements.markdown"; sourceTree = "<group>"; };
+		63A0EA7854EB4652112838DA6244BBC6 /* OtpHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpHeaderView.swift; sourceTree = "<group>"; };
+		64CD0B6FA48A521630F29A5D7E781590 /* Pods-OtpFlowTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OtpFlowTests-dummy.m"; sourceTree = "<group>"; };
+		6A52FAA53DD8AD3D175EE714608F6E72 /* PhoneVerifyingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneVerifyingViewController.swift; sourceTree = "<group>"; };
+		6CF717E54920BAF4469B53253FC20995 /* Pods-OtpFlowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		722E6413BCD1969849FB5D6DBE388AC7 /* Pods-OtpFlowUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OtpFlowUITests-dummy.m"; sourceTree = "<group>"; };
+		72685C1B61F62631D48D1BD866F0C14C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		731FDD300D5C508768C9601BEEA0D358 /* KaoOtpFlow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KaoOtpFlow-prefix.pch"; sourceTree = "<group>"; };
+		76E050C5A405921C0A7F90DEC793358E /* Pods-OtpFlowTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OtpFlowTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		76F48C820BFE7F4A02C98A0925C870D2 /* Pods-OtpFlowUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowUITests-resources.sh"; sourceTree = "<group>"; };
+		7E8954414AF28DE5D7443B462D5F5B45 /* KaoOtpFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KaoOtpFlow.modulemap; sourceTree = "<group>"; };
+		815BFBB4594D62769FC571577961AFB7 /* UIColor+MaterialTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MaterialTextField.m"; path = "MaterialTextField/UIColor+MaterialTextField.m"; sourceTree = "<group>"; };
+		8BD925F50FF3F20AC522CCD7BF09FA73 /* TextfieldViewParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextfieldViewParams.swift; sourceTree = "<group>"; };
+		912FF7A8DF719425DA908943E5F08C23 /* Pods-OtpFlowTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OtpFlowTests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		967E657DE7891EEF8FB60BD2E631DE3F /* OtpPinTextfield.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpPinTextfield.swift; sourceTree = "<group>"; };
+		9771597A36DEC27560C556CEFABF1C95 /* UIFont+MaterialTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+MaterialTextField.m"; path = "MaterialTextField/UIFont+MaterialTextField.m"; sourceTree = "<group>"; };
+		9D0D7762A19D060900BD42D2494BE0E9 /* UIImage+MFTint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MFTint.m"; path = "MaterialTextField/UIImage+MFTint.m"; sourceTree = "<group>"; };
+		9E2BA7D2EB38C5F2258AD61C3A0A8F71 /* Pods-OtpFlowUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowUITests-frameworks.sh"; sourceTree = "<group>"; };
+		A22EE4B193E1F0DFA8735BA37E951D95 /* MaterialTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MaterialTextField.modulemap; sourceTree = "<group>"; };
+		A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = OtpCustomPod.bundle; path = "KaoOtpFlow-OtpCustomPod.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3A9C9746525BC00488A31C405A2070E /* UIFont+MaterialTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+MaterialTextField.h"; path = "MaterialTextField/UIFont+MaterialTextField.h"; sourceTree = "<group>"; };
+		A972D01932874F3D61F8D7D9CCBCA98A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2B30232378E4FC977506A6D5487CDD5 /* KaoOtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KaoOtpFlow.framework; path = KaoOtpFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9307E5075163C66E916482EC19B872B /* CustomLabelAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomLabelAttributes.swift; sourceTree = "<group>"; };
+		BA482109F28A4E25F128F5BDF0888479 /* PhoneVerifyProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneVerifyProtocol.swift; sourceTree = "<group>"; };
+		BBA07778E5A7A3B651E58A0A263D04AF /* ResourceBundle-OtpCustomPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-OtpCustomPod-Info.plist"; sourceTree = "<group>"; };
+		BF205BAE1680AD747AD618BEE7BD564D /* OtpCountrySelectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionCell.swift; sourceTree = "<group>"; };
+		BF95F7A7AF187560711991BDCB9C8003 /* CustomButtonAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomButtonAttributes.swift; sourceTree = "<group>"; };
+		C0979E4856C769804BFBBC7A273E7F12 /* Pods-OtpFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlow.debug.xcconfig"; sourceTree = "<group>"; };
+		C855FD048E9BBA1DB3E2F296BB56D1A0 /* Pods-OtpFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OtpFlow.modulemap"; sourceTree = "<group>"; };
+		CE79FE792E5528317A04B554204E4EB4 /* Pods-OtpFlowTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowTests-frameworks.sh"; sourceTree = "<group>"; };
+		D13FFEEE5BE1ED679BFD8AB7A3AFDCB7 /* KaoOtpFlow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KaoOtpFlow.xcconfig; sourceTree = "<group>"; };
+		D299982D6413122C0682CB9C8DBECD88 /* Pods-OtpFlowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA9E826C6FD952EE1FB7A0CBCCEDED28 /* MaterialTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaterialTextField-prefix.pch"; sourceTree = "<group>"; };
+		DC8871406132AC8B557584C8AFC91BF0 /* OtpPinEnterView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpPinEnterView.xib; sourceTree = "<group>"; };
+		DE0BBAD1DE952104C745486569434B41 /* Pods-OtpFlow-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlow-frameworks.sh"; sourceTree = "<group>"; };
+		DEA3D02EFCFBB3FFC122227FB2A0E68D /* OtpPinEnterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpPinEnterView.swift; sourceTree = "<group>"; };
+		E3F7D53AFF65DDA7A51B3F6E45693DC5 /* Pods-OtpFlow-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OtpFlow-acknowledgements.plist"; sourceTree = "<group>"; };
+		E8C079FC2D670311E5B73C4E85BE8796 /* Pods-OtpFlowTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OtpFlowTests-umbrella.h"; sourceTree = "<group>"; };
+		EA488ABADD2621932DC383E4480B1307 /* PhoneEnterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneEnterProtocol.swift; sourceTree = "<group>"; };
+		EA8006B59431F934E540AE00D59B71F0 /* CustomDropUpDownImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomDropUpDownImage.swift; sourceTree = "<group>"; };
+		EB548EE52BE8E4AF6B73DE277228CFB2 /* Pods_OtpFlowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlowUITests.framework; path = "Pods-OtpFlowUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE7EEB7ADAA4C8E7E8F5C577C57F366 /* MaterialTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaterialTextField.h; path = MaterialTextField/MaterialTextField.h; sourceTree = "<group>"; };
+		EDE2414DB1205679C31344CA6375F768 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFD45E54BBCD40CB04FC7C9918A5771A /* KaoOtpFlow.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = KaoOtpFlow.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F2DFF6DD6EA0E3FBE24911294FCD329F /* Pods-OtpFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlow.release.xcconfig"; sourceTree = "<group>"; };
+		FCFA98BFB8152752B412958B60B4FAA8 /* Pods-OtpFlowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69AA1454510A34D5C776E0C9F86CB29E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77659D4AFE01088EB066D56FC305D711 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BB17917137456A822335C261626A69E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265A924FCE6CFAC1AB5E580D5B10E8A2 /* Foundation.framework in Frameworks */,
+				2372091CA25EA68459A907120C3BF039 /* MaterialTextField.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49084C78407B8FB13AD34F9C7B429D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0204C26B5722558C2640803D74B9772 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B62D536115F2478F9D5A889EC81FDAC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D023C10DD9EFDD693D846D0DD1356532 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46347005FBEC752494E4ACBA7153DB38 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4E470E9135698501818EBB9768E14F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED9B7E74C67A8F4B1ED0D040B6840672 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FD385EC86AD22DEE061933D6D7060FE /* Pods-OtpFlow */ = {
+			isa = PBXGroup;
+			children = (
+				72685C1B61F62631D48D1BD866F0C14C /* Info.plist */,
+				C855FD048E9BBA1DB3E2F296BB56D1A0 /* Pods-OtpFlow.modulemap */,
+				63864FF412A343FC808EF80C8FDB54EE /* Pods-OtpFlow-acknowledgements.markdown */,
+				E3F7D53AFF65DDA7A51B3F6E45693DC5 /* Pods-OtpFlow-acknowledgements.plist */,
+				02E8C0B2906CD6897ED0D178B298FC30 /* Pods-OtpFlow-dummy.m */,
+				DE0BBAD1DE952104C745486569434B41 /* Pods-OtpFlow-frameworks.sh */,
+				323F077AFDBDC38B81663F73F82AF62F /* Pods-OtpFlow-resources.sh */,
+				2A65C908EE0CC3309EF18E81CCB1D512 /* Pods-OtpFlow-umbrella.h */,
+				C0979E4856C769804BFBBC7A273E7F12 /* Pods-OtpFlow.debug.xcconfig */,
+				F2DFF6DD6EA0E3FBE24911294FCD329F /* Pods-OtpFlow.release.xcconfig */,
+			);
+			name = "Pods-OtpFlow";
+			path = "Target Support Files/Pods-OtpFlow";
+			sourceTree = "<group>";
+		};
+		1A266EDD7C8CBC523E6B67A2A3AF0FE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2B30232378E4FC977506A6D5487CDD5 /* KaoOtpFlow.framework */,
+				3527CEA07752F7F956256C3A36EECEDA /* MaterialTextField.framework */,
+				A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */,
+				624357B8BD87272A7DF6A3FB639386BC /* Pods_OtpFlow.framework */,
+				4688CA8D3E8A223ADB32D21A05356F5C /* Pods_OtpFlowTests.framework */,
+				EB548EE52BE8E4AF6B73DE277228CFB2 /* Pods_OtpFlowUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CA3F29288AF7893218C9367734C1C12 /* KaoOtpFlow */ = {
+			isa = PBXGroup;
+			children = (
+				D876DCCD0BC8226398D937F55C518523 /* Models */,
+				CB06944148C94B54CE8D2E674448879D /* Pod */,
+				207F24056BDC7B91EBED2C5731B4DC6E /* Protocols */,
+				799D49FE8B6DE110331A5B770DAA9B40 /* Resources */,
+				3F2058A0696281F7CCBE694C0CA4D066 /* Support Files */,
+				23E43CDE6F419142BA56BDFCA98FA37B /* ViewController */,
+				AFA45455971F06915D5177E8DE68FBA2 /* Views */,
+			);
+			name = KaoOtpFlow;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		207F24056BDC7B91EBED2C5731B4DC6E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EA488ABADD2621932DC383E4480B1307 /* PhoneEnterProtocol.swift */,
+				BA482109F28A4E25F128F5BDF0888479 /* PhoneVerifyProtocol.swift */,
+			);
+			name = Protocols;
+			path = Sources/Protocols;
+			sourceTree = "<group>";
+		};
+		23E43CDE6F419142BA56BDFCA98FA37B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4E1FFCECC33E458A0C7986BA7B9B91A4 /* PhoneEnteringViewController.swift */,
+				6A52FAA53DD8AD3D175EE714608F6E72 /* PhoneVerifyingViewController.swift */,
+			);
+			name = ViewController;
+			path = Sources/ViewController;
+			sourceTree = "<group>";
+		};
+		24FB932BB460020DBC31A2CC64C9D071 /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				967E657DE7891EEF8FB60BD2E631DE3F /* OtpPinTextfield.swift */,
+			);
+			name = Textfields;
+			path = Textfields;
+			sourceTree = "<group>";
+		};
+		3C0F75DCBA7C50C56736779671DDA4BE /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CA3F29288AF7893218C9367734C1C12 /* KaoOtpFlow */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3F2058A0696281F7CCBE694C0CA4D066 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A972D01932874F3D61F8D7D9CCBCA98A /* Info.plist */,
+				7E8954414AF28DE5D7443B462D5F5B45 /* KaoOtpFlow.modulemap */,
+				D13FFEEE5BE1ED679BFD8AB7A3AFDCB7 /* KaoOtpFlow.xcconfig */,
+				1F2C81F6BF8F1C1261DA6F86233D35E6 /* KaoOtpFlow-dummy.m */,
+				731FDD300D5C508768C9601BEEA0D358 /* KaoOtpFlow-prefix.pch */,
+				53B6BAFA6377FCCCF3866EA631B31E24 /* KaoOtpFlow-umbrella.h */,
+				BBA07778E5A7A3B651E58A0A263D04AF /* ResourceBundle-OtpCustomPod-Info.plist */,
+			);
+			name = "Support Files";
+			path = "OtpDemo/Pods/Target Support Files/KaoOtpFlow";
+			sourceTree = "<group>";
+		};
+		506B880024D9472B1E4D9A8E568E6254 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72DC32A7F9E51167A19ED88FB79CF7B5 /* MaterialTextField */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		557678F87EAB767384381607120D45EB /* Pods-OtpFlowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				20C40790EF895D7BD8FC71B716C9517B /* Info.plist */,
+				48570B0A3C5BE894F0EF2CD8CECB4F1B /* Pods-OtpFlowUITests.modulemap */,
+				371B5B2BE4A1DBB23C5566C6DD96695A /* Pods-OtpFlowUITests-acknowledgements.markdown */,
+				0FA990E9AEF1F7F78731D057D0512713 /* Pods-OtpFlowUITests-acknowledgements.plist */,
+				722E6413BCD1969849FB5D6DBE388AC7 /* Pods-OtpFlowUITests-dummy.m */,
+				9E2BA7D2EB38C5F2258AD61C3A0A8F71 /* Pods-OtpFlowUITests-frameworks.sh */,
+				76F48C820BFE7F4A02C98A0925C870D2 /* Pods-OtpFlowUITests-resources.sh */,
+				0E21D6D44EF85D893483BEEEE8C42A95 /* Pods-OtpFlowUITests-umbrella.h */,
+				6CF717E54920BAF4469B53253FC20995 /* Pods-OtpFlowUITests.debug.xcconfig */,
+				FCFA98BFB8152752B412958B60B4FAA8 /* Pods-OtpFlowUITests.release.xcconfig */,
+			);
+			name = "Pods-OtpFlowUITests";
+			path = "Target Support Files/Pods-OtpFlowUITests";
+			sourceTree = "<group>";
+		};
+		58FE60FBD9868AD8FDD0AF35CED37AB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4833702864B5C633765785B5BE9B0A7C /* MaterialTextField.framework */,
+				E041F94CE18452AE8F827445356811CE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72DC32A7F9E51167A19ED88FB79CF7B5 /* MaterialTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EBE7EEB7ADAA4C8E7E8F5C577C57F366 /* MaterialTextField.h */,
+				4B15DD26FDB68ACB4BB03CAAC4408D76 /* MFTextField.h */,
+				1AE6E140560DAC7653A469A96387210A /* MFTextField.m */,
+				3ED61CD87BDC8D055E6E414FCC5849D2 /* UIColor+MaterialTextField.h */,
+				815BFBB4594D62769FC571577961AFB7 /* UIColor+MaterialTextField.m */,
+				A3A9C9746525BC00488A31C405A2070E /* UIFont+MaterialTextField.h */,
+				9771597A36DEC27560C556CEFABF1C95 /* UIFont+MaterialTextField.m */,
+				0123BD2AD2CF2EDD72982FF8DB2A2A23 /* UIImage+MFTint.h */,
+				9D0D7762A19D060900BD42D2494BE0E9 /* UIImage+MFTint.m */,
+				26391C4A6106D949424FE4082846322E /* UITextField+MFClearButton.h */,
+				2D882C6EEC5ECECC8F05752BBD5F93F1 /* UITextField+MFClearButton.m */,
+				908435666CB962325D076799A7A205B1 /* Support Files */,
+			);
+			name = MaterialTextField;
+			path = MaterialTextField;
+			sourceTree = "<group>";
+		};
+		799D49FE8B6DE110331A5B770DAA9B40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				3C0F75DCBA7C50C56736779671DDA4BE /* Development Pods */,
+				58FE60FBD9868AD8FDD0AF35CED37AB4 /* Frameworks */,
+				506B880024D9472B1E4D9A8E568E6254 /* Pods */,
+				1A266EDD7C8CBC523E6B67A2A3AF0FE9 /* Products */,
+				FFA94AC6798B7F0715348AB0FD4C2FDB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		904BC3D9A9A1998EE6DD53287160E646 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BF205BAE1680AD747AD618BEE7BD564D /* OtpCountrySelectionCell.swift */,
+			);
+			name = Cells;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		908435666CB962325D076799A7A205B1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDE2414DB1205679C31344CA6375F768 /* Info.plist */,
+				A22EE4B193E1F0DFA8735BA37E951D95 /* MaterialTextField.modulemap */,
+				337074971EF4EAE296EB2F2DF71466DA /* MaterialTextField.xcconfig */,
+				474AF08ED2371BD60AF5BA1EF5C94C38 /* MaterialTextField-dummy.m */,
+				DA9E826C6FD952EE1FB7A0CBCCEDED28 /* MaterialTextField-prefix.pch */,
+				348F4EB5BECF54F444DE858EDABA74FF /* MaterialTextField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MaterialTextField";
+			sourceTree = "<group>";
+		};
+		AFA45455971F06915D5177E8DE68FBA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F6AC5D9FB5CD440652C26B51AC27F17 /* OtpBottomView.swift */,
+				1450D5C0006FF8E3A447374C90AA1C55 /* OtpBottomView.xib */,
+				3E26DEDDE23CD98D670A90B1403C588A /* OtpCountrySelectionView.swift */,
+				0354A512068C4963B6B0957E891D04D9 /* OtpCountrySelectionView.xib */,
+				63A0EA7854EB4652112838DA6244BBC6 /* OtpHeaderView.swift */,
+				0E6C96E73A39725DDC12A7B38B155BC6 /* OtpHeaderView.xib */,
+				DEA3D02EFCFBB3FFC122227FB2A0E68D /* OtpPinEnterView.swift */,
+				DC8871406132AC8B557584C8AFC91BF0 /* OtpPinEnterView.xib */,
+				48D0F30E42E8AB287FECD4A237232FA0 /* OtpTextfieldView.swift */,
+				05526733ECD70A2B25A7DCDE741952DA /* OtpTextfieldView.xib */,
+				904BC3D9A9A1998EE6DD53287160E646 /* Cells */,
+				24FB932BB460020DBC31A2CC64C9D071 /* Textfields */,
+			);
+			name = Views;
+			path = Sources/Views;
+			sourceTree = "<group>";
+		};
+		BC79529454661429F6AD7F98C9686159 /* Pods-OtpFlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				13B29EDAFC87715E1B475DD8182ABB95 /* Info.plist */,
+				912FF7A8DF719425DA908943E5F08C23 /* Pods-OtpFlowTests.modulemap */,
+				76E050C5A405921C0A7F90DEC793358E /* Pods-OtpFlowTests-acknowledgements.markdown */,
+				472C8760967760B11AF4D18944C67C23 /* Pods-OtpFlowTests-acknowledgements.plist */,
+				64CD0B6FA48A521630F29A5D7E781590 /* Pods-OtpFlowTests-dummy.m */,
+				CE79FE792E5528317A04B554204E4EB4 /* Pods-OtpFlowTests-frameworks.sh */,
+				5943568C2CC63B22DAB0ED66E5E92F84 /* Pods-OtpFlowTests-resources.sh */,
+				E8C079FC2D670311E5B73C4E85BE8796 /* Pods-OtpFlowTests-umbrella.h */,
+				D299982D6413122C0682CB9C8DBECD88 /* Pods-OtpFlowTests.debug.xcconfig */,
+				51F604C0666C1F156B250050DF323724 /* Pods-OtpFlowTests.release.xcconfig */,
+			);
+			name = "Pods-OtpFlowTests";
+			path = "Target Support Files/Pods-OtpFlowTests";
+			sourceTree = "<group>";
+		};
+		CB06944148C94B54CE8D2E674448879D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				EFD45E54BBCD40CB04FC7C9918A5771A /* KaoOtpFlow.podspec */,
+				48595B8D21550EDE9A107585FE165EEC /* LICENSE */,
+				19244EDA4595113F08F55EEFFC5E79AE /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		D876DCCD0BC8226398D937F55C518523 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				132CE0AFAD30807734B755C96A04C8DA /* CountryPhone.swift */,
+				BF95F7A7AF187560711991BDCB9C8003 /* CustomButtonAttributes.swift */,
+				EA8006B59431F934E540AE00D59B71F0 /* CustomDropUpDownImage.swift */,
+				B9307E5075163C66E916482EC19B872B /* CustomLabelAttributes.swift */,
+				28AF436404887EDEB9D0950CC3BDA361 /* CustomTextfieldAttributes.swift */,
+				4B1E76D28B5F5FFDCC49CB7AE1EF98F3 /* HeaderViewParams.swift */,
+				8BD925F50FF3F20AC522CCD7BF09FA73 /* TextfieldViewParams.swift */,
+			);
+			name = Models;
+			path = Sources/Models;
+			sourceTree = "<group>";
+		};
+		E041F94CE18452AE8F827445356811CE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FFA94AC6798B7F0715348AB0FD4C2FDB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0FD385EC86AD22DEE061933D6D7060FE /* Pods-OtpFlow */,
+				BC79529454661429F6AD7F98C9686159 /* Pods-OtpFlowTests */,
+				557678F87EAB767384381607120D45EB /* Pods-OtpFlowUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1F725281B9C5C01EF83423943FA15D3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08661A7A18EC1C335CCC59E5203B4A92 /* Pods-OtpFlowUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7C25583E41FC47CBFA882FAE06F1D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB344AD72F4FABC84FC63983703E0CB0 /* MaterialTextField-umbrella.h in Headers */,
+				B1218369DB5CFAAE8E80B2E8E733A54B /* MaterialTextField.h in Headers */,
+				F17E363A8A6274624190EFFD7444D869 /* MFTextField.h in Headers */,
+				9C9F1D90B855D3F326F8A876A95D252C /* UIColor+MaterialTextField.h in Headers */,
+				F638EABE30CBEEFF9C115D5F7D988828 /* UIFont+MaterialTextField.h in Headers */,
+				E10B36C76D72E8079EF7CC91059D0726 /* UIImage+MFTint.h in Headers */,
+				41694FCCB9F1B9F3C699AF9639498CA7 /* UITextField+MFClearButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C5EA311866673101416D8DBF6C53890 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D77B88198759DF34116E28CC23B24C1 /* KaoOtpFlow-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7387600BEAA12360B716D1F2915B1A12 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F1D42464BF4D7582CC963AF7647DAE9 /* Pods-OtpFlow-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3965993B61C8428CA204E8BCA63884F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5020381C5F8D8EE61D78FEA8EB9E923 /* Pods-OtpFlowTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AFBAAB008E10B836721A697EE9790FD /* Pods-OtpFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4387A0883D8202D2FD7F8854A296A6F5 /* Build configuration list for PBXNativeTarget "Pods-OtpFlow" */;
+			buildPhases = (
+				35089CB6C0633F521954918D58A63618 /* Sources */,
+				DC4E470E9135698501818EBB9768E14F /* Frameworks */,
+				7387600BEAA12360B716D1F2915B1A12 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B45BC563EF0F34FAB572B9608F9A3B40 /* PBXTargetDependency */,
+				610E3EA847FA4EADCA224D0965E99696 /* PBXTargetDependency */,
+			);
+			name = "Pods-OtpFlow";
+			productName = "Pods-OtpFlow";
+			productReference = 624357B8BD87272A7DF6A3FB639386BC /* Pods_OtpFlow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		24C587F0F413AAAD75DBFDF22D8EF46C /* Pods-OtpFlowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 257AB244CF6EEE823CA60EF2CAA04745 /* Build configuration list for PBXNativeTarget "Pods-OtpFlowUITests" */;
+			buildPhases = (
+				C1365798411855EF8F79977BC6DDF3D8 /* Sources */,
+				D023C10DD9EFDD693D846D0DD1356532 /* Frameworks */,
+				1F725281B9C5C01EF83423943FA15D3A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				805D56C1E1BDC6CD3442772B93D8FF10 /* PBXTargetDependency */,
+			);
+			name = "Pods-OtpFlowUITests";
+			productName = "Pods-OtpFlowUITests";
+			productReference = EB548EE52BE8E4AF6B73DE277228CFB2 /* Pods_OtpFlowUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3CB6FBF784812F7B41B234868941A3B0 /* Pods-OtpFlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7477A178397446F078DEA2D5DD2EB8C0 /* Build configuration list for PBXNativeTarget "Pods-OtpFlowTests" */;
+			buildPhases = (
+				1672C41F36002F87310CE6C06F7D2AB6 /* Sources */,
+				69AA1454510A34D5C776E0C9F86CB29E /* Frameworks */,
+				A3965993B61C8428CA204E8BCA63884F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61517294F46EA5C18731F913D9AA1E22 /* PBXTargetDependency */,
+			);
+			name = "Pods-OtpFlowTests";
+			productName = "Pods-OtpFlowTests";
+			productReference = 4688CA8D3E8A223ADB32D21A05356F5C /* Pods_OtpFlowTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4DADE24C21A144C751FFD5ABFC04B70D /* MaterialTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5A342C3D9719453C9C23F16A6AB653D /* Build configuration list for PBXNativeTarget "MaterialTextField" */;
+			buildPhases = (
+				5B2103265EAE283D86CB1F07ECDA1FC2 /* Sources */,
+				B49084C78407B8FB13AD34F9C7B429D8 /* Frameworks */,
+				5C7C25583E41FC47CBFA882FAE06F1D2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaterialTextField;
+			productName = MaterialTextField;
+			productReference = 3527CEA07752F7F956256C3A36EECEDA /* MaterialTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		948995507FC668E25DAAE62543BF7017 /* KaoOtpFlow-OtpCustomPod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3190F88DF641143BA28DBD587D04080 /* Build configuration list for PBXNativeTarget "KaoOtpFlow-OtpCustomPod" */;
+			buildPhases = (
+				D88528BF9502AA0FC96A539494357B90 /* Sources */,
+				B62D536115F2478F9D5A889EC81FDAC6 /* Frameworks */,
+				6085E689916F5422CD2A6BDBCA171D15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KaoOtpFlow-OtpCustomPod";
+			productName = "KaoOtpFlow-OtpCustomPod";
+			productReference = A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		E84326AD8E7E8D4698B8A08CADA7D50E /* KaoOtpFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72BD2E1ACD153A76705D12FFAF531DAD /* Build configuration list for PBXNativeTarget "KaoOtpFlow" */;
+			buildPhases = (
+				CF228127795B8F588E13354EDD3E7364 /* Sources */,
+				6BB17917137456A822335C261626A69E /* Frameworks */,
+				192FA4C34816FA74FE255668E9FB5A6C /* Resources */,
+				6C5EA311866673101416D8DBF6C53890 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE582639CBBC4024A4CBF1E4F0BD34D0 /* PBXTargetDependency */,
+				577AFF94C9C3AEA162E3FA4F7F8B3947 /* PBXTargetDependency */,
+			);
+			name = KaoOtpFlow;
+			productName = KaoOtpFlow;
+			productReference = B2B30232378E4FC977506A6D5487CDD5 /* KaoOtpFlow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1A266EDD7C8CBC523E6B67A2A3AF0FE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E84326AD8E7E8D4698B8A08CADA7D50E /* KaoOtpFlow */,
+				948995507FC668E25DAAE62543BF7017 /* KaoOtpFlow-OtpCustomPod */,
+				4DADE24C21A144C751FFD5ABFC04B70D /* MaterialTextField */,
+				0AFBAAB008E10B836721A697EE9790FD /* Pods-OtpFlow */,
+				3CB6FBF784812F7B41B234868941A3B0 /* Pods-OtpFlowTests */,
+				24C587F0F413AAAD75DBFDF22D8EF46C /* Pods-OtpFlowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		192FA4C34816FA74FE255668E9FB5A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED428D536A4180C2E1FEFEC783C0003 /* OtpCustomPod.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6085E689916F5422CD2A6BDBCA171D15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F16CC869E3017DAE2C445A3514DF170 /* OtpBottomView.xib in Resources */,
+				49B388EB32DABDBC8AFDE62D889B3332 /* OtpCountrySelectionView.xib in Resources */,
+				DD071F04EC02B6707C19E9E3AE66596D /* OtpHeaderView.xib in Resources */,
+				6573C49443F8A54D509ABCBB922AFB70 /* OtpPinEnterView.xib in Resources */,
+				58FCA707584C19ECBD07775AA4D317C2 /* OtpTextfieldView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1672C41F36002F87310CE6C06F7D2AB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB4CB855A1A1A6A24D14EAB903EC20C7 /* Pods-OtpFlowTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35089CB6C0633F521954918D58A63618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C47055CA0C68FF072FE8D36E40D1E97 /* Pods-OtpFlow-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B2103265EAE283D86CB1F07ECDA1FC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68F6A96CF8C10E2B418B9EA0EFAABEBF /* MaterialTextField-dummy.m in Sources */,
+				84336EF4CFAA2D4F9A2FC68FC87B4C97 /* MFTextField.m in Sources */,
+				398DF7FB67D4362196E2D67346EDF3AF /* UIColor+MaterialTextField.m in Sources */,
+				8DB3FE712E5F9E8FD3B4D165949E9582 /* UIFont+MaterialTextField.m in Sources */,
+				DDE66A5732E2DA019159DEC598C7B819 /* UIImage+MFTint.m in Sources */,
+				59B57151535BADB76FB63A58202EF3FB /* UITextField+MFClearButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1365798411855EF8F79977BC6DDF3D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831CE1E7B65E08B36162165111C01F55 /* Pods-OtpFlowUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF228127795B8F588E13354EDD3E7364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1908B3B8ACFD3104D632CBDAACE1B296 /* CountryPhone.swift in Sources */,
+				98E9DB32EC7C65C76E9B87402B32ECF1 /* CustomButtonAttributes.swift in Sources */,
+				69C2257F71954DB343D7BFD227C58418 /* CustomDropUpDownImage.swift in Sources */,
+				6D09CD64F00CF9A558E4EFA95B854ED3 /* CustomLabelAttributes.swift in Sources */,
+				07FFCEEC24AB23E3F954ADE898E83E55 /* CustomTextfieldAttributes.swift in Sources */,
+				CE25D136A7C7D74DE90BBF05A69B9BDB /* HeaderViewParams.swift in Sources */,
+				377905A52B7DEDFDA8EF68E23C29DB01 /* KaoOtpFlow-dummy.m in Sources */,
+				763226E0595257B4A15322833B88734A /* OtpBottomView.swift in Sources */,
+				A51990633261FFB0D1DD64EC305FB3CB /* OtpBottomView.xib in Sources */,
+				58F6013BB939AA3B6C8FC55B36603539 /* OtpCountrySelectionCell.swift in Sources */,
+				0B0CF607CB01BBD66EB156279EF20F3C /* OtpCountrySelectionView.swift in Sources */,
+				5E2B7E33A8202D7D9AA1120BEB8DAE92 /* OtpCountrySelectionView.xib in Sources */,
+				C8EC9108266150C2E3D42A59960D1B48 /* OtpHeaderView.swift in Sources */,
+				7750A46EA99C8669A9DDA05566C9E93D /* OtpHeaderView.xib in Sources */,
+				B8DCE5634A2906BD8216AB0511E5E522 /* OtpPinEnterView.swift in Sources */,
+				C9184EBB86EAC2197452EBD90E2900B3 /* OtpPinEnterView.xib in Sources */,
+				C9A4017C2E7B57905C666E41D776FFD8 /* OtpPinTextfield.swift in Sources */,
+				978C28D670DEA3D8491B4BBE9A634600 /* OtpTextfieldView.swift in Sources */,
+				758D9AA78AC3DB71A355B5030EFF9EF5 /* OtpTextfieldView.xib in Sources */,
+				76D9B37EEB2954E171D088B7A96DD7B8 /* PhoneEnteringViewController.swift in Sources */,
+				9EF69B942B6AF2AA81AD87F3847251A9 /* PhoneEnterProtocol.swift in Sources */,
+				DF4648EB6AD3E8743ABF6FBE88E0F980 /* PhoneVerifyingViewController.swift in Sources */,
+				070ECDDF4C61A7B513D288A05F5DDCC2 /* PhoneVerifyProtocol.swift in Sources */,
+				85449D219DAE906A2C89DC9F965BBB8A /* TextfieldViewParams.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88528BF9502AA0FC96A539494357B90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		577AFF94C9C3AEA162E3FA4F7F8B3947 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MaterialTextField;
+			target = 4DADE24C21A144C751FFD5ABFC04B70D /* MaterialTextField */;
+			targetProxy = 1DB53A1EAB3816B812B76B6107B7620B /* PBXContainerItemProxy */;
+		};
+		610E3EA847FA4EADCA224D0965E99696 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MaterialTextField;
+			target = 4DADE24C21A144C751FFD5ABFC04B70D /* MaterialTextField */;
+			targetProxy = FB90A44CF0AB218FB8EFCA5ED0C22248 /* PBXContainerItemProxy */;
+		};
+		61517294F46EA5C18731F913D9AA1E22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-OtpFlow";
+			target = 0AFBAAB008E10B836721A697EE9790FD /* Pods-OtpFlow */;
+			targetProxy = A228B9180122432A89DBAC270E8C8047 /* PBXContainerItemProxy */;
+		};
+		805D56C1E1BDC6CD3442772B93D8FF10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-OtpFlow";
+			target = 0AFBAAB008E10B836721A697EE9790FD /* Pods-OtpFlow */;
+			targetProxy = 51D87700244BF581614CE14BFB1BE97B /* PBXContainerItemProxy */;
+		};
+		B45BC563EF0F34FAB572B9608F9A3B40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KaoOtpFlow;
+			target = E84326AD8E7E8D4698B8A08CADA7D50E /* KaoOtpFlow */;
+			targetProxy = 90C626A5BCAE86BF73AFD7BC504E4C37 /* PBXContainerItemProxy */;
+		};
+		BE582639CBBC4024A4CBF1E4F0BD34D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KaoOtpFlow-OtpCustomPod";
+			target = 948995507FC668E25DAAE62543BF7017 /* KaoOtpFlow-OtpCustomPod */;
+			targetProxy = EC77D0937389259490D8872B6F3FCDBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00F224F1342EA94714BD2D2F8902B938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CF717E54920BAF4469B53253FC20995 /* Pods-OtpFlowUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowUITests/Pods-OtpFlowUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0BE4EDDDE1A976A616950D44ED86AA20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D13FFEEE5BE1ED679BFD8AB7A3AFDCB7 /* KaoOtpFlow.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KaoOtpFlow/KaoOtpFlow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KaoOtpFlow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KaoOtpFlow/KaoOtpFlow.modulemap";
+				PRODUCT_MODULE_NAME = KaoOtpFlow;
+				PRODUCT_NAME = KaoOtpFlow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1DB9B350D6EFF307A4C513729B1AEF06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0979E4856C769804BFBBC7A273E7F12 /* Pods-OtpFlow.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlow/Pods-OtpFlow.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		40446A4FBB0D7E0B34F576676810F6B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D13FFEEE5BE1ED679BFD8AB7A3AFDCB7 /* KaoOtpFlow.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KaoOtpFlow";
+				INFOPLIST_FILE = "Target Support Files/KaoOtpFlow/ResourceBundle-OtpCustomPod-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = OtpCustomPod;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		51B1A64DB378F176D8FF64F85E8F13A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 337074971EF4EAE296EB2F2DF71466DA /* MaterialTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MaterialTextField/MaterialTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MaterialTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MaterialTextField/MaterialTextField.modulemap";
+				PRODUCT_MODULE_NAME = MaterialTextField;
+				PRODUCT_NAME = MaterialTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5D0F28135B1C47CAAD092EF1F807D7F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51F604C0666C1F156B250050DF323724 /* Pods-OtpFlowTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowTests/Pods-OtpFlowTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		77C18E62817DAD1C88FA7214C94BE0F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 337074971EF4EAE296EB2F2DF71466DA /* MaterialTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MaterialTextField/MaterialTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MaterialTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MaterialTextField/MaterialTextField.modulemap";
+				PRODUCT_MODULE_NAME = MaterialTextField;
+				PRODUCT_NAME = MaterialTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8492F8CFFEA87C6435CF18BEAC84D7F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D13FFEEE5BE1ED679BFD8AB7A3AFDCB7 /* KaoOtpFlow.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KaoOtpFlow/KaoOtpFlow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KaoOtpFlow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KaoOtpFlow/KaoOtpFlow.modulemap";
+				PRODUCT_MODULE_NAME = KaoOtpFlow;
+				PRODUCT_NAME = KaoOtpFlow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		88BEFD2B54364484E934647693442D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D299982D6413122C0682CB9C8DBECD88 /* Pods-OtpFlowTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowTests/Pods-OtpFlowTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		98163ADD6D2959A93B7A1661A361DA4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D13FFEEE5BE1ED679BFD8AB7A3AFDCB7 /* KaoOtpFlow.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KaoOtpFlow";
+				INFOPLIST_FILE = "Target Support Files/KaoOtpFlow/ResourceBundle-OtpCustomPod-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = OtpCustomPod;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C1BBCF0F7FFFC0E254346E8D62DBCA25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2DFF6DD6EA0E3FBE24911294FCD329F /* Pods-OtpFlow.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlow/Pods-OtpFlow.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C9B872FCC7AF0542CD821A48DF111A2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCFA98BFB8152752B412958B60B4FAA8 /* Pods-OtpFlowUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowUITests/Pods-OtpFlowUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		257AB244CF6EEE823CA60EF2CAA04745 /* Build configuration list for PBXNativeTarget "Pods-OtpFlowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F224F1342EA94714BD2D2F8902B938 /* Debug */,
+				C9B872FCC7AF0542CD821A48DF111A2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
+				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4387A0883D8202D2FD7F8854A296A6F5 /* Build configuration list for PBXNativeTarget "Pods-OtpFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DB9B350D6EFF307A4C513729B1AEF06 /* Debug */,
+				C1BBCF0F7FFFC0E254346E8D62DBCA25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72BD2E1ACD153A76705D12FFAF531DAD /* Build configuration list for PBXNativeTarget "KaoOtpFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8492F8CFFEA87C6435CF18BEAC84D7F6 /* Debug */,
+				0BE4EDDDE1A976A616950D44ED86AA20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7477A178397446F078DEA2D5DD2EB8C0 /* Build configuration list for PBXNativeTarget "Pods-OtpFlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88BEFD2B54364484E934647693442D39 /* Debug */,
+				5D0F28135B1C47CAAD092EF1F807D7F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3190F88DF641143BA28DBD587D04080 /* Build configuration list for PBXNativeTarget "KaoOtpFlow-OtpCustomPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98163ADD6D2959A93B7A1661A361DA4D /* Debug */,
+				40446A4FBB0D7E0B34F576676810F6B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5A342C3D9719453C9C23F16A6AB653D /* Build configuration list for PBXNativeTarget "MaterialTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51B1A64DB378F176D8FF64F85E8F13A4 /* Debug */,
+				77C18E62817DAD1C88FA7214C94BE0F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

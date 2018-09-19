@@ -11,13 +11,15 @@ KaoOtpFlow provide complete ui for otp and allow you to inject your own endpoint
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Augustius' => 'tech+ios@kaodim.com' }
   s.source           = { :git => 'https://auyotoc@bitbucket.org/kaodim/kao-ios-otp.git', :tag => s.version.to_s }
- 
+
   s.source_files = 'Sources/**/*'
     s.resource_bundles = {
     'OtpCustomPod' => [
         'Sources/**/*.xib'
     ]
   }
+
+  s.dependency 'MaterialTextField', '~> 0.2'
 
   s.pod_target_xcconfig = {
      "SWIFT_VERSION" => "4.0",
