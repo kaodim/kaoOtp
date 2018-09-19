@@ -9,7 +9,7 @@
 import Foundation
 import MaterialTextField
 
-class NumberFieldView: UIView {
+public class NumberFieldView: UIView {
     
     @IBOutlet weak private var flagImageView: UIImageView!
     @IBOutlet weak private var countryCodeLabel: UILabel!
@@ -21,12 +21,12 @@ class NumberFieldView: UIView {
     @IBOutlet weak private var fieldHeightConstraint: NSLayoutConstraint!
     
     var selectionViewDidSelect: (() -> Void)?
-    var updateValidationState: ((Credential,Bool) -> Void)?
-    var selectedCountry: SelectionData?
+//    var updateValidationState: ((Credential,Bool) -> Void)?
+//    var selectedCountry: SelectionData?
     var countryPhone: CountryPhone?
     var countryCode: String?
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClickSelectionView))
         selectionView.addGestureRecognizer(tapGesture)
         numberField.delegate = self
@@ -36,30 +36,30 @@ class NumberFieldView: UIView {
         configureClearTextField()
     }
     
-    func configureView(with selectedCountry: SelectionData?) {
-        self.selectedCountry = selectedCountry
-        self.countryCode = selectedCountry?.code
-        flagImageView.image = UIImage(named: selectedCountry?.flag ?? "")
-        countryCodeLabel.text = "(\(selectedCountry?.code ?? ""))"
-        if (numberField.text ?? "").count >= 5 {
-            updateValidationState?(.username, isValid(with: true))
-        } else {
-            numberField.setErrorMessage(errorMessage: "")
-        }
-    }
-    
-    func configureView(with selectedCountry: CountryPhone?) {
-        countryPhone = selectedCountry
-        countryCode = selectedCountry?.phoneExtension
-        flagImageView.image = selectedCountry?.icon
-        countryCodeLabel.text = "(\(selectedCountry?.phoneExtension ?? ""))"
-        if (numberField.text ?? "").count >= 5 {
-            updateValidationState?(.username, isValid(with: true))
-        } else {
-            numberField.setErrorMessage(errorMessage: "")
-        }
-    }
-    
+//    func configureView(with selectedCountry: SelectionData?) {
+//        self.selectedCountry = selectedCountry
+//        self.countryCode = selectedCountry?.code
+//        flagImageView.image = UIImage(named: selectedCountry?.flag ?? "")
+//        countryCodeLabel.text = "(\(selectedCountry?.code ?? ""))"
+//        if (numberField.text ?? "").count >= 5 {
+//            updateValidationState?(.username, isValid(with: true))
+//        } else {
+//            numberField.setErrorMessage(errorMessage: "")
+//        }
+//    }
+
+//    func configureView(with selectedCountry: CountryPhone?) {
+//        countryPhone = selectedCountry
+//        countryCode = selectedCountry?.phoneExtension
+//        flagImageView.image = selectedCountry?.icon
+//        countryCodeLabel.text = "(\(selectedCountry?.phoneExtension ?? ""))"
+//        if (numberField.text ?? "").count >= 5 {
+//            updateValidationState?(.username, isValid(with: true))
+//        } else {
+//            numberField.setErrorMessage(errorMessage: "")
+//        }
+//    }
+
     func textfieldBecomeResponder() {
         numberField.becomeFirstResponder()
     }
@@ -84,24 +84,24 @@ class NumberFieldView: UIView {
     }
     
     func configureClearTextField() {
-        numberField.setUpClearTheme()
+//        numberField.setUpClearTheme()
         fieldHeightConstraint.constant = 50
     }
     
-    func configureField(mode: ViewMode) {
-        if mode == .landing {
-            fieldLeadingConstraint.constant = 15
-            fieldTrailingConstraint.constant = 15
-            fieldHeightConstraint.constant = 50
-            numberField.setUpClearTheme()
-        } else {
-            fieldLeadingConstraint.constant = 0
-            fieldTrailingConstraint.constant = 0
-            fieldHeightConstraint.constant = 64
-            numberField.setupCustomTheme(placeHolder: "Enter mobile number", type: .mobileNumber)
-        }
-    }
-    
+//    func configureField(mode: ViewMode) {
+//        if mode == .landing {
+//            fieldLeadingConstraint.constant = 15
+//            fieldTrailingConstraint.constant = 15
+//            fieldHeightConstraint.constant = 50
+//            numberField.setUpClearTheme()
+//        } else {
+//            fieldLeadingConstraint.constant = 0
+//            fieldTrailingConstraint.constant = 0
+//            fieldHeightConstraint.constant = 64
+//            numberField.setupCustomTheme(placeHolder: "Enter mobile number", type: .mobileNumber)
+//        }
+//    }
+
     func getNumberWithCode() -> String {
         let number = numberField.text?.first == "0" ? String(numberField.text?.dropFirst() ?? "") : (numberField.text ?? "")
         return (countryCode?.replacingOccurrences(of: "+", with: "") ?? "") + (number)
@@ -114,28 +114,28 @@ class NumberFieldView: UIView {
 
 extension NumberFieldView : UITextFieldDelegate {
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         let mfTextFiled = (textField as? MFTextField)
         mfTextFiled?.setError(nil, animated: true)
     }
     
     @objc func onTextEditingChange(_ textField: UITextField) {
         
-        if (textField.text ?? "").count >= 5 {
-            updateValidationState?(.username, isValid(with: true))
-        } else {
-            numberField.setErrorMessage(errorMessage: "")
-        }
+//        if (textField.text ?? "").count >= 5 {
+//            updateValidationState?(.username, isValid(with: true))
+//        } else {
+//            numberField.setErrorMessage(errorMessage: "")
+//        }
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         
-        updateValidationState?(.username, isValid(with: true))
+//        updateValidationState?(.username, isValid(with: true))
     }
     
-    func isValid(with error: Bool) -> Bool {
-        let number = "\(countryCode ?? "")" + "\(numberField.text ?? "")"
-        return Validator.shared.validateNumber(number: number, textField: numberField, setError: error)
-    }
+//    func isValid(with error: Bool) -> Bool {
+//        let number = "\(countryCode ?? "")" + "\(numberField.text ?? "")"
+//        return Validator.shared.validateNumber(number: number, textField: numberField, setError: error)
+//    }
 }
 
