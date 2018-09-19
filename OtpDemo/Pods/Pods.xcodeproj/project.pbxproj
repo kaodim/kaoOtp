@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,8 @@
 		7750A46EA99C8669A9DDA05566C9E93D /* OtpHeaderView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C96E73A39725DDC12A7B38B155BC6 /* OtpHeaderView.xib */; };
 		77659D4AFE01088EB066D56FC305D711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
 		7F16CC869E3017DAE2C445A3514DF170 /* OtpBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1450D5C0006FF8E3A447374C90AA1C55 /* OtpBottomView.xib */; };
+		7F2CD1B52152072900706D4D /* NumberFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2CD1B32152072800706D4D /* NumberFieldView.swift */; };
+		7F2CD1B62152072900706D4D /* NumberFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2CD1B42152072800706D4D /* NumberFieldView.xib */; };
 		831CE1E7B65E08B36162165111C01F55 /* Pods-OtpFlowUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 722E6413BCD1969849FB5D6DBE388AC7 /* Pods-OtpFlowUITests-dummy.m */; };
 		84336EF4CFAA2D4F9A2FC68FC87B4C97 /* MFTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6E140560DAC7653A469A96387210A /* MFTextField.m */; };
 		85449D219DAE906A2C89DC9F965BBB8A /* TextfieldViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD925F50FF3F20AC522CCD7BF09FA73 /* TextfieldViewParams.swift */; };
@@ -121,7 +123,7 @@
 		132CE0AFAD30807734B755C96A04C8DA /* CountryPhone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountryPhone.swift; sourceTree = "<group>"; };
 		13B29EDAFC87715E1B475DD8182ABB95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1450D5C0006FF8E3A447374C90AA1C55 /* OtpBottomView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpBottomView.xib; sourceTree = "<group>"; };
-		19244EDA4595113F08F55EEFFC5E79AE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		19244EDA4595113F08F55EEFFC5E79AE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1AE6E140560DAC7653A469A96387210A /* MFTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MFTextField.m; path = MaterialTextField/MFTextField.m; sourceTree = "<group>"; };
 		1F2C81F6BF8F1C1261DA6F86233D35E6 /* KaoOtpFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KaoOtpFlow-dummy.m"; sourceTree = "<group>"; };
 		1F6AC5D9FB5CD440652C26B51AC27F17 /* OtpBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpBottomView.swift; sourceTree = "<group>"; };
@@ -134,16 +136,16 @@
 		323F077AFDBDC38B81663F73F82AF62F /* Pods-OtpFlow-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlow-resources.sh"; sourceTree = "<group>"; };
 		337074971EF4EAE296EB2F2DF71466DA /* MaterialTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MaterialTextField.xcconfig; sourceTree = "<group>"; };
 		348F4EB5BECF54F444DE858EDABA74FF /* MaterialTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaterialTextField-umbrella.h"; sourceTree = "<group>"; };
-		3527CEA07752F7F956256C3A36EECEDA /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MaterialTextField.framework; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3527CEA07752F7F956256C3A36EECEDA /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		371B5B2BE4A1DBB23C5566C6DD96695A /* Pods-OtpFlowUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OtpFlowUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3E26DEDDE23CD98D670A90B1403C588A /* OtpCountrySelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionView.swift; sourceTree = "<group>"; };
 		3ED61CD87BDC8D055E6E414FCC5849D2 /* UIColor+MaterialTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+MaterialTextField.h"; path = "MaterialTextField/UIColor+MaterialTextField.h"; sourceTree = "<group>"; };
-		4688CA8D3E8A223ADB32D21A05356F5C /* Pods_OtpFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlowTests.framework; path = "Pods-OtpFlowTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4688CA8D3E8A223ADB32D21A05356F5C /* Pods_OtpFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		472C8760967760B11AF4D18944C67C23 /* Pods-OtpFlowTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OtpFlowTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		474AF08ED2371BD60AF5BA1EF5C94C38 /* MaterialTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MaterialTextField-dummy.m"; sourceTree = "<group>"; };
 		4833702864B5C633765785B5BE9B0A7C /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48570B0A3C5BE894F0EF2CD8CECB4F1B /* Pods-OtpFlowUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OtpFlowUITests.modulemap"; sourceTree = "<group>"; };
-		48595B8D21550EDE9A107585FE165EEC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		48595B8D21550EDE9A107585FE165EEC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		48D0F30E42E8AB287FECD4A237232FA0 /* OtpTextfieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpTextfieldView.swift; sourceTree = "<group>"; };
 		4B15DD26FDB68ACB4BB03CAAC4408D76 /* MFTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MFTextField.h; path = MaterialTextField/MFTextField.h; sourceTree = "<group>"; };
 		4B1E76D28B5F5FFDCC49CB7AE1EF98F3 /* HeaderViewParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeaderViewParams.swift; sourceTree = "<group>"; };
@@ -151,7 +153,7 @@
 		51F604C0666C1F156B250050DF323724 /* Pods-OtpFlowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowTests.release.xcconfig"; sourceTree = "<group>"; };
 		53B6BAFA6377FCCCF3866EA631B31E24 /* KaoOtpFlow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KaoOtpFlow-umbrella.h"; sourceTree = "<group>"; };
 		5943568C2CC63B22DAB0ED66E5E92F84 /* Pods-OtpFlowTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowTests-resources.sh"; sourceTree = "<group>"; };
-		624357B8BD87272A7DF6A3FB639386BC /* Pods_OtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlow.framework; path = "Pods-OtpFlow.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		624357B8BD87272A7DF6A3FB639386BC /* Pods_OtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63864FF412A343FC808EF80C8FDB54EE /* Pods-OtpFlow-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OtpFlow-acknowledgements.markdown"; sourceTree = "<group>"; };
 		63A0EA7854EB4652112838DA6244BBC6 /* OtpHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpHeaderView.swift; sourceTree = "<group>"; };
 		64CD0B6FA48A521630F29A5D7E781590 /* Pods-OtpFlowTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OtpFlowTests-dummy.m"; sourceTree = "<group>"; };
@@ -163,19 +165,21 @@
 		76E050C5A405921C0A7F90DEC793358E /* Pods-OtpFlowTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OtpFlowTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		76F48C820BFE7F4A02C98A0925C870D2 /* Pods-OtpFlowUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowUITests-resources.sh"; sourceTree = "<group>"; };
 		7E8954414AF28DE5D7443B462D5F5B45 /* KaoOtpFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KaoOtpFlow.modulemap; sourceTree = "<group>"; };
+		7F2CD1B32152072800706D4D /* NumberFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFieldView.swift; sourceTree = "<group>"; };
+		7F2CD1B42152072800706D4D /* NumberFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberFieldView.xib; sourceTree = "<group>"; };
 		815BFBB4594D62769FC571577961AFB7 /* UIColor+MaterialTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MaterialTextField.m"; path = "MaterialTextField/UIColor+MaterialTextField.m"; sourceTree = "<group>"; };
 		8BD925F50FF3F20AC522CCD7BF09FA73 /* TextfieldViewParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextfieldViewParams.swift; sourceTree = "<group>"; };
 		912FF7A8DF719425DA908943E5F08C23 /* Pods-OtpFlowTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OtpFlowTests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		967E657DE7891EEF8FB60BD2E631DE3F /* OtpPinTextfield.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpPinTextfield.swift; sourceTree = "<group>"; };
 		9771597A36DEC27560C556CEFABF1C95 /* UIFont+MaterialTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+MaterialTextField.m"; path = "MaterialTextField/UIFont+MaterialTextField.m"; sourceTree = "<group>"; };
 		9D0D7762A19D060900BD42D2494BE0E9 /* UIImage+MFTint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MFTint.m"; path = "MaterialTextField/UIImage+MFTint.m"; sourceTree = "<group>"; };
 		9E2BA7D2EB38C5F2258AD61C3A0A8F71 /* Pods-OtpFlowUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowUITests-frameworks.sh"; sourceTree = "<group>"; };
 		A22EE4B193E1F0DFA8735BA37E951D95 /* MaterialTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MaterialTextField.modulemap; sourceTree = "<group>"; };
-		A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = OtpCustomPod.bundle; path = "KaoOtpFlow-OtpCustomPod.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtpCustomPod.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A9C9746525BC00488A31C405A2070E /* UIFont+MaterialTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+MaterialTextField.h"; path = "MaterialTextField/UIFont+MaterialTextField.h"; sourceTree = "<group>"; };
 		A972D01932874F3D61F8D7D9CCBCA98A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2B30232378E4FC977506A6D5487CDD5 /* KaoOtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KaoOtpFlow.framework; path = KaoOtpFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2B30232378E4FC977506A6D5487CDD5 /* KaoOtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KaoOtpFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9307E5075163C66E916482EC19B872B /* CustomLabelAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomLabelAttributes.swift; sourceTree = "<group>"; };
 		BA482109F28A4E25F128F5BDF0888479 /* PhoneVerifyProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneVerifyProtocol.swift; sourceTree = "<group>"; };
 		BBA07778E5A7A3B651E58A0A263D04AF /* ResourceBundle-OtpCustomPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-OtpCustomPod-Info.plist"; sourceTree = "<group>"; };
@@ -194,10 +198,10 @@
 		E8C079FC2D670311E5B73C4E85BE8796 /* Pods-OtpFlowTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OtpFlowTests-umbrella.h"; sourceTree = "<group>"; };
 		EA488ABADD2621932DC383E4480B1307 /* PhoneEnterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneEnterProtocol.swift; sourceTree = "<group>"; };
 		EA8006B59431F934E540AE00D59B71F0 /* CustomDropUpDownImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomDropUpDownImage.swift; sourceTree = "<group>"; };
-		EB548EE52BE8E4AF6B73DE277228CFB2 /* Pods_OtpFlowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlowUITests.framework; path = "Pods-OtpFlowUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB548EE52BE8E4AF6B73DE277228CFB2 /* Pods_OtpFlowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE7EEB7ADAA4C8E7E8F5C577C57F366 /* MaterialTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaterialTextField.h; path = MaterialTextField/MaterialTextField.h; sourceTree = "<group>"; };
 		EDE2414DB1205679C31344CA6375F768 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFD45E54BBCD40CB04FC7C9918A5771A /* KaoOtpFlow.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = KaoOtpFlow.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EFD45E54BBCD40CB04FC7C9918A5771A /* KaoOtpFlow.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = KaoOtpFlow.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F2DFF6DD6EA0E3FBE24911294FCD329F /* Pods-OtpFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlow.release.xcconfig"; sourceTree = "<group>"; };
 		FCFA98BFB8152752B412958B60B4FAA8 /* Pods-OtpFlowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -325,7 +329,6 @@
 			children = (
 				967E657DE7891EEF8FB60BD2E631DE3F /* OtpPinTextfield.swift */,
 			);
-			name = Textfields;
 			path = Textfields;
 			sourceTree = "<group>";
 		};
@@ -403,7 +406,6 @@
 				2D882C6EEC5ECECC8F05752BBD5F93F1 /* UITextField+MFClearButton.m */,
 				908435666CB962325D076799A7A205B1 /* Support Files */,
 			);
-			name = MaterialTextField;
 			path = MaterialTextField;
 			sourceTree = "<group>";
 		};
@@ -431,7 +433,6 @@
 			children = (
 				BF205BAE1680AD747AD618BEE7BD564D /* OtpCountrySelectionCell.swift */,
 			);
-			name = Cells;
 			path = Cells;
 			sourceTree = "<group>";
 		};
@@ -462,6 +463,8 @@
 				DC8871406132AC8B557584C8AFC91BF0 /* OtpPinEnterView.xib */,
 				48D0F30E42E8AB287FECD4A237232FA0 /* OtpTextfieldView.swift */,
 				05526733ECD70A2B25A7DCDE741952DA /* OtpTextfieldView.xib */,
+				7F2CD1B32152072800706D4D /* NumberFieldView.swift */,
+				7F2CD1B42152072800706D4D /* NumberFieldView.xib */,
 				904BC3D9A9A1998EE6DD53287160E646 /* Cells */,
 				24FB932BB460020DBC31A2CC64C9D071 /* Textfields */,
 			);
@@ -727,6 +730,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2CD1B62152072900706D4D /* NumberFieldView.xib in Resources */,
 				5ED428D536A4180C2E1FEFEC783C0003 /* OtpCustomPod.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -804,6 +808,7 @@
 				B8DCE5634A2906BD8216AB0511E5E522 /* OtpPinEnterView.swift in Sources */,
 				C9184EBB86EAC2197452EBD90E2900B3 /* OtpPinEnterView.xib in Sources */,
 				C9A4017C2E7B57905C666E41D776FFD8 /* OtpPinTextfield.swift in Sources */,
+				7F2CD1B52152072900706D4D /* NumberFieldView.swift in Sources */,
 				978C28D670DEA3D8491B4BBE9A634600 /* OtpTextfieldView.swift in Sources */,
 				758D9AA78AC3DB71A355B5030EFF9EF5 /* OtpTextfieldView.xib in Sources */,
 				76D9B37EEB2954E171D088B7A96DD7B8 /* PhoneEnteringViewController.swift in Sources */,
@@ -881,11 +886,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowUITests/Pods-OtpFlowUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -918,11 +919,7 @@
 				INFOPLIST_FILE = "Target Support Files/KaoOtpFlow/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KaoOtpFlow/KaoOtpFlow.modulemap";
 				PRODUCT_MODULE_NAME = KaoOtpFlow;
 				PRODUCT_NAME = KaoOtpFlow;
@@ -956,11 +953,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlow/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlow/Pods-OtpFlow.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1011,11 +1004,7 @@
 				INFOPLIST_FILE = "Target Support Files/MaterialTextField/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MaterialTextField/MaterialTextField.modulemap";
 				PRODUCT_MODULE_NAME = MaterialTextField;
 				PRODUCT_NAME = MaterialTextField;
@@ -1047,11 +1036,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowTests/Pods-OtpFlowTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1148,11 +1133,7 @@
 				INFOPLIST_FILE = "Target Support Files/MaterialTextField/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MaterialTextField/MaterialTextField.modulemap";
 				PRODUCT_MODULE_NAME = MaterialTextField;
 				PRODUCT_NAME = MaterialTextField;
@@ -1184,11 +1165,7 @@
 				INFOPLIST_FILE = "Target Support Files/KaoOtpFlow/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KaoOtpFlow/KaoOtpFlow.modulemap";
 				PRODUCT_MODULE_NAME = KaoOtpFlow;
 				PRODUCT_NAME = KaoOtpFlow;
@@ -1221,11 +1198,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowTests/Pods-OtpFlowTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1333,11 +1306,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlow/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlow/Pods-OtpFlow.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1373,11 +1342,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowUITests/Pods-OtpFlowUITests.modulemap";
 				OTHER_LDFLAGS = "";
