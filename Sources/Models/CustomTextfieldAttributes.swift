@@ -16,13 +16,22 @@ public struct CustomTextfieldAttributes {
     let placeholderColor: UIColor
     let lineColor: UIColor
     let disableLineColor: UIColor
+    let textAlignment: NSTextAlignment
 
-    public init(font: UIFont = .systemFont(ofSize: 14), color: UIColor = .black, placeholder: String = "", placeholderColor: UIColor = .lightGray, lineColor: UIColor = .black, disableLineColor: UIColor = .lightGray) {
+    public init(font: UIFont = .systemFont(ofSize: 14),
+                color: UIColor = .black,
+                placeholder: String = "",
+                placeholderColor: UIColor = .lightGray,
+                lineColor: UIColor = .black,
+                disableLineColor: UIColor = .lightGray,
+                textAlignment: NSTextAlignment = .left) {
+        
         self.font = font
         self.color = color
         self.placeholder = placeholder
         self.placeholderColor = placeholderColor
         self.lineColor = lineColor
         self.disableLineColor = disableLineColor
+        self.textAlignment = textAlignment
     }
 }
