@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberField" customModule="KaoOtpFlow" customModuleProvider="target">
             <connections>
                 <outlet property="countryLabel" destination="gWK-wJ-e2S" id="xfC-yp-oEG"/>
+                <outlet property="dropIcon" destination="8sI-Kj-8wh" id="GDl-aC-DUc"/>
                 <outlet property="fieldHeightConstraint" destination="mkB-qP-p6g" id="nlW-TY-cNN"/>
                 <outlet property="fieldLeadingConstraint" destination="SKV-2S-sOI" id="Oc5-Pl-Hca"/>
                 <outlet property="fieldTrailingConstraint" destination="W7m-PA-SEV" id="3rO-bH-Yuz"/>
@@ -42,11 +43,20 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftSpacer">
+                                    <real key="value" value="85"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="textFieldChanged:" destination="-1" eventType="editingChanged" id="pQk-pu-vSz"/>
+                                <outlet property="delegate" destination="-1" id="e9l-NL-MYn"/>
+                            </connections>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNY-e5-AtT" userLabel="Selection View">
-                            <rect key="frame" x="15" y="42" width="47" height="20"/>
+                            <rect key="frame" x="15" y="48" width="47" height="20"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8sI-Kj-8wh" userLabel="Drop Down">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="8sI-Kj-8wh" userLabel="Drop Down">
                                     <rect key="frame" x="30" y="7" width="10" height="6"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="10" id="MeM-B4-cyI"/>
@@ -86,7 +96,7 @@
                         <constraint firstItem="4sc-81-mgJ" firstAttribute="centerY" secondItem="Tfs-UD-IcG" secondAttribute="centerY" id="McC-9m-tvN"/>
                         <constraint firstItem="4sc-81-mgJ" firstAttribute="leading" secondItem="Tfs-UD-IcG" secondAttribute="leading" constant="15" id="SKV-2S-sOI"/>
                         <constraint firstAttribute="trailing" secondItem="4sc-81-mgJ" secondAttribute="trailing" constant="14" id="W7m-PA-SEV"/>
-                        <constraint firstItem="iNY-e5-AtT" firstAttribute="centerY" secondItem="Tfs-UD-IcG" secondAttribute="centerY" id="X0G-RQ-G0l"/>
+                        <constraint firstItem="iNY-e5-AtT" firstAttribute="centerY" secondItem="Tfs-UD-IcG" secondAttribute="centerY" constant="6" id="X0G-RQ-G0l"/>
                     </constraints>
                 </view>
             </subviews>
@@ -103,4 +113,7 @@
             <point key="canvasLocation" x="-418" y="-376"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_dropdown" width="10" height="6"/>
+    </resources>
 </document>

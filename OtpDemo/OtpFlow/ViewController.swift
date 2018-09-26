@@ -73,7 +73,7 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
     }
 
     func dropDownUpImages(in view: PhoneEnteringViewController) -> CustomDropUpDownImage {
-        return CustomDropUpDownImage(dropUp: UIImage(named: "up"), dropDown: UIImage(named: "down"))
+        return CustomDropUpDownImage(dropUp: UIImage(named: "ic_dropup"), dropDown: UIImage(named: "ic_dropdown"))
     }
 }
 

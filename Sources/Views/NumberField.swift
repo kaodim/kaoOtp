@@ -15,11 +15,13 @@ class NumberField: UIView {
     @IBOutlet weak private var flagImageView: UIImageView!
     @IBOutlet weak private var numberField: MFTextField!
     @IBOutlet weak private var selectionView: UIView!
+    @IBOutlet weak private var dropIcon: UIImageView!
     
     @IBOutlet weak var fieldTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var fieldLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var fieldHeightConstraint: NSLayoutConstraint!
     
+    var didChangedText: ((_ text: String?) -> Void)?
     var selectionViewDidSelect: (() -> Void)?
     var countryPhone: CountryPhone?
     var countryCode: String?
@@ -97,7 +99,10 @@ class NumberField: UIView {
         fieldHeightConstraint.constant = 50
     }
     
-
+    func configure(dropUpDownImage: UIImage?) {
+        dropIcon.image = dropUpDownImage
+    }
+    
     func getNumberWithCode() -> String {
         let number = numberField.text?.first == "0" ? String(numberField.text?.dropFirst() ?? "") : (numberField.text ?? "")
         return (countryCode?.replacingOccurrences(of: "+", with: "") ?? "") + (number)
@@ -113,6 +118,10 @@ extension NumberField : UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         let mfTextFiled = (textField as? MFTextField)
         mfTextFiled?.setError(nil, animated: true)
+    }
+    
+    @IBAction private func textFieldChanged(_ sender: UITextField) {
+        didChangedText?(sender.text)
     }
 }
 

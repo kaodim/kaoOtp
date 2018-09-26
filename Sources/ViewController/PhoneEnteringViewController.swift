@@ -34,7 +34,8 @@ open class PhoneEnteringViewController: UIViewController {
         let view = NumberField()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.configureView(with: selectedCountry)
-        view.selectionViewDidSelect = configureSelectionView
+        view.didChangedText = phoneTextChanged
+        view.selectionViewDidSelect = { self.hideSelectionView(false) }
         return view
     }()
     
@@ -102,7 +103,6 @@ open class PhoneEnteringViewController: UIViewController {
             selectionView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
             selectionViewHeight
             ])
-        selectionView.isHidden = true
     }
     
     override open func viewDidLoad() {
@@ -114,6 +114,7 @@ open class PhoneEnteringViewController: UIViewController {
         contentView.addSubview(bottomView)
         configureLayout()
         reloadData()
+        hideSelectionView()
     }
     
     override open func viewWillAppear(_ animated: Bool) {
@@ -128,8 +129,6 @@ open class PhoneEnteringViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
-    
-
     
     @objc private func keyboardWillShow(_ notif: Notification) {
         if let keyboardFrame: NSValue = notif.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
@@ -165,10 +164,6 @@ open class PhoneEnteringViewController: UIViewController {
         configureBottomButton()
     }
     
-    func configureSelectionView(){
-        selectionView.isHidden = false
-    }
-    
     private func configureBottomButton() {
         if let _ = selectedCountry, !phoneNumber.isEmpty {
             bottomView.enableNextButton()
@@ -177,12 +172,16 @@ open class PhoneEnteringViewController: UIViewController {
         }
     }
     
+    private func hideSelectionView(_ isHide: Bool = true) {
+        selectionView.isHidden = isHide
+        textFieldView.configure(dropUpDownImage: isHide ? dropUpDownIcon?.dropDown : dropUpDownIcon?.dropUp)
+    }
+    
     private func animateLayout() {
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
         }
     }
-    
     
     private func nextButtonTapped() {
         guard let selectedCountry = selectedCountry else { return }
@@ -209,7 +208,7 @@ extension PhoneEnteringViewController: UITextFieldDelegate {
 extension PhoneEnteringViewController: CountrySelectionDelegate {
     func selectedCountry(_ selectedCountry: CountryPhone) {
         UIView.animate(withDuration: 0.1){
-            self.selectionView.isHidden = true
+            self.hideSelectionView()
         }
         self.selectedCountry = selectedCountry
         phoneEnterDelegate?.countryDidChange(in: self, country: selectedCountry)
@@ -218,7 +217,7 @@ extension PhoneEnteringViewController: CountrySelectionDelegate {
 
 extension PhoneEnteringViewController {
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        selectionView.isHidden = true
+        hideSelectionView()
     }
 }
 
