@@ -27,15 +27,15 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" misplaced="YES" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="104"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfs-UD-IcG">
-                    <rect key="frame" x="0.0" y="0.0" width="410" height="138"/>
+                    <rect key="frame" x="0.0" y="0.0" width="318" height="104"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-81-mgJ" userLabel="Number Field" customClass="MFTextField">
-                            <rect key="frame" x="15" y="59" width="381" height="20"/>
+                            <rect key="frame" x="15" y="42" width="289" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="mkB-qP-p6g"/>
                             </constraints>
@@ -44,7 +44,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNY-e5-AtT" userLabel="Selection View">
-                            <rect key="frame" x="15" y="59" width="47" height="20"/>
+                            <rect key="frame" x="15" y="42" width="47" height="20"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8sI-Kj-8wh" userLabel="Drop Down">
                                     <rect key="frame" x="30" y="7" width="10" height="6"/>
@@ -98,8 +98,9 @@
                 <constraint firstItem="Tfs-UD-IcG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="eCY-EO-cWj"/>
                 <constraint firstItem="Tfs-UD-IcG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="tGy-5V-ROP"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-330" y="-509"/>
+            <point key="canvasLocation" x="-418" y="-376"/>
         </view>
     </objects>
 </document>
