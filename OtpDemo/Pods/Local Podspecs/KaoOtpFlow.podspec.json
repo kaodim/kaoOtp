@@ -1,6 +1,6 @@
 {
   "name": "KaoOtpFlow",
-  "version": "0.1.10",
+  "version": "0.1.13",
   "summary": "Kaodim custom otp views",
   "description": "KaoOtpFlow provide complete ui for otp and allow you to inject your own endpoint",
   "homepage": "https://github.com/augustius/KaoOtpFlow.git",
@@ -12,8 +12,8 @@
     "Augustius": "tech+ios@kaodim.com"
   },
   "source": {
-    "git": "https://auyotoc@bitbucket.org/kaodim/kao-ios-otp.git",
-    "tag": "0.1.10"
+    "git": "git@bitbucket.org:kaodim/kao-ios-otp.git",
+    "tag": "0.1.13"
   },
   "source_files": "Sources/**/*",
   "resource_bundles": {

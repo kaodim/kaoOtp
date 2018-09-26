@@ -10,11 +10,13 @@ import Foundation
 import UIKit
 
 public struct CountryPhone {
-    public let icon: UIImage
+    public let icon: UIImage?
     public let phoneExtension: String
+    public let displayCode: String
 
-    public init(icon: UIImage, phoneExtension: String) {
+    public init(icon: UIImage?, phoneExtension: String, displayCode: String) {
         self.icon = icon
         self.phoneExtension = phoneExtension
+        self.displayCode = displayCode
     }
 }

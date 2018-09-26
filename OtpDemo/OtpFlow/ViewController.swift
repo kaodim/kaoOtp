@@ -18,17 +18,11 @@ class ViewController: PhoneEnteringViewController {
         super.phoneEnterDataSource = self
         super.phoneEnterDelegate = self
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     private func configureList() {
         for index in 0...2 {
-            let countryPhone = CountryPhone(icon: UIImage(named: "flag_my")!, phoneExtension: "(+6\(index))")
+            let countryPhone = CountryPhone(icon: UIImage(named: "flag-my"), phoneExtension: "(+6\(index))", displayCode: "+6\(index) • Malaysia")
             list.append(countryPhone)
         }
     }
@@ -40,7 +34,14 @@ class ViewController: PhoneEnteringViewController {
 }
 
 extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
-
+    func countryDidChange(in view: PhoneEnteringViewController, country: CountryPhone) {
+        if country.phoneExtension == "+60" {
+            print("+60 selected")
+        } else {
+            print("Nothing selected")
+        }
+    }
+    
     func nextButtonTapped(in view: PhoneEnteringViewController, phoneNumber: String, countryPhone: CountryPhone) {
         print(countryPhone.phoneExtension + " " + phoneNumber)
         print("next please....")

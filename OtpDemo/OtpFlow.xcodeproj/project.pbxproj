@@ -58,6 +58,7 @@
 		4F35A9F5EA9AF6EDFB87A228 /* Pods-OtpFlowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OtpFlowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OtpFlowUITests/Pods-OtpFlowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		63024C2F636D26ADF1836057 /* Pods-OtpFlowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OtpFlowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OtpFlowUITests/Pods-OtpFlowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6F6B1F00FD30B37078513E94 /* Pods-OtpFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OtpFlow.release.xcconfig"; path = "Pods/Target Support Files/Pods-OtpFlow/Pods-OtpFlow.release.xcconfig"; sourceTree = "<group>"; };
+		7F6EA289215A2507008D941F /* OtpFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OtpFlow.entitlements; sourceTree = "<group>"; };
 		875C207E00EAEB1A2BBD69E3 /* Pods-OtpFlowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OtpFlowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OtpFlowTests/Pods-OtpFlowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8894FCB680F16089907B6A18 /* Pods_OtpFlowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B808D87571B5876A1208C7A7 /* Pods_OtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +119,7 @@
 		2766F74F20FDC3E300B8A2AF /* OtpFlow */ = {
 			isa = PBXGroup;
 			children = (
+				7F6EA289215A2507008D941F /* OtpFlow.entitlements */,
 				2766F75020FDC3E300B8A2AF /* AppDelegate.swift */,
 				2766F75220FDC3E300B8A2AF /* ViewController.swift */,
 				279BC57321007AC90009D775 /* SecondViewController.swift */,
@@ -182,7 +184,7 @@
 				2766F74920FDC3E300B8A2AF /* Sources */,
 				2766F74A20FDC3E300B8A2AF /* Frameworks */,
 				2766F74B20FDC3E300B8A2AF /* Resources */,
-				8284EE3BC53AE38338B020AE /* [CP] Embed Pods Frameworks */,
+				58394E1C307F66C5B947C769 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +245,11 @@
 				TargetAttributes = {
 					2766F74C20FDC3E300B8A2AF = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					2766F76320FDC3E700B8A2AF = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -338,7 +345,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8284EE3BC53AE38338B020AE /* [CP] Embed Pods Frameworks */ = {
+		58394E1C307F66C5B947C769 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -561,7 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H63JK63G6G;
+				DEVELOPMENT_TEAM = HA7Q8JY3QG;
 				INFOPLIST_FILE = OtpFlow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -580,7 +587,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H63JK63G6G;
+				DEVELOPMENT_TEAM = HA7Q8JY3QG;
 				INFOPLIST_FILE = OtpFlow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

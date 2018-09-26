@@ -34,6 +34,8 @@ extension PhoneEnterDataSource {
 public protocol PhoneEnterDelegate: class {
     
     func nextButtonTapped(in view: PhoneEnteringViewController, phoneNumber: String, countryPhone: CountryPhone)
+    
+    func countryDidChange(in view: PhoneEnteringViewController, country: CountryPhone)
 }
 
 

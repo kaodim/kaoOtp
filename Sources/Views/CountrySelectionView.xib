@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountrySelectionView" customModule="KaoOtpFlow" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="HQ5-iz-Aii" id="EXr-sL-oXS"/>
+                <outlet property="shadowView" destination="lrJ-R5-30s" id="7nc-cZ-lqQ"/>
+                <outlet property="tableView" destination="ndw-QH-vKo" id="nzj-T7-V7v"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="129"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrJ-R5-30s" userLabel="Shadow View">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="129"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQ5-iz-Aii" userLabel="Container View">
+                            <rect key="frame" x="4" y="4" width="366" height="121"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ndw-QH-vKo">
+                                    <rect key="frame" x="0.0" y="0.0" width="366" height="121"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="luO-au-wxz"/>
+                                        <outlet property="delegate" destination="-1" id="Va2-j5-0X3"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ndw-QH-vKo" firstAttribute="leading" secondItem="HQ5-iz-Aii" secondAttribute="leading" id="dZs-4w-L3T"/>
+                                <constraint firstAttribute="bottom" secondItem="ndw-QH-vKo" secondAttribute="bottom" id="duZ-c9-f71"/>
+                                <constraint firstAttribute="trailing" secondItem="ndw-QH-vKo" secondAttribute="trailing" id="gOc-H9-2E9"/>
+                                <constraint firstItem="ndw-QH-vKo" firstAttribute="top" secondItem="HQ5-iz-Aii" secondAttribute="top" id="lCs-OL-Um2"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="HQ5-iz-Aii" secondAttribute="bottom" constant="4" id="D7g-vq-4Pe"/>
+                        <constraint firstAttribute="trailing" secondItem="HQ5-iz-Aii" secondAttribute="trailing" constant="4" id="Zaa-ig-izY"/>
+                        <constraint firstItem="HQ5-iz-Aii" firstAttribute="leading" secondItem="lrJ-R5-30s" secondAttribute="leading" constant="4" id="a4B-x4-8bo"/>
+                        <constraint firstItem="HQ5-iz-Aii" firstAttribute="top" secondItem="lrJ-R5-30s" secondAttribute="top" constant="4" id="pcS-qS-c7S"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lrJ-R5-30s" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QUi-b8-bV1"/>
+                <constraint firstItem="lrJ-R5-30s" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="c24-mT-8fT"/>
+                <constraint firstItem="lrJ-R5-30s" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ej6-nE-R2I"/>
+                <constraint firstItem="lrJ-R5-30s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="t7P-JA-TMr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-72" y="-232.5"/>
+        </view>
+    </objects>
+</document>
