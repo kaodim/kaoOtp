@@ -3,77 +3,77 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0115470F9E40574EA9B8E55DC586CCAE /* OtpTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98219D858E445926ECAC76AC9D4CED4A /* OtpTextfieldView.swift */; };
-		01D4B9FD971A4F1157D356CD099DA846 /* OtpPinEnterView.xib in Sources */ = {isa = PBXBuildFile; fileRef = C34E901B75A8C9A96A0697A7922D4A04 /* OtpPinEnterView.xib */; };
-		05BABEB06092E6F8701958B0D2241733 /* NumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF599757C2F8E9E57622AE9B00C58B /* NumberField.swift */; };
-		0C112E0D6536883F403A540A755B6DA2 /* MaterialTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 474AF08ED2371BD60AF5BA1EF5C94C38 /* MaterialTextField-dummy.m */; };
-		0F87BECF0A83C526CB11B3ED0A9AADAB /* PhoneVerifyingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AB1DE606FBCE18389217C3918C4D2F /* PhoneVerifyingViewController.swift */; };
-		188ED0E24142882D858CE672EBF63733 /* TextfieldViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52479B33ADB5C8FB53022A572ACC9B4 /* TextfieldViewParams.swift */; };
-		1AD2F692B03050AF40909123BB1C9FC5 /* OtpCountrySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55A80E21D2D3084A6DD573359C2D49E7 /* OtpCountrySelectionView.xib */; };
-		1C722D061F0FA0519805778AB80743BA /* OtpPinEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80FC012C5A5EAE40CCAEBD080A31558 /* OtpPinEnterView.swift */; };
-		1FA45D69FE89B03C6B03BE82C242B8CD /* PhoneEnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C462A414708BFBEF930398921EB2CF /* PhoneEnteringViewController.swift */; };
-		200F658456411285F5A7714C17138BFA /* MFTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B15DD26FDB68ACB4BB03CAAC4408D76 /* MFTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		030F372CBEFD1A65E65A54A80DDC9338 /* CountryOptionsView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 054B03DD86FEDE74AD3EEA88F437623A /* CountryOptionsView.xib */; };
+		045C9AC626817A5077B3C79D9EE4246E /* OtpCountrySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B070B40CA9BABFDB300FACD60E605958 /* OtpCountrySelectionView.swift */; };
+		046FF33076E40CEB20F5A2431EDCB264 /* CustomDropUpDownImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CC535704EC4525BC727EAFAB9C5187 /* CustomDropUpDownImage.swift */; };
+		0B9043BF47412C7E8A574A29864D39F9 /* UITextField+MFClearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D882C6EEC5ECECC8F05752BBD5F93F1 /* UITextField+MFClearButton.m */; };
+		0C333515EE579F4EF29614312BD7A925 /* OtpHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FC6853B664C065364CFC98B7888E56 /* OtpHeaderView.xib */; };
+		0ED352A8829F9264993444781313E988 /* MaterialTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 348F4EB5BECF54F444DE858EDABA74FF /* MaterialTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A5E0803C135002EF396FD7118E4B51A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
+		1D68EF7384C6D79C8A6818368B9C835A /* OtpPinTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4448641CB1F3916E14981C0CA8E03 /* OtpPinTextfield.swift */; };
 		21B64EC69DB7FDB4425BE380244F2CEE /* Pods-OtpFlow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E8C0B2906CD6897ED0D178B298FC30 /* Pods-OtpFlow-dummy.m */; };
-		2B184305125E5DDD29446BC6F29DACF8 /* OtpCountrySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6B3B56E5BA0F65D8D2BA463D81B211 /* OtpCountrySelectionView.swift */; };
-		3473A5A17261906EFD612D3EB0AE326E /* OtpBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D6CFF9889CFEAAB9F6DCE9B9BD330BD /* OtpBottomView.xib */; };
-		34F6ACAE5CAA1435DDC801BDC65513F1 /* OtpTextfieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1995D3CF0F36B39DB60835A5B9336A7 /* OtpTextfieldView.xib */; };
-		3500BF8DBC9D400B304992F06A2C0E36 /* OtpHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8A097888BA5F676CEBB04FEF77DDBE /* OtpHeaderView.xib */; };
-		3EF5E33BF0E797FB9626908245317DCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
-		4212AD9AC90DE4F5C5D7F0BFB2C8FE7A /* OtpPinEnterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34E901B75A8C9A96A0697A7922D4A04 /* OtpPinEnterView.xib */; };
-		49AE58EF7EED0AA37F5426A807545B6D /* OtpTextfieldView.xib in Sources */ = {isa = PBXBuildFile; fileRef = B1995D3CF0F36B39DB60835A5B9336A7 /* OtpTextfieldView.xib */; };
-		54EEB1633E843FC24B79C2FFF8BA57D6 /* CustomLabelAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53BF729032DAF4D8049D8C782FFF9C /* CustomLabelAttributes.swift */; };
-		55A1E047AE870FB8854E01BF7328E26E /* OtpBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACDA76CBDF64378A32A70F0303DE8B /* OtpBottomView.swift */; };
-		5C9377968E0A7619519E5EC42736DC94 /* UIImage+MFTint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0123BD2AD2CF2EDD72982FF8DB2A2A23 /* UIImage+MFTint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		66E41F9D56F2A4BE45B5B4491A1C083B /* KaoOtpFlow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 463F19FF4EA52C0BFB37A61FF293752D /* KaoOtpFlow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D54FA9ECDF4D2962A7DBADB03E280F1 /* UIFont+MaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A9C9746525BC00488A31C405A2070E /* UIFont+MaterialTextField.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6E88657FF4063A34F64ACD8A4B0D4069 /* PhoneVerifyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF90F9CA47566FA762FE61BAF32BBD5 /* PhoneVerifyProtocol.swift */; };
+		2B3C63A4CD247CC04997C417225E3807 /* CountryPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294F42B8DD8A280CB551AF343A9A2B3 /* CountryPhone.swift */; };
+		2B7AE6D301CF19A5F796CBFD63EAF241 /* CountrySelectionView.xib in Sources */ = {isa = PBXBuildFile; fileRef = ED0B1F8E2914A2EAEF09514246E47BA8 /* CountrySelectionView.xib */; };
+		33E4ABAEB84526BE53E05C12821A5FB7 /* PhoneEnterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A3947FA022D0FBF2382E411F76E469 /* PhoneEnterProtocol.swift */; };
+		351CE965447A7027513E9259BB085C4C /* PhoneVerifyingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DAB4AAF7CC2138E2F877727FDCDBBB /* PhoneVerifyingViewController.swift */; };
+		3A078A29317B1002359E3F9F8C06F9D2 /* UIImage+MFTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D7762A19D060900BD42D2494BE0E9 /* UIImage+MFTint.m */; };
+		3C36FAAAF6CFF16592B9AA95DAFCCF0C /* MFTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B15DD26FDB68ACB4BB03CAAC4408D76 /* MFTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42D6CBE43FDE710E4D824745C9491F4E /* PhoneEnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73F763AF7F8BC43672DE183BF1C087 /* PhoneEnteringViewController.swift */; };
+		5019CDE895DE1CE4366A704D0B78680A /* UIImage+MFTint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0123BD2AD2CF2EDD72982FF8DB2A2A23 /* UIImage+MFTint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		502BC6144CFA0A23D8AFD391E99C1526 /* OtpBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC19F38FAD4959A28EBD5D7E434A39 /* OtpBottomView.swift */; };
+		51BD2522C7578E2EE09E55DE52195E73 /* OtpTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C239A4F652F80D8F68E68EDC2C28C57D /* OtpTextfieldView.swift */; };
+		51D773A558803F14AB1523B3ED5AC5AC /* MaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE7EEB7ADAA4C8E7E8F5C577C57F366 /* MaterialTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B06B4B8506F7014FB496BF7C376C4A9 /* OtpTextfieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B85207A5BD6AA8849B93905938E370 /* OtpTextfieldView.xib */; };
+		5CDED95C95F8A0AABB4D26CD9783D281 /* OtpCountrySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 807C580BF6B84A5BD8030576B6E5778C /* OtpCountrySelectionView.xib */; };
+		5D2D0C6FA4104C24AD4E185380680EC6 /* PhoneVerifyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6CBA18AE800F98C53510D79C5CA81 /* PhoneVerifyProtocol.swift */; };
+		6306AC2D9EAC085F8FCCAD1AC3CD350A /* OtpCustomPod.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */; };
 		73EE913880E47BAD3DDE3DF749794768 /* Pods-OtpFlowUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E21D6D44EF85D893483BEEEE8C42A95 /* Pods-OtpFlowUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7643111D49B342165388734BD282BA69 /* MaterialTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 348F4EB5BECF54F444DE858EDABA74FF /* MaterialTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76EAC4F8FAAD63D6F47E705E29C5AF7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
-		7AD89F2500A24D13242F42132DD819A5 /* CustomButtonAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38B005EA7C47E3DA8DC8E9F5B5CE0DE /* CustomButtonAttributes.swift */; };
-		7C6F2EC639E3C88B58260BB460078B9C /* MaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE7EEB7ADAA4C8E7E8F5C577C57F366 /* MaterialTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F6EA27A2159F0D6008D941F /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6EA2792159F0D6008D941F /* UIView+Custom.swift */; };
-		7F6EA27C2159F48E008D941F /* CountrySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6EA27B2159F48E008D941F /* CountrySelectionView.xib */; };
-		7F6EA27E2159F53B008D941F /* CountrySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6EA27D2159F53B008D941F /* CountrySelectionView.swift */; };
-		7F6EA281215A0626008D941F /* CountrySelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6EA27F215A0626008D941F /* CountrySelectionTableViewCell.swift */; };
-		7F6EA286215A1A24008D941F /* NumberField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6EA285215A1A24008D941F /* NumberField.xib */; };
-		7F6EA290215A397B008D941F /* NumberField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6EA285215A1A24008D941F /* NumberField.xib */; };
-		7F6EA291215A409A008D941F /* CountrySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6EA27B2159F48E008D941F /* CountrySelectionView.xib */; };
-		7F6EA295215A49BC008D941F /* CountryOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6EA294215A49BC008D941F /* CountryOptionsView.xib */; };
-		7F6EA296215A49BC008D941F /* CountryOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6EA294215A49BC008D941F /* CountryOptionsView.xib */; };
-		7F6EA298215A4A1D008D941F /* CountryOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6EA297215A4A1D008D941F /* CountryOptionsView.swift */; };
-		8A147306D2A21C71A9B4C31065AF0C6A /* UITextField+MFClearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D882C6EEC5ECECC8F05752BBD5F93F1 /* UITextField+MFClearButton.m */; };
-		8F483BA7BD00C012E73903716F018190 /* OtpHeaderView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A097888BA5F676CEBB04FEF77DDBE /* OtpHeaderView.xib */; };
-		938D934145F6F3DE2BE54767020D6A4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
-		9D5BD8BB8CBBB8FB8BC87424B538522A /* OtpPinTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A71242517DDB2C75FAE9C7CE411D08 /* OtpPinTextfield.swift */; };
-		A06038E15D8591EC9F846F24F39F5DFC /* CustomDropUpDownImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402D5A17D1F4689BB79BFCCB0FF4687 /* CustomDropUpDownImage.swift */; };
+		7888C987924A39548FBDD0077CA0CB20 /* MaterialTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4833702864B5C633765785B5BE9B0A7C /* MaterialTextField.framework */; };
+		78907C92DE9574230C14BA24CC7BFC9E /* CustomButtonAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B466C76E3FD0BBDDB9A76864B6A5455 /* CustomButtonAttributes.swift */; };
+		793F923F56020F0A7633F2601FACB8E8 /* OtpPinEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD999199C433A4F0D189212DDCD81E2D /* OtpPinEnterView.swift */; };
+		7FAC4AB1275E18F9644F7442CA33786C /* OtpCountrySelectionView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 807C580BF6B84A5BD8030576B6E5778C /* OtpCountrySelectionView.xib */; };
+		83FDF8746766B06B6B16E67F528FB093 /* OtpBottomView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 114065E7F572AA7205B623E508961B67 /* OtpBottomView.xib */; };
+		87B8399B9D474F81F9584CAB55378802 /* OtpHeaderView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 68FC6853B664C065364CFC98B7888E56 /* OtpHeaderView.xib */; };
+		8C8079955E3973CA6195CEE6D12B6177 /* OtpCountrySelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C174F55B647B69812C60EE25A7E4AC /* OtpCountrySelectionCell.swift */; };
+		954C5C32B2D579F5D290B3B756BB88E0 /* CountryOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D343D34E588BF225EBE5D9428E4252B /* CountryOptionsView.swift */; };
+		96A1BAE331934C8728AEE2CA918226C3 /* UIColor+MaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED61CD87BDC8D055E6E414FCC5849D2 /* UIColor+MaterialTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97E8A2EBCF856B65CA459A01900FFC39 /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796B901EBB789E7DCEDD1CE07967134 /* UIView+Custom.swift */; };
+		9A99D187CC06DA5F798EAFD3301B70EA /* OtpPinEnterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F909985BAF73F67C0E775E15BA6B3 /* OtpPinEnterView.xib */; };
+		A3026FFC29D12DC1A14AB00362F5AE1F /* MaterialTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 474AF08ED2371BD60AF5BA1EF5C94C38 /* MaterialTextField-dummy.m */; };
+		A485816A837824D7EB106C1A07BCBA02 /* CustomLabelAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58CFF3B624764B35937F9658E08BC0 /* CustomLabelAttributes.swift */; };
 		A5FEDFAA8B1CDB9A8DA9BA5762C6C80A /* Pods-OtpFlowTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C079FC2D670311E5B73C4E85BE8796 /* Pods-OtpFlowTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A617A7F0440466DA333586BAB56B468C /* UIColor+MaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED61CD87BDC8D055E6E414FCC5849D2 /* UIColor+MaterialTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9BCE739E096F0003799FC7FC4531760 /* KaoOtpFlow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51434F1B9EF478926112FF83C52D2457 /* KaoOtpFlow-dummy.m */; };
-		B0A0B3908568CDEB877A20F4A9DD290A /* CountryPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162C0DFCD26BF0F4DDB4DA37FFDC3C28 /* CountryPhone.swift */; };
-		B2B8B3BE541B978A4394ADF30E11EC2D /* HeaderViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233A2145F72ECD96E5FDDDA16C744F4 /* HeaderViewParams.swift */; };
-		B40BE1397386F3AE15E88102E5BB5F9B /* UIImage+MFTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D7762A19D060900BD42D2494BE0E9 /* UIImage+MFTint.m */; };
-		B7AA93D54E54CD09A6F33AABD33D48B2 /* OtpCountrySelectionView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 55A80E21D2D3084A6DD573359C2D49E7 /* OtpCountrySelectionView.xib */; };
-		B97048DA344323FB11EEDB8F1E8FF621 /* OtpCountrySelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1880763CD8098A845F216D7929641B7 /* OtpCountrySelectionCell.swift */; };
-		BA3BDDD3FC5E1CD19B897173B72AE361 /* UIColor+MaterialTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BFBB4594D62769FC571577961AFB7 /* UIColor+MaterialTextField.m */; };
-		C010D6C3E5DDCEF3828F08BC318E58B6 /* PhoneEnterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C26ADB741E41991E800609301113B /* PhoneEnterProtocol.swift */; };
+		B1CEC667DD1B89B9F3250F06D7C1D28F /* CountrySelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0026BC2056BADAF006B48EC391D1B9 /* CountrySelectionTableViewCell.swift */; };
+		B5ED4C816BE8856FAEAFF22E876122BF /* OtpTextfieldView.xib in Sources */ = {isa = PBXBuildFile; fileRef = B4B85207A5BD6AA8849B93905938E370 /* OtpTextfieldView.xib */; };
+		B6E819D7FD0123679474B0EE928A6BD8 /* CountrySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C54BEF139E2E0137E9D7DFB91547E6 /* CountrySelectionView.swift */; };
+		BCD47017431D5135498A89B8F6A306C9 /* KaoOtpFlow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0FC4A9318B8FB480605D91804B21E1 /* KaoOtpFlow-dummy.m */; };
+		BE2B9249BE7F9F1BD606B536C7450F2B /* MFTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6E140560DAC7653A469A96387210A /* MFTextField.m */; };
 		C43FC0B817B825A153800C543DB9DB30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
-		C9E3E49B0FDAD9B27A2C5A0202C3D680 /* OtpBottomView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 5D6CFF9889CFEAAB9F6DCE9B9BD330BD /* OtpBottomView.xib */; };
-		D0EFF5F969C8E4651F056042A084C623 /* MFTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6E140560DAC7653A469A96387210A /* MFTextField.m */; };
-		D50DCF1EFB8EFFC2BFACBDD494C052A1 /* OtpCustomPod.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */; };
-		D7822EAEEA808B1942B0472EAFCD5AEB /* OtpHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A487319EC0C4F6E82D4C6D60240C9973 /* OtpHeaderView.swift */; };
-		D9D80E277B8007B46754864C0BC7727F /* MaterialTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4833702864B5C633765785B5BE9B0A7C /* MaterialTextField.framework */; };
-		E72B8A8BA25EFD3DBE2F1947456D3360 /* CustomTextfieldAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C6B11935B4A78121881733EF52F92F /* CustomTextfieldAttributes.swift */; };
+		C4B03443F368670B12B2999728C598E5 /* UIFont+MaterialTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A9C9746525BC00488A31C405A2070E /* UIFont+MaterialTextField.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CAB41C9D04FBB2FB26FDF641F46B05B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
+		CB513D923868275F0DC55CCF2080B58D /* CountrySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0B1F8E2914A2EAEF09514246E47BA8 /* CountrySelectionView.xib */; };
+		CC6062CB9EB44989D775FF929CAF2AF6 /* KaoOtpFlow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D8FEC659A909BA50BAB6E4F82E9DB00 /* KaoOtpFlow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD3F1FA721DEF41CD969878F0A8F9487 /* NumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9155202F872D94B005C57B5FCC30A53 /* NumberField.swift */; };
+		CFD8CA3836EE92ED839C7DDE1BC28A61 /* OtpPinEnterView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F909985BAF73F67C0E775E15BA6B3 /* OtpPinEnterView.xib */; };
+		D5747C3249D98B3C782139650295FABE /* UIColor+MaterialTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 815BFBB4594D62769FC571577961AFB7 /* UIColor+MaterialTextField.m */; };
+		DAB6B81DC3B6EB7B52B334A93234AF1C /* OtpHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B14868525F6AE68AE62B9CE93F8282 /* OtpHeaderView.swift */; };
+		DC56DE6C3F92573FF8FE722EABFD8803 /* OtpBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114065E7F572AA7205B623E508961B67 /* OtpBottomView.xib */; };
+		DCF21335F3D428120C61AF790DA44FF2 /* UITextField+MFClearButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 26391C4A6106D949424FE4082846322E /* UITextField+MFClearButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E0A75E8EE1049E574337B2458E430639 /* TextfieldViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C0EAC662B3F667E922EDE117448A9C /* TextfieldViewParams.swift */; };
+		E172119D9C89AE063F683627A509AE83 /* UIFont+MaterialTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9771597A36DEC27560C556CEFABF1C95 /* UIFont+MaterialTextField.m */; };
+		E2F90CD26B0CF96D01A3E96D83358E3E /* CountryOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 054B03DD86FEDE74AD3EEA88F437623A /* CountryOptionsView.xib */; };
+		EA935D6432CFF613E895109754180978 /* NumberField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56128B6AFD37E9E0A3E7AE6EB79E8C86 /* NumberField.xib */; };
 		ECD3714C3C14B7A23B1CAF70ADB8D4F2 /* Pods-OtpFlowTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64CD0B6FA48A521630F29A5D7E781590 /* Pods-OtpFlowTests-dummy.m */; };
+		ED14FFE03DDE32278615494493CB591E /* HeaderViewParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658BE16F0C0480B52AFF55543CC1AAA2 /* HeaderViewParams.swift */; };
 		EE6DE2D51935D860E018048EA8927558 /* Pods-OtpFlowUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 722E6413BCD1969849FB5D6DBE388AC7 /* Pods-OtpFlowUITests-dummy.m */; };
+		EF650963095F1681C0B2FA836832DCF3 /* CustomTextfieldAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1C9885B4856AD2BA69CF57FE255ED /* CustomTextfieldAttributes.swift */; };
 		F11519B13ADD516270F3B0B84F70E562 /* Pods-OtpFlow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A65C908EE0CC3309EF18E81CCB1D512 /* Pods-OtpFlow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7E36C1F525191AFB95ED25A25F42DAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */; };
-		F9549F6BF3267CFDA10D0100D41D29F3 /* UIFont+MaterialTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9771597A36DEC27560C556CEFABF1C95 /* UIFont+MaterialTextField.m */; };
-		FC2CF19D56AB65D889C22609FF542ED7 /* UITextField+MFClearButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 26391C4A6106D949424FE4082846322E /* UITextField+MFClearButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FE940CB581E4551CCFDC17A1C2CF89EA /* NumberField.xib in Sources */ = {isa = PBXBuildFile; fileRef = 56128B6AFD37E9E0A3E7AE6EB79E8C86 /* NumberField.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,149 +91,149 @@
 			remoteGlobalIDString = BC76F6FE6251335FF1498197123929DF;
 			remoteInfo = "Pods-OtpFlow";
 		};
-		34DA90FD080A927337204B075D5DB001 /* PBXContainerItemProxy */ = {
+		346A703E0CBDD435EE85BB81F26B3669 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BF22D9044058C6EBA4EA5D7C190BC7EB;
+			remoteGlobalIDString = 74E080010781ECBACA6D4E19456B47A1;
 			remoteInfo = "KaoOtpFlow-OtpCustomPod";
 		};
 		72439B4905AE4069CD059FF2419CBC02 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A1DD585619B70A43F119F83A1E2DCBD1;
+			remoteGlobalIDString = CCB15BA077289DA35B4DCD8A77BC82E8;
 			remoteInfo = KaoOtpFlow;
 		};
-		874ED059086FD1629D777636CAB8D47F /* PBXContainerItemProxy */ = {
+		8D1568022D3BACE6F441E28BEC788AE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9734EE4DB2C767546F429B730041593D;
+			remoteGlobalIDString = D6EDD6524FCFAC2A8EDD70E86FEAE162;
 			remoteInfo = MaterialTextField;
 		};
 		BE7E5AA0A85EFCFCFC25E599B42F834B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9734EE4DB2C767546F429B730041593D;
+			remoteGlobalIDString = D6EDD6524FCFAC2A8EDD70E86FEAE162;
 			remoteInfo = MaterialTextField;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0123BD2AD2CF2EDD72982FF8DB2A2A23 /* UIImage+MFTint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MFTint.h"; path = "MaterialTextField/UIImage+MFTint.h"; sourceTree = "<group>"; };
-		0233A2145F72ECD96E5FDDDA16C744F4 /* HeaderViewParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeaderViewParams.swift; sourceTree = "<group>"; };
+		024EAA6C0AB4A14EC9B6B0C299F1E884 /* KaoOtpFlow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KaoOtpFlow.xcconfig; sourceTree = "<group>"; };
+		0294F42B8DD8A280CB551AF343A9A2B3 /* CountryPhone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountryPhone.swift; sourceTree = "<group>"; };
 		02E8C0B2906CD6897ED0D178B298FC30 /* Pods-OtpFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OtpFlow-dummy.m"; sourceTree = "<group>"; };
+		054B03DD86FEDE74AD3EEA88F437623A /* CountryOptionsView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CountryOptionsView.xib; sourceTree = "<group>"; };
 		0E21D6D44EF85D893483BEEEE8C42A95 /* Pods-OtpFlowUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OtpFlowUITests-umbrella.h"; sourceTree = "<group>"; };
 		0FA990E9AEF1F7F78731D057D0512713 /* Pods-OtpFlowUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OtpFlowUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		114065E7F572AA7205B623E508961B67 /* OtpBottomView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpBottomView.xib; sourceTree = "<group>"; };
 		13B29EDAFC87715E1B475DD8182ABB95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1471CDFCA8B258DA9C6DE4D878CDAE77 /* ResourceBundle-OtpCustomPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-OtpCustomPod-Info.plist"; sourceTree = "<group>"; };
-		162C0DFCD26BF0F4DDB4DA37FFDC3C28 /* CountryPhone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountryPhone.swift; sourceTree = "<group>"; };
+		17DAB4AAF7CC2138E2F877727FDCDBBB /* PhoneVerifyingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneVerifyingViewController.swift; sourceTree = "<group>"; };
 		1AE6E140560DAC7653A469A96387210A /* MFTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MFTextField.m; path = MaterialTextField/MFTextField.m; sourceTree = "<group>"; };
+		1B466C76E3FD0BBDDB9A76864B6A5455 /* CustomButtonAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomButtonAttributes.swift; sourceTree = "<group>"; };
 		20C40790EF895D7BD8FC71B716C9517B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		26391C4A6106D949424FE4082846322E /* UITextField+MFClearButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+MFClearButton.h"; path = "MaterialTextField/UITextField+MFClearButton.h"; sourceTree = "<group>"; };
-		26AB1DE606FBCE18389217C3918C4D2F /* PhoneVerifyingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneVerifyingViewController.swift; sourceTree = "<group>"; };
 		2A65C908EE0CC3309EF18E81CCB1D512 /* Pods-OtpFlow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OtpFlow-umbrella.h"; sourceTree = "<group>"; };
-		2A67A639ADA5AE9377E116806AAD1FB7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		2A6B3B56E5BA0F65D8D2BA463D81B211 /* OtpCountrySelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionView.swift; sourceTree = "<group>"; };
+		2B58CFF3B624764B35937F9658E08BC0 /* CustomLabelAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomLabelAttributes.swift; sourceTree = "<group>"; };
 		2D882C6EEC5ECECC8F05752BBD5F93F1 /* UITextField+MFClearButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+MFClearButton.m"; path = "MaterialTextField/UITextField+MFClearButton.m"; sourceTree = "<group>"; };
-		2E8A097888BA5F676CEBB04FEF77DDBE /* OtpHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpHeaderView.xib; sourceTree = "<group>"; };
 		323F077AFDBDC38B81663F73F82AF62F /* Pods-OtpFlow-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlow-resources.sh"; sourceTree = "<group>"; };
 		337074971EF4EAE296EB2F2DF71466DA /* MaterialTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MaterialTextField.xcconfig; sourceTree = "<group>"; };
 		348F4EB5BECF54F444DE858EDABA74FF /* MaterialTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaterialTextField-umbrella.h"; sourceTree = "<group>"; };
-		3527CEA07752F7F956256C3A36EECEDA /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3527CEA07752F7F956256C3A36EECEDA /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MaterialTextField.framework; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35DBBA74DDD5C24C0D4458507D755F38 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		371B5B2BE4A1DBB23C5566C6DD96695A /* Pods-OtpFlowUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OtpFlowUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3D53BF729032DAF4D8049D8C782FFF9C /* CustomLabelAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomLabelAttributes.swift; sourceTree = "<group>"; };
+		39D4448641CB1F3916E14981C0CA8E03 /* OtpPinTextfield.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpPinTextfield.swift; sourceTree = "<group>"; };
+		3D343D34E588BF225EBE5D9428E4252B /* CountryOptionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountryOptionsView.swift; sourceTree = "<group>"; };
 		3ED61CD87BDC8D055E6E414FCC5849D2 /* UIColor+MaterialTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+MaterialTextField.h"; path = "MaterialTextField/UIColor+MaterialTextField.h"; sourceTree = "<group>"; };
-		45A71242517DDB2C75FAE9C7CE411D08 /* OtpPinTextfield.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpPinTextfield.swift; sourceTree = "<group>"; };
-		463F19FF4EA52C0BFB37A61FF293752D /* KaoOtpFlow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KaoOtpFlow-umbrella.h"; sourceTree = "<group>"; };
-		4688CA8D3E8A223ADB32D21A05356F5C /* Pods_OtpFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4688CA8D3E8A223ADB32D21A05356F5C /* Pods_OtpFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlowTests.framework; path = "Pods-OtpFlowTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		472C8760967760B11AF4D18944C67C23 /* Pods-OtpFlowTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OtpFlowTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		474AF08ED2371BD60AF5BA1EF5C94C38 /* MaterialTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MaterialTextField-dummy.m"; sourceTree = "<group>"; };
 		4833702864B5C633765785B5BE9B0A7C /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48570B0A3C5BE894F0EF2CD8CECB4F1B /* Pods-OtpFlowUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OtpFlowUITests.modulemap"; sourceTree = "<group>"; };
 		4B15DD26FDB68ACB4BB03CAAC4408D76 /* MFTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MFTextField.h; path = MaterialTextField/MFTextField.h; sourceTree = "<group>"; };
-		51434F1B9EF478926112FF83C52D2457 /* KaoOtpFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KaoOtpFlow-dummy.m"; sourceTree = "<group>"; };
 		51F604C0666C1F156B250050DF323724 /* Pods-OtpFlowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowTests.release.xcconfig"; sourceTree = "<group>"; };
-		52ACDA76CBDF64378A32A70F0303DE8B /* OtpBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpBottomView.swift; sourceTree = "<group>"; };
-		55A80E21D2D3084A6DD573359C2D49E7 /* OtpCountrySelectionView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpCountrySelectionView.xib; sourceTree = "<group>"; };
+		56128B6AFD37E9E0A3E7AE6EB79E8C86 /* NumberField.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NumberField.xib; sourceTree = "<group>"; };
 		5943568C2CC63B22DAB0ED66E5E92F84 /* Pods-OtpFlowTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowTests-resources.sh"; sourceTree = "<group>"; };
-		5BBF599757C2F8E9E57622AE9B00C58B /* NumberField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumberField.swift; sourceTree = "<group>"; };
-		5D6CFF9889CFEAAB9F6DCE9B9BD330BD /* OtpBottomView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpBottomView.xib; sourceTree = "<group>"; };
-		624357B8BD87272A7DF6A3FB639386BC /* Pods_OtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60A3947FA022D0FBF2382E411F76E469 /* PhoneEnterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneEnterProtocol.swift; sourceTree = "<group>"; };
+		624357B8BD87272A7DF6A3FB639386BC /* Pods_OtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlow.framework; path = "Pods-OtpFlow.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63864FF412A343FC808EF80C8FDB54EE /* Pods-OtpFlow-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OtpFlow-acknowledgements.markdown"; sourceTree = "<group>"; };
 		64CD0B6FA48A521630F29A5D7E781590 /* Pods-OtpFlowTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OtpFlowTests-dummy.m"; sourceTree = "<group>"; };
-		6650C1BA65705B4628450658720E0AE3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		658BE16F0C0480B52AFF55543CC1AAA2 /* HeaderViewParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeaderViewParams.swift; sourceTree = "<group>"; };
+		68FC6853B664C065364CFC98B7888E56 /* OtpHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpHeaderView.xib; sourceTree = "<group>"; };
 		6CF717E54920BAF4469B53253FC20995 /* Pods-OtpFlowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D8FEC659A909BA50BAB6E4F82E9DB00 /* KaoOtpFlow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KaoOtpFlow-umbrella.h"; sourceTree = "<group>"; };
 		722E6413BCD1969849FB5D6DBE388AC7 /* Pods-OtpFlowUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OtpFlowUITests-dummy.m"; sourceTree = "<group>"; };
 		72685C1B61F62631D48D1BD866F0C14C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76C462A414708BFBEF930398921EB2CF /* PhoneEnteringViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneEnteringViewController.swift; sourceTree = "<group>"; };
+		749DC1A93ECECC50D0CED1832058BCB2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		74F6CBA18AE800F98C53510D79C5CA81 /* PhoneVerifyProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneVerifyProtocol.swift; sourceTree = "<group>"; };
+		76C174F55B647B69812C60EE25A7E4AC /* OtpCountrySelectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionCell.swift; sourceTree = "<group>"; };
 		76E050C5A405921C0A7F90DEC793358E /* Pods-OtpFlowTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OtpFlowTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		76F48C820BFE7F4A02C98A0925C870D2 /* Pods-OtpFlowUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowUITests-resources.sh"; sourceTree = "<group>"; };
-		7F6EA2792159F0D6008D941F /* UIView+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
-		7F6EA27B2159F48E008D941F /* CountrySelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountrySelectionView.xib; sourceTree = "<group>"; };
-		7F6EA27D2159F53B008D941F /* CountrySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectionView.swift; sourceTree = "<group>"; };
-		7F6EA27F215A0626008D941F /* CountrySelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectionTableViewCell.swift; sourceTree = "<group>"; };
-		7F6EA285215A1A24008D941F /* NumberField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberField.xib; sourceTree = "<group>"; };
-		7F6EA294215A49BC008D941F /* CountryOptionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryOptionsView.xib; sourceTree = "<group>"; };
-		7F6EA297215A4A1D008D941F /* CountryOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryOptionsView.swift; sourceTree = "<group>"; };
+		7796B901EBB789E7DCEDD1CE07967134 /* UIView+Custom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
+		77E7BD5B87BDEC94DAA54788C35892E9 /* KaoOtpFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KaoOtpFlow.modulemap; sourceTree = "<group>"; };
+		7B7F909985BAF73F67C0E775E15BA6B3 /* OtpPinEnterView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpPinEnterView.xib; sourceTree = "<group>"; };
+		807C580BF6B84A5BD8030576B6E5778C /* OtpCountrySelectionView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpCountrySelectionView.xib; sourceTree = "<group>"; };
 		815BFBB4594D62769FC571577961AFB7 /* UIColor+MaterialTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MaterialTextField.m"; path = "MaterialTextField/UIColor+MaterialTextField.m"; sourceTree = "<group>"; };
-		8402D5A17D1F4689BB79BFCCB0FF4687 /* CustomDropUpDownImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomDropUpDownImage.swift; sourceTree = "<group>"; };
+		82D6DA319257AD34B12364491A73B2E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85C54BEF139E2E0137E9D7DFB91547E6 /* CountrySelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountrySelectionView.swift; sourceTree = "<group>"; };
+		89C0EAC662B3F667E922EDE117448A9C /* TextfieldViewParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextfieldViewParams.swift; sourceTree = "<group>"; };
+		90B87443BAFA9FA7D46B3B59AE2E7AA3 /* ResourceBundle-OtpCustomPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-OtpCustomPod-Info.plist"; sourceTree = "<group>"; };
 		912FF7A8DF719425DA908943E5F08C23 /* Pods-OtpFlowTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OtpFlowTests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9771597A36DEC27560C556CEFABF1C95 /* UIFont+MaterialTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+MaterialTextField.m"; path = "MaterialTextField/UIFont+MaterialTextField.m"; sourceTree = "<group>"; };
-		98219D858E445926ECAC76AC9D4CED4A /* OtpTextfieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpTextfieldView.swift; sourceTree = "<group>"; };
+		9AEC19F38FAD4959A28EBD5D7E434A39 /* OtpBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpBottomView.swift; sourceTree = "<group>"; };
 		9D0D7762A19D060900BD42D2494BE0E9 /* UIImage+MFTint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MFTint.m"; path = "MaterialTextField/UIImage+MFTint.m"; sourceTree = "<group>"; };
 		9E2BA7D2EB38C5F2258AD61C3A0A8F71 /* Pods-OtpFlowUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowUITests-frameworks.sh"; sourceTree = "<group>"; };
 		A22EE4B193E1F0DFA8735BA37E951D95 /* MaterialTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MaterialTextField.modulemap; sourceTree = "<group>"; };
-		A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtpCustomPod.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = OtpCustomPod.bundle; path = "KaoOtpFlow-OtpCustomPod.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A9C9746525BC00488A31C405A2070E /* UIFont+MaterialTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+MaterialTextField.h"; path = "MaterialTextField/UIFont+MaterialTextField.h"; sourceTree = "<group>"; };
-		A487319EC0C4F6E82D4C6D60240C9973 /* OtpHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpHeaderView.swift; sourceTree = "<group>"; };
-		A5B78F1A56819B063579E1EDF4E8C790 /* KaoOtpFlow.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = KaoOtpFlow.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A6C6B11935B4A78121881733EF52F92F /* CustomTextfieldAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomTextfieldAttributes.swift; sourceTree = "<group>"; };
-		B1880763CD8098A845F216D7929641B7 /* OtpCountrySelectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionCell.swift; sourceTree = "<group>"; };
-		B1995D3CF0F36B39DB60835A5B9336A7 /* OtpTextfieldView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpTextfieldView.xib; sourceTree = "<group>"; };
-		B2B30232378E4FC977506A6D5487CDD5 /* KaoOtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KaoOtpFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAF4E8DCAAB96BC159068743FC453435 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD0FC4A9318B8FB480605D91804B21E1 /* KaoOtpFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KaoOtpFlow-dummy.m"; sourceTree = "<group>"; };
+		B070B40CA9BABFDB300FACD60E605958 /* OtpCountrySelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpCountrySelectionView.swift; sourceTree = "<group>"; };
+		B2B30232378E4FC977506A6D5487CDD5 /* KaoOtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KaoOtpFlow.framework; path = KaoOtpFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B85207A5BD6AA8849B93905938E370 /* OtpTextfieldView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpTextfieldView.xib; sourceTree = "<group>"; };
 		C0979E4856C769804BFBBC7A273E7F12 /* Pods-OtpFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlow.debug.xcconfig"; sourceTree = "<group>"; };
-		C34E901B75A8C9A96A0697A7922D4A04 /* OtpPinEnterView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpPinEnterView.xib; sourceTree = "<group>"; };
+		C239A4F652F80D8F68E68EDC2C28C57D /* OtpTextfieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpTextfieldView.swift; sourceTree = "<group>"; };
 		C855FD048E9BBA1DB3E2F296BB56D1A0 /* Pods-OtpFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OtpFlow.modulemap"; sourceTree = "<group>"; };
-		CD7FBE7A492E103FB22AC1FAC1FA884A /* KaoOtpFlow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KaoOtpFlow.xcconfig; sourceTree = "<group>"; };
 		CE79FE792E5528317A04B554204E4EB4 /* Pods-OtpFlowTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowTests-frameworks.sh"; sourceTree = "<group>"; };
-		CFF90F9CA47566FA762FE61BAF32BBD5 /* PhoneVerifyProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneVerifyProtocol.swift; sourceTree = "<group>"; };
 		D299982D6413122C0682CB9C8DBECD88 /* Pods-OtpFlowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D38B005EA7C47E3DA8DC8E9F5B5CE0DE /* CustomButtonAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomButtonAttributes.swift; sourceTree = "<group>"; };
-		D67C26ADB741E41991E800609301113B /* PhoneEnterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneEnterProtocol.swift; sourceTree = "<group>"; };
+		D3E1C9885B4856AD2BA69CF57FE255ED /* CustomTextfieldAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomTextfieldAttributes.swift; sourceTree = "<group>"; };
 		DA9E826C6FD952EE1FB7A0CBCCEDED28 /* MaterialTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaterialTextField-prefix.pch"; sourceTree = "<group>"; };
+		DC97928D97F1C6BF39E246B5362D4D82 /* KaoOtpFlow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KaoOtpFlow-prefix.pch"; sourceTree = "<group>"; };
 		DE0BBAD1DE952104C745486569434B41 /* Pods-OtpFlow-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlow-frameworks.sh"; sourceTree = "<group>"; };
+		DF73F763AF7F8BC43672DE183BF1C087 /* PhoneEnteringViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhoneEnteringViewController.swift; sourceTree = "<group>"; };
 		E3F7D53AFF65DDA7A51B3F6E45693DC5 /* Pods-OtpFlow-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OtpFlow-acknowledgements.plist"; sourceTree = "<group>"; };
-		E66429DD849CF038250A745C1CCEACBB /* KaoOtpFlow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KaoOtpFlow.modulemap; sourceTree = "<group>"; };
-		E6B7160027DDF8019E16C3FE1F5C8450 /* KaoOtpFlow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KaoOtpFlow-prefix.pch"; sourceTree = "<group>"; };
+		E64BF6BB369E2B80730021FEF1A08F63 /* KaoOtpFlow.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = KaoOtpFlow.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E6B14868525F6AE68AE62B9CE93F8282 /* OtpHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpHeaderView.swift; sourceTree = "<group>"; };
+		E6CC535704EC4525BC727EAFAB9C5187 /* CustomDropUpDownImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomDropUpDownImage.swift; sourceTree = "<group>"; };
 		E8C079FC2D670311E5B73C4E85BE8796 /* Pods-OtpFlowTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OtpFlowTests-umbrella.h"; sourceTree = "<group>"; };
-		EB548EE52BE8E4AF6B73DE277228CFB2 /* Pods_OtpFlowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9155202F872D94B005C57B5FCC30A53 /* NumberField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumberField.swift; sourceTree = "<group>"; };
+		EB0026BC2056BADAF006B48EC391D1B9 /* CountrySelectionTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountrySelectionTableViewCell.swift; sourceTree = "<group>"; };
+		EB548EE52BE8E4AF6B73DE277228CFB2 /* Pods_OtpFlowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlowUITests.framework; path = "Pods-OtpFlowUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE7EEB7ADAA4C8E7E8F5C577C57F366 /* MaterialTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaterialTextField.h; path = MaterialTextField/MaterialTextField.h; sourceTree = "<group>"; };
+		ED0B1F8E2914A2EAEF09514246E47BA8 /* CountrySelectionView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CountrySelectionView.xib; sourceTree = "<group>"; };
 		EDE2414DB1205679C31344CA6375F768 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2DFF6DD6EA0E3FBE24911294FCD329F /* Pods-OtpFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlow.release.xcconfig"; sourceTree = "<group>"; };
-		F52479B33ADB5C8FB53022A572ACC9B4 /* TextfieldViewParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextfieldViewParams.swift; sourceTree = "<group>"; };
-		F80FC012C5A5EAE40CCAEBD080A31558 /* OtpPinEnterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpPinEnterView.swift; sourceTree = "<group>"; };
 		FCFA98BFB8152752B412958B60B4FAA8 /* Pods-OtpFlowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD999199C433A4F0D189212DDCD81E2D /* OtpPinEnterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpPinEnterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		38B15179077F1609AB577551D5C4753B /* Frameworks */ = {
+		1FD4435C36C9419E6FC1BA706B84C775 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB41C9D04FBB2FB26FDF641F46B05B6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B56C820457C348E1130B29E279C68FE /* Frameworks */ = {
+		5716F7FCDF39BBC95AF55DA5EB3A2123 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				938D934145F6F3DE2BE54767020D6A4C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +253,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF266BD94B21C7ABADB5727EBA29163D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A5E0803C135002EF396FD7118E4B51A /* Foundation.framework in Frameworks */,
+				7888C987924A39548FBDD0077CA0CB20 /* MaterialTextField.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1CE2DF59E25D3965488F2B8A05CE1EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,24 +270,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7216F515CBA8F62D95049A3E2ACA7AC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3EF5E33BF0E797FB9626908245317DCB /* Foundation.framework in Frameworks */,
-				D9D80E277B8007B46754864C0BC7727F /* MaterialTextField.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0018F24C094598AF6C70840346183364 /* Textfields */ = {
+		093534AEB82D4A9E7517F00245BD9EB2 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				45A71242517DDB2C75FAE9C7CE411D08 /* OtpPinTextfield.swift */,
+				AC9550C71C8908912B45AA321BEA2786 /* KaoOtpFlow */,
 			);
-			path = Textfields;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		0FD385EC86AD22DEE061933D6D7060FE /* Pods-OtpFlow */ = {
@@ -312,12 +312,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3C0F75DCBA7C50C56736779671DDA4BE /* Development Pods */ = {
+		3D97CE0A1899E5E429ACE32855A1AEB9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E27C0E1C1733DBAE092F3FD031FB74F8 /* KaoOtpFlow */,
+				76C174F55B647B69812C60EE25A7E4AC /* OtpCountrySelectionCell.swift */,
 			);
-			name = "Development Pods";
+			name = Cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		506B880024D9472B1E4D9A8E568E6254 /* Pods */ = {
@@ -355,6 +356,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		599D7DD6F27C25C3895833DC72F1994F /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				39D4448641CB1F3916E14981C0CA8E03 /* OtpPinTextfield.swift */,
+			);
+			name = Textfields;
+			path = Textfields;
+			sourceTree = "<group>";
+		};
+		5EA1145AB3991E6D057D1D3A321C79CE /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E64BF6BB369E2B80730021FEF1A08F63 /* KaoOtpFlow.podspec */,
+				35DBBA74DDD5C24C0D4458507D755F38 /* LICENSE */,
+				749DC1A93ECECC50D0CED1832058BCB2 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		72DC32A7F9E51167A19ED88FB79CF7B5 /* MaterialTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,48 +391,20 @@
 				2D882C6EEC5ECECC8F05752BBD5F93F1 /* UITextField+MFClearButton.m */,
 				908435666CB962325D076799A7A205B1 /* Support Files */,
 			);
+			name = MaterialTextField;
 			path = MaterialTextField;
-			sourceTree = "<group>";
-		};
-		753F99B7ECE333D997266625CD764466 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				A5B78F1A56819B063579E1EDF4E8C790 /* KaoOtpFlow.podspec */,
-				2A67A639ADA5AE9377E116806AAD1FB7 /* LICENSE */,
-				6650C1BA65705B4628450658720E0AE3 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				3C0F75DCBA7C50C56736779671DDA4BE /* Development Pods */,
+				093534AEB82D4A9E7517F00245BD9EB2 /* Development Pods */,
 				58FE60FBD9868AD8FDD0AF35CED37AB4 /* Frameworks */,
 				506B880024D9472B1E4D9A8E568E6254 /* Pods */,
 				1A266EDD7C8CBC523E6B67A2A3AF0FE9 /* Products */,
 				FFA94AC6798B7F0715348AB0FD4C2FDB /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		7F6EA2782159F0B3008D941F /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				7F6EA2792159F0D6008D941F /* UIView+Custom.swift */,
-			);
-			name = Extension;
-			path = ../../Extension;
-			sourceTree = "<group>";
-		};
-		900E561B335FCA134F09174ED34C5C3A /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				D67C26ADB741E41991E800609301113B /* PhoneEnterProtocol.swift */,
-				CFF90F9CA47566FA762FE61BAF32BBD5 /* PhoneVerifyProtocol.swift */,
-			);
-			name = Protocols;
-			path = Sources/Protocols;
 			sourceTree = "<group>";
 		};
 		908435666CB962325D076799A7A205B1 /* Support Files */ = {
@@ -427,6 +419,89 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MaterialTextField";
+			sourceTree = "<group>";
+		};
+		9992E6041CEAA4A0FDCA27DA3F1C6C85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D343D34E588BF225EBE5D9428E4252B /* CountryOptionsView.swift */,
+				054B03DD86FEDE74AD3EEA88F437623A /* CountryOptionsView.xib */,
+				EB0026BC2056BADAF006B48EC391D1B9 /* CountrySelectionTableViewCell.swift */,
+				85C54BEF139E2E0137E9D7DFB91547E6 /* CountrySelectionView.swift */,
+				ED0B1F8E2914A2EAEF09514246E47BA8 /* CountrySelectionView.xib */,
+				E9155202F872D94B005C57B5FCC30A53 /* NumberField.swift */,
+				56128B6AFD37E9E0A3E7AE6EB79E8C86 /* NumberField.xib */,
+				9AEC19F38FAD4959A28EBD5D7E434A39 /* OtpBottomView.swift */,
+				114065E7F572AA7205B623E508961B67 /* OtpBottomView.xib */,
+				B070B40CA9BABFDB300FACD60E605958 /* OtpCountrySelectionView.swift */,
+				807C580BF6B84A5BD8030576B6E5778C /* OtpCountrySelectionView.xib */,
+				E6B14868525F6AE68AE62B9CE93F8282 /* OtpHeaderView.swift */,
+				68FC6853B664C065364CFC98B7888E56 /* OtpHeaderView.xib */,
+				FD999199C433A4F0D189212DDCD81E2D /* OtpPinEnterView.swift */,
+				7B7F909985BAF73F67C0E775E15BA6B3 /* OtpPinEnterView.xib */,
+				C239A4F652F80D8F68E68EDC2C28C57D /* OtpTextfieldView.swift */,
+				B4B85207A5BD6AA8849B93905938E370 /* OtpTextfieldView.xib */,
+				3D97CE0A1899E5E429ACE32855A1AEB9 /* Cells */,
+				599D7DD6F27C25C3895833DC72F1994F /* Textfields */,
+			);
+			name = Views;
+			path = Sources/Views;
+			sourceTree = "<group>";
+		};
+		9B845213A875773E003F4E60A54560C1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				82D6DA319257AD34B12364491A73B2E7 /* Info.plist */,
+				77E7BD5B87BDEC94DAA54788C35892E9 /* KaoOtpFlow.modulemap */,
+				024EAA6C0AB4A14EC9B6B0C299F1E884 /* KaoOtpFlow.xcconfig */,
+				AD0FC4A9318B8FB480605D91804B21E1 /* KaoOtpFlow-dummy.m */,
+				DC97928D97F1C6BF39E246B5362D4D82 /* KaoOtpFlow-prefix.pch */,
+				6D8FEC659A909BA50BAB6E4F82E9DB00 /* KaoOtpFlow-umbrella.h */,
+				90B87443BAFA9FA7D46B3B59AE2E7AA3 /* ResourceBundle-OtpCustomPod-Info.plist */,
+			);
+			name = "Support Files";
+			path = "OtpDemo/Pods/Target Support Files/KaoOtpFlow";
+			sourceTree = "<group>";
+		};
+		A3332333AC1111AE7EBE63BD13C42713 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0294F42B8DD8A280CB551AF343A9A2B3 /* CountryPhone.swift */,
+				1B466C76E3FD0BBDDB9A76864B6A5455 /* CustomButtonAttributes.swift */,
+				E6CC535704EC4525BC727EAFAB9C5187 /* CustomDropUpDownImage.swift */,
+				2B58CFF3B624764B35937F9658E08BC0 /* CustomLabelAttributes.swift */,
+				D3E1C9885B4856AD2BA69CF57FE255ED /* CustomTextfieldAttributes.swift */,
+				658BE16F0C0480B52AFF55543CC1AAA2 /* HeaderViewParams.swift */,
+				89C0EAC662B3F667E922EDE117448A9C /* TextfieldViewParams.swift */,
+			);
+			name = Models;
+			path = Sources/Models;
+			sourceTree = "<group>";
+		};
+		AC9550C71C8908912B45AA321BEA2786 /* KaoOtpFlow */ = {
+			isa = PBXGroup;
+			children = (
+				DFF493FDEF30B6F1C73E764A89260CE1 /* Extension */,
+				A3332333AC1111AE7EBE63BD13C42713 /* Models */,
+				5EA1145AB3991E6D057D1D3A321C79CE /* Pod */,
+				BBA63010518B71EAFFC9AE11736409B6 /* Protocols */,
+				D13A28197CBE62F6DACA31B561C6E0EC /* Resources */,
+				9B845213A875773E003F4E60A54560C1 /* Support Files */,
+				C543FD563E165A5563D1E90C272FC594 /* ViewController */,
+				9992E6041CEAA4A0FDCA27DA3F1C6C85 /* Views */,
+			);
+			name = KaoOtpFlow;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BBA63010518B71EAFFC9AE11736409B6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				60A3947FA022D0FBF2382E411F76E469 /* PhoneEnterProtocol.swift */,
+				74F6CBA18AE800F98C53510D79C5CA81 /* PhoneVerifyProtocol.swift */,
+			);
+			name = Protocols;
+			path = Sources/Protocols;
 			sourceTree = "<group>";
 		};
 		BC79529454661429F6AD7F98C9686159 /* Pods-OtpFlowTests */ = {
@@ -447,37 +522,30 @@
 			path = "Target Support Files/Pods-OtpFlowTests";
 			sourceTree = "<group>";
 		};
-		CC0A7052C133179CACC4FD3B99BD57F1 /* Support Files */ = {
+		C543FD563E165A5563D1E90C272FC594 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BAF4E8DCAAB96BC159068743FC453435 /* Info.plist */,
-				E66429DD849CF038250A745C1CCEACBB /* KaoOtpFlow.modulemap */,
-				CD7FBE7A492E103FB22AC1FAC1FA884A /* KaoOtpFlow.xcconfig */,
-				51434F1B9EF478926112FF83C52D2457 /* KaoOtpFlow-dummy.m */,
-				E6B7160027DDF8019E16C3FE1F5C8450 /* KaoOtpFlow-prefix.pch */,
-				463F19FF4EA52C0BFB37A61FF293752D /* KaoOtpFlow-umbrella.h */,
-				1471CDFCA8B258DA9C6DE4D878CDAE77 /* ResourceBundle-OtpCustomPod-Info.plist */,
-			);
-			name = "Support Files";
-			path = "OtpDemo/Pods/Target Support Files/KaoOtpFlow";
-			sourceTree = "<group>";
-		};
-		D2BC72721CCFE49F38B4B188F8D69E5D /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				76C462A414708BFBEF930398921EB2CF /* PhoneEnteringViewController.swift */,
-				26AB1DE606FBCE18389217C3918C4D2F /* PhoneVerifyingViewController.swift */,
+				DF73F763AF7F8BC43672DE183BF1C087 /* PhoneEnteringViewController.swift */,
+				17DAB4AAF7CC2138E2F877727FDCDBBB /* PhoneVerifyingViewController.swift */,
 			);
 			name = ViewController;
 			path = Sources/ViewController;
 			sourceTree = "<group>";
 		};
-		D72B99BA73118B19BA71867DF43C6352 /* Cells */ = {
+		D13A28197CBE62F6DACA31B561C6E0EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B1880763CD8098A845F216D7929641B7 /* OtpCountrySelectionCell.swift */,
 			);
-			path = Cells;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DFF493FDEF30B6F1C73E764A89260CE1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7796B901EBB789E7DCEDD1CE07967134 /* UIView+Custom.swift */,
+			);
+			name = Extension;
+			path = Sources/Extension;
 			sourceTree = "<group>";
 		};
 		E041F94CE18452AE8F827445356811CE /* iOS */ = {
@@ -486,71 +554,6 @@
 				24CEEFDF48B50DA2A71AF3273419377C /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		E27C0E1C1733DBAE092F3FD031FB74F8 /* KaoOtpFlow */ = {
-			isa = PBXGroup;
-			children = (
-				F461CF75BD511C736557A17E6A9B527B /* Models */,
-				753F99B7ECE333D997266625CD764466 /* Pod */,
-				900E561B335FCA134F09174ED34C5C3A /* Protocols */,
-				EE112F0982C43EF982E85F57D9C89C21 /* Resources */,
-				CC0A7052C133179CACC4FD3B99BD57F1 /* Support Files */,
-				D2BC72721CCFE49F38B4B188F8D69E5D /* ViewController */,
-				F8361753B63202DDB9DA5DEC340E25AC /* Views */,
-			);
-			name = KaoOtpFlow;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		EE112F0982C43EF982E85F57D9C89C21 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		F461CF75BD511C736557A17E6A9B527B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				162C0DFCD26BF0F4DDB4DA37FFDC3C28 /* CountryPhone.swift */,
-				D38B005EA7C47E3DA8DC8E9F5B5CE0DE /* CustomButtonAttributes.swift */,
-				8402D5A17D1F4689BB79BFCCB0FF4687 /* CustomDropUpDownImage.swift */,
-				3D53BF729032DAF4D8049D8C782FFF9C /* CustomLabelAttributes.swift */,
-				A6C6B11935B4A78121881733EF52F92F /* CustomTextfieldAttributes.swift */,
-				0233A2145F72ECD96E5FDDDA16C744F4 /* HeaderViewParams.swift */,
-				F52479B33ADB5C8FB53022A572ACC9B4 /* TextfieldViewParams.swift */,
-			);
-			name = Models;
-			path = Sources/Models;
-			sourceTree = "<group>";
-		};
-		F8361753B63202DDB9DA5DEC340E25AC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2A6B3B56E5BA0F65D8D2BA463D81B211 /* OtpCountrySelectionView.swift */,
-				55A80E21D2D3084A6DD573359C2D49E7 /* OtpCountrySelectionView.xib */,
-				F80FC012C5A5EAE40CCAEBD080A31558 /* OtpPinEnterView.swift */,
-				C34E901B75A8C9A96A0697A7922D4A04 /* OtpPinEnterView.xib */,
-				98219D858E445926ECAC76AC9D4CED4A /* OtpTextfieldView.swift */,
-				B1995D3CF0F36B39DB60835A5B9336A7 /* OtpTextfieldView.xib */,
-				A487319EC0C4F6E82D4C6D60240C9973 /* OtpHeaderView.swift */,
-				2E8A097888BA5F676CEBB04FEF77DDBE /* OtpHeaderView.xib */,
-				5BBF599757C2F8E9E57622AE9B00C58B /* NumberField.swift */,
-				7F6EA285215A1A24008D941F /* NumberField.xib */,
-				7F6EA27D2159F53B008D941F /* CountrySelectionView.swift */,
-				7F6EA27B2159F48E008D941F /* CountrySelectionView.xib */,
-				7F6EA27F215A0626008D941F /* CountrySelectionTableViewCell.swift */,
-				7F6EA297215A4A1D008D941F /* CountryOptionsView.swift */,
-				7F6EA294215A49BC008D941F /* CountryOptionsView.xib */,
-				52ACDA76CBDF64378A32A70F0303DE8B /* OtpBottomView.swift */,
-				5D6CFF9889CFEAAB9F6DCE9B9BD330BD /* OtpBottomView.xib */,
-				D72B99BA73118B19BA71867DF43C6352 /* Cells */,
-				7F6EA2782159F0B3008D941F /* Extension */,
-				0018F24C094598AF6C70840346183364 /* Textfields */,
-			);
-			name = Views;
-			path = Sources/Views;
 			sourceTree = "<group>";
 		};
 		FFA94AC6798B7F0715348AB0FD4C2FDB /* Targets Support Files */ = {
@@ -566,20 +569,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		09F520BEC91C51FC677F87946D909F6E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7643111D49B342165388734BD282BA69 /* MaterialTextField-umbrella.h in Headers */,
-				7C6F2EC639E3C88B58260BB460078B9C /* MaterialTextField.h in Headers */,
-				200F658456411285F5A7714C17138BFA /* MFTextField.h in Headers */,
-				A617A7F0440466DA333586BAB56B468C /* UIColor+MaterialTextField.h in Headers */,
-				6D54FA9ECDF4D2962A7DBADB03E280F1 /* UIFont+MaterialTextField.h in Headers */,
-				5C9377968E0A7619519E5EC42736DC94 /* UIImage+MFTint.h in Headers */,
-				FC2CF19D56AB65D889C22609FF542ED7 /* UITextField+MFClearButton.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2FC319F68968FD6F0FDD8C38D8CBA802 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -604,54 +593,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0177FAA5F83D420F79CC7E24C1E548B /* Headers */ = {
+		B210FF6C07B70ADB7D24BC6EE9090113 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66E41F9D56F2A4BE45B5B4491A1C083B /* KaoOtpFlow-umbrella.h in Headers */,
+				CC6062CB9EB44989D775FF929CAF2AF6 /* KaoOtpFlow-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6165301A70115281525F53E3BAE19D7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ED352A8829F9264993444781313E988 /* MaterialTextField-umbrella.h in Headers */,
+				51D773A558803F14AB1523B3ED5AC5AC /* MaterialTextField.h in Headers */,
+				3C36FAAAF6CFF16592B9AA95DAFCCF0C /* MFTextField.h in Headers */,
+				96A1BAE331934C8728AEE2CA918226C3 /* UIColor+MaterialTextField.h in Headers */,
+				C4B03443F368670B12B2999728C598E5 /* UIFont+MaterialTextField.h in Headers */,
+				5019CDE895DE1CE4366A704D0B78680A /* UIImage+MFTint.h in Headers */,
+				DCF21335F3D428120C61AF790DA44FF2 /* UITextField+MFClearButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9734EE4DB2C767546F429B730041593D /* MaterialTextField */ = {
+		74E080010781ECBACA6D4E19456B47A1 /* KaoOtpFlow-OtpCustomPod */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B66261DFFFA8B004D2ACA062457BC88 /* Build configuration list for PBXNativeTarget "MaterialTextField" */;
+			buildConfigurationList = 93876E757F13C1289ACE9F987702BB0A /* Build configuration list for PBXNativeTarget "KaoOtpFlow-OtpCustomPod" */;
 			buildPhases = (
-				09F520BEC91C51FC677F87946D909F6E /* Headers */,
-				CD9662AD37A8E1EAAB5F622A2EA954A8 /* Sources */,
-				8B56C820457C348E1130B29E279C68FE /* Frameworks */,
-				F29E79FF3359921F2EA03E6B50D0FCC2 /* Resources */,
+				61AC36A5BA8A04FB1D817352996645BD /* Sources */,
+				5716F7FCDF39BBC95AF55DA5EB3A2123 /* Frameworks */,
+				C092C5C770F7F69AD68CFD22A92DF1B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MaterialTextField;
-			productName = MaterialTextField;
-			productReference = 3527CEA07752F7F956256C3A36EECEDA /* MaterialTextField.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A1DD585619B70A43F119F83A1E2DCBD1 /* KaoOtpFlow */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 17328CEA754188BF8921D3E03DC493C7 /* Build configuration list for PBXNativeTarget "KaoOtpFlow" */;
-			buildPhases = (
-				E0177FAA5F83D420F79CC7E24C1E548B /* Headers */,
-				7B3DAC8FA2193641E2EBB108D460A378 /* Sources */,
-				E7216F515CBA8F62D95049A3E2ACA7AC /* Frameworks */,
-				40361097B016146DCFCAE5DC384A050E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0FCEE8F3236AFA23EE88DA2792E1155B /* PBXTargetDependency */,
-				206224918CB8F5966336E4ED733C919A /* PBXTargetDependency */,
-			);
-			name = KaoOtpFlow;
-			productName = KaoOtpFlow;
-			productReference = B2B30232378E4FC977506A6D5487CDD5 /* KaoOtpFlow.framework */;
-			productType = "com.apple.product-type.framework";
+			name = "KaoOtpFlow-OtpCustomPod";
+			productName = "KaoOtpFlow-OtpCustomPod";
+			productReference = A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		B62653CA30BAE9F724CD20EAF5B01BDB /* Pods-OtpFlowUITests */ = {
 			isa = PBXNativeTarget;
@@ -692,22 +674,25 @@
 			productReference = 624357B8BD87272A7DF6A3FB639386BC /* Pods_OtpFlow.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BF22D9044058C6EBA4EA5D7C190BC7EB /* KaoOtpFlow-OtpCustomPod */ = {
+		CCB15BA077289DA35B4DCD8A77BC82E8 /* KaoOtpFlow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5189084E1102F0C9A10893CB65D21778 /* Build configuration list for PBXNativeTarget "KaoOtpFlow-OtpCustomPod" */;
+			buildConfigurationList = FDD83C0320232BDFA98E321067DE7279 /* Build configuration list for PBXNativeTarget "KaoOtpFlow" */;
 			buildPhases = (
-				21FD98B5872BC2167DF8C07ECFC22937 /* Sources */,
-				38B15179077F1609AB577551D5C4753B /* Frameworks */,
-				13EDFE2BC2360E7BC30C65183B796C01 /* Resources */,
+				B210FF6C07B70ADB7D24BC6EE9090113 /* Headers */,
+				5634F35472FE5F28664B3E74EDB79567 /* Sources */,
+				DF266BD94B21C7ABADB5727EBA29163D /* Frameworks */,
+				72E3B7C51B0993F6E20A3588094CCDA6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1D47CA6F5F88285263BA29EEC21FBCF3 /* PBXTargetDependency */,
+				B14A9513818E303946CCDFC4A9852D79 /* PBXTargetDependency */,
 			);
-			name = "KaoOtpFlow-OtpCustomPod";
-			productName = "KaoOtpFlow-OtpCustomPod";
-			productReference = A24B31EB619F2931BCB0775E60126856 /* OtpCustomPod.bundle */;
-			productType = "com.apple.product-type.bundle";
+			name = KaoOtpFlow;
+			productName = KaoOtpFlow;
+			productReference = B2B30232378E4FC977506A6D5487CDD5 /* KaoOtpFlow.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		D1BB3C7C680413EC47241FE5796CC362 /* Pods-OtpFlowTests */ = {
 			isa = PBXNativeTarget;
@@ -726,6 +711,24 @@
 			name = "Pods-OtpFlowTests";
 			productName = "Pods-OtpFlowTests";
 			productReference = 4688CA8D3E8A223ADB32D21A05356F5C /* Pods_OtpFlowTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D6EDD6524FCFAC2A8EDD70E86FEAE162 /* MaterialTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F4A2068005BAA4A06BF471E5CC5F1A3 /* Build configuration list for PBXNativeTarget "MaterialTextField" */;
+			buildPhases = (
+				F6165301A70115281525F53E3BAE19D7 /* Headers */,
+				65E2546EF1E1AE85EAEEB99140C34FF7 /* Sources */,
+				1FD4435C36C9419E6FC1BA706B84C775 /* Frameworks */,
+				870403978E2A96E4A625CE4949FF9097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaterialTextField;
+			productName = MaterialTextField;
+			productReference = 3527CEA07752F7F956256C3A36EECEDA /* MaterialTextField.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -749,9 +752,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1DD585619B70A43F119F83A1E2DCBD1 /* KaoOtpFlow */,
-				BF22D9044058C6EBA4EA5D7C190BC7EB /* KaoOtpFlow-OtpCustomPod */,
-				9734EE4DB2C767546F429B730041593D /* MaterialTextField */,
+				CCB15BA077289DA35B4DCD8A77BC82E8 /* KaoOtpFlow */,
+				74E080010781ECBACA6D4E19456B47A1 /* KaoOtpFlow-OtpCustomPod */,
+				D6EDD6524FCFAC2A8EDD70E86FEAE162 /* MaterialTextField */,
 				BC76F6FE6251335FF1498197123929DF /* Pods-OtpFlow */,
 				D1BB3C7C680413EC47241FE5796CC362 /* Pods-OtpFlowTests */,
 				B62653CA30BAE9F724CD20EAF5B01BDB /* Pods-OtpFlowUITests */,
@@ -760,33 +763,22 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		13EDFE2BC2360E7BC30C65183B796C01 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3473A5A17261906EFD612D3EB0AE326E /* OtpBottomView.xib in Resources */,
-				1AD2F692B03050AF40909123BB1C9FC5 /* OtpCountrySelectionView.xib in Resources */,
-				7F6EA296215A49BC008D941F /* CountryOptionsView.xib in Resources */,
-				3500BF8DBC9D400B304992F06A2C0E36 /* OtpHeaderView.xib in Resources */,
-				7F6EA290215A397B008D941F /* NumberField.xib in Resources */,
-				4212AD9AC90DE4F5C5D7F0BFB2C8FE7A /* OtpPinEnterView.xib in Resources */,
-				34F6ACAE5CAA1435DDC801BDC65513F1 /* OtpTextfieldView.xib in Resources */,
-				7F6EA291215A409A008D941F /* CountrySelectionView.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		40361097B016146DCFCAE5DC384A050E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7F6EA286215A1A24008D941F /* NumberField.xib in Resources */,
-				7F6EA27C2159F48E008D941F /* CountrySelectionView.xib in Resources */,
-				7F6EA295215A49BC008D941F /* CountryOptionsView.xib in Resources */,
-				D50DCF1EFB8EFFC2BFACBDD494C052A1 /* OtpCustomPod.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		51EE7244594701CD5012C85887CF9091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72E3B7C51B0993F6E20A3588094CCDA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6306AC2D9EAC085F8FCCAD1AC3CD350A /* OtpCustomPod.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		870403978E2A96E4A625CE4949FF9097 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -800,14 +792,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F12330BE7E5938F505D1014F8A11DAE3 /* Resources */ = {
+		C092C5C770F7F69AD68CFD22A92DF1B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F90CD26B0CF96D01A3E96D83358E3E /* CountryOptionsView.xib in Resources */,
+				CB513D923868275F0DC55CCF2080B58D /* CountrySelectionView.xib in Resources */,
+				EA935D6432CFF613E895109754180978 /* NumberField.xib in Resources */,
+				DC56DE6C3F92573FF8FE722EABFD8803 /* OtpBottomView.xib in Resources */,
+				5CDED95C95F8A0AABB4D26CD9783D281 /* OtpCountrySelectionView.xib in Resources */,
+				0C333515EE579F4EF29614312BD7A925 /* OtpHeaderView.xib in Resources */,
+				9A99D187CC06DA5F798EAFD3301B70EA /* OtpPinEnterView.xib in Resources */,
+				5B06B4B8506F7014FB496BF7C376C4A9 /* OtpTextfieldView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F29E79FF3359921F2EA03E6B50D0FCC2 /* Resources */ = {
+		F12330BE7E5938F505D1014F8A11DAE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -817,10 +817,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		21FD98B5872BC2167DF8C07ECFC22937 /* Sources */ = {
+		5634F35472FE5F28664B3E74EDB79567 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954C5C32B2D579F5D290B3B756BB88E0 /* CountryOptionsView.swift in Sources */,
+				030F372CBEFD1A65E65A54A80DDC9338 /* CountryOptionsView.xib in Sources */,
+				2B3C63A4CD247CC04997C417225E3807 /* CountryPhone.swift in Sources */,
+				B1CEC667DD1B89B9F3250F06D7C1D28F /* CountrySelectionTableViewCell.swift in Sources */,
+				B6E819D7FD0123679474B0EE928A6BD8 /* CountrySelectionView.swift in Sources */,
+				2B7AE6D301CF19A5F796CBFD63EAF241 /* CountrySelectionView.xib in Sources */,
+				78907C92DE9574230C14BA24CC7BFC9E /* CustomButtonAttributes.swift in Sources */,
+				046FF33076E40CEB20F5A2431EDCB264 /* CustomDropUpDownImage.swift in Sources */,
+				A485816A837824D7EB106C1A07BCBA02 /* CustomLabelAttributes.swift in Sources */,
+				EF650963095F1681C0B2FA836832DCF3 /* CustomTextfieldAttributes.swift in Sources */,
+				ED14FFE03DDE32278615494493CB591E /* HeaderViewParams.swift in Sources */,
+				BCD47017431D5135498A89B8F6A306C9 /* KaoOtpFlow-dummy.m in Sources */,
+				CD3F1FA721DEF41CD969878F0A8F9487 /* NumberField.swift in Sources */,
+				FE940CB581E4551CCFDC17A1C2CF89EA /* NumberField.xib in Sources */,
+				502BC6144CFA0A23D8AFD391E99C1526 /* OtpBottomView.swift in Sources */,
+				83FDF8746766B06B6B16E67F528FB093 /* OtpBottomView.xib in Sources */,
+				8C8079955E3973CA6195CEE6D12B6177 /* OtpCountrySelectionCell.swift in Sources */,
+				045C9AC626817A5077B3C79D9EE4246E /* OtpCountrySelectionView.swift in Sources */,
+				7FAC4AB1275E18F9644F7442CA33786C /* OtpCountrySelectionView.xib in Sources */,
+				DAB6B81DC3B6EB7B52B334A93234AF1C /* OtpHeaderView.swift in Sources */,
+				87B8399B9D474F81F9584CAB55378802 /* OtpHeaderView.xib in Sources */,
+				793F923F56020F0A7633F2601FACB8E8 /* OtpPinEnterView.swift in Sources */,
+				CFD8CA3836EE92ED839C7DDE1BC28A61 /* OtpPinEnterView.xib in Sources */,
+				1D68EF7384C6D79C8A6818368B9C835A /* OtpPinTextfield.swift in Sources */,
+				51BD2522C7578E2EE09E55DE52195E73 /* OtpTextfieldView.swift in Sources */,
+				B5ED4C816BE8856FAEAFF22E876122BF /* OtpTextfieldView.xib in Sources */,
+				42D6CBE43FDE710E4D824745C9491F4E /* PhoneEnteringViewController.swift in Sources */,
+				33E4ABAEB84526BE53E05C12821A5FB7 /* PhoneEnterProtocol.swift in Sources */,
+				351CE965447A7027513E9259BB085C4C /* PhoneVerifyingViewController.swift in Sources */,
+				5D2D0C6FA4104C24AD4E185380680EC6 /* PhoneVerifyProtocol.swift in Sources */,
+				E0A75E8EE1049E574337B2458E430639 /* TextfieldViewParams.swift in Sources */,
+				97E8A2EBCF856B65CA459A01900FFC39 /* UIView+Custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,60 +864,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		61AC36A5BA8A04FB1D817352996645BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E2546EF1E1AE85EAEEB99140C34FF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3026FFC29D12DC1A14AB00362F5AE1F /* MaterialTextField-dummy.m in Sources */,
+				BE2B9249BE7F9F1BD606B536C7450F2B /* MFTextField.m in Sources */,
+				D5747C3249D98B3C782139650295FABE /* UIColor+MaterialTextField.m in Sources */,
+				E172119D9C89AE063F683627A509AE83 /* UIFont+MaterialTextField.m in Sources */,
+				3A078A29317B1002359E3F9F8C06F9D2 /* UIImage+MFTint.m in Sources */,
+				0B9043BF47412C7E8A574A29864D39F9 /* UITextField+MFClearButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A6CC95879422ECD8B44BAB9F731111F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ECD3714C3C14B7A23B1CAF70ADB8D4F2 /* Pods-OtpFlowTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B3DAC8FA2193641E2EBB108D460A378 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B0A0B3908568CDEB877A20F4A9DD290A /* CountryPhone.swift in Sources */,
-				7AD89F2500A24D13242F42132DD819A5 /* CustomButtonAttributes.swift in Sources */,
-				A06038E15D8591EC9F846F24F39F5DFC /* CustomDropUpDownImage.swift in Sources */,
-				54EEB1633E843FC24B79C2FFF8BA57D6 /* CustomLabelAttributes.swift in Sources */,
-				E72B8A8BA25EFD3DBE2F1947456D3360 /* CustomTextfieldAttributes.swift in Sources */,
-				B2B8B3BE541B978A4394ADF30E11EC2D /* HeaderViewParams.swift in Sources */,
-				A9BCE739E096F0003799FC7FC4531760 /* KaoOtpFlow-dummy.m in Sources */,
-				05BABEB06092E6F8701958B0D2241733 /* NumberField.swift in Sources */,
-				7F6EA281215A0626008D941F /* CountrySelectionTableViewCell.swift in Sources */,
-				55A1E047AE870FB8854E01BF7328E26E /* OtpBottomView.swift in Sources */,
-				C9E3E49B0FDAD9B27A2C5A0202C3D680 /* OtpBottomView.xib in Sources */,
-				B97048DA344323FB11EEDB8F1E8FF621 /* OtpCountrySelectionCell.swift in Sources */,
-				2B184305125E5DDD29446BC6F29DACF8 /* OtpCountrySelectionView.swift in Sources */,
-				B7AA93D54E54CD09A6F33AABD33D48B2 /* OtpCountrySelectionView.xib in Sources */,
-				D7822EAEEA808B1942B0472EAFCD5AEB /* OtpHeaderView.swift in Sources */,
-				8F483BA7BD00C012E73903716F018190 /* OtpHeaderView.xib in Sources */,
-				1C722D061F0FA0519805778AB80743BA /* OtpPinEnterView.swift in Sources */,
-				7F6EA298215A4A1D008D941F /* CountryOptionsView.swift in Sources */,
-				01D4B9FD971A4F1157D356CD099DA846 /* OtpPinEnterView.xib in Sources */,
-				9D5BD8BB8CBBB8FB8BC87424B538522A /* OtpPinTextfield.swift in Sources */,
-				0115470F9E40574EA9B8E55DC586CCAE /* OtpTextfieldView.swift in Sources */,
-				49AE58EF7EED0AA37F5426A807545B6D /* OtpTextfieldView.xib in Sources */,
-				1FA45D69FE89B03C6B03BE82C242B8CD /* PhoneEnteringViewController.swift in Sources */,
-				7F6EA27E2159F53B008D941F /* CountrySelectionView.swift in Sources */,
-				C010D6C3E5DDCEF3828F08BC318E58B6 /* PhoneEnterProtocol.swift in Sources */,
-				0F87BECF0A83C526CB11B3ED0A9AADAB /* PhoneVerifyingViewController.swift in Sources */,
-				7F6EA27A2159F0D6008D941F /* UIView+Custom.swift in Sources */,
-				6E88657FF4063A34F64ACD8A4B0D4069 /* PhoneVerifyProtocol.swift in Sources */,
-				188ED0E24142882D858CE672EBF63733 /* TextfieldViewParams.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD9662AD37A8E1EAAB5F622A2EA954A8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C112E0D6536883F403A540A755B6DA2 /* MaterialTextField-dummy.m in Sources */,
-				D0EFF5F969C8E4651F056042A084C623 /* MFTextField.m in Sources */,
-				BA3BDDD3FC5E1CD19B897173B72AE361 /* UIColor+MaterialTextField.m in Sources */,
-				F9549F6BF3267CFDA10D0100D41D29F3 /* UIFont+MaterialTextField.m in Sources */,
-				B40BE1397386F3AE15E88102E5BB5F9B /* UIImage+MFTint.m in Sources */,
-				8A147306D2A21C71A9B4C31065AF0C6A /* UITextField+MFClearButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,29 +903,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0FCEE8F3236AFA23EE88DA2792E1155B /* PBXTargetDependency */ = {
+		1D47CA6F5F88285263BA29EEC21FBCF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "KaoOtpFlow-OtpCustomPod";
-			target = BF22D9044058C6EBA4EA5D7C190BC7EB /* KaoOtpFlow-OtpCustomPod */;
-			targetProxy = 34DA90FD080A927337204B075D5DB001 /* PBXContainerItemProxy */;
-		};
-		206224918CB8F5966336E4ED733C919A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MaterialTextField;
-			target = 9734EE4DB2C767546F429B730041593D /* MaterialTextField */;
-			targetProxy = 874ED059086FD1629D777636CAB8D47F /* PBXContainerItemProxy */;
+			target = 74E080010781ECBACA6D4E19456B47A1 /* KaoOtpFlow-OtpCustomPod */;
+			targetProxy = 346A703E0CBDD435EE85BB81F26B3669 /* PBXContainerItemProxy */;
 		};
 		2871A6019D819632E8A8EEA78237A7A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KaoOtpFlow;
-			target = A1DD585619B70A43F119F83A1E2DCBD1 /* KaoOtpFlow */;
+			target = CCB15BA077289DA35B4DCD8A77BC82E8 /* KaoOtpFlow */;
 			targetProxy = 72439B4905AE4069CD059FF2419CBC02 /* PBXContainerItemProxy */;
 		};
 		7D03D33490FC9B9C498DC91115C3CD0E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MaterialTextField;
-			target = 9734EE4DB2C767546F429B730041593D /* MaterialTextField */;
+			target = D6EDD6524FCFAC2A8EDD70E86FEAE162 /* MaterialTextField */;
 			targetProxy = BE7E5AA0A85EFCFCFC25E599B42F834B /* PBXContainerItemProxy */;
+		};
+		B14A9513818E303946CCDFC4A9852D79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MaterialTextField;
+			target = D6EDD6524FCFAC2A8EDD70E86FEAE162 /* MaterialTextField */;
+			targetProxy = 8D1568022D3BACE6F441E28BEC788AE1 /* PBXContainerItemProxy */;
 		};
 		B726640746628B86B45C6BC8A5AD8810 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -998,6 +1001,41 @@
 			};
 			name = Release;
 		};
+		0DCE88C3986675C051F4C10539DD7FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 337074971EF4EAE296EB2F2DF71466DA /* MaterialTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MaterialTextField/MaterialTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MaterialTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MaterialTextField/MaterialTextField.modulemap";
+				PRODUCT_MODULE_NAME = MaterialTextField;
+				PRODUCT_NAME = MaterialTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		1AE4459AFFBA18C606990896BD66AF3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FCFA98BFB8152752B412958B60B4FAA8 /* Pods-OtpFlowUITests.release.xcconfig */;
@@ -1016,7 +1054,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowUITests/Pods-OtpFlowUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1033,9 +1075,45 @@
 			};
 			name = Release;
 		};
-		1DD8B70A91D4C384DBFA364F54BFDDE2 /* Release */ = {
+		48E847CF23AD3B2069D8DE573FD896C9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD7FBE7A492E103FB22AC1FAC1FA884A /* KaoOtpFlow.xcconfig */;
+			baseConfigurationReference = 337074971EF4EAE296EB2F2DF71466DA /* MaterialTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MaterialTextField/MaterialTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MaterialTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MaterialTextField/MaterialTextField.modulemap";
+				PRODUCT_MODULE_NAME = MaterialTextField;
+				PRODUCT_NAME = MaterialTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		564765EF607CFA7515F449E111005599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 024EAA6C0AB4A14EC9B6B0C299F1E884 /* KaoOtpFlow.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KaoOtpFlow";
@@ -1046,71 +1124,6 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		38425D8F9AC787031A01D09697EEB5BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD7FBE7A492E103FB22AC1FAC1FA884A /* KaoOtpFlow.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KaoOtpFlow/KaoOtpFlow-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KaoOtpFlow/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KaoOtpFlow/KaoOtpFlow.modulemap";
-				PRODUCT_MODULE_NAME = KaoOtpFlow;
-				PRODUCT_NAME = KaoOtpFlow;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		399553396AD13B3D26A75E438BA53043 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD7FBE7A492E103FB22AC1FAC1FA884A /* KaoOtpFlow.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KaoOtpFlow/KaoOtpFlow-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KaoOtpFlow/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KaoOtpFlow/KaoOtpFlow.modulemap";
-				PRODUCT_MODULE_NAME = KaoOtpFlow;
-				PRODUCT_NAME = KaoOtpFlow;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1132,7 +1145,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlow/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlow/Pods-OtpFlow.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1168,7 +1185,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowTests/Pods-OtpFlowTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1184,9 +1205,9 @@
 			};
 			name = Debug;
 		};
-		6641C5E2ADFE56AA03FAC0D6E738083D /* Debug */ = {
+		8E5C694BC8D8B0D3264B8D496B6C459C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD7FBE7A492E103FB22AC1FAC1FA884A /* KaoOtpFlow.xcconfig */;
+			baseConfigurationReference = 024EAA6C0AB4A14EC9B6B0C299F1E884 /* KaoOtpFlow.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KaoOtpFlow";
@@ -1218,7 +1239,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlow/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlow/Pods-OtpFlow.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1228,7 +1253,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1236,9 +1262,9 @@
 			};
 			name = Release;
 		};
-		DD0AD1E02FF75B58CD45358A0AA6F846 /* Release */ = {
+		CE7C8373D5B8B34AD21BAE268EE4A9AC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 337074971EF4EAE296EB2F2DF71466DA /* MaterialTextField.xcconfig */;
+			baseConfigurationReference = 024EAA6C0AB4A14EC9B6B0C299F1E884 /* KaoOtpFlow.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1249,17 +1275,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MaterialTextField/MaterialTextField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MaterialTextField/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/KaoOtpFlow/KaoOtpFlow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KaoOtpFlow/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MaterialTextField/MaterialTextField.modulemap";
-				PRODUCT_MODULE_NAME = MaterialTextField;
-				PRODUCT_NAME = MaterialTextField;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KaoOtpFlow/KaoOtpFlow.modulemap";
+				PRODUCT_MODULE_NAME = KaoOtpFlow;
+				PRODUCT_NAME = KaoOtpFlow;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1267,6 +1299,42 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		D33698CE2CC04B680869595F5D87ED2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 024EAA6C0AB4A14EC9B6B0C299F1E884 /* KaoOtpFlow.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KaoOtpFlow/KaoOtpFlow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KaoOtpFlow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KaoOtpFlow/KaoOtpFlow.modulemap";
+				PRODUCT_MODULE_NAME = KaoOtpFlow;
+				PRODUCT_NAME = KaoOtpFlow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		DE3C08650BD12CE2EF66CC56F9248A82 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1286,7 +1354,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowUITests/Pods-OtpFlowUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1384,7 +1456,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowTests/Pods-OtpFlowTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1401,49 +1477,9 @@
 			};
 			name = Release;
 		};
-		E8B332FAAF221BA451F7FF7022C01882 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 337074971EF4EAE296EB2F2DF71466DA /* MaterialTextField.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MaterialTextField/MaterialTextField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MaterialTextField/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MaterialTextField/MaterialTextField.modulemap";
-				PRODUCT_MODULE_NAME = MaterialTextField;
-				PRODUCT_NAME = MaterialTextField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		17328CEA754188BF8921D3E03DC493C7 /* Build configuration list for PBXNativeTarget "KaoOtpFlow" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				38425D8F9AC787031A01D09697EEB5BC /* Debug */,
-				399553396AD13B3D26A75E438BA53043 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1AC0C4B30FF61894CB25185E68217871 /* Build configuration list for PBXNativeTarget "Pods-OtpFlow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1462,20 +1498,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5189084E1102F0C9A10893CB65D21778 /* Build configuration list for PBXNativeTarget "KaoOtpFlow-OtpCustomPod" */ = {
+		3F4A2068005BAA4A06BF471E5CC5F1A3 /* Build configuration list for PBXNativeTarget "MaterialTextField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6641C5E2ADFE56AA03FAC0D6E738083D /* Debug */,
-				1DD8B70A91D4C384DBFA364F54BFDDE2 /* Release */,
+				0DCE88C3986675C051F4C10539DD7FA1 /* Debug */,
+				48E847CF23AD3B2069D8DE573FD896C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B66261DFFFA8B004D2ACA062457BC88 /* Build configuration list for PBXNativeTarget "MaterialTextField" */ = {
+		93876E757F13C1289ACE9F987702BB0A /* Build configuration list for PBXNativeTarget "KaoOtpFlow-OtpCustomPod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E8B332FAAF221BA451F7FF7022C01882 /* Debug */,
-				DD0AD1E02FF75B58CD45358A0AA6F846 /* Release */,
+				8E5C694BC8D8B0D3264B8D496B6C459C /* Debug */,
+				564765EF607CFA7515F449E111005599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1494,6 +1530,15 @@
 			buildConfigurations = (
 				DE3C08650BD12CE2EF66CC56F9248A82 /* Debug */,
 				1AE4459AFFBA18C606990896BD66AF3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDD83C0320232BDFA98E321067DE7279 /* Build configuration list for PBXNativeTarget "KaoOtpFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D33698CE2CC04B680869595F5D87ED2F /* Debug */,
+				CE7C8373D5B8B34AD21BAE268EE4A9AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

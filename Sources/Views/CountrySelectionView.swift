@@ -77,9 +77,7 @@ extension CountrySelectionView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = CountrySelectionTableViewCell.init(style: .default, reuseIdentifier: "CountrySelectionTableViewCell") as? CountrySelectionTableViewCell else {
-            fatalError("Cell not found")
-        }
+        let cell = CountrySelectionTableViewCell.init(style: .default, reuseIdentifier: "CountrySelectionTableViewCell")
         cell.configure(data: selectionDataSource[indexPath.row])
         return cell
     }

@@ -135,12 +135,13 @@ open class PhoneEnteringViewController: UIViewController {
         if let keyboardFrame: NSValue = notif.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
+            bottomConstraint.constant = -keyboardHeight
             animateLayout()
         }
     }
     
     @objc private func keyboardWillHide(_ notif: Notification) {
-        
+        bottomConstraint.constant = 0
         animateLayout()
     }
     
