@@ -19,13 +19,13 @@ open class PhoneVerifyingViewController: UIViewController {
 
     private lazy var headerView: OtpHeaderView = {
         let view = OtpHeaderView()
-        view.didTapUpdateNumber = changeNumber
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
     private lazy var pinEnterView: OtpPinEnterView = {
         let view = OtpPinEnterView()
+        view.tapEditNumber = changeNumber
         view.pinCompleted = pinCompleted
         view.pinReset = pinReseted
         view.tapResend = resendCode
@@ -129,8 +129,9 @@ open class PhoneVerifyingViewController: UIViewController {
             headerView.configure(headerViewParams: headerParams)
         }
         if let textfieldParams = phoneVerifyDataSource?.pinTextFieldAttribute(in: self),
-            let buttonParams = phoneVerifyDataSource?.resendButtonAttribute(in: self) {
-            pinEnterView.configure(customButtonAttributes: buttonParams, textfieldAttribute: textfieldParams)
+            let buttonParams = phoneVerifyDataSource?.resendButtonAttribute(in: self),
+             let editParams = phoneVerifyDataSource?.editNumberAttributes(in: self){
+            pinEnterView.configure(customButtonAttributes: buttonParams, textfieldAttribute: textfieldParams, editNumberAttribute: editParams)
         }
         if let buttonParams = phoneVerifyDataSource?.bottomViewButtonText(in: self) {
             bottomView.configure(customButtonAttributes: buttonParams)

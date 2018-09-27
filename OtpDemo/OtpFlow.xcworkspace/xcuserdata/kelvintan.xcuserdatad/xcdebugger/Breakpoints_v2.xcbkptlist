@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Sources/ViewController/PhoneEnteringViewController.swift"
-            timestampString = "559644573.576823"
+            filePath = "OtpFlow/SecondViewController.swift"
+            timestampString = "559709307.556047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
-            landmarkName = "phoneTextChanged(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Sources/Views/NumberField.swift"
-            timestampString = "559644573.577197"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "textFieldChanged(_:)"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "changeNumberTapped(in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

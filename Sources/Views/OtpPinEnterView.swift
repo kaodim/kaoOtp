@@ -14,7 +14,8 @@ class OtpPinEnterView: UIView {
     @IBOutlet private weak var pinStacktouchView: UIView!
     @IBOutlet private weak var pinStackviews: UIStackView!
     @IBOutlet private weak var resetLabel: UILabel!
-
+    @IBOutlet private weak var editNumberLabel: UILabel!
+    
     private var contentView: UIView!
     private var resetButtonAttr = CustomButtonAttributes() {
         didSet {
@@ -31,7 +32,16 @@ class OtpPinEnterView: UIView {
             }
         }
     }
+    
+    private var editNumberAttr = CustomButtonAttributes(){
+        didSet {
+            editNumberLabel.font = editNumberAttr.font
+            editNumberLabel.text = editNumberAttr.text
+            editNumberLabel.textColor = editNumberAttr.color
+        }
+    }
 
+    var tapEditNumber: (() -> Void)?
     var lastActiveTextfield: OtpPinTextfield?
     var tapResend: (() -> Void)?
     var pinCompleted: ((_ pins:String) -> Void)?
@@ -70,6 +80,7 @@ class OtpPinEnterView: UIView {
         resetLabel.text = ""
         resetLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapResend)))
         pinStacktouchView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapStackview)))
+        editNumberLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapEditNumber)))
     }
 
     private func configurePinTextfield() {
@@ -88,6 +99,10 @@ class OtpPinEnterView: UIView {
         tapResend?()
     }
 
+    @objc private func didTapEditNumber () {
+        tapEditNumber?()
+    }
+    
     @objc private func didTapStackview() {
         lastActiveTextfield?.becomeFirstResponder()
     }
@@ -106,9 +121,10 @@ class OtpPinEnterView: UIView {
         pinCompleted?(pins)
     }
 
-    func configure(customButtonAttributes: CustomButtonAttributes, textfieldAttribute: CustomTextfieldAttributes) {
+    func configure(customButtonAttributes: CustomButtonAttributes, textfieldAttribute: CustomTextfieldAttributes, editNumberAttribute: CustomButtonAttributes) {
         resetButtonAttr = customButtonAttributes
         textfieldAttr = textfieldAttribute
+        editNumberAttr = editNumberAttribute
     }
 
     func enableResetButton(enable: Bool = true, countDownStr: String = "") {

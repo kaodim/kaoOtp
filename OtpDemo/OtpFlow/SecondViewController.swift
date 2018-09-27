@@ -26,12 +26,17 @@ class SecondViewController: PhoneVerifyingViewController {
 }
 
 extension SecondViewController: PhoneVerifyDataSource, PhoneVerifyDelegate {
+    func editNumberAttributes(in view: PhoneVerifyingViewController) -> CustomButtonAttributes {
+        let customFont: UIFont = .boldSystemFont(ofSize: 14)
+        return CustomButtonAttributes(text: "Edit your phone number now", font: customFont, color: UIColor.blue, disableColor: UIColor(), disableText: "", highlightedColor: UIColor())
+    }
+    
 
     func headerViewText(in view: PhoneVerifyingViewController) -> HeaderViewParams {
         let titleAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 20), color: .red)
         let phoneAttr = CustomLabelAttributes(font: .systemFont(ofSize: 14), color: .brown)
         let updateAttr = CustomLabelAttributes(font: .systemFont(ofSize: 14), color: .blue)
-        return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "Enter the 6-digit code sent to you at", messageAttr: CustomLabelAttributes(), phoneNumberText: "+601938301133", phoneNumberTextAttr: phoneAttr, updateNumberText: "Change you number", updateNumberTextAttr: updateAttr)
+        return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "Enter the 6-digit code sent to you at", messageAttr: CustomLabelAttributes(), phoneNumberText: "+601938301133", phoneNumberTextAttr: phoneAttr, updateNumberText: "", updateNumberTextAttr: CustomLabelAttributes())
     }
 
     func pinTextFieldAttribute(in view: PhoneVerifyingViewController) -> CustomTextfieldAttributes {

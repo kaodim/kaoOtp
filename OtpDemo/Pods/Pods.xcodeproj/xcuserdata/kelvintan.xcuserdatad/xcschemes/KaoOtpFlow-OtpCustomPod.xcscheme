@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "74E080010781ECBACA6D4E19456B47A1"
+               BlueprintIdentifier = "9B6F87C2EBCAC8976014FDFEB5555FF7"
                BuildableName = "OtpCustomPod.bundle"
                BlueprintName = "KaoOtpFlow-OtpCustomPod"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "74E080010781ECBACA6D4E19456B47A1"
+            BlueprintIdentifier = "9B6F87C2EBCAC8976014FDFEB5555FF7"
             BuildableName = "OtpCustomPod.bundle"
             BlueprintName = "KaoOtpFlow-OtpCustomPod"
             ReferencedContainer = "container:Pods.xcodeproj">

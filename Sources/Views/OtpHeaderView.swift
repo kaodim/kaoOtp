@@ -20,7 +20,6 @@ class OtpHeaderView: UIView {
     private var textStorage: NSTextStorage!
     private var clickableRange: NSRange!
 
-    var didTapUpdateNumber: (() -> Void)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -108,9 +107,6 @@ class OtpHeaderView: UIView {
         let textContainerOffset = CGPoint(x: (((labelSize?.width ?? 0) - textBoundingBox.size.width) * 0.5) - textBoundingBox.origin.x , y: (((labelSize?.height ?? 0) - textBoundingBox.size.height) * 0.5) - textBoundingBox.origin.y)
         let locationOfTouchInTextContainer = CGPoint(x: locationOfTouchInLabel.x - textContainerOffset.x, y: locationOfTouchInLabel.y - textContainerOffset.y)
         let indexOfCharacter = layoutManager.characterIndex(for: locationOfTouchInTextContainer, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
-        if NSLocationInRange(indexOfCharacter, clickableRange) {
-            didTapUpdateNumber?()
-        }
     }
 
     func configure(headerViewParams: HeaderViewParams) {

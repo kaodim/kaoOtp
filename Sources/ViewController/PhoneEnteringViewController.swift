@@ -145,7 +145,7 @@ open class PhoneEnteringViewController: UIViewController {
     }
     
     public func beginEditing(_ begin: Bool = true) {
-        //        textFieldView.textfieldBecomeResponder(begin)
+        textFieldView.textfieldBecomeResponder()
     }
     
     public func reloadData() {
