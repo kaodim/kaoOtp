@@ -20,7 +20,6 @@ class OtpHeaderView: UIView {
     private var textStorage: NSTextStorage!
     private var clickableRange: NSRange!
 
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureViews()

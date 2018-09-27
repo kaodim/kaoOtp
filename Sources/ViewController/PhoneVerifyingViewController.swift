@@ -25,10 +25,10 @@ open class PhoneVerifyingViewController: UIViewController {
 
     private lazy var pinEnterView: OtpPinEnterView = {
         let view = OtpPinEnterView()
-        view.tapEditNumber = changeNumber
         view.pinCompleted = pinCompleted
         view.pinReset = pinReseted
         view.tapResend = resendCode
+        view.tapEditNumber = changeNumber
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -141,7 +141,6 @@ open class PhoneVerifyingViewController: UIViewController {
 
     public func startResendTimer() {
         if countdownTimer == nil {
-            phoneVerifyDelegate?.resendCodeTapped(in: self)
             countdown = phoneVerifyDataSource?.resendCodeDelay(in: self) ?? 0
             countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateResendButton), userInfo: nil, repeats: true)
         }
@@ -149,7 +148,6 @@ open class PhoneVerifyingViewController: UIViewController {
 
     @objc private func updateResendButton() {
         pinEnterView.enableResetButton(enable: false, countDownStr: timeFormatted(countdown))
-
         if countdown != 0 {
             countdown -= 1
         } else {
@@ -185,7 +183,7 @@ open class PhoneVerifyingViewController: UIViewController {
     }
 
     private func resendCode() {
-        startResendTimer()
+        phoneVerifyDelegate?.resendCodeTapped(in: self)
     }
 
     private func changeNumber() {

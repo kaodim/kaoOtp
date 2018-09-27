@@ -54,7 +54,7 @@ extension SecondViewController: PhoneVerifyDataSource, PhoneVerifyDelegate {
     }
 
     func resendCodeDelay(in view: PhoneVerifyingViewController) -> Int {
-        return 15
+        return 30
     }
 
     func verifyTapped(in view: PhoneVerifyingViewController, pins: String) {

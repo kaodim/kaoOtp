@@ -13,15 +13,11 @@ class OtpPinEnterView: UIView {
 
     @IBOutlet private weak var pinStacktouchView: UIView!
     @IBOutlet private weak var pinStackviews: UIStackView!
-    @IBOutlet private weak var resetLabel: UILabel!
-    @IBOutlet private weak var editNumberLabel: UILabel!
+    @IBOutlet private weak var resetButton: UIButton!
+    @IBOutlet private weak var editNumberButton: UIButton!
     
     private var contentView: UIView!
-    private var resetButtonAttr = CustomButtonAttributes() {
-        didSet {
-            resetLabel.font = resetButtonAttr.font
-        }
-    }
+    private var resetButtonAttr = CustomButtonAttributes()
     private var textfieldAttr = CustomTextfieldAttributes() {
         didSet {
             for view in pinStackviews.arrangedSubviews {
@@ -35,9 +31,11 @@ class OtpPinEnterView: UIView {
     
     private var editNumberAttr = CustomButtonAttributes(){
         didSet {
-            editNumberLabel.font = editNumberAttr.font
-            editNumberLabel.text = editNumberAttr.text
-            editNumberLabel.textColor = editNumberAttr.color
+            let attributes = NSAttributedString(string: editNumberAttr.text,
+                                                attributes: [
+                                                    NSAttributedStringKey.foregroundColor: editNumberAttr.color,
+                                                    NSAttributedStringKey.font: editNumberAttr.font])
+            editNumberButton.setAttributedTitle(attributes, for: .normal)
         }
     }
 
@@ -77,10 +75,8 @@ class OtpPinEnterView: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
         configurePinTextfield()
-        resetLabel.text = ""
-        resetLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapResend)))
+        resetButton.setTitle("", for: .normal)
         pinStacktouchView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapStackview)))
-        editNumberLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapEditNumber)))
     }
 
     private func configurePinTextfield() {
@@ -94,12 +90,12 @@ class OtpPinEnterView: UIView {
             textfield.delegate = self
         }
     }
-
-    @objc private func didTapResend() {
+    
+    @IBAction func didTappedResend() {
         tapResend?()
     }
-
-    @objc private func didTapEditNumber () {
+    
+    @IBAction private func didTapEditNumber () {
         tapEditNumber?()
     }
     
@@ -128,9 +124,13 @@ class OtpPinEnterView: UIView {
     }
 
     func enableResetButton(enable: Bool = true, countDownStr: String = "") {
-        resetLabel.isUserInteractionEnabled = enable
-        resetLabel.text = enable ? resetButtonAttr.text : (resetButtonAttr.disableText + " \(countDownStr)")
-        resetLabel.textColor = enable ? resetButtonAttr.color : resetButtonAttr.disableColor
+        resetButton.isEnabled = enable
+        let attributes = NSAttributedString(string: enable ? resetButtonAttr.text : (resetButtonAttr.disableText + " \(countDownStr)"),
+                                            attributes: [
+                                                NSAttributedStringKey.font: resetButtonAttr.font,
+                                                NSAttributedStringKey.foregroundColor: enable ? resetButtonAttr.color : resetButtonAttr.disableColor
+            ])
+        resetButton.setAttributedTitle(attributes, for: .normal)
     }
 }
 
