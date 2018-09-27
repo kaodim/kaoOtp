@@ -106,7 +106,6 @@ class OtpHeaderView: UIView {
         let textBoundingBox = layoutManager.usedRect(for: textContainer)
         let textContainerOffset = CGPoint(x: (((labelSize?.width ?? 0) - textBoundingBox.size.width) * 0.5) - textBoundingBox.origin.x , y: (((labelSize?.height ?? 0) - textBoundingBox.size.height) * 0.5) - textBoundingBox.origin.y)
         let locationOfTouchInTextContainer = CGPoint(x: locationOfTouchInLabel.x - textContainerOffset.x, y: locationOfTouchInLabel.y - textContainerOffset.y)
-        let indexOfCharacter = layoutManager.characterIndex(for: locationOfTouchInTextContainer, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
     }
 
     func configure(headerViewParams: HeaderViewParams) {
