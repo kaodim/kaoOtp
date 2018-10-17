@@ -61,10 +61,10 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
         return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "This is as part of our effort to provide a safe and secure service, we will send you a 6-digit code for verification.", messageAttr: CustomLabelAttributes(), phoneNumberText: "", phoneNumberTextAttr: CustomLabelAttributes(), updateNumberText: "", updateNumberTextAttr: CustomLabelAttributes())
     }
 
-    func textFieldAttribute(in view: PhoneEnteringViewController) -> TextfieldViewParams {
+    func textFieldAttribute(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes {
         let phoneExtensionAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 14), color: .red)
         let textfieldAttr = CustomTextfieldAttributes(font: .boldSystemFont(ofSize: 14), color: .blue, placeholder: "Enter phone number", lineColor: .clear, disableLineColor: .clear)
-        return TextfieldViewParams(text: nil, phoneExtensionAttr: phoneExtensionAttr, phoneTextfieldAttr: textfieldAttr)
+        return CustomTextfieldAttributes(label: "Mobile number")
     }
 
     func bottomViewButtonText(in view: PhoneEnteringViewController) -> CustomButtonAttributes {

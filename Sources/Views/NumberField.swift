@@ -11,15 +11,13 @@ import MaterialTextField
 
 class NumberField: UIView {
 
+    @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var countryLabel: UILabel!
     @IBOutlet weak private var flagImageView: UIImageView!
     @IBOutlet weak private var numberField: MFTextField!
     @IBOutlet weak private var selectionView: UIView!
     @IBOutlet weak private var dropIcon: UIImageView!
-    
-    @IBOutlet weak var fieldTrailingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var fieldLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var fieldHeightConstraint: NSLayoutConstraint!
+
     
     var didChangedText: ((_ text: String?) -> Void)?
     var selectionViewDidSelect: (() -> Void)?
@@ -62,7 +60,6 @@ class NumberField: UIView {
         numberField.delegate = self
         numberField.keyboardType = .numberPad
         numberField.textAlignment = .left
-        configureClearTextField()
     }
 
     func configureView(with selectedCountry: CountryPhone?) {
@@ -70,6 +67,11 @@ class NumberField: UIView {
         countryCode = selectedCountry?.phoneExtension
         flagImageView.image = selectedCountry?.icon 
         countryLabel.text = "\(selectedCountry?.phoneExtension ?? "")"
+    }
+    
+    func configureTextFieldLabel(with title: CustomTextfieldAttributes){
+        titleLabel.text = title.label
+        titleLabel.font = title.labelFont
     }
 
     func textfieldBecomeResponder() {
@@ -94,10 +96,7 @@ class NumberField: UIView {
         numberField.rightViewMode = .always
         numberField.rightView = selectionView
     }
-    
-    func configureClearTextField() {
-        fieldHeightConstraint.constant = 50
-    }
+
     
     func configure(dropUpDownImage: UIImage?) {
         dropIcon.image = dropUpDownImage

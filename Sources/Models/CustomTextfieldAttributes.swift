@@ -10,28 +10,31 @@ import Foundation
 import UIKit
 
 public struct CustomTextfieldAttributes {
+    let label: String
+    let labelFont: UIFont
     let font: UIFont
     let color: UIColor
     let placeholder: String
     let placeholderColor: UIColor
     let lineColor: UIColor
     let disableLineColor: UIColor
-    let textAlignment: NSTextAlignment
 
-    public init(font: UIFont = .systemFont(ofSize: 14),
+    public init(label: String = "",
+                labelFont: UIFont = .systemFont(ofSize: 14),
+                font: UIFont = .systemFont(ofSize: 14),
                 color: UIColor = .black,
                 placeholder: String = "",
                 placeholderColor: UIColor = .lightGray,
                 lineColor: UIColor = .black,
-                disableLineColor: UIColor = .lightGray,
-                textAlignment: NSTextAlignment = .left) {
+                disableLineColor: UIColor = .lightGray) {
         
+        self.label = label
+        self.labelFont = labelFont
         self.font = font
         self.color = color
         self.placeholder = placeholder
         self.placeholderColor = placeholderColor
         self.lineColor = lineColor
         self.disableLineColor = disableLineColor
-        self.textAlignment = textAlignment
     }
 }

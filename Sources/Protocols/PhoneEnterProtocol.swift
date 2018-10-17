@@ -17,7 +17,7 @@ public protocol PhoneEnterDataSource: class {
 
     func headerViewText(in view: PhoneEnteringViewController) -> HeaderViewParams
 
-    func textFieldAttribute(in view: PhoneEnteringViewController) -> TextfieldViewParams
+    func textFieldAttribute(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes
 
     func bottomViewButtonText(in view: PhoneEnteringViewController) -> CustomButtonAttributes
 

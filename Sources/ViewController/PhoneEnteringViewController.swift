@@ -159,6 +159,11 @@ open class PhoneEnteringViewController: UIViewController {
         if let customButtonAttributes = phoneEnterDataSource?.bottomViewButtonText(in: self) {
             bottomView.configure(customButtonAttributes: customButtonAttributes)
         }
+        
+        if let customTextfieldAttr = phoneEnterDataSource?.textFieldAttribute(in: self) {
+            textFieldView.configureTextFieldLabel(with: customTextfieldAttr)
+        }
+        
         selectionViewHeight.constant = CGFloat((countryList.count * 44) + 8)
         selectionView.selectionDataSource = countryList
         configureBottomButton()
