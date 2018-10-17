@@ -34,7 +34,6 @@ open class PhoneEnteringViewController: UIViewController {
         let view = NumberField()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.configureView(with: selectedCountry)
-        view.didChangedText = phoneTextChanged
         view.selectionViewDidSelect = { self.hideSelectionView(false) }
         return view
     }()
@@ -96,7 +95,7 @@ open class PhoneEnteringViewController: UIViewController {
             bottomView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             bottomConstraint
             ])
-        selectionViewHeight = selectionView.heightAnchor.constraint(equalToConstant: 23)
+        selectionViewHeight = selectionView.heightAnchor.constraint(equalToConstant: 8)
         NSLayoutConstraint.activate([
             selectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
             selectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
@@ -158,6 +157,7 @@ open class PhoneEnteringViewController: UIViewController {
         countryList = phoneEnterDataSource?.supportedCountryPhones(in: self) ?? []
         selectedCountry = phoneEnterDataSource?.selectedCountryPhone(in: self) ?? countryList.first
         dropUpDownIcon = phoneEnterDataSource?.dropDownUpImages(in: self)
+        
         if let headerParams = phoneEnterDataSource?.headerViewText(in: self) {
             headerView.configure(headerViewParams: headerParams)
         }
@@ -172,11 +172,11 @@ open class PhoneEnteringViewController: UIViewController {
         
         selectionViewHeight.constant = CGFloat((countryList.count * 44) + 8)
         selectionView.selectionDataSource = countryList
-        configureBottomButton()
+        configureBottomButton(valid: false)
     }
     
-    private func configureBottomButton() {
-        if let _ = selectedCountry, !phoneNumber.isEmpty {
+    public func configureBottomButton(valid: Bool) {
+        if valid {
             bottomView.enableNextButton()
         } else {
             bottomView.enableNextButton(enable: false)
@@ -197,11 +197,6 @@ open class PhoneEnteringViewController: UIViewController {
     private func nextButtonTapped() {
         guard let selectedCountry = selectedCountry else { return }
         phoneEnterDelegate?.nextButtonTapped(in: self, phoneNumber: phoneNumber, countryPhone: selectedCountry)
-    }
-    
-    private func phoneTextChanged(_ text: String?) {
-        phoneNumber = text ?? ""
-        configureBottomButton()
     }
 }
 

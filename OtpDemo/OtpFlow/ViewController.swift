@@ -64,7 +64,7 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
     func textFieldAttribute(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes {
         let phoneExtensionAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 14), color: .red)
         let textfieldAttr = CustomTextfieldAttributes(font: .boldSystemFont(ofSize: 14), color: .blue, placeholder: "Enter phone number", lineColor: .clear, disableLineColor: .clear)
-        return CustomTextfieldAttributes(label: "Mobile number")
+        return CustomTextfieldAttributes(label: "Mobile number", color: UIColor.black, lineColor: UIColor.lightGray )
     }
 
     func bottomViewButtonText(in view: PhoneEnteringViewController) -> CustomButtonAttributes {

@@ -72,6 +72,9 @@ class NumberField: UIView {
     func configureTextFieldLabel(with title: CustomTextfieldAttributes){
         titleLabel.text = title.label
         titleLabel.font = title.labelFont
+        numberField.tintColor = title.color
+        numberField.textColor = title.color
+        numberField.underlineColor = title.lineColor
     }
 
     func textfieldBecomeResponder() {
