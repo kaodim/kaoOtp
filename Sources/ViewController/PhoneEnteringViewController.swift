@@ -88,7 +88,7 @@ open class PhoneEnteringViewController: UIViewController {
             textFieldView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             textFieldView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             textFieldView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
-            textFieldView.heightAnchor.constraint(equalToConstant: 35)
+            textFieldView.heightAnchor.constraint(equalToConstant: 75)
             ])
         bottomConstraint = bottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         NSLayoutConstraint.activate([
@@ -96,7 +96,7 @@ open class PhoneEnteringViewController: UIViewController {
             bottomView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             bottomConstraint
             ])
-        selectionViewHeight = selectionView.heightAnchor.constraint(equalToConstant: 8)
+        selectionViewHeight = selectionView.heightAnchor.constraint(equalToConstant: 23)
         NSLayoutConstraint.activate([
             selectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
             selectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
@@ -115,6 +115,12 @@ open class PhoneEnteringViewController: UIViewController {
         configureLayout()
         reloadData()
         hideSelectionView()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
+
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     override open func viewWillAppear(_ animated: Bool) {
