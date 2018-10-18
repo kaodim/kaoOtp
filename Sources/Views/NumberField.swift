@@ -23,6 +23,8 @@ class NumberField: UIView {
     var selectionViewDidSelect: (() -> Void)?
     var countryPhone: CountryPhone?
     var countryCode: String?
+    var valueUpdate: ((_ value: String) -> Void)?
+    
     private var contentView: UIView!
 
     override init(frame: CGRect) {
@@ -60,6 +62,7 @@ class NumberField: UIView {
         numberField.delegate = self
         numberField.keyboardType = .numberPad
         numberField.textAlignment = .left
+        valueUpdate = didChangedText
     }
 
     func configureView(with selectedCountry: CountryPhone?) {

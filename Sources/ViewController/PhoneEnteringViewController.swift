@@ -34,6 +34,7 @@ open class PhoneEnteringViewController: UIViewController {
         let view = NumberField()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.configureView(with: selectedCountry)
+        view.didChangedText = phoneTextChanged
         view.selectionViewDidSelect = { self.hideSelectionView(false) }
         return view
     }()
@@ -56,7 +57,7 @@ open class PhoneEnteringViewController: UIViewController {
     private var phoneNumber: String = ""
     private var bottomConstraint: NSLayoutConstraint!
     private var selectionViewHeight: NSLayoutConstraint!
-    
+
     public weak var phoneEnterDataSource: PhoneEnterDataSource?
     public weak var phoneEnterDelegate: PhoneEnterDelegate?
     
@@ -115,7 +116,6 @@ open class PhoneEnteringViewController: UIViewController {
         reloadData()
         hideSelectionView()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
-
     }
     
     @objc func dismissKeyboard() {
@@ -172,15 +172,11 @@ open class PhoneEnteringViewController: UIViewController {
         
         selectionViewHeight.constant = CGFloat((countryList.count * 44) + 8)
         selectionView.selectionDataSource = countryList
-        configureBottomButton(valid: false)
+        configureBottomButton()
     }
     
-    public func configureBottomButton(valid: Bool) {
-        if valid {
-            bottomView.enableNextButton()
-        } else {
-            bottomView.enableNextButton(enable: false)
-        }
+    public func configureBottomButton() {
+        bottomView.enableNextButton()
     }
     
     private func hideSelectionView(_ isHide: Bool = true) {
@@ -197,6 +193,10 @@ open class PhoneEnteringViewController: UIViewController {
     private func nextButtonTapped() {
         guard let selectedCountry = selectedCountry else { return }
         phoneEnterDelegate?.nextButtonTapped(in: self, phoneNumber: phoneNumber, countryPhone: selectedCountry)
+    }
+    
+    public func phoneTextChanged(_ text: String?) {
+        phoneNumber = text ?? ""
     }
 }
 

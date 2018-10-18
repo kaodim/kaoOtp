@@ -19,7 +19,7 @@ class ViewController: PhoneEnteringViewController {
         super.phoneEnterDelegate = self
         super.viewDidLoad()
     }
-
+    
     private func configureList() {
         for index in 0...2 {
             let countryPhone = CountryPhone(icon: UIImage(named: "flag-my"), phoneExtension: "(+6\(index))", displayCode: "+6\(index) • Malaysia")
