@@ -29,6 +29,7 @@ open class PhoneVerifyingViewController: UIViewController {
         view.pinReset = pinReseted
         view.tapResend = resendCode
         view.tapEditNumber = changeNumber
+        view.editNumberButton.isHidden = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

@@ -11,12 +11,11 @@ import UIKit
 
 class OtpBottomView: UIView {
     
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet private weak var nextButton: UIButton!
 
     private var contentView: UIView!
     var nextButtonAttr = CustomButtonAttributes() {
         didSet {
-            
             nextButton.titleLabel?.font = nextButtonAttr.font
             setBackgroundColor(color: nextButtonAttr.highlightedColor, forState: .highlighted)
             setBackgroundColor(color: nextButtonAttr.disableColor, forState: .disabled)

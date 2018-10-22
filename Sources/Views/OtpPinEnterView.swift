@@ -14,7 +14,7 @@ class OtpPinEnterView: UIView {
     @IBOutlet private weak var pinStacktouchView: UIView!
     @IBOutlet private weak var pinStackviews: UIStackView!
     @IBOutlet private weak var resetButton: UIButton!
-    @IBOutlet private weak var editNumberButton: UIButton!
+    @IBOutlet weak var editNumberButton: UIButton!
     
     private var contentView: UIView!
     private var resetButtonAttr = CustomButtonAttributes()
@@ -77,6 +77,7 @@ class OtpPinEnterView: UIView {
         configurePinTextfield()
         resetButton.setTitle("", for: .normal)
         pinStacktouchView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapStackview)))
+        editNumberButton.isHidden = true
     }
 
     private func configurePinTextfield() {
