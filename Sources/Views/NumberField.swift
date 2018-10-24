@@ -123,6 +123,7 @@ extension NumberField : UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         let mfTextFiled = (textField as? MFTextField)
         mfTextFiled?.setError(nil, animated: true)
+        UIView.setAnimationsEnabled(false)
     }
     
     @IBAction private func textFieldChanged(_ sender: UITextField) {

@@ -140,13 +140,11 @@ open class PhoneEnteringViewController: UIViewController {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
             bottomConstraint.constant = -keyboardHeight
-            animateLayout()
         }
     }
     
     @objc private func keyboardWillHide(_ notif: Notification) {
         bottomConstraint.constant = 0
-        animateLayout()
     }
     
     public func beginEditing(_ begin: Bool = true) {

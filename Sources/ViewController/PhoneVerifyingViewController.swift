@@ -88,6 +88,8 @@ open class PhoneVerifyingViewController: UIViewController {
         contentView.addSubview(bottomView)
         configureLayout()
         reloadData()
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
     }
 
     override open func viewWillAppear(_ animated: Bool) {
@@ -103,18 +105,20 @@ open class PhoneVerifyingViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     @objc private func keyboardWillShow(_ notif: Notification) {
         if let keyboardFrame: NSValue = notif.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
             bottomConstraint.constant = -keyboardHeight
-            animateLayout()
         }
     }
 
     @objc private func keyboardWillHide(_ notif: Notification) {
         bottomConstraint.constant = 0
-        animateLayout()
     }
 
     public func beginEditing(_ begin: Bool = true) {
