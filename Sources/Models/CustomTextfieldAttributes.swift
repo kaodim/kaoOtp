@@ -11,6 +11,7 @@ import UIKit
 
 public struct CustomTextfieldAttributes {
     let label: String
+    let enabled: Bool
     let labelFont: UIFont
     let font: UIFont
     let color: UIColor
@@ -18,8 +19,10 @@ public struct CustomTextfieldAttributes {
     let placeholderColor: UIColor
     let lineColor: UIColor
     let disableLineColor: UIColor
+    
 
     public init(label: String = "",
+                enabled: Bool = true,
                 labelFont: UIFont = .systemFont(ofSize: 14),
                 font: UIFont = .systemFont(ofSize: 14),
                 color: UIColor = .black,
@@ -29,6 +32,7 @@ public struct CustomTextfieldAttributes {
                 disableLineColor: UIColor = .lightGray) {
         
         self.label = label
+        self.enabled = enabled
         self.labelFont = labelFont
         self.font = font
         self.color = color

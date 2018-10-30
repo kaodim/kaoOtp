@@ -22,6 +22,8 @@ public protocol PhoneEnterDataSource: class {
     func bottomViewButtonText(in view: PhoneEnteringViewController) -> CustomButtonAttributes
 
     func dropDownUpImages(in view: PhoneEnteringViewController) -> CustomDropUpDownImage
+    
+//    func textFieldValue(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes
 }
 
 extension PhoneEnterDataSource {

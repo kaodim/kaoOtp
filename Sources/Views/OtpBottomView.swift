@@ -76,9 +76,8 @@ class OtpBottomView: UIView {
         nextButton.setTitle(customButtonAttributes.text, for: .normal)
     }
 
-    func enableNextButton(enable: Bool = true) {
+    func enableNextButton(_ enable: Bool) {
         nextButton.isEnabled = enable
         nextButton.setTitle(enable ? nextButtonAttr.text : nextButtonAttr.disableText, for: .normal)
-
     }
 }

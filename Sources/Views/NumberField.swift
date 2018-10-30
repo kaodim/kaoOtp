@@ -63,6 +63,8 @@ class NumberField: UIView {
         numberField.keyboardType = .numberPad
         numberField.textAlignment = .left
         valueUpdate = didChangedText
+        
+        dropIcon.isHidden = true
     }
 
     func configureView(with selectedCountry: CountryPhone?) {
@@ -92,10 +94,9 @@ class NumberField: UIView {
         numberField.text = nil
     }
     
-    func setText(with text: String, country: CountryPhone) {
-        numberField.text = text
-        flagImageView.image = country.icon
-        countryLabel.text = country.phoneExtension
+    func setText(with text: CustomTextfieldAttributes) {
+        numberField.text = text.label
+        numberField.isEnabled = text.enabled
     }
     
     func rightViewTextField() {

@@ -34,6 +34,11 @@ class ViewController: PhoneEnteringViewController {
 }
 
 extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
+//    func textFieldValue(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes {
+//
+//        return CustomTextfieldAttributes(label: "", enabled: true)
+//    }
+    
     func countryDidChange(in view: PhoneEnteringViewController, country: CountryPhone) {
         if country.phoneExtension == "+60" {
             print("+60 selected")
@@ -45,9 +50,10 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
     func nextButtonTapped(in view: PhoneEnteringViewController, phoneNumber: String, countryPhone: CountryPhone) {
         print(countryPhone.phoneExtension + " " + phoneNumber)
         print("next please....")
+        
         presentSecondView()
     }
-
+    
     func supportedCountryPhones(in view: PhoneEnteringViewController) -> [CountryPhone] {
         return list
     }

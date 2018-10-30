@@ -33,9 +33,7 @@ open class PhoneEnteringViewController: UIViewController {
     private lazy var textFieldView: NumberField = {
         let view = NumberField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.configureView(with: selectedCountry)
         view.didChangedText = phoneTextChanged
-        view.selectionViewDidSelect = { self.hideSelectionView(false) }
         return view
     }()
     
@@ -168,13 +166,17 @@ open class PhoneEnteringViewController: UIViewController {
             textFieldView.configureTextFieldLabel(with: customTextfieldAttr)
         }
         
+//        if let textFieldValue = phoneEnterDataSource?.textFieldValue(in: self){
+//            textFieldView.setText(with: textFieldValue)
+//        }
+        
         selectionViewHeight.constant = CGFloat((countryList.count * 44) + 8)
         selectionView.selectionDataSource = countryList
-        configureBottomButton()
+        configureBottomButton(status: false)
     }
     
-    public func configureBottomButton() {
-        bottomView.enableNextButton()
+    func configureBottomButton(status: Bool) {
+        bottomView.enableNextButton(status)
     }
     
     private func hideSelectionView(_ isHide: Bool = true) {
@@ -193,7 +195,7 @@ open class PhoneEnteringViewController: UIViewController {
         phoneEnterDelegate?.nextButtonTapped(in: self, phoneNumber: phoneNumber, countryPhone: selectedCountry)
     }
     
-    public func phoneTextChanged(_ text: String?) {
+    func phoneTextChanged(_ text: String?) {
         phoneNumber = text ?? ""
     }
 }

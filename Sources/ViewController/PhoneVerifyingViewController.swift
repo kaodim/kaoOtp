@@ -100,6 +100,7 @@ open class PhoneVerifyingViewController: UIViewController {
     }
 
     override open func viewWillDisappear(_ animated: Bool) {
+        
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -164,9 +165,9 @@ open class PhoneVerifyingViewController: UIViewController {
 
     private func configureBottomButton() {
         if !pins.isEmpty {
-            bottomView.enableNextButton()
+            bottomView.enableNextButton(false)
         } else {
-            bottomView.enableNextButton(enable: false)
+            bottomView.enableNextButton(true)
         }
     }
 
