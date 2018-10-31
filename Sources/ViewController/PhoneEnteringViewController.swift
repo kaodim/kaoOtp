@@ -172,7 +172,6 @@ open class PhoneEnteringViewController: UIViewController {
         
         selectionViewHeight.constant = CGFloat((countryList.count * 44) + 8)
         selectionView.selectionDataSource = countryList
-        configureBottomButton(status: false)
     }
     
     func configureBottomButton(status: Bool) {
