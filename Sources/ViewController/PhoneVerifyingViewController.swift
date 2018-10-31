@@ -165,9 +165,9 @@ open class PhoneVerifyingViewController: UIViewController {
 
     private func configureBottomButton() {
         if !pins.isEmpty {
-            bottomView.enableNextButton(false)
+            bottomView.enableNextButton()
         } else {
-            bottomView.enableNextButton(true)
+            bottomView.enableNextButton(enable: false)
         }
     }
 

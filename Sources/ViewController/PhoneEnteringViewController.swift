@@ -174,8 +174,12 @@ open class PhoneEnteringViewController: UIViewController {
         selectionView.selectionDataSource = countryList
     }
     
-    func configureBottomButton(status: Bool) {
-        bottomView.enableNextButton(status)
+    func configureBottomButton() {
+        if !phoneNumber.isEmpty {
+            bottomView.enableNextButton()
+        } else {
+            bottomView.enableNextButton(enable: false)
+        }
     }
     
     private func hideSelectionView(_ isHide: Bool = true) {
