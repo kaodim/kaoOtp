@@ -23,7 +23,7 @@ public protocol PhoneEnterDataSource: class {
 
     func dropDownUpImages(in view: PhoneEnteringViewController) -> CustomDropUpDownImage
     
-//    func textFieldValue(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes
+    func textFieldValue(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes
 }
 
 extension PhoneEnterDataSource {

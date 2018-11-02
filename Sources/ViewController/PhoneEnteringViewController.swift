@@ -166,9 +166,9 @@ open class PhoneEnteringViewController: UIViewController {
             textFieldView.configureTextFieldLabel(with: customTextfieldAttr)
         }
         
-//        if let textFieldValue = phoneEnterDataSource?.textFieldValue(in: self){
-//            textFieldView.setText(with: textFieldValue)
-//        }
+        if let textFieldValue = phoneEnterDataSource?.textFieldValue(in: self){
+            textFieldView.setText(with: textFieldValue)
+        }
         
         selectionViewHeight.constant = CGFloat((countryList.count * 44) + 8)
         selectionView.selectionDataSource = countryList

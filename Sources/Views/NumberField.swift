@@ -96,7 +96,6 @@ class NumberField: UIView {
     
     func setText(with text: CustomTextfieldAttributes) {
         numberField.text = text.label
-        numberField.isEnabled = text.enabled
     }
     
     func rightViewTextField() {

@@ -12,6 +12,7 @@ import KaoOtpFlow
 class ViewController: PhoneEnteringViewController {
 
     var list : [CountryPhone] = []
+    var number = "12345767"
 
     override func viewDidLoad() {
         configureList()
@@ -34,10 +35,10 @@ class ViewController: PhoneEnteringViewController {
 }
 
 extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
-//    func textFieldValue(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes {
-//
-//        return CustomTextfieldAttributes(label: "", enabled: true)
-//    }
+    func textFieldValue(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes {
+
+        return CustomTextfieldAttributes(label: number)
+    }
     
     func countryDidChange(in view: PhoneEnteringViewController, country: CountryPhone) {
         if country.phoneExtension == "+60" {
