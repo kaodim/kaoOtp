@@ -12,19 +12,29 @@ import KaoOtpFlow
 class ViewController: PhoneEnteringViewController {
 
     var list : [CountryPhone] = []
-    var number = "12345767"
+    var number = "12345767890"
 
     override func viewDidLoad() {
         configureList()
         super.phoneEnterDataSource = self
         super.phoneEnterDelegate = self
         super.viewDidLoad()
+        configureBottomButton(enable: false)
     }
     
     private func configureList() {
         for index in 0...2 {
             let countryPhone = CountryPhone(icon: UIImage(named: "flag-my"), phoneExtension: "(+6\(index))", displayCode: "+6\(index) • Malaysia")
             list.append(countryPhone)
+        }
+    }
+    
+    override func phoneTextChanged(_ text: String?) {
+        print(text)
+        if text?.count ?? 0 > 6 {
+            configureBottomButton(enable: true)
+        } else {
+            configureBottomButton(enable: false)
         }
     }
 
@@ -35,6 +45,14 @@ class ViewController: PhoneEnteringViewController {
 }
 
 extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
+    func nextEnabled(in view: PhoneEnteringViewController) -> Bool {
+        if number.count > 10 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func textFieldValue(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes {
 
         return CustomTextfieldAttributes(label: number)
@@ -83,4 +101,3 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
         return CustomDropUpDownImage(dropUp: UIImage(named: "ic_dropup"), dropDown: UIImage(named: "ic_dropdown"))
     }
 }
-
