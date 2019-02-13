@@ -1,150 +1,105 @@
-# kao-ios-otp
+# kaoOtp
 
 
-## Example Use case for phone enter view :
+## Setting Up Podfile & Podspec:
 ---
 
+Go to your .podspec and add dependency on `KaoDesign`
 ~~~~
-class ViewController: PhoneEnteringViewController {
-
-    var list : [CountryPhone] = []
-
-    override func viewDidLoad() {
-        configureList()
-        super.phoneEnterDataSource = self
-        super.phoneEnterDelegate = self
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    private func configureList() {
-        for index in 0...2 {
-            let countryPhone = CountryPhone(icon: UIImage(named: "flag_my")!, phoneExtension: "(+6\(index))")
-            list.append(countryPhone)
-        }
-    }
-
-    private func presentSecondView() {
-        let view = SecondViewController()
-        navigationController?.pushViewController(view, animated: true)
-    }
-}
-
-extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
-
-    func nextButtonTapped(in view: PhoneEnteringViewController, phoneNumber: String, countryPhone: CountryPhone) {
-        print(countryPhone.phoneExtension + " " + phoneNumber)
-        print("next please....")
-        presentSecondView()
-    }
-
-    func supportedCountryPhones(in view: PhoneEnteringViewController) -> [CountryPhone] {
-        return list
-    }
-
-    func selectedCountryPhone(in view: PhoneEnteringViewController) -> CountryPhone? {
-        return list.first
-    }
-
-    func headerViewText(in view: PhoneEnteringViewController) -> HeaderViewParams {
-        let titleAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 20), color: .red)
-        return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "This is as part of our effort to provide a safe and secure service, we will send you a 6-digit code for verification.", messageAttr: CustomLabelAttributes(), phoneNumberText: "", phoneNumberTextAttr: CustomLabelAttributes(), updateNumberText: "", updateNumberTextAttr: CustomLabelAttributes())
-    }
-
-    func textFieldAttribute(in view: PhoneEnteringViewController) -> TextfieldViewParams {
-        let phoneExtensionAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 14), color: .red)
-        let textfieldAttr = CustomTextfieldAttributes(font: .boldSystemFont(ofSize: 14), color: .blue, placeholder: "Enter phone number", lineColor: .clear, disableLineColor: .clear)
-        return TextfieldViewParams(text: nil, phoneExtensionAttr: phoneExtensionAttr, phoneTextfieldAttr: textfieldAttr)
-    }
-
-    func bottomViewButtonText(in view: PhoneEnteringViewController) -> CustomButtonAttributes {
-        let customFont: UIFont = .boldSystemFont(ofSize: 14)
-        return CustomButtonAttributes(text: "NEXT", font: customFont, color: .red, disableColor: .gray, disableText: "NOPE")
-    }
-
-    func dropDownUpImages(in view: PhoneEnteringViewController) -> CustomDropUpDownImage {
-        return CustomDropUpDownImage(dropUp: UIImage(named: "up"), dropDown: UIImage(named: "down"))
-    }
-}
+  s.dependency 'KaoDesign', '0.1.33'
 ~~~~
----
 
-## Example Use case for phone verifying view :
----
+Go to your Podfile and add the source
 ~~~~
-class SecondViewController: PhoneVerifyingViewController {
-
-    override func viewDidLoad() {
-        super.phoneVerifyDelegate = self
-        super.phoneVerifyDataSource = self
-        super.viewDidLoad()
-        view.backgroundColor = .white
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        super.startResendTimer()
-    }
-}
-
-extension SecondViewController: PhoneVerifyDataSource, PhoneVerifyDelegate {
-
-    func headerViewText(in view: PhoneVerifyingViewController) -> HeaderViewParams {
-        let titleAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 20), color: .red)
-        let phoneAttr = CustomLabelAttributes(font: .systemFont(ofSize: 14), color: .brown)
-        let updateAttr = CustomLabelAttributes(font: .systemFont(ofSize: 14), color: .blue)
-        return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "Enter the 6-digit code sent to you at", messageAttr: CustomLabelAttributes(), phoneNumberText: "+601938301133", phoneNumberTextAttr: phoneAttr, updateNumberText: "Change you number", updateNumberTextAttr: updateAttr)
-    }
-
-    func pinTextFieldAttribute(in view: PhoneVerifyingViewController) -> CustomTextfieldAttributes {
-        return CustomTextfieldAttributes(font: .boldSystemFont(ofSize: 14), color: .blue, placeholder: "", lineColor: .blue, disableLineColor: .brown)
-    }
-
-    func resendButtonAttribute(in view: PhoneVerifyingViewController) -> CustomButtonAttributes {
-        let customFont: UIFont = .boldSystemFont(ofSize: 14)
-        return CustomButtonAttributes(text: "Resend code", font: customFont, color: .blue, disableColor: .lightGray, disableText: "Resend code in")
-    }
-
-    func bottomViewButtonText(in view: PhoneVerifyingViewController) -> CustomButtonAttributes {
-        let customFont: UIFont = .boldSystemFont(ofSize: 14)
-        return CustomButtonAttributes(text: "Verify number", font: customFont, color: .red, disableColor: .gray, disableText: "Verified?")
-    }
-
-    func resendCodeDelay(in view: PhoneVerifyingViewController) -> Int {
-        return 15
-    }
-
-    func verifyTapped(in view: PhoneVerifyingViewController, pins: String) {
-        print("pins : \(pins)")
-    }
-
-    func resendCodeTapped(in view: PhoneVerifyingViewController) {
-        print("resendCodeTapped")
-    }
-
-    func changeNumberTapped(in view: PhoneVerifyingViewController) {
-        print("changeNumberTapped")
-    }
-}
-
+source 'git@github.com:kaodim/KaoCocoaPods.git'
+source 'https://github.com/CocoaPods/Specs.git'
 ~~~~
----
+
 ## Instalation
 ---
 ~~~~
-pod 'KaoOtpFlow'
+pod 'KaoOtp'
 ~~~~
+
+## Usage
 ---
 
-## Notes : Don't forget to specify code below to your podfile (since it's a private library) 
+For phone entering, inherit `PhoneEnteringViewController`. 
+For phone verification, inherit `PhoneVerifyingViewController`.
+~~~~
+import KaoOtp
+
+class ViewController: PhoneEnteringViewController {
+
+    override func viewDidLoad() {
+        super.phoneEnterDelegate = self
+        super.phoneEnterDataSource = self
+    }
+
+}
+~~~~
+
+## PhoneEnteringViewController
 ---
+
+
+Conform the protocol with the following function to: (in order)
+- return CountryPhone
+- edit Header texts
+- edit Text Field label
+- autofill TextField
+- trigger button tapped
+
 ~~~~
-source 'https://auyotoc@bitbucket.org/kaodim/kaococoapods.git'
-source 'https://github.com/CocoaPods/Specs.git'
+    func selectedCountryPhone(in view: PhoneEnteringViewController) -> CountryPhone?
+
+    func headerViewText(in view: PhoneEnteringViewController) -> HeaderViewParams
+
+    func textFieldAttribute(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes
+
+    func bottomViewButtonText(in view: PhoneEnteringViewController) -> CustomButtonAttributes
+    
+    func textFieldValue(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes
+
+    func nextButtonTapped(in view: PhoneEnteringViewController, phoneNumber: String, countryPhone: CountryPhone)
 ~~~~
+
+![](https://github.com/zhiyao92/Images/blob/master/OTP%20Images/PhoneEntering.png)
+
+## PhoneVerifyingViewController
+---
+
+Conform the protocol with the following function to: (in order)
+- edit Header texts
+- edit OTP text attributes
+- edit Resend OTP text and attributes
+- edit the button text
+- adjust the code delay time
+- edit edit phone number text and attributes
+- trigger verify button
+- trigger resend button
+- trigger change number button
+
+~~~~
+
+    func headerViewText(in view: PhoneVerifyingViewController) -> HeaderViewParams
+
+    func pinTextFieldAttribute(in view: PhoneVerifyingViewController) -> CustomTextfieldAttributes
+
+    func resendButtonAttribute(in view: PhoneVerifyingViewController) -> CustomButtonAttributes
+
+    func bottomViewButtonText(in view: PhoneVerifyingViewController) -> CustomButtonAttributes
+
+    func resendCodeDelay(in view: PhoneVerifyingViewController) -> Int
+    
+    func editNumberAttributes(in view: PhoneVerifyingViewController) -> CustomButtonAttributes
+
+    func verifyTapped(in view: PhoneVerifyingViewController, pins: String)
+
+    func resendCodeTapped(in view: PhoneVerifyingViewController)
+
+    func changeNumberTapped(in view: PhoneVerifyingViewController)
+
+~~~~
+![](https://github.com/zhiyao92/Images/blob/master/OTP%20Images/PhoneVerification.png)
 
