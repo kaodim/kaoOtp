@@ -1,4 +1,4 @@
-# kao-ios-otp
+# kaoOtp
 
 
 ## Setting Up Podfile & Podspec:
