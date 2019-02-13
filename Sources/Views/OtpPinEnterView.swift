@@ -15,7 +15,7 @@ class OtpPinEnterView: UIView {
     @IBOutlet private weak var pinStackviews: UIStackView!
     @IBOutlet private weak var resetButton: UIButton!
     @IBOutlet weak var editNumberButton: UIButton!
-    
+
     private var contentView: UIView!
     private var resetButtonAttr = CustomButtonAttributes()
     private var textfieldAttr = CustomTextfieldAttributes() {

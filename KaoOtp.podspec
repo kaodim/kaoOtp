@@ -13,7 +13,7 @@ KaoOtpFlow provide complete ui for otp and allow you to inject your own endpoint
   s.source           = { :git => 'git@github.com:kaodim/kaoOtp.git', :tag => s.version.to_s }
 
   s.source_files = 'Sources/**/*'
-    s.resource_bundles = {
+  s.resource_bundles = {
     'OtpCustomPod' => [
         'Sources/**/*.xib'
     ]
