@@ -172,5 +172,4 @@ extension OtpPinEnterView: UITextFieldDelegate, OtpPinTextFieldDelegate {
         pinTextfield.text = ""
         pinTextfield.becomeFirstResponder()
     }
-
 }

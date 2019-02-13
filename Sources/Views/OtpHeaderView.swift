@@ -60,7 +60,7 @@ class OtpHeaderView: UIView {
         messageLabel.font = headerViewParams.messageAttr.font
         messageLabel.textColor = headerViewParams.messageAttr.color
 
-        let combineStr = [headerViewParams.message, headerViewParams.phoneNumberText, headerViewParams.updateNumberText].joined(separator: " ")
+        let combineStr = [headerViewParams.message, headerViewParams.phoneNumberText].joined(separator: " ")
         let attrString = NSMutableAttributedString(string: combineStr)
 
         // phone number
@@ -71,17 +71,6 @@ class OtpHeaderView: UIView {
                 NSAttributedStringKey.font : headerViewParams.phoneNumberTextAttr.font
             ]
             attrString.addAttributes(phoneAttr, range: phoneRange)
-        }
-
-        // update phone number
-        if headerViewParams.updateNumberText != "" {
-            clickableRange = NSMakeRange(combineStr.count-headerViewParams.updateNumberText.count, headerViewParams.updateNumberText.count)
-            let updatePhoneAttr: [NSAttributedStringKey : Any] = [
-                NSAttributedStringKey.foregroundColor : headerViewParams.updateNumberTextAttr.color,
-                NSAttributedStringKey.font : headerViewParams.updateNumberTextAttr.font
-            ]
-            attrString.addAttributes(updatePhoneAttr, range: clickableRange)
-            messageLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapLabel(_:))))
         }
 
         messageLabel.attributedText = attrString
@@ -97,14 +86,6 @@ class OtpHeaderView: UIView {
         textContainer.lineFragmentPadding = 0
         textContainer.lineBreakMode = messageLabel.lineBreakMode
         textContainer.maximumNumberOfLines = messageLabel.numberOfLines
-    }
-
-    @objc private func handleTapLabel(_ tapGesture: UITapGestureRecognizer) {
-        let locationOfTouchInLabel = tapGesture.location(in: tapGesture.view)
-        let labelSize = tapGesture.view?.bounds.size
-        let textBoundingBox = layoutManager.usedRect(for: textContainer)
-        let textContainerOffset = CGPoint(x: (((labelSize?.width ?? 0) - textBoundingBox.size.width) * 0.5) - textBoundingBox.origin.x , y: (((labelSize?.height ?? 0) - textBoundingBox.size.height) * 0.5) - textBoundingBox.origin.y)
-        let locationOfTouchInTextContainer = CGPoint(x: locationOfTouchInLabel.x - textContainerOffset.x, y: locationOfTouchInLabel.y - textContainerOffset.y)
     }
 
     func configure(headerViewParams: HeaderViewParams) {

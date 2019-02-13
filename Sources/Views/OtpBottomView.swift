@@ -79,7 +79,5 @@ class OtpBottomView: UIView {
     func enableNextButton(enable: Bool = true) {
         nextButton.isEnabled = enable
         nextButton.backgroundColor = enable ? UIColor(red:0.89, green:0.10, blue:0.23, alpha:1.0) : UIColor(red:0.75, green:0.75, blue:0.75, alpha:1.0)
-
-
     }
 }

@@ -30,7 +30,6 @@ public struct CustomTextfieldAttributes {
                 placeholderColor: UIColor = .lightGray,
                 lineColor: UIColor = .black,
                 disableLineColor: UIColor = .lightGray) {
-        
         self.label = label
         self.enabled = enabled
         self.labelFont = labelFont

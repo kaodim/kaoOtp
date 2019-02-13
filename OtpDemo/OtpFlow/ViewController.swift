@@ -24,13 +24,12 @@ class ViewController: PhoneEnteringViewController {
     
     private func configureList() {
         for index in 0...2 {
-            let countryPhone = CountryPhone(icon: UIImage(named: "flag-my"), phoneExtension: "(+6\(index))", displayCode: "+6\(index) • Malaysia")
+            let countryPhone = CountryPhone(phoneExtension: "(+6\(index))")
             list.append(countryPhone)
         }
     }
     
     override func phoneTextChanged(_ text: String?) {
-        print(text)
         if text?.count ?? 0 > 6 {
             configureBottomButton(enable: true)
         } else {
@@ -54,16 +53,7 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
     }
     
     func textFieldValue(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes {
-
         return CustomTextfieldAttributes(label: number)
-    }
-    
-    func countryDidChange(in view: PhoneEnteringViewController, country: CountryPhone) {
-        if country.phoneExtension == "+60" {
-            print("+60 selected")
-        } else {
-            print("Nothing selected")
-        }
     }
     
     func nextButtonTapped(in view: PhoneEnteringViewController, phoneNumber: String, countryPhone: CountryPhone) {
@@ -72,10 +62,6 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
         
         presentSecondView()
     }
-    
-    func supportedCountryPhones(in view: PhoneEnteringViewController) -> [CountryPhone] {
-        return list
-    }
 
     func selectedCountryPhone(in view: PhoneEnteringViewController) -> CountryPhone? {
         return list.first
@@ -83,21 +69,15 @@ extension ViewController: PhoneEnterDelegate, PhoneEnterDataSource {
 
     func headerViewText(in view: PhoneEnteringViewController) -> HeaderViewParams {
         let titleAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 20), color: .red)
-        return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "This is as part of our effort to provide a safe and secure service, we will send you a 6-digit code for verification.", messageAttr: CustomLabelAttributes(), phoneNumberText: "", phoneNumberTextAttr: CustomLabelAttributes(), updateNumberText: "", updateNumberTextAttr: CustomLabelAttributes())
+        return HeaderViewParams(title: "Verify your phone number", titleAttr: titleAttr, message: "This is as part of our effort to provide a safe and secure service, we will send you a 6-digit code for verification.", messageAttr: CustomLabelAttributes(), phoneNumberText: "", phoneNumberTextAttr: CustomLabelAttributes())
     }
 
     func textFieldAttribute(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes {
-        let phoneExtensionAttr = CustomLabelAttributes(font: .boldSystemFont(ofSize: 14), color: .red)
-        let textfieldAttr = CustomTextfieldAttributes(font: .boldSystemFont(ofSize: 14), color: .blue, placeholder: "Enter phone number", lineColor: .clear, disableLineColor: .clear)
         return CustomTextfieldAttributes(label: "Mobile number", color: UIColor.black, lineColor: UIColor.lightGray )
     }
 
     func bottomViewButtonText(in view: PhoneEnteringViewController) -> CustomButtonAttributes {
         let customFont: UIFont = .boldSystemFont(ofSize: 14)
         return CustomButtonAttributes(text: "NEXT", font: customFont, color: .red, disableColor: .gray, disableText: "NOPE")
-    }
-
-    func dropDownUpImages(in view: PhoneEnteringViewController) -> CustomDropUpDownImage {
-        return CustomDropUpDownImage(dropUp: UIImage(named: "ic_dropup"), dropDown: UIImage(named: "ic_dropdown"))
     }
 }

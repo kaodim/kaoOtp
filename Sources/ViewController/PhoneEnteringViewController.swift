@@ -23,13 +23,6 @@ open class PhoneEnteringViewController: UIViewController {
         return view
     }()
     
-    private lazy var selectionView: CountrySelectionView = {
-        let view = CountrySelectionView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.delegate = self
-        return view
-    }()
-    
     private lazy var textFieldView: NumberField = {
         let view = NumberField()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -51,10 +44,8 @@ open class PhoneEnteringViewController: UIViewController {
             textFieldView.configureView(with: safeCountry)
         }
     }
-    private var dropUpDownIcon: CustomDropUpDownImage?
     private var phoneNumber: String = ""
     private var bottomConstraint: NSLayoutConstraint!
-    private var selectionViewHeight: NSLayoutConstraint!
 
     public weak var phoneEnterDataSource: PhoneEnterDataSource?
     public weak var phoneEnterDelegate: PhoneEnterDelegate?
@@ -94,13 +85,6 @@ open class PhoneEnteringViewController: UIViewController {
             bottomView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             bottomConstraint
             ])
-        selectionViewHeight = selectionView.heightAnchor.constraint(equalToConstant: 8)
-        NSLayoutConstraint.activate([
-            selectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-            selectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-            selectionView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
-            selectionViewHeight
-            ])
     }
     
     override open func viewDidLoad() {
@@ -108,11 +92,9 @@ open class PhoneEnteringViewController: UIViewController {
         view.addSubview(contentView)
         contentView.addSubview(headerView)
         contentView.addSubview(textFieldView)
-        contentView.addSubview(selectionView)
         contentView.addSubview(bottomView)
         configureLayout()
         reloadData()
-        hideSelectionView()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
     }
     
@@ -150,10 +132,8 @@ open class PhoneEnteringViewController: UIViewController {
     }
     
     public func reloadData() {
-        countryList = phoneEnterDataSource?.supportedCountryPhones(in: self) ?? []
         selectedCountry = phoneEnterDataSource?.selectedCountryPhone(in: self) ?? countryList.first
-        dropUpDownIcon = phoneEnterDataSource?.dropDownUpImages(in: self)
-        
+
         if let headerParams = phoneEnterDataSource?.headerViewText(in: self) {
             headerView.configure(headerViewParams: headerParams)
         }
@@ -169,18 +149,10 @@ open class PhoneEnteringViewController: UIViewController {
         if let textFieldValue = phoneEnterDataSource?.textFieldValue(in: self){
             textFieldView.setText(with: textFieldValue)
         }
-        
-        selectionViewHeight.constant = CGFloat((countryList.count * 44) + 8)
-        selectionView.selectionDataSource = countryList
     }
     
     open func configureBottomButton(enable: Bool) {
         bottomView.enableNextButton(enable: enable)
-    }
-    
-    private func hideSelectionView(_ isHide: Bool = true) {
-        selectionView.isHidden = isHide
-        textFieldView.configure(dropUpDownImage: isHide ? dropUpDownIcon?.dropDown : dropUpDownIcon?.dropUp)
     }
     
     private func animateLayout() {
@@ -207,22 +179,6 @@ extension PhoneEnteringViewController: UITextFieldDelegate {
             return false
         }
         return true
-    }
-}
-
-extension PhoneEnteringViewController: CountrySelectionDelegate {
-    func selectedCountry(_ selectedCountry: CountryPhone) {
-        UIView.animate(withDuration: 0.1){
-            self.hideSelectionView()
-        }
-        self.selectedCountry = selectedCountry
-        phoneEnterDelegate?.countryDidChange(in: self, country: selectedCountry)
-    }
-}
-
-extension PhoneEnteringViewController {
-    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        hideSelectionView()
     }
 }
 

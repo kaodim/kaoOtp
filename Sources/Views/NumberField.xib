@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,11 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberField" customModule="KaoOtpFlow" customModuleProvider="target">
             <connections>
-                <outlet property="countryLabel" destination="gWK-wJ-e2S" id="xfC-yp-oEG"/>
-                <outlet property="dropIcon" destination="8sI-Kj-8wh" id="GDl-aC-DUc"/>
-                <outlet property="flagImageView" destination="lv3-fg-bg0" id="A77-rz-bj5"/>
                 <outlet property="numberField" destination="4sc-81-mgJ" id="WLc-Gb-i3X"/>
-                <outlet property="selectionView" destination="iNY-e5-AtT" id="ZIi-0p-QHd"/>
                 <outlet property="titleLabel" destination="LRk-y8-rb1" id="4y5-4j-6HP"/>
             </connections>
         </placeholder>
@@ -43,9 +39,6 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="leftSpacer">
-                                    <real key="value" value="100"/>
-                                </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
                                     <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </userDefinedRuntimeAttribute>
@@ -55,43 +48,8 @@
                                 <outlet property="delegate" destination="-1" id="e9l-NL-MYn"/>
                             </connections>
                         </textField>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNY-e5-AtT" userLabel="Selection View">
-                            <rect key="frame" x="19" y="41" width="29" height="23"/>
-                            <subviews>
-                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="8sI-Kj-8wh" userLabel="Drop Down">
-                                    <rect key="frame" x="12" y="8.5" width="10" height="6"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="10" id="MeM-B4-cyI"/>
-                                        <constraint firstAttribute="height" constant="6" id="j6t-IP-hlB"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWK-wJ-e2S" userLabel="Country Code Label">
-                                    <rect key="frame" x="29" y="11.5" width="0.0" height="0.0"/>
-                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lv3-fg-bg0" userLabel="Flag Image View">
-                                    <rect key="frame" x="10" y="5" width="22" height="13"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="13" id="B9J-1X-oBG"/>
-                                        <constraint firstAttribute="width" constant="22" id="a4u-3k-xka"/>
-                                    </constraints>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="8sI-Kj-8wh" firstAttribute="centerY" secondItem="iNY-e5-AtT" secondAttribute="centerY" id="0oA-NU-BaQ"/>
-                                <constraint firstItem="gWK-wJ-e2S" firstAttribute="leading" secondItem="8sI-Kj-8wh" secondAttribute="trailing" constant="7" id="1pA-Jo-fmS"/>
-                                <constraint firstItem="lv3-fg-bg0" firstAttribute="centerY" secondItem="iNY-e5-AtT" secondAttribute="centerY" id="ALM-Tw-JUR"/>
-                                <constraint firstAttribute="trailing" secondItem="gWK-wJ-e2S" secondAttribute="trailing" id="BBh-df-kqg"/>
-                                <constraint firstItem="8sI-Kj-8wh" firstAttribute="leading" secondItem="lv3-fg-bg0" secondAttribute="trailing" constant="-20" id="GDK-WU-PdY"/>
-                                <constraint firstItem="gWK-wJ-e2S" firstAttribute="centerY" secondItem="iNY-e5-AtT" secondAttribute="centerY" id="Nb8-Ob-Zxc"/>
-                                <constraint firstItem="lv3-fg-bg0" firstAttribute="leading" secondItem="iNY-e5-AtT" secondAttribute="leading" constant="10" id="pWM-fL-OWY"/>
-                            </constraints>
-                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRk-y8-rb1">
-                            <rect key="frame" x="19" y="25" width="29" height="14"/>
+                            <rect key="frame" x="15" y="22" width="29" height="14"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="14" id="ZdB-cG-AoJ"/>
                             </constraints>
@@ -102,15 +60,11 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="LRk-y8-rb1" firstAttribute="bottom" secondItem="iNY-e5-AtT" secondAttribute="bottom" constant="-25" id="Aal-hc-YSh"/>
                         <constraint firstItem="4sc-81-mgJ" firstAttribute="top" secondItem="Tfs-UD-IcG" secondAttribute="top" constant="22" id="FMN-1n-fgh"/>
                         <constraint firstAttribute="bottom" secondItem="4sc-81-mgJ" secondAttribute="bottom" constant="23" id="IMg-2d-SsV"/>
                         <constraint firstItem="4sc-81-mgJ" firstAttribute="leading" secondItem="Tfs-UD-IcG" secondAttribute="leading" constant="15" id="IWr-OW-Ldt"/>
-                        <constraint firstItem="iNY-e5-AtT" firstAttribute="bottom" secondItem="4sc-81-mgJ" secondAttribute="bottom" constant="12" id="WbP-6S-a0C"/>
-                        <constraint firstItem="LRk-y8-rb1" firstAttribute="trailing" secondItem="iNY-e5-AtT" secondAttribute="trailing" id="dIR-HJ-2cP"/>
-                        <constraint firstItem="iNY-e5-AtT" firstAttribute="top" secondItem="4sc-81-mgJ" secondAttribute="top" constant="19" id="fmB-kF-SMv"/>
-                        <constraint firstItem="LRk-y8-rb1" firstAttribute="leading" secondItem="iNY-e5-AtT" secondAttribute="leading" id="p36-4A-E1X"/>
-                        <constraint firstItem="iNY-e5-AtT" firstAttribute="leading" secondItem="4sc-81-mgJ" secondAttribute="leading" constant="4" id="ryx-Ft-5kd"/>
+                        <constraint firstItem="LRk-y8-rb1" firstAttribute="top" secondItem="4sc-81-mgJ" secondAttribute="top" id="J0t-hd-V0A"/>
+                        <constraint firstItem="LRk-y8-rb1" firstAttribute="leading" secondItem="4sc-81-mgJ" secondAttribute="leading" id="aLw-Xl-hri"/>
                         <constraint firstAttribute="trailing" secondItem="4sc-81-mgJ" secondAttribute="trailing" constant="14" id="zlW-yK-kMJ"/>
                     </constraints>
                 </view>
@@ -127,7 +81,4 @@
             <point key="canvasLocation" x="-417.60000000000002" y="-370.16491754122939"/>
         </view>
     </objects>
-    <resources>
-        <image name="ic_dropdown" width="10" height="6"/>
-    </resources>
 </document>

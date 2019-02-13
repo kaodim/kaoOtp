@@ -12,15 +12,9 @@ import MaterialTextField
 class NumberField: UIView {
 
     @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var countryLabel: UILabel!
-    @IBOutlet weak private var flagImageView: UIImageView!
     @IBOutlet weak private var numberField: MFTextField!
-    @IBOutlet weak private var selectionView: UIView!
-    @IBOutlet weak private var dropIcon: UIImageView!
 
-    
     var didChangedText: ((_ text: String?) -> Void)?
-    var selectionViewDidSelect: (() -> Void)?
     var countryPhone: CountryPhone?
     var countryCode: String?
     var valueUpdate: ((_ value: String) -> Void)?
@@ -56,22 +50,16 @@ class NumberField: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClickSelectionView))
-        selectionView.addGestureRecognizer(tapGesture)
+
         numberField.delegate = self
         numberField.keyboardType = .numberPad
         numberField.textAlignment = .left
         valueUpdate = didChangedText
-        
-        dropIcon.isHidden = true
     }
 
     func configureView(with selectedCountry: CountryPhone?) {
         countryPhone = selectedCountry
         countryCode = selectedCountry?.phoneExtension
-        flagImageView.image = selectedCountry?.icon 
-        countryLabel.text = "\(selectedCountry?.phoneExtension ?? "")"
     }
     
     func configureTextFieldLabel(with title: CustomTextfieldAttributes){
@@ -86,35 +74,8 @@ class NumberField: UIView {
         numberField.becomeFirstResponder()
     }
     
-    func getText() -> String? {
-        return numberField.text
-    }
-    
-    func emptyText() {
-        numberField.text = nil
-    }
-    
     func setText(with text: CustomTextfieldAttributes) {
         numberField.text = text.label
-    }
-    
-    func rightViewTextField() {
-        numberField.rightViewMode = .always
-        numberField.rightView = selectionView
-    }
-
-    
-    func configure(dropUpDownImage: UIImage?) {
-        dropIcon.image = dropUpDownImage
-    }
-    
-    func getNumberWithCode() -> String {
-        let number = numberField.text?.first == "0" ? String(numberField.text?.dropFirst() ?? "") : (numberField.text ?? "")
-        return (countryCode?.replacingOccurrences(of: "+", with: "") ?? "") + (number)
-    }
-    
-    @objc func onClickSelectionView() {
-        selectionViewDidSelect?()
     }
 }
 

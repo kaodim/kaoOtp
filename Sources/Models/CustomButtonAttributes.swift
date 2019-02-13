@@ -17,7 +17,12 @@ public struct CustomButtonAttributes {
     let disableText: String
     let highlightedColor: UIColor
 
-    public init(text: String = "", font: UIFont = .systemFont(ofSize: 14), color: UIColor = .red, disableColor: UIColor = .gray, disableText: String = "", highlightedColor: UIColor = .white) {
+    public init(text: String = "",
+                font: UIFont = .systemFont(ofSize: 14),
+                color: UIColor = .red,
+                disableColor: UIColor = .gray,
+                disableText: String = "",
+                highlightedColor: UIColor = .white) {
         self.text = text
         self.font = font
         self.color = color

@@ -100,7 +100,6 @@ open class PhoneVerifyingViewController: UIViewController {
     }
 
     override open func viewWillDisappear(_ animated: Bool) {
-        
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -205,5 +204,4 @@ open class PhoneVerifyingViewController: UIViewController {
             pins = ""
         }
     }
-
 }
