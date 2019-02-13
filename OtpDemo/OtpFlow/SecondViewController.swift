@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import KaoOtpFlow
+import KaoOtp
 
 class SecondViewController: PhoneVerifyingViewController {
 

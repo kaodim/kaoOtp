@@ -1,23 +1,56 @@
 PODS:
-  - KaoOtpFlow (0.1.21):
+  - DZNEmptyDataSet (1.8.1)
+  - FontAwesome.swift (1.3.2)
+  - KaoDesign (0.1.33):
+    - DZNEmptyDataSet (= 1.8.1)
+    - FontAwesome.swift (= 1.3.2)
+    - Kingfisher (= 4.6.2)
+    - NotificationBannerSwift (= 1.6.3)
+    - XLPagerTabStrip (= 8.0.0)
+  - KaoOtp (0.1.0):
+    - KaoDesign (= 0.1.33)
     - MaterialTextField (~> 0.2)
+  - Kingfisher (4.6.2)
+  - MarqueeLabel/Swift (3.2.0)
   - MaterialTextField (0.2.1)
+  - NotificationBannerSwift (1.6.3):
+    - MarqueeLabel/Swift
+    - SnapKit (~> 4.0)
+  - SnapKit (4.2.0)
+  - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
-  - KaoOtpFlow (from `../`)
+  - KaoOtp (from `../`)
 
 SPEC REPOS:
+  "git@github.com:kaodim/KaoCocoaPods.git":
+    - KaoDesign
   https://github.com/cocoapods/specs.git:
+    - DZNEmptyDataSet
+    - FontAwesome.swift
+    - Kingfisher
+    - MarqueeLabel
     - MaterialTextField
+    - NotificationBannerSwift
+    - SnapKit
+    - XLPagerTabStrip
 
 EXTERNAL SOURCES:
-  KaoOtpFlow:
+  KaoOtp:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KaoOtpFlow: 8edd9a427f666f23854fda88f38296891f65ccf5
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FontAwesome.swift: b4e4c8ccbbecb12f9b592bc533ff237af3706667
+  KaoDesign: a02cb3b4f60886c001074838e351918f074f77fc
+  KaoOtp: 9261df7382f0c95df527cf75d57e1644fb6e8adb
+  Kingfisher: 55b9c395bf8d3949676ad3861111923990ab68cf
+  MarqueeLabel: 440a502b91a9179bd98f9fff00ba1150650a1c0e
   MaterialTextField: f876a39d571eeece872af6a4da421e3bd065fe0b
+  NotificationBannerSwift: b231e4c3244848ef300e1c53ce027b9756b9b06f
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: 07729b835b6a876810dbe19b08a5ef060ea65f82
+PODFILE CHECKSUM: 271b39961e64d4db4735356b011cb0f57c693a43
 
 COCOAPODS: 1.5.3

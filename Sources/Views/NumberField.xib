@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberField" customModule="KaoOtpFlow" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberField" customModule="KaoOtp" customModuleProvider="target">
             <connections>
                 <outlet property="numberField" destination="4sc-81-mgJ" id="WLc-Gb-i3X"/>
                 <outlet property="titleLabel" destination="LRk-y8-rb1" id="4y5-4j-6HP"/>

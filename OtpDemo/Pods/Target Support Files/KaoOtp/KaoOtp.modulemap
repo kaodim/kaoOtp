@@ -1,0 +1,6 @@
+framework module KaoOtp {
+  umbrella header "KaoOtp-umbrella.h"
+
+  export *
+  module * { export * }
+}

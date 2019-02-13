@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import KaoOtpFlow
+import KaoOtp
 
 class ViewController: PhoneEnteringViewController {
 

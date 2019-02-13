@@ -1,0 +1,39 @@
+{
+  "name": "KaoOtp",
+  "version": "0.1.0",
+  "summary": "Kaodim custom otp views",
+  "description": "KaoOtpFlow provide complete ui for otp and allow you to inject your own endpoint",
+  "homepage": "https://github.com/kaodim/kaoOtp.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Augustius": "tech+ios@kaodim.com"
+  },
+  "source": {
+    "git": "git@github.com:kaodim/kaoOtp.git",
+    "tag": "0.1.0"
+  },
+  "source_files": "Sources/**/*",
+  "resource_bundles": {
+    "OtpCustomPod": [
+      "Sources/**/*.xib"
+    ]
+  },
+  "dependencies": {
+    "MaterialTextField": [
+      "~> 0.2"
+    ],
+    "KaoDesign": [
+      "0.1.33"
+    ]
+  },
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "4.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true
+}
