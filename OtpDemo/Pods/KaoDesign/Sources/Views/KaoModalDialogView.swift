@@ -56,9 +56,9 @@ public class KaoModalDialogView: UIView {
         secondButton.configure(type: .textOnly)
     }
 
-    public func configure(_ image: UIImage? = nil, titleText: String, messageText: String,  firstButtonTitle: String? = nil, secondButtonTitle: String? = nil) {
+    public func configure(_ image: UIImage? = nil, titleText: String, messageText: NSAttributedString,  firstButtonTitle: String? = nil, secondButtonTitle: String? = nil) {
         title.text = titleText
-        message.text = messageText
+        message.attributedText = messageText
         configureIcon(image)
         configureButton(firstButtonTitle: firstButtonTitle, secondButtonTitle: secondButtonTitle)
     }

@@ -26,7 +26,7 @@
       "~> 0.2"
     ],
     "KaoDesign": [
-      "0.1.33"
+      "0.1.36"
     ]
   },
   "pod_target_xcconfig": {

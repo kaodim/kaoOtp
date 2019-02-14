@@ -90,8 +90,8 @@ public class KaoInfoView: UIView {
 
     private func configureButton(firstButtonTitle: String?, secondButtonTitle: String?) {
         if firstButtonTitle != nil || secondButtonTitle != nil {
-            buttonViewHeight.constant = 35
-            bottomButtonView.constant = 20
+            buttonViewHeight.constant = 25
+            bottomButtonView.constant = 15
             if let firstButtonTitle = firstButtonTitle {
                 firstButton.isHidden = false
                 firstButton.setTitle(firstButtonTitle, for: .normal)
