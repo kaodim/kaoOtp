@@ -15,7 +15,38 @@ source 'git@github.com:kaodim/KaoCocoaPods.git'
 source 'https://github.com/CocoaPods/Specs.git'
 ~~~~
 
-## Instalation
+## Setting up your repo
+---
+1. On terminal, check your repository with the following command.
+`pod repo`
+
+You should see this, if not you could set it up so that it will look like below.
+
+~~~~
+kaodim
+- Type: git (master)
+- URL:  git@github.com:kaodim/KaoCocoaPods.git
+- Path: /Users/kelvintan/.cocoapods/repos/kaodim
+~~~~
+
+2. Push your repo
+
+`pod repo push kaodim --swift-version=4.0 --allow-warnings KaoOtp.podspec’`
+
+
+## Steps to update library
+---
+
+1. Do changes in **Pods** > **Development Pods** > **KaoOtp**
+2. Commit changes
+3. Update pod spec file **KaoOtpFlow.podspec**, bump the version and then commit
+4. Create a release tag
+5. To validate -> `pod lib lint --swift-version=“4.0”`
+6. To push -> `pod repo push kaodim --swift-version=4.0 --allow-warnings KaoOtp.podspec`
+7. In the kaodim project, run `pod update KaoOtp`
+
+
+## Installation
 ---
 ~~~~
 pod 'KaoOtp'
@@ -102,4 +133,3 @@ Conform the protocol with the following function to: (in order)
 
 ~~~~
 ![](https://github.com/zhiyao92/Images/blob/master/OTP%20Images/PhoneVerification.png)
-
