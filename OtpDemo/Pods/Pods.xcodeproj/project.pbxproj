@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -218,7 +218,6 @@
 		CD5975E48A17BBA784F4AA419CB19741 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC1961500D31A1943A3AA26C117379D /* BarPagerTabStripViewController.swift */; };
 		CD9A2BB947DFE9EF2B0CE40D7F914A58 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68844CACD2D61095E9E7FEC2EC451B5 /* Date+Extension.swift */; };
 		CEBA45658AAC4264EE6E88A54193A92E /* KaoLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23714EABEE9CA82B0382C78F8AAD4B9E /* KaoLineView.swift */; };
-		CFA1F367FE37360B0F7055486E212C16 /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA65A7A611230441453F14B7A80A559 /* UIView+Custom.swift */; };
 		D1C025B39D8D96DEA8911CE4A6999676 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CFE860EAA2B7F2011CF6D6061A350C /* UIButton+Extension.swift */; };
 		D54B8B692BD768A67FC6C1ADC9A4FEB4 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E78593A2C7CD314FFD424F512D797 /* BarView.swift */; };
 		D60DA3E60D36D5FAE70C1563AC5BD2AF /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720A4321E74AE83DF46A72049EA5BEA1 /* ButtonBarViewCell.swift */; };
@@ -505,7 +504,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0153669AF0FB7017E3CA3E26A15B9CD6 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Roboto-LightItalic.ttf"; path = "Sources/Resources/Fonts/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		0153669AF0FB7017E3CA3E26A15B9CD6 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "Roboto-LightItalic.ttf"; path = "Sources/Resources/Fonts/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		0196CE42B7478909939F475B5D0C438F /* OtpPinEnterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpPinEnterView.swift; sourceTree = "<group>"; };
 		02E8C0B2906CD6897ED0D178B298FC30 /* Pods-OtpFlow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OtpFlow-dummy.m"; sourceTree = "<group>"; };
 		02F5476C55ACCE587C89B3C4963263FD /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
@@ -513,7 +512,7 @@
 		053212447135FEC015C53ADC0B7A9825 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
 		059B48C80BE8D2CEA484B3BA1C0D6510 /* DateTimeModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTimeModel.swift; path = Sources/KaoDateTimePicker/Model/DateTimeModel.swift; sourceTree = "<group>"; };
 		06FA6997128D33F3165E067C8F60C5C9 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		07469A68612F2F8DD440B44EB324F5E9 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.otf; path = FontAwesome/FontAwesome.otf; sourceTree = "<group>"; };
+		07469A68612F2F8DD440B44EB324F5E9 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = FontAwesome/FontAwesome.otf; sourceTree = "<group>"; };
 		08CFE860EAA2B7F2011CF6D6061A350C /* UIButton+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "Sources/Extensions/UIButton+Extension.swift"; sourceTree = "<group>"; };
 		0B55916011E18C4C1C4D133FA069D525 /* FontAwesomeSegmentedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesomeSegmentedControl.swift; path = FontAwesome/FontAwesomeSegmentedControl.swift; sourceTree = "<group>"; };
 		0B61652FAAA9C0835CC018EDBC2CC912 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
@@ -530,14 +529,14 @@
 		16250E7078A3EBAE336F377B778B7132 /* DateTimeManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTimeManager.swift; path = Sources/KaoDateTimePicker/Manager/DateTimeManager.swift; sourceTree = "<group>"; };
 		1BA7BEC459002728EC37CB9F6E62D324 /* MaterialTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaterialTextField.h; path = MaterialTextField/MaterialTextField.h; sourceTree = "<group>"; };
 		1C3BCFCD24A96683DC448C72BC986F19 /* StatusBarNotificationBanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusBarNotificationBanner.swift; path = NotificationBanner/Classes/StatusBarNotificationBanner.swift; sourceTree = "<group>"; };
-		1CBF470F946EADE91009B14CD5BCFA57 /* Pods_OtpFlowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlowUITests.framework; path = "Pods-OtpFlowUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBF470F946EADE91009B14CD5BCFA57 /* Pods_OtpFlowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2080F373BDCBFB5DF0A58F70460208 /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Placeholder.swift; sourceTree = "<group>"; };
 		1D3D982CDB450D60BE1F9A7232222B20 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D953A7FB9AAF6AC62007FD4265168B2 /* NotificationBannerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NotificationBannerSwift-dummy.m"; sourceTree = "<group>"; };
 		1EC09640164893678DA35407228D229A /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
 		1F70E461913998DB35BCA4AC8DD32C9A /* MaterialTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MaterialTextField.xcconfig; sourceTree = "<group>"; };
 		20C40790EF895D7BD8FC71B716C9517B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		226A0C1E0E7D672184A06658C210BDD5 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FontAwesome_swift.framework; path = FontAwesome.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		226A0C1E0E7D672184A06658C210BDD5 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AD74D6A45742544D1FC5BC8FD60138 /* CollectionViewHorizontalLayout+DateTimeVCExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CollectionViewHorizontalLayout+DateTimeVCExtension.swift"; path = "Sources/KaoDateTimePicker/Controller/Date/CollectionViewHorizontalLayout+DateTimeVCExtension.swift"; sourceTree = "<group>"; };
 		23714EABEE9CA82B0382C78F8AAD4B9E /* KaoLineView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaoLineView.swift; path = Sources/IBDesignable/KaoLineView.swift; sourceTree = "<group>"; };
 		25471396A49985781E94F9A43586F705 /* FontAwesomeImageRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesomeImageRepresentable.swift; path = FontAwesome/FontAwesomeImageRepresentable.swift; sourceTree = "<group>"; };
@@ -547,10 +546,10 @@
 		28A82CEF40F7CE5A975C6BEC7BBED503 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		2987878D84801A59C9E502D9ABD0B045 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
 		2A65C908EE0CC3309EF18E81CCB1D512 /* Pods-OtpFlow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OtpFlow-umbrella.h"; sourceTree = "<group>"; };
-		2A97C786CE18D82122DB3AAF42F87257 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A97C786CE18D82122DB3AAF42F87257 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF9169DD9EA1356D11E7D7979C38B63 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		2B4C4F7E3C70376B65650E5940A22A51 /* KaoNotificationBannerView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = KaoNotificationBannerView.xib; path = Sources/Views/KaoNotificationBannerView.xib; sourceTree = "<group>"; };
-		2C098C7480783DDE3CBDACE68A24BDE7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		2C098C7480783DDE3CBDACE68A24BDE7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2CDEFDE3C8FB8DCBC7D47B91818E0629 /* KaoRatingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaoRatingView.swift; path = Sources/IBDesignable/KaoRatingView.swift; sourceTree = "<group>"; };
 		2D07D3C743B5F9CBF73022F26859314D /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
 		2D3FD7BF48173BE7679A40B9007ACE94 /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
@@ -569,21 +568,21 @@
 		3817B40BA4B93D0EFB90DDBBEC7551F4 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D34493C6A2887BE23BF6102B37AAEB /* KaoOtp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KaoOtp-prefix.pch"; sourceTree = "<group>"; };
 		39373AAB00C1F3838BFCE8488577696F /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
-		3BAE7BE756291E4855D99212567188DE /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MaterialTextField.framework; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BAE7BE756291E4855D99212567188DE /* MaterialTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB8665FBECB697DFEDE7C8D0C39DA61 /* FontAwesomeBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesomeBarButtonItem.swift; path = FontAwesome/FontAwesomeBarButtonItem.swift; sourceTree = "<group>"; };
 		3C32A3508C85BE32BBE52083BAF08AA8 /* BannerColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BannerColors.swift; path = NotificationBanner/Classes/BannerColors.swift; sourceTree = "<group>"; };
 		3D7E6309080AB16D46F7412C62DA8F61 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
-		3EE19059EB668A2DCA3C0EBD49058AD1 /* KaoOtp.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = KaoOtp.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3EE19059EB668A2DCA3C0EBD49058AD1 /* KaoOtp.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = KaoOtp.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3EFA738C6D3553926C756D5DDF0F645E /* ResourceBundle-OtpCustomPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-OtpCustomPod-Info.plist"; sourceTree = "<group>"; };
 		400251E6A448AEC99B332883987B7930 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
-		4188EE8FD673BDDE7535656E0D2B5445 /* KaoDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KaoDesign.framework; path = KaoDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4188EE8FD673BDDE7535656E0D2B5445 /* KaoDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KaoDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41E1AAAF19A15BF283EE994E5A751A00 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		43DF4B361BB6CF58715EA41BF28BD0D2 /* FontAwesomeTabBarItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesomeTabBarItem.swift; path = FontAwesome/FontAwesomeTabBarItem.swift; sourceTree = "<group>"; };
 		44EFD2633944E4AAFFEBCC4367021426 /* DateTimeCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTimeCollectionViewCell.swift; path = Sources/KaoDateTimePicker/cells/DateTimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		45A6B04970B0B18CE86758E0E09FAECF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		45B511824E594FA6AB4EF266A24A9E0D /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		46C2EA065DDCA844C69783816457AD79 /* MFTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MFTextField.m; path = MaterialTextField/MFTextField.m; sourceTree = "<group>"; };
-		46F555A6362EAC25D56D5C999113CFEB /* KaoOtp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KaoOtp.framework; path = KaoOtp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F555A6362EAC25D56D5C999113CFEB /* KaoOtp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KaoOtp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		472C8760967760B11AF4D18944C67C23 /* Pods-OtpFlowTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OtpFlowTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4790CB0D79B0E45DAA76285C5FEAEC43 /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
 		48570B0A3C5BE894F0EF2CD8CECB4F1B /* Pods-OtpFlowUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OtpFlowUITests.modulemap"; sourceTree = "<group>"; };
@@ -596,7 +595,7 @@
 		4D3723DD8EAE900257570DBCC404C22E /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
 		4D3C385BF04803003AD7E3285A349BED /* MaterialTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MaterialTextField-dummy.m"; sourceTree = "<group>"; };
 		4E366E5652FFF658432EDA0A311D20F1 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
-		4F86A1A0950DD3BB1D16ACBD933ED81D /* KaoCustomPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = KaoCustomPod.bundle; path = "KaoDesign-KaoCustomPod.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F86A1A0950DD3BB1D16ACBD933ED81D /* KaoCustomPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaoCustomPod.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5028666421941714CBD332EF5F515EA4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508AE7E9D6082780AA741A5635CF73AD /* OtpPinTextfield.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpPinTextfield.swift; sourceTree = "<group>"; };
 		51D90B18C7A472363FB2552529B01018 /* KaoOtp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KaoOtp.xcconfig; sourceTree = "<group>"; };
@@ -607,8 +606,8 @@
 		546041BC96B9E556FF075F4857BA7F70 /* NotificationBannerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NotificationBannerSwift-umbrella.h"; sourceTree = "<group>"; };
 		5943568C2CC63B22DAB0ED66E5E92F84 /* Pods-OtpFlowTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowTests-resources.sh"; sourceTree = "<group>"; };
 		59BFEF6F0BE6CCA6181C05B16A45CA4E /* OtpPinEnterView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpPinEnterView.xib; sourceTree = "<group>"; };
-		5A2ECF287BA105FB15E0E781B8ECDCD5 /* FontAwesome.swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FontAwesome.swift.bundle; path = "FontAwesome.swift-FontAwesome.swift.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A4C9A12A9B4E0519F4F7F7ED6FF7689 /* MarqueeLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MarqueeLabel.framework; path = MarqueeLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A2ECF287BA105FB15E0E781B8ECDCD5 /* FontAwesome.swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FontAwesome.swift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A4C9A12A9B4E0519F4F7F7ED6FF7689 /* MarqueeLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarqueeLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8A2E25F7BCB933F774336717AA90B3 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		5C94B41428F79995F733FC2564E9877C /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = FontAwesome/Enum.swift; sourceTree = "<group>"; };
 		5DAA8BDA17F788C5F9F59BA7CFAAB494 /* CollectionHeaderReusableView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CollectionHeaderReusableView.xib; path = Sources/Views/CollectionHeaderReusableView.xib; sourceTree = "<group>"; };
@@ -628,7 +627,7 @@
 		6852F1AFCA8EFF0D5B9F78AFF6B67356 /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
 		69310D8826AA32FEA32992D3B71D8D58 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		6956F0C13C3A02BC22FC5B0E3B63F312 /* MarqueeLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarqueeLabel.swift; path = Sources/Swift/MarqueeLabel.swift; sourceTree = "<group>"; };
-		6A4C7EA30CFC530945BB3FA6B8FF8A44 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Roboto-Regular.ttf"; path = "Sources/Resources/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		6A4C7EA30CFC530945BB3FA6B8FF8A44 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Sources/Resources/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		6BF4A0249690B1538230C40C470A1EBC /* UIViewController+Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Alert.swift"; path = "Sources/Extensions/UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		6CF717E54920BAF4469B53253FC20995 /* Pods-OtpFlowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OtpFlowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F4F6CFF2F8DC2B5E886144CD1AACEBB /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/ImageModifier.swift; sourceTree = "<group>"; };
@@ -662,18 +661,17 @@
 		7D9AC677F6DCA44CAB5D7598D31CFB2E /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
 		7DA61EC4802FC2B1009A1E158D3D0A17 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		7DEF9CF45C5AF0607144CDA6DF9A0B91 /* KaoDesign-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KaoDesign-prefix.pch"; sourceTree = "<group>"; };
-		7FA65A7A611230441453F14B7A80A559 /* UIView+Custom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
 		7FD6C2A30F81F1B18CF0D0F1E79EE0DF /* UIImage+MFTint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MFTint.h"; path = "MaterialTextField/UIImage+MFTint.h"; sourceTree = "<group>"; };
 		80EB7FE3A998C5DD8AF5CDC82CFF0254 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		812EDE1424DF37C6636E01F34836166B /* FontAwesome.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesome.swift-prefix.pch"; sourceTree = "<group>"; };
 		8425596B7B906AA4363D723C28A874D2 /* KaoNotificationBanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaoNotificationBanner.swift; path = Sources/Controller/KaoNotificationBanner.swift; sourceTree = "<group>"; };
-		85C871C0E55322C19C8342074F99C6F3 /* Pods_OtpFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlowTests.framework; path = "Pods-OtpFlowTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85C871C0E55322C19C8342074F99C6F3 /* Pods_OtpFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		869B4F3B47D7593BEB36DA18CF259F6C /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
-		88502906C7357A8DC3A875696409E5FE /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLPagerTabStrip.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88502906C7357A8DC3A875696409E5FE /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B193B34EBE96FF8D669A63728FB132 /* OtpBottomView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpBottomView.xib; sourceTree = "<group>"; };
 		88CDBC7C22F36CD8BF467EE5F4A8D408 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
 		894DE4ED2D586D9D011DAD6866FE2CF4 /* NumberField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumberField.swift; sourceTree = "<group>"; };
-		8B0DD0FFCAAE6CE923A77C3DA47678AD /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XLPagerTabStrip.bundle; path = "XLPagerTabStrip-XLPagerTabStrip.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0DD0FFCAAE6CE923A77C3DA47678AD /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C374999C13ED013FE1CE20C1422E000 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D9D252816544E8A5E6FD6B5D966E597 /* BannerHapticGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BannerHapticGenerator.swift; path = NotificationBanner/Classes/BannerHapticGenerator.swift; sourceTree = "<group>"; };
 		8EC1961500D31A1943A3AA26C117379D /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
@@ -685,18 +683,18 @@
 		91E553DEEE30D450C6913022FBE2BA44 /* EasyTipView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EasyTipView.swift; path = Sources/Views/EasyTipView.swift; sourceTree = "<group>"; };
 		92886E8D25C018B4906CF83988CF2DF0 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		930D3F4E15630F4868EEBF04E1B83536 /* KaoNoSearchFound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaoNoSearchFound.swift; path = Sources/Views/KaoNoSearchFound.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		952679C6051DB5A3837E8C7F2A4F383F /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		952DE55EA010D3BDAA19096E3DE2E4A1 /* MaterialTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaterialTextField-prefix.pch"; sourceTree = "<group>"; };
-		9578470795C4E1EB67A63376B0B08475 /* NotificationBannerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NotificationBannerSwift.framework; path = NotificationBannerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9578470795C4E1EB67A63376B0B08475 /* NotificationBannerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NotificationBannerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		962343613FB21C763C4D168FDB8FAE27 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		980E91C182BA5DD1227C267416411D0F /* Roboto-Medium.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Roboto-Medium.ttf"; path = "Sources/Resources/Fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		980E91C182BA5DD1227C267416411D0F /* Roboto-Medium.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "Sources/Resources/Fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		9853B448422478E809F825EE3DF8DB57 /* KaoOtp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KaoOtp-dummy.m"; sourceTree = "<group>"; };
 		9926FB6B49DF4EEEC62E978A3EFC7510 /* OtpBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpBottomView.swift; sourceTree = "<group>"; };
 		99C99699B572C52B52F562640645F3FC /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
 		9ADAAE342BA653ADC91468AD8EB4D3A0 /* OtpHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OtpHeaderView.xib; sourceTree = "<group>"; };
-		9BA60C3B6B2B2C86FF4455D9E1615E96 /* Pods_OtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OtpFlow.framework; path = "Pods-OtpFlow.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D6B092A178F8E187C3212196F6D7493 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DZNEmptyDataSet.framework; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA60C3B6B2B2C86FF4455D9E1615E96 /* Pods_OtpFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OtpFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D6B092A178F8E187C3212196F6D7493 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA675D42749D4BB4505AA416AE5BAB1 /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
 		9DB96DC4C69D4E67466A21FB7FD7E3BA /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
 		9E2BA7D2EB38C5F2258AD61C3A0A8F71 /* Pods-OtpFlowUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OtpFlowUITests-frameworks.sh"; sourceTree = "<group>"; };
@@ -704,7 +702,7 @@
 		9FED69FD15423AC591D29C41F7F96665 /* KaoNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaoNavigationController.swift; path = Sources/Controller/KaoNavigationController.swift; sourceTree = "<group>"; };
 		A2924AA995318C97AAD598B4BB744056 /* KaoBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaoBarPagerTabStripViewController.swift; path = Sources/Controller/KaoBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		A39DB50B24F774FA134093DFF9F9D1C1 /* UITextfield+Custom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextfield+Custom.swift"; sourceTree = "<group>"; };
-		A42AF46F30AD21511BD8FC81C5C23ABC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A42AF46F30AD21511BD8FC81C5C23ABC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A43032F088D5BCAD20F631E0F69DD77E /* DateTime.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = DateTime.storyboard; path = Sources/Views/DateTime.storyboard; sourceTree = "<group>"; };
 		A46EB621CCE7BC3873910AFD86DF1B03 /* BannerPositionFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BannerPositionFrame.swift; path = NotificationBanner/Classes/BannerPositionFrame.swift; sourceTree = "<group>"; };
 		A4AA925B82C943908BAA1416E2281CC3 /* MaterialTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaterialTextField-umbrella.h"; sourceTree = "<group>"; };
@@ -712,7 +710,7 @@
 		A52F0214584A8C111823861227B5225B /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
 		A88F5DFC365D2807D90A69CE35BE3924 /* KaoLinkButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaoLinkButton.swift; path = Sources/IBDesignable/KaoLinkButton.swift; sourceTree = "<group>"; };
 		A99BA24E786C1AC7989AED08E0DA5585 /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
-		A9D619B4824A860EC544384DF86B51BC /* OtpCustomPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = OtpCustomPod.bundle; path = "KaoOtp-OtpCustomPod.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D619B4824A860EC544384DF86B51BC /* OtpCustomPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtpCustomPod.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEA3BBCB39F0204711D9F00E40AA35C /* FontAwesome.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FontAwesome.swift.modulemap; sourceTree = "<group>"; };
 		AF8B0EFE30578CA1E1A231CC1EFD610C /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		AFC18926EDD3E642FB0147EA48D548B4 /* HeaderViewParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HeaderViewParams.swift; sourceTree = "<group>"; };
@@ -723,7 +721,7 @@
 		B234316BA33CA797CE8256BA8517EF86 /* OtpHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtpHeaderView.swift; sourceTree = "<group>"; };
 		B2DCF9CC07110CE0ED314BE83B9BDCA6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3A8B0BB624B221C32D5CD1AEC134CAF /* MarqueeLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-umbrella.h"; sourceTree = "<group>"; };
-		B3E698C88C1905F703597BEA29C1DB74 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3E698C88C1905F703597BEA29C1DB74 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59EC094F7E1D483F69C6C7682363E3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63F5BF87C9552013548A441D13D2356 /* UILabel+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Extension.swift"; path = "Sources/Extensions/UILabel+Extension.swift"; sourceTree = "<group>"; };
 		B66653614B8ED07573B90EB7024B7914 /* NotificationBannerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NotificationBannerSwift.xcconfig; sourceTree = "<group>"; };
@@ -760,7 +758,7 @@
 		CEBA268645002BD3034B79720054824A /* KaoSpinningView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaoSpinningView.swift; path = Sources/IBDesignable/KaoSpinningView.swift; sourceTree = "<group>"; };
 		CF22DC1DDC399E319818816602EE3262 /* UITableview+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableview+Extension.swift"; path = "Sources/Extensions/UITableview+Extension.swift"; sourceTree = "<group>"; };
 		CF9E6DBAAF53C5179C16CE7642E562D6 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchBar+Extension.swift"; path = "Sources/Extensions/UISearchBar+Extension.swift"; sourceTree = "<group>"; };
-		CFC3E7ACB65DADC141010A42BBABB0A7 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Roboto-Bold.ttf"; path = "Sources/Resources/Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		CFC3E7ACB65DADC141010A42BBABB0A7 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Sources/Resources/Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		D03867552A68B9840E2294B0DED7A7E9 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F645C0864A2CC2D07041178EF6E8B2 /* KaoInfoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaoInfoView.swift; path = Sources/Views/KaoInfoView.swift; sourceTree = "<group>"; };
 		D24B1E0CA6F3863E2D0A7D1AD5690262 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
@@ -789,7 +787,7 @@
 		E17A133FC00B86AE849146FE1DF2B0C1 /* MarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarqueeLabel-dummy.m"; sourceTree = "<group>"; };
 		E2FA8644DCE2AF3D0E0FB37B222DE223 /* MarqueeLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.xcconfig; sourceTree = "<group>"; };
 		E3028010683F0E0EFBEFA6ECAD6D2C07 /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
-		E3ECD605137822243DB38232B5B86739 /* Roboto-Light.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Roboto-Light.ttf"; path = "Sources/Resources/Fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		E3ECD605137822243DB38232B5B86739 /* Roboto-Light.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Sources/Resources/Fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		E3F08320295DB1CA77DAEADB061352EE /* UITextField+MFClearButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+MFClearButton.m"; path = "MaterialTextField/UITextField+MFClearButton.m"; sourceTree = "<group>"; };
 		E3F7D53AFF65DDA7A51B3F6E45693DC5 /* Pods-OtpFlow-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OtpFlow-acknowledgements.plist"; sourceTree = "<group>"; };
 		E44C7088BEC232903409C490E96141CF /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1034,7 +1032,6 @@
 				C10918E742A52E8FC31AC409C6259F3C /* Resources */,
 				9FD9E65505767F7A5C1970D0C246EFCC /* Support Files */,
 			);
-			name = XLPagerTabStrip;
 			path = XLPagerTabStrip;
 			sourceTree = "<group>";
 		};
@@ -1077,7 +1074,6 @@
 				92886E8D25C018B4906CF83988CF2DF0 /* UILayoutSupport+Extensions.swift */,
 				9EC71E477EC0140D9C608738976737F1 /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -1280,7 +1276,6 @@
 				5915B8F1A3EC6A9D81137C306C1C6688 /* Support Files */,
 				5E26A6B4A3323F4F7288EBF3072F889E /* Swift */,
 			);
-			name = MarqueeLabel;
 			path = MarqueeLabel;
 			sourceTree = "<group>";
 		};
@@ -1300,7 +1295,6 @@
 				E3F08320295DB1CA77DAEADB061352EE /* UITextField+MFClearButton.m */,
 				EAF23102E56DC34E2253EB683AE1BE62 /* Support Files */,
 			);
-			name = MaterialTextField;
 			path = MaterialTextField;
 			sourceTree = "<group>";
 		};
@@ -1309,7 +1303,6 @@
 			children = (
 				508AE7E9D6082780AA741A5635CF73AD /* OtpPinTextfield.swift */,
 			);
-			name = Textfields;
 			path = Textfields;
 			sourceTree = "<group>";
 		};
@@ -1399,7 +1392,6 @@
 				4DCF1297A27DAECE09B3720934593FED /* Resources */,
 				DEF5A39F4437305D7D49522D0B7A11FE /* Support Files */,
 			);
-			name = KaoDesign;
 			path = KaoDesign;
 			sourceTree = "<group>";
 		};
@@ -1431,7 +1423,6 @@
 				139D20996CEEE8CA43FA76AA5672B7CC /* UIButton+Kingfisher.swift */,
 				5BDD73FDD29F18BA035A48D4491772CF /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -1472,7 +1463,6 @@
 				F56DD299F56152FBDEBE472FB4257424 /* Resources */,
 				C5E406257CB4A53ABB4F2519239E66B3 /* Support Files */,
 			);
-			name = FontAwesome.swift;
 			path = FontAwesome.swift;
 			sourceTree = "<group>";
 		};
@@ -1540,7 +1530,6 @@
 				1C3BCFCD24A96683DC448C72BC986F19 /* StatusBarNotificationBanner.swift */,
 				AE005488443BE06F5BAC7C587751C01D /* Support Files */,
 			);
-			name = NotificationBannerSwift;
 			path = NotificationBannerSwift;
 			sourceTree = "<group>";
 		};
@@ -1548,7 +1537,6 @@
 			isa = PBXGroup;
 			children = (
 				A39DB50B24F774FA134093DFF9F9D1C1 /* UITextfield+Custom.swift */,
-				7FA65A7A611230441453F14B7A80A559 /* UIView+Custom.swift */,
 			);
 			name = Extension;
 			path = Sources/Extension;
@@ -1576,7 +1564,6 @@
 				B1EF0F28370831143A95B5FA9F7F0211 /* UIScrollView+EmptyDataSet.m */,
 				5442A56CDACDC859D05DEA7FAB066703 /* Support Files */,
 			);
-			name = DZNEmptyDataSet;
 			path = DZNEmptyDataSet;
 			sourceTree = "<group>";
 		};
@@ -2520,7 +2507,6 @@
 				044D47D8094667EFE879436015A00A24 /* PhoneVerifyingViewController.swift in Sources */,
 				52BBB490FB9DD8263793541DB01DDBA2 /* PhoneVerifyProtocol.swift in Sources */,
 				E00DA3940450091728880E189EB195BB /* UITextfield+Custom.swift in Sources */,
-				CFA1F367FE37360B0F7055486E212C16 /* UIView+Custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2887,11 +2873,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowUITests/Pods-OtpFlowUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2926,11 +2908,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlow/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlow/Pods-OtpFlow.modulemap";
 				OTHER_LDFLAGS = "";
@@ -2940,8 +2918,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2966,11 +2943,7 @@
 				INFOPLIST_FILE = "Target Support Files/KaoDesign/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KaoDesign/KaoDesign.modulemap";
 				PRODUCT_MODULE_NAME = KaoDesign;
 				PRODUCT_NAME = KaoDesign;
@@ -3002,11 +2975,7 @@
 				INFOPLIST_FILE = "Target Support Files/DZNEmptyDataSet/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DZNEmptyDataSet/DZNEmptyDataSet.modulemap";
 				PRODUCT_MODULE_NAME = DZNEmptyDataSet;
 				PRODUCT_NAME = DZNEmptyDataSet;
@@ -3037,19 +3006,14 @@
 				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
 				PRODUCT_NAME = SnapKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3075,11 +3039,7 @@
 				INFOPLIST_FILE = "Target Support Files/NotificationBannerSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/NotificationBannerSwift/NotificationBannerSwift.modulemap";
 				PRODUCT_MODULE_NAME = NotificationBannerSwift;
 				PRODUCT_NAME = NotificationBannerSwift;
@@ -3144,11 +3104,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowTests/Pods-OtpFlowTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3181,19 +3137,14 @@
 				INFOPLIST_FILE = "Target Support Files/NotificationBannerSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/NotificationBannerSwift/NotificationBannerSwift.modulemap";
 				PRODUCT_MODULE_NAME = NotificationBannerSwift;
 				PRODUCT_NAME = NotificationBannerSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3219,11 +3170,7 @@
 				INFOPLIST_FILE = "Target Support Files/MaterialTextField/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MaterialTextField/MaterialTextField.modulemap";
 				PRODUCT_MODULE_NAME = MaterialTextField;
 				PRODUCT_NAME = MaterialTextField;
@@ -3256,11 +3203,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlow/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlow/Pods-OtpFlow.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3295,11 +3238,7 @@
 				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
 				PRODUCT_MODULE_NAME = FontAwesome_swift;
 				PRODUCT_NAME = FontAwesome_swift;
@@ -3331,19 +3270,14 @@
 				INFOPLIST_FILE = "Target Support Files/KaoDesign/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KaoDesign/KaoDesign.modulemap";
 				PRODUCT_MODULE_NAME = KaoDesign;
 				PRODUCT_NAME = KaoDesign;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3369,11 +3303,7 @@
 				INFOPLIST_FILE = "Target Support Files/KaoOtp/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KaoOtp/KaoOtp.modulemap";
 				PRODUCT_MODULE_NAME = KaoOtp;
 				PRODUCT_NAME = KaoOtp;
@@ -3405,19 +3335,14 @@
 				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
 				PRODUCT_MODULE_NAME = MarqueeLabel;
 				PRODUCT_NAME = MarqueeLabel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3443,11 +3368,7 @@
 				INFOPLIST_FILE = "Target Support Files/MaterialTextField/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MaterialTextField/MaterialTextField.modulemap";
 				PRODUCT_MODULE_NAME = MaterialTextField;
 				PRODUCT_NAME = MaterialTextField;
@@ -3494,11 +3415,7 @@
 				INFOPLIST_FILE = "Target Support Files/DZNEmptyDataSet/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DZNEmptyDataSet/DZNEmptyDataSet.modulemap";
 				PRODUCT_MODULE_NAME = DZNEmptyDataSet;
 				PRODUCT_NAME = DZNEmptyDataSet;
@@ -3530,19 +3447,14 @@
 				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
 				PRODUCT_MODULE_NAME = Kingfisher;
 				PRODUCT_NAME = Kingfisher;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3584,19 +3496,14 @@
 				INFOPLIST_FILE = "Target Support Files/FontAwesome.swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FontAwesome.swift/FontAwesome.swift.modulemap";
 				PRODUCT_MODULE_NAME = FontAwesome_swift;
 				PRODUCT_NAME = FontAwesome_swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3638,11 +3545,7 @@
 				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
 				PRODUCT_MODULE_NAME = Kingfisher;
 				PRODUCT_NAME = Kingfisher;
@@ -3674,19 +3577,14 @@
 				INFOPLIST_FILE = "Target Support Files/KaoOtp/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KaoOtp/KaoOtp.modulemap";
 				PRODUCT_MODULE_NAME = KaoOtp;
 				PRODUCT_NAME = KaoOtp;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3713,11 +3611,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowUITests/Pods-OtpFlowUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -3814,19 +3708,14 @@
 				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
 				PRODUCT_MODULE_NAME = XLPagerTabStrip;
 				PRODUCT_NAME = XLPagerTabStrip;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3852,11 +3741,7 @@
 				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
 				PRODUCT_NAME = SnapKit;
@@ -3888,11 +3773,7 @@
 				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
 				PRODUCT_MODULE_NAME = MarqueeLabel;
 				PRODUCT_NAME = MarqueeLabel;
@@ -3924,11 +3805,7 @@
 				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
 				PRODUCT_MODULE_NAME = XLPagerTabStrip;
 				PRODUCT_NAME = XLPagerTabStrip;
@@ -3961,11 +3838,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-OtpFlowTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OtpFlowTests/Pods-OtpFlowTests.modulemap";
 				OTHER_LDFLAGS = "";
