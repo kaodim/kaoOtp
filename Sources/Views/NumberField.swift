@@ -11,7 +11,9 @@ import MaterialTextField
 
 class NumberField: UIView {
 
+    @IBOutlet weak private var flagImageView: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var countryLabel: UILabel!
     @IBOutlet weak private var numberField: MFTextField!
 
     var didChangedText: ((_ text: String?) -> Void)?
@@ -60,6 +62,8 @@ class NumberField: UIView {
     func configureView(with selectedCountry: CountryPhone?) {
         countryPhone = selectedCountry
         countryCode = selectedCountry?.phoneExtension
+        flagImageView.image = selectedCountry?.icon
+        countryLabel.text = "\(selectedCountry?.phoneExtension ?? "")"
     }
     
     func configureTextFieldLabel(with title: CustomTextfieldAttributes){

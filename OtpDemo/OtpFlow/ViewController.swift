@@ -24,7 +24,7 @@ class ViewController: PhoneEnteringViewController {
     
     private func configureList() {
         for index in 0...2 {
-            let countryPhone = CountryPhone(phoneExtension: "(+6\(index))")
+            let countryPhone = CountryPhone(icon: UIImage(named: "flag-my")!, phoneExtension: "(+6\(index))")
             list.append(countryPhone)
         }
     }

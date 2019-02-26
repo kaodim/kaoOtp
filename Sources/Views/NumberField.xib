@@ -17,6 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberField" customModule="KaoOtp" customModuleProvider="target">
             <connections>
+                <outlet property="countryLabel" destination="rZC-0K-OGY" id="dHg-i0-X5l"/>
+                <outlet property="flagImageView" destination="IBH-nz-auA" id="wbx-GZ-Shy"/>
                 <outlet property="numberField" destination="4sc-81-mgJ" id="WLc-Gb-i3X"/>
                 <outlet property="titleLabel" destination="LRk-y8-rb1" id="4y5-4j-6HP"/>
             </connections>
@@ -42,6 +44,9 @@
                                 <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
                                     <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftSpacer">
+                                    <real key="value" value="80"/>
+                                </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="textFieldChanged:" destination="-1" eventType="editingChanged" id="pQk-pu-vSz"/>
@@ -57,14 +62,44 @@
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gs7-WX-edQ">
+                            <rect key="frame" x="15" y="54" width="29" height="0.0"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IBH-nz-auA">
+                                    <rect key="frame" x="10" y="-6.5" width="22" height="13"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="13" id="LNT-JV-ruc"/>
+                                        <constraint firstAttribute="width" constant="22" id="bzh-2b-Qkh"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZC-0K-OGY">
+                                    <rect key="frame" x="10" y="0.0" width="26" height="0.0"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="rZC-0K-OGY" firstAttribute="leading" secondItem="IBH-nz-auA" secondAttribute="leading" id="NMc-xH-XjJ"/>
+                                <constraint firstAttribute="trailing" secondItem="rZC-0K-OGY" secondAttribute="trailing" constant="-7" id="SQQ-Sg-OoZ"/>
+                                <constraint firstItem="rZC-0K-OGY" firstAttribute="centerY" secondItem="gs7-WX-edQ" secondAttribute="centerY" id="TVp-cz-RVF"/>
+                                <constraint firstItem="IBH-nz-auA" firstAttribute="leading" secondItem="gs7-WX-edQ" secondAttribute="leading" constant="10" id="cPa-tF-SST"/>
+                                <constraint firstItem="IBH-nz-auA" firstAttribute="centerY" secondItem="gs7-WX-edQ" secondAttribute="centerY" id="nCR-6r-0Ty"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="gs7-WX-edQ" firstAttribute="leading" secondItem="LRk-y8-rb1" secondAttribute="leading" id="3vd-2g-xpD"/>
+                        <constraint firstItem="gs7-WX-edQ" firstAttribute="top" secondItem="LRk-y8-rb1" secondAttribute="bottom" constant="18" id="7Y4-Un-EAW"/>
                         <constraint firstItem="4sc-81-mgJ" firstAttribute="top" secondItem="Tfs-UD-IcG" secondAttribute="top" constant="22" id="FMN-1n-fgh"/>
                         <constraint firstAttribute="bottom" secondItem="4sc-81-mgJ" secondAttribute="bottom" constant="23" id="IMg-2d-SsV"/>
                         <constraint firstItem="4sc-81-mgJ" firstAttribute="leading" secondItem="Tfs-UD-IcG" secondAttribute="leading" constant="15" id="IWr-OW-Ldt"/>
                         <constraint firstItem="LRk-y8-rb1" firstAttribute="top" secondItem="4sc-81-mgJ" secondAttribute="top" id="J0t-hd-V0A"/>
+                        <constraint firstItem="gs7-WX-edQ" firstAttribute="trailing" secondItem="LRk-y8-rb1" secondAttribute="trailing" id="MCY-Kj-dZf"/>
                         <constraint firstItem="LRk-y8-rb1" firstAttribute="leading" secondItem="4sc-81-mgJ" secondAttribute="leading" id="aLw-Xl-hri"/>
+                        <constraint firstAttribute="bottom" secondItem="gs7-WX-edQ" secondAttribute="bottom" constant="21" id="tCq-Gp-QMI"/>
                         <constraint firstAttribute="trailing" secondItem="4sc-81-mgJ" secondAttribute="trailing" constant="14" id="zlW-yK-kMJ"/>
                     </constraints>
                 </view>
