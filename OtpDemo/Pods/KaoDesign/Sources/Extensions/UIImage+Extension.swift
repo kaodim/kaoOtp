@@ -8,6 +8,14 @@
 import Foundation
 import FontAwesome_swift
 
+public enum QualityType: CGFloat {
+    case lowest  = 0
+    case low     = 0.25
+    case medium  = 0.5
+    case high    = 0.75
+    case highest = 1
+}
+
 public extension UIImage {
     class func imageFromDesignIos(_ imageName: String) -> UIImage? {
         return ImageLoader.loadImage(imageName: imageName)
@@ -31,6 +39,18 @@ public extension UIImage {
         UIGraphicsEndImageContext()
 
         return newImage
+    }
+
+    public func compressedImage(_ quality: QualityType) -> UIImage? {
+        if let data = UIImageJPEGRepresentation(self, quality.rawValue) {
+            return UIImage(data: data)
+        } else {
+            return nil
+        }
+    }
+
+    public func compressedData(_ quality: QualityType) -> Data? {
+        return UIImageJPEGRepresentation(self, quality.rawValue)
     }
 }
 

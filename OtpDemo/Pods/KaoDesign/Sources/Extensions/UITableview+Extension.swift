@@ -21,8 +21,12 @@ public extension UITableView {
     }
 
     func setAndLayoutTableHeaderView(header: UIView?) {
-        guard let header = header else { return }
         self.tableHeaderView = header
+        self.refreshLayoutTableHeaderView()
+    }
+
+    func refreshLayoutTableHeaderView() {
+        guard let header = self.tableHeaderView else { return }
         header.setNeedsLayout()
         header.layoutIfNeeded()
         let height = header.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
@@ -33,8 +37,12 @@ public extension UITableView {
     }
 
     func setAndLayoutTableFooterView(footer: UIView?) {
-        guard let footer = footer else { return }
         self.tableFooterView = footer
+        refreshLayoutTableFooterView()
+    }
+
+    func refreshLayoutTableFooterView() {
+        guard let footer = self.tableFooterView else { return }
         footer.setNeedsLayout()
         footer.layoutIfNeeded()
         let height = footer.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
@@ -42,6 +50,14 @@ public extension UITableView {
         frame.size.height = height
         footer.frame = frame
         self.tableFooterView = footer
+    }
+
+    func reloadData(completion: @escaping() -> Void) {
+        UIView.animate(withDuration: 0, animations: {
+            self.reloadData()
+        }) { _ in
+            completion()
+        }
     }
 }
 

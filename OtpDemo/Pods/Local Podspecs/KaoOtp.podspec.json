@@ -1,6 +1,6 @@
 {
   "name": "KaoOtp",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "summary": "Kaodim custom otp views",
   "description": "KaoOtpFlow provide complete ui for otp and allow you to inject your own endpoint",
   "homepage": "https://github.com/kaodim/kaoOtp.git",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "git@github.com:kaodim/kaoOtp.git",
-    "tag": "0.1.0"
+    "tag": "0.1.3"
   },
   "source_files": "Sources/**/*",
   "resource_bundles": {
@@ -26,7 +26,7 @@
       "~> 0.2"
     ],
     "KaoDesign": [
-      "0.1.36"
+      "0.1.42"
     ]
   },
   "pod_target_xcconfig": {

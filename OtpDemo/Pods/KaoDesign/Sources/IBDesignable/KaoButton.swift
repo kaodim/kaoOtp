@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 public enum KaoButtonType {
-    case primary, secondary, textOnly
+    case primary, secondary, textOnly, dismiss
 }
 
 @IBDesignable
@@ -78,6 +78,13 @@ public class KaoButton: UIButton {
             setTitleColor(.kaoColor(.curiousBlue), for: .highlighted)
             setTitleColor(.kaoColor(.whiteLilac), for: .disabled)
             tintColor = .kaoColor(.curiousBlue)
+        case .dismiss:
+            setBackgroundColor(color: .kaoColor(.whiteThree), forState: .highlighted)
+            setBackgroundColor(color: .kaoColor(.whiteThree), forState: .disabled)
+            setBackgroundColor(color: .kaoColor(.whiteThree), forState: .normal)
+            titleLabel?.textColor = .kaoColor(.greyishBrown)
+            setTitleColor(.kaoColor(.greyishBrown), for: .normal)
+            tintColor = .kaoColor(.greyishBrown)
         }
 
         titleLabel?.font = .kaoFont(style: .medium, size: size)
