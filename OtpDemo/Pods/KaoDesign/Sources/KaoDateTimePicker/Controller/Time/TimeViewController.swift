@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HelperFunctions {
+class TimeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, KaoDateTimePickerHelper {
 
     @IBOutlet weak var timeCollectionView: UICollectionView!
 

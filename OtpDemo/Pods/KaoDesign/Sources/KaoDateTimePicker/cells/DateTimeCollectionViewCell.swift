@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DatesCollectionViewCell: UICollectionViewCell, HelperFunctions {
+class DatesCollectionViewCell: UICollectionViewCell, KaoDateTimePickerHelper {
 
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var date: UILabel!
@@ -74,7 +74,7 @@ class DatesCollectionViewCell: UICollectionViewCell, HelperFunctions {
 
 }
 
-class TimeCollectionViewCell: UICollectionViewCell, HelperFunctions {
+class TimeCollectionViewCell: UICollectionViewCell, KaoDateTimePickerHelper {
 
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var money: UILabel!

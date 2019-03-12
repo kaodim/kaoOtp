@@ -21,6 +21,7 @@ public enum KaoColorHex: UInt {
     case silver = 0xC0C0C0
     case curiousBlue = 0x3498DB
     case twilightBlue = 0xF8FFFF
+    case altoSolid = 0xdbdbdb
     case alto = 0xD8D8D8
     case alto2 = 0xD9D9D9
     case dustyGray = 0x969696
@@ -59,6 +60,10 @@ public enum KaoColorHex: UInt {
     case tradewind = 0x51ba9e
     case corn = 0xeac709
     case casablanca = 0xF9C647
+    case cinnabar = 0xe3363b
+    case carouselPink = 0xfbe8eb
+    case malachite = 0x11b958
+    case red = 0xfb0000
 }
 
 public extension UIColor {

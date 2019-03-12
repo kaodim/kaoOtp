@@ -202,12 +202,12 @@ extension KaoSpinningView {
 extension KaoSpinningView {
 
     /// Show spinner
-    open func show() {
+    open func show(_ duration: Double = 0.33) {
         self.hide {
             self.alpha = 0
             self.animating = true
             self.updateAnimation()
-            UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
                 self.alpha = 1
                 self.layer.addSublayer(self.maskLayer)
                 self.layer.addSublayer(self.circleLayer)

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-open class KaoBaseViewController: UIViewController {
+open class KaoBaseViewController: UIViewController, KaoNetworkProtocol {
 
     public var needListenToKeyboard: Bool = false
 
@@ -47,5 +47,18 @@ open class KaoBaseViewController: UIViewController {
         UIView.animate(withDuration: duration) {
             self.view.layoutIfNeeded()
         }
+    }
+
+    // MARK: - KaoNetworkProtocol
+    open func retry() { }
+
+    open func addNetworkErrorView(_ errorView: UIView) {
+        view.addSubview(errorView)
+        NSLayoutConstraint.activate([
+            errorView.topAnchor.constraint(equalTo: safeTopAnchor),
+            errorView.bottomAnchor.constraint(equalTo: safeBottomAnchor),
+            errorView.leadingAnchor.constraint(equalTo: safeLeadingAnchor),
+            errorView.trailingAnchor.constraint(equalTo: safeTrailingAnchor)
+            ])
     }
 }

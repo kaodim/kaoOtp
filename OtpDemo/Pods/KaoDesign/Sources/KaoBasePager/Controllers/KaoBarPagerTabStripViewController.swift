@@ -11,22 +11,35 @@ import XLPagerTabStrip
 
 open class KaoBarPagerTabStripViewController: BaseButtonBarPagerTabStripViewController<KaoPageBarCell> {
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+
+        let podBundle = Bundle(for: KaoPageBarCell.self)
+        let bundleURL = podBundle.url(forResource: "KaoCustomPod", withExtension: "bundle")!
+        let bundle = Bundle(url: bundleURL)
+        buttonBarItemSpec = ButtonBarItemSpec.nibFile(nibName: "KaoPageBarCell", bundle: bundle, width: { _ in
+            return 55.0
+        })
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-
-        buttonBarItemSpec = ButtonBarItemSpec.nibFile(nibName: "KaoPageBarCell", bundle: Bundle(for: KaoPageBarCell.self), width: { _ in
-            return 55.0
-        })
     }
 
     override open func viewDidLoad() {
         configureTabbarSetting()
         super.viewDidLoad()
         configureTabbar()
+    }
+
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.showBottomLine(false)
+    }
+
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.showBottomLine()
     }
 
     private func configureTabbarSetting() {

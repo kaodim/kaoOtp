@@ -59,6 +59,17 @@ public extension UITableView {
             completion()
         }
     }
+
+    func scrollToTop(_ animate: Bool = true) {
+        setContentOffset(.zero, animated: animate)
+    }
+
+    func scrollToBottom(_ animate: Bool = true)  {
+        let point = CGPoint(x: 0, y: self.contentSize.height + self.contentInset.bottom - self.frame.height)
+        if point.y >= 0{
+            self.setContentOffset(point, animated: animate)
+        }
+    }
 }
 
 public extension UITableView {

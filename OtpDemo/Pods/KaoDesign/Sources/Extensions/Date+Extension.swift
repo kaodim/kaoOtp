@@ -8,112 +8,145 @@
 
 import Foundation
 
-import UIKit
+public extension DateFormatter {
+    class func kaoDefault() -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        let gregorianCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
+        dateFormatter.calendar = gregorianCalendar as Calendar?
+        return dateFormatter
+    }
+}
 
-//MARK:- Protocol
-public protocol HelperFunctions {}
+public extension Date {
 
-public extension HelperFunctions {
-
-    func getSelectionColor() -> UIColor {
-        return UIColor.blue
+    func toLongString() -> String {
+        let dateFormatter = DateFormatter.kaoDefault()
+        dateFormatter.dateStyle = .long
+        return dateFormatter.string(from: self)
     }
 
-    func formattedDateFromString(dateString: String, withFormat format: String, havingFormat old: String? = "yyyy-MM-dd'T'HH:mm:ss.SSSSZ") -> String? {
+    func toMediumString() -> String {
+        let dateFormatter = DateFormatter.kaoDefault()
+        dateFormatter.dateStyle = .medium
+        return dateFormatter.string(from: self)
+    }
 
-        let inputFormatter = DateFormatter()
-        inputFormatter.dateFormat = old
+    func toShortString() -> String {
+        let dateFormatter = DateFormatter.kaoDefault()
+        dateFormatter.dateStyle = .short
+        return dateFormatter.string(from: self)
+    }
 
-        if let date = inputFormatter.date(from: dateString) {
+    func toOrdinaralFormat() -> String {
+        let calendar = Calendar.current
+        let dateComponents = calendar.component(.day, from: self)
 
-            let outputFormatter = DateFormatter()
-            outputFormatter.dateFormat = format
-            outputFormatter.timeZone = TimeZone.init(identifier: "UTC")
-            outputFormatter.locale = Locale(identifier: "en_US")
-            return outputFormatter.string(from: date)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .ordinal
+
+        let day = numberFormatter.string(from: dateComponents as NSNumber)
+        let dateFormatter = DateFormatter.kaoDefault()
+        dateFormatter.dateFormat = "MMM yyyy"
+
+        return "\(day!) \(dateFormatter.string(from: self))"
+    }
+
+    func toString(_ format: String = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSSZ") -> String {
+        let dateFormatter = DateFormatter.kaoDefault()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+
+    func isGreaterThanDate(_ dateToCompare : Date) -> Bool {
+        var isGreater = false
+        if self.compare(dateToCompare) == ComparisonResult.orderedDescending {
+            isGreater = true
         }
-
-        return nil
+        return isGreater
     }
 
-    func loadDayTimesInterval() -> [String] {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm a"
-
-        let dateNow = Date.init()
-
-        formatter.dateFormat = "HH"
-        let dateCurrent = formatter.string(from: dateNow)
-
-        var timeArray: [String] = []
-
-        let lastTime: Double = 24.0
-        var currentTime: Double = Double(dateCurrent) ?? 0.0
-        let incrementMinutes: Double = 30.0 // increment by  minutes
-
-        while currentTime <= lastTime {
-            currentTime += (incrementMinutes/60)
-            let hours = (floor(currentTime))
-            let minutes = (currentTime.truncatingRemainder(dividingBy: 1.0)*60.0)
-
-            let printedHour = Int(hours)
-            let printedMinutes = Int(minutes)
-            if minutes == 0 {
-                if hours >= 12 {
-                    timeArray.append("\(printedHour):00 PM")
-                } else {
-                    timeArray.append("\(printedHour):00 AM")
-                }
-            } else {
-                if hours < 24 {
-                    if hours >= 12 {
-                        timeArray.append("\(printedHour):\(printedMinutes) PM")
-                    } else {
-                        timeArray.append("\(printedHour):\(printedMinutes) AM")
-                    }
-                }
-            }
+    func isLessThanDate(_ dateToCompare : Date) -> Bool {
+        var isLess = false
+        if self.compare(dateToCompare) == ComparisonResult.orderedAscending {
+            isLess = true
         }
-        return timeArray
+        return isLess
     }
 
-}
-
-public extension UILabel {
-
-    func formattedString(style: KaoFontStyle = .regular, fontSize size: CGFloat) {
-        self.lineBreakMode = .byWordWrapping
-        self.numberOfLines = 0
-        self.textColor = UIColor(red:0.07, green:0.14, blue:0.18, alpha:1)
-        self.textAlignment = .center
-        let textContent = self.text
-        let textString = NSMutableAttributedString(string: textContent ?? "", attributes: [
-            NSAttributedString.Key.font: UIFont(name: style.rawValue, size: size) ?? UIFont.systemFont(ofSize: size)
-            ])
-        let textRange = NSRange(location: 0, length: textString.length)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 1.11
-        paragraphStyle.alignment = .center
-        textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        self.attributedText = textString
-        self.sizeToFit()
+    func isEqualToSelectedDate(_ dateToCompare : Date) -> Bool {
+        var isEqualTo = false
+        if self.compare(dateToCompare) == ComparisonResult.orderedSame {
+            isEqualTo = true
+        }
+        return isEqualTo
     }
 
-}
+    func addDays(_ daysToAdd : Int) -> Date {
+        let secondsInDays : TimeInterval = Double(daysToAdd) * 60 * 60 * 24
+        let dateWithDaysAdded : Date = self.addingTimeInterval(secondsInDays)
+        return dateWithDaysAdded
+    }
 
-extension CALayer {
-    func manualLayouting(view: UIView? = nil) {
-        view?.backgroundColor = UIColor.white
-        self.borderColor   = UIColor.kaoColor(KaoColorHex.prussianBlue).cgColor
-        self.masksToBounds = true
-        self.cornerRadius = 3
-        self.borderWidth = 1
-        self.borderColor = UIColor(red:0.75, green:0.75, blue:0.75, alpha:1).cgColor
-        self.shadowOffset = CGSize(width: 0, height: 2)
-        self.shadowColor = UIColor(red:0, green:0, blue:0, alpha:0.07).cgColor
-        self.shadowOpacity = 1
-        self.shadowRadius = 4
+    func addHours(_ hoursToAdd : Int) -> Date {
+        let secondsInHours : TimeInterval = Double(hoursToAdd) * 60 * 60
+        let dateWithHoursAdded : Date = self.addingTimeInterval(secondsInHours)
+        return dateWithHoursAdded
+    }
+
+    func roundUpMin(_ roundValue : Float) -> Date {
+        var component = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: self)
+        let roundMin = ceil(Float(component.minute ?? 0) / roundValue) * roundValue
+        component.minute = Int(roundMin)
+        return Calendar.current.date(from: component) ?? self
+    }
+
+    func getTime() -> String {
+        let dateFromat = DateFormatter.kaoDefault()
+        dateFromat.dateFormat = "h:mm a"
+        return dateFromat.string(from: self)
+    }
+
+    func getDay() -> String {
+        let dateFromat = DateFormatter.kaoDefault()
+        dateFromat.dateFormat = "EE"
+        return dateFromat.string(from: self)
+    }
+
+    func pickerDateFormat(showTime: Bool) -> String {
+        return "\(getDay()), \(toString("dd MMM yyyy")) \(showTime ? "- \(getTime().removeAllWhiteSpace())" : "")"
+    }
+
+    func newDateFormat() -> String {
+        let timeRange = self.timeIntervalSinceNow * -1
+        switch timeRange {
+        case 0...5:
+            return NSLocalizedString("now", comment: "")
+        case 5...60:
+            return NSLocalizedString("few_seconds_ago", comment: "")
+        case 60...120:
+            return NSLocalizedString("minute_ago", comment: "")
+        default:
+            return self.messageDateFormat()
+        }
+    }
+
+    func messageDateFormat() -> String {
+        var output: String = "\(toMediumString()), \(getTime())"
+        let calendar = Calendar.current
+
+        if calendar.isDateInToday(self) {
+            output = "Today, \(getTime())"
+        } else if calendar.isDateInYesterday(self) {
+            output = "Yesterday, \(getTime())"
+        }
+        return output
+    }
+
+    func resetTimeTo(hour:Int = 0, min:Int = 0, sec:Int = 0) -> Date {
+        var component = NSCalendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: self)
+        component.hour = hour
+        component.minute = min
+        component.second = sec
+        return NSCalendar.current.date(from: component) ?? self
     }
 }
-
-

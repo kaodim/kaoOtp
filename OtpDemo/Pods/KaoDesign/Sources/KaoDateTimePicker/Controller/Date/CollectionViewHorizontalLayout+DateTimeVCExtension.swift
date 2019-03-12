@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension DateTimeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HelperFunctions {
+extension DateTimeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, KaoDateTimePickerHelper {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         guard let model = self.dateModel else { return 0 }

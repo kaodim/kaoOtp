@@ -8,15 +8,11 @@
 import Foundation
 import UIKit
 
-public enum KaoPopupViewStyle {
-    case normal, cancel
-}
-
 public class KaoPopupAction {
     let title: String
-    let style: KaoPopupViewStyle
+    let style: KaoButtonType
 
-    public init(title: String, style: KaoPopupViewStyle) {
+    public init(title: String, style: KaoButtonType) {
         self.title = title
         self.style = style
     }
@@ -32,7 +28,6 @@ public class KaoPopupView: UIView {
     @IBOutlet private weak var iconHeight: NSLayoutConstraint!
 
     private var contentView: UIView!
-    public var dismissTapped: (() -> Void)?
     public var firstButtonTapped: (() -> Void)?
     public var secondButtonTapped: (() -> Void)?
 
@@ -83,20 +78,15 @@ public class KaoPopupView: UIView {
     }
 
     private func configureButton(kaoPopupButton: KaoPopupAction?, button: KaoButton) {
-        if let title = kaoPopupButton?.title {
+        if let popUpButton = kaoPopupButton {
             button.isHidden = false
-            button.setTitle(title, for: .normal)
+            button.setTitle(popUpButton.title, for: .normal)
+            button.configure(type: popUpButton.style, size: KaoFontSize.regular)
         } else {
             button.isHidden = true
         }
-        if let style = kaoPopupButton?.style, style == .normal {
-            button.configure(type: .primary, size: KaoFontSize.regular)
-        } else {
-            button.configure(type: .dismiss, size: KaoFontSize.regular)
-        }
         button.reloadInputViews()
     }
-
 
     @IBAction private func firstButtonTap() {
         firstButtonTapped?()

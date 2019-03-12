@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC1B66433B3D2B4A43064BC07B12742E"
+               BlueprintIdentifier = "060FC9EE5184FD6290FEBBA9BD5FEF98"
                BlueprintName = "KaoDesign"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "KaoDesign.framework">
