@@ -1,6 +1,7 @@
+ls
 Pod::Spec.new do |s|
   s.name             = 'KaoOtp'
-  s.version          = '0.1.10'
+  s.version          = '0.1.11'
   s.summary          = 'Kaodim custom otp views'
  
   s.description      = <<-DESC
@@ -20,7 +21,7 @@ KaoOtpFlow provide complete ui for otp and allow you to inject your own endpoint
   }
 
   s.dependency 'MaterialTextField', '~> 0.2'
-  s.dependency 'KaoDesign', '0.1.52'
+  s.dependency 'KaoDesign', '0.1.54'
 
   s.pod_target_xcconfig = {
      "SWIFT_VERSION" => "4.0",
