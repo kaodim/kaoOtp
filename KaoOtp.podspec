@@ -1,4 +1,3 @@
-ls
 Pod::Spec.new do |s|
   s.name             = 'KaoOtp'
   s.version          = '0.1.11'
