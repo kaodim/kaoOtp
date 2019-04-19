@@ -113,6 +113,7 @@ open class PhoneEnteringViewController: UIViewController {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        UIView.setAnimationsEnabled(true)
     }
     
     @objc private func keyboardWillShow(_ notif: Notification) {
