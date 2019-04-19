@@ -1,15 +1,15 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
   - FontAwesome.swift (1.3.2)
-  - KaoDesign (0.1.55):
+  - KaoDesign (0.2.2):
     - DZNEmptyDataSet (= 1.8.1)
     - FontAwesome.swift (= 1.3.2)
     - Kingfisher (= 4.6.2)
     - NotificationBannerSwift (= 1.6.3)
     - SVProgressHUD (= 2.2.5)
     - XLPagerTabStrip (= 8.0.0)
-  - KaoOtp (0.1.12):
-    - KaoDesign (= 0.1.55)
+  - KaoOtp (0.1.14):
+    - KaoDesign (~> 0.2.1)
     - MaterialTextField (~> 0.2)
   - Kingfisher (4.6.2)
   - MarqueeLabel/Swift (3.2.1)
@@ -45,8 +45,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FontAwesome.swift: b4e4c8ccbbecb12f9b592bc533ff237af3706667
-  KaoDesign: 5437dc58dbb6c408094a97bc4e156cedd57d5003
-  KaoOtp: 023a418b61fd08f11feda5ff449a5178c76fe34e
+  KaoDesign: d88d5b1f633fece992ff9bc2388558a1c24aaa0e
+  KaoOtp: c99b838a6f18ca06c2b3e0ce5eae3fb0c6ecc5b7
   Kingfisher: 55b9c395bf8d3949676ad3861111923990ab68cf
   MarqueeLabel: 2daf039bf916937c8a4c9adfc13577cc5e51b4ce
   MaterialTextField: f876a39d571eeece872af6a4da421e3bd065fe0b

@@ -64,6 +64,10 @@ public enum KaoColorHex: UInt {
     case carouselPink = 0xfbe8eb
     case malachite = 0x11b958
     case red = 0xfb0000
+    case hibiscus = 0xA51F7D
+    case iron = 0xcecfd2
+    case hawkesBlue = 0xe9f4fd
+    case mischka = 0xdcdee6
 }
 
 public extension UIColor {

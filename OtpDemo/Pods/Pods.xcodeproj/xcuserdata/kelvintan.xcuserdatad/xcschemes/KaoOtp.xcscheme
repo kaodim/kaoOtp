@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D294F80AD15107F1D7311F85F615231B"
+               BlueprintIdentifier = "7406B0AFBB55000450063F105F173D40"
+               BuildableName = "KaoOtp.framework"
                BlueprintName = "KaoOtp"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "KaoOtp.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
