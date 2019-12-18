@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'KaoOtp'
-  s.version          = '0.1.15'
+  s.version          = '0.1.16'
   s.summary          = 'Kaodim custom otp views'
  
   s.description      = <<-DESC
@@ -25,7 +25,7 @@ KaoOtpFlow provide complete ui for otp and allow you to inject your own endpoint
   s.pod_target_xcconfig = {
      "SWIFT_VERSION" => "4.0",
   }
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
   s.requires_arc = true
  
 end
