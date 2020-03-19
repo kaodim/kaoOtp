@@ -23,7 +23,6 @@ public protocol PhoneEnterDataSource: class {
 }
 
 public protocol PhoneEnterDelegate: class {
-
     func nextButtonTapped(in view: PhoneEnteringViewController, phoneNumber: String, countryPhone: CountryPhone)
 }
 

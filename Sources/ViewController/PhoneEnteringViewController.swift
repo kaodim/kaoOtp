@@ -135,6 +135,7 @@ open class PhoneEnteringViewController: UIViewController {
     public func reloadData() {
         selectedCountry = phoneEnterDataSource?.selectedCountryPhone(in: self) ?? countryList.first
 
+    
         if let headerParams = phoneEnterDataSource?.headerViewText(in: self) {
             headerView.configure(headerViewParams: headerParams)
         }

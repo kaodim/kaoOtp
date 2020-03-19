@@ -14,8 +14,9 @@ class OtpPinEnterView: UIView {
     @IBOutlet private weak var pinStacktouchView: UIView!
     @IBOutlet private weak var pinStackviews: UIStackView!
     @IBOutlet private weak var resetButton: UIButton!
-    @IBOutlet weak var editNumberButton: UIButton!
-
+    @IBOutlet private weak var buttonOtpViaPhone: UIButton!
+    @IBOutlet  weak var btnEditPhoneNumber: UIButton!
+    
     private var contentView: UIView!
     private var resetButtonAttr = CustomButtonAttributes()
     private var textfieldAttr = CustomTextfieldAttributes() {
@@ -29,17 +30,18 @@ class OtpPinEnterView: UIView {
         }
     }
     
-    private var editNumberAttr = CustomButtonAttributes(){
+    private var buttonOtpViaPhoneAttr = CustomButtonAttributes(){
         didSet {
-            let attributes = NSAttributedString(string: editNumberAttr.text,
+            let attributes = NSAttributedString(string: buttonOtpViaPhoneAttr.text,
                                                 attributes: [
-                                                    NSAttributedStringKey.foregroundColor: editNumberAttr.color,
-                                                    NSAttributedStringKey.font: editNumberAttr.font])
-            editNumberButton.setAttributedTitle(attributes, for: .normal)
+                                                    NSAttributedStringKey.foregroundColor: buttonOtpViaPhoneAttr.color,
+                                                    NSAttributedStringKey.font: buttonOtpViaPhoneAttr.font])
+            buttonOtpViaPhone.setAttributedTitle(attributes, for: .normal)
         }
     }
 
-    var tapEditNumber: (() -> Void)?
+    var tapPhoneNumberChange: (() -> Void)?
+    var tapOtpViaPhoneCall: (() -> Void)?
     var lastActiveTextfield: OtpPinTextfield?
     var tapResend: (() -> Void)?
     var pinCompleted: ((_ pins:String) -> Void)?
@@ -75,9 +77,9 @@ class OtpPinEnterView: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
         configurePinTextfield()
+        buttonOtpViaPhone.isHidden = true
         resetButton.setTitle("", for: .normal)
         pinStacktouchView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapStackview)))
-        editNumberButton.isHidden = true
     }
 
     private func configurePinTextfield() {
@@ -96,8 +98,11 @@ class OtpPinEnterView: UIView {
         tapResend?()
     }
     
-    @IBAction private func didTapEditNumber () {
-        tapEditNumber?()
+    @IBAction func didTapOtpViaPhone(_ sender: Any) {
+        tapOtpViaPhoneCall?()
+    }
+    @IBAction func didTapChangePhoneNumber(_ sender: Any) {
+        tapPhoneNumberChange?()
     }
     
     @objc private func didTapStackview() {
@@ -118,10 +123,21 @@ class OtpPinEnterView: UIView {
         pinCompleted?(pins)
     }
 
-    func configure(customButtonAttributes: CustomButtonAttributes, textfieldAttribute: CustomTextfieldAttributes, editNumberAttribute: CustomButtonAttributes) {
+    func configure(customButtonAttributes: CustomButtonAttributes, textfieldAttribute: CustomTextfieldAttributes, buttonOtpViaPhoneAttr: CustomButtonAttributes,buttonEditPhoneNumberAttr: CustomButtonAttributes) {
         resetButtonAttr = customButtonAttributes
         textfieldAttr = textfieldAttribute
-        editNumberAttr = editNumberAttribute
+        //self.buttonOtpViaPhoneAttr = buttonOtpViaPhoneAttr
+        //self.buttonEditPhoneNumberAttr = buttonEditPhoneNumberAttr
+
+        btnEditPhoneNumber.setAttributedTitle( NSAttributedString(string: buttonEditPhoneNumberAttr.text,
+                                            attributes: [
+                                                NSAttributedStringKey.foregroundColor: buttonEditPhoneNumberAttr.color,
+                                                NSAttributedStringKey.font: buttonEditPhoneNumberAttr.font]), for: .normal)
+
+        buttonOtpViaPhone.setAttributedTitle( NSAttributedString(string: buttonOtpViaPhoneAttr.text,
+        attributes: [
+            NSAttributedStringKey.foregroundColor: buttonOtpViaPhoneAttr.color,
+            NSAttributedStringKey.font: buttonOtpViaPhoneAttr.font]), for: .normal)
     }
 
     func enableResetButton(enable: Bool = true, countDownStr: String = "") {
@@ -132,6 +148,9 @@ class OtpPinEnterView: UIView {
                                                 NSAttributedStringKey.foregroundColor: enable ? resetButtonAttr.color : resetButtonAttr.disableColor
             ])
         resetButton.setAttributedTitle(attributes, for: .normal)
+
+        buttonOtpViaPhone.isHidden = !enable
+
     }
 }
 

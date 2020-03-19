@@ -89,10 +89,14 @@ class OtpHeaderView: UIView {
     }
 
     func configure(headerViewParams: HeaderViewParams) {
-        titleLabel.text = headerViewParams.title
-        titleLabel.font = headerViewParams.titleAttr.font
-        titleLabel.textColor = headerViewParams.titleAttr.color
-
+        if let title = headerViewParams.title{
+            titleLabel.text = headerViewParams.title
+            titleLabel.font = headerViewParams.titleAttr.font
+            titleLabel.textColor = headerViewParams.titleAttr.color
+            titleLabel.isHidden = false
+        }else{
+            titleLabel.isHidden = false
+        }
         configureMessageLabel(headerViewParams: headerViewParams)
     }
 }
