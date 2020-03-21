@@ -19,7 +19,6 @@ open class PhoneVerifyingViewController: UIViewController {
 
     private lazy var headerView: OtpHeaderView = {
         let view = OtpHeaderView()
-
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -31,7 +30,6 @@ open class PhoneVerifyingViewController: UIViewController {
         view.tapResend = resendCode
         view.tapOtpViaPhoneCall = otpViaPhone
         view.tapPhoneNumberChange = changeNumber
-        view.btnEditPhoneNumber.isHidden = false
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -98,7 +96,7 @@ open class PhoneVerifyingViewController: UIViewController {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow , object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide , object: nil)
-        beginEditing()
+        //beginEditing()
     }
 
     override open func viewWillDisappear(_ animated: Bool) {
@@ -124,12 +122,12 @@ open class PhoneVerifyingViewController: UIViewController {
         bottomConstraint.constant = 0
     }
 
-    public func beginEditing(_ begin: Bool = true) {
-        if begin {
-            pinEnterView.lastActiveTextfield?.becomeFirstResponder()
-        } else {
-            pinEnterView.lastActiveTextfield?.resignFirstResponder()
-        }
+    public func handleEditButtonVisiblity(isHidden: Bool){
+        pinEnterView.btnEditPhoneNumber.isHidden = isHidden
+    }
+
+    public func configureErrorMessage(message: String){
+        pinEnterView.configureErrorMessage(message: message)
     }
 
     public func reloadData() {
@@ -147,6 +145,12 @@ open class PhoneVerifyingViewController: UIViewController {
             bottomView.configure(customButtonAttributes: buttonParams)
         }
         configureBottomButton()
+    }
+    
+    public func restartTimer() {
+        countdownTimer.invalidate()
+        countdownTimer = nil
+        startResendTimer()
     }
 
     public func startResendTimer() {

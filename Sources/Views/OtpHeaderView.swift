@@ -95,7 +95,7 @@ class OtpHeaderView: UIView {
             titleLabel.textColor = headerViewParams.titleAttr.color
             titleLabel.isHidden = false
         }else{
-            titleLabel.isHidden = false
+            titleLabel.isHidden = true
         }
         configureMessageLabel(headerViewParams: headerViewParams)
     }
