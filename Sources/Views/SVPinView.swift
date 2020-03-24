@@ -139,7 +139,7 @@ public class SVPinView: UIView {
         // secure text after a bit
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
             if textField.text == "" {
-                textField.text = " "
+                textField.text = textField.tag == 101 ? "" : " "
                 placeholderLabel.isHidden = false
                 textField.layer.sublayerTransform = CATransform3DMakeTranslation(-4, 0, 0)
             } else {
@@ -153,7 +153,9 @@ public class SVPinView: UIView {
         let passwordIndex = index - 1
         if password.count > (passwordIndex) {
             // delete if space
-            password[passwordIndex] = text == " " ? "" : text
+
+            //ONE password[passwordIndex] = text == " " ? "" : text
+            password[passwordIndex] = text == "" ? "" : text
         } else {
             password.append(text)
         }
@@ -220,7 +222,8 @@ public class SVPinView: UIView {
     public func getPin() -> String {
         
         guard !isLoading else { return "" }
-        guard password.count == pinLength && password.joined().trimmingCharacters(in: CharacterSet(charactersIn: " ")).count == pinLength else {
+        //ONE guard password.count == pinLength && password.joined().trimmingCharacters(in: CharacterSet(charactersIn: " ")).count == pinLength else {
+        guard password.count == pinLength && password.joined().trimmingCharacters(in: CharacterSet(charactersIn: "")).count == pinLength else {
             return ""
         }
         return password.joined()
@@ -234,20 +237,6 @@ public class SVPinView: UIView {
         
         password.removeAll()
         refreshPinView()
-    }
-
-    @objc
-      public func clearLastPin() {
-       // guard !isLoading else { return }
-
-        var newPin = getPin()
-
-        if let pin = newPin.popLast(){
-            //clearPin()
-            //refreshPinView()
-            //pastePin(pin: String(pin))
-        }
-        //refreshPinView()
     }
     
     /// Pastes the PIN onto the PinView
@@ -272,7 +261,7 @@ public class SVPinView: UIView {
             //secure text after a bit
             DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
                 if textField.text == "" {
-                    textField.text = " "
+                    textField.text = textField.tag == 101 ? "" : " "
                     placeholderLabel.isHidden = false
                 } else {
                     if self.shouldSecureText { textField.text = self.secureCharacter } else {}
@@ -303,7 +292,8 @@ extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICo
         
         // Setting up textField
         textField.tag = 101 + indexPath.row
-        textField.text = " "
+        //OLD textField.text = " "
+        textField.text = ""
         textField.layer.sublayerTransform = CATransform3DMakeTranslation(-4, 0, 0)
         textField.isSecureTextEntry = false
         textField.textColor = self.textColor
@@ -385,7 +375,8 @@ extension SVPinView : UITextFieldDelegate
         
         if text.count == 0 {
             textField.isSecureTextEntry = false
-            textField.text =  " "
+            //OLD textField.text =  " "
+            textField.text =  textField.tag == 101 ? "" : " "
             placeholderLabel.isHidden = false
         }
         
