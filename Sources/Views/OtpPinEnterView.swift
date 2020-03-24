@@ -78,6 +78,7 @@ class OtpPinEnterView: UIView {
         pinView.textColor = UIColor.kaoColor(.black)
         pinView.borderLineColor = UIColor.kaoColor(.dustyGray2)
         pinView.activeBorderLineColor = UIColor.kaoColor(.crimson)
+        pinView.errorBorderLineColor = UIColor.kaoColor(.crimson)
         pinView.fieldBackgroundColor = UIColor.clear
         pinView.activeFieldBackgroundColor = UIColor.clear
         pinView.borderLineThickness = 1
@@ -89,6 +90,7 @@ class OtpPinEnterView: UIView {
 
         pinView.didFinishCallback = { pin in
 
+            self.labelErrorMessage.isHidden = true
             if(pin.isEmpty){
                 self.pinReset?()
             }
@@ -99,6 +101,8 @@ class OtpPinEnterView: UIView {
         }
 
         pinView.didChangeCallback = { pin in
+            
+            self.labelErrorMessage.isHidden = true
             if(pin.isEmpty){
                 self.pinReset?()
             }
@@ -120,9 +124,8 @@ class OtpPinEnterView: UIView {
     }
 
     public func wrongOtpTyped(){
-        print("wrongOtpTyped \(pinView.pinLength - 1)")
         pinView.becomeFirstResponderAtIndex = pinView.pinLength - 1
-        //pinView.clearLastPin()
+        pinView.wrongOtpTyped()
     }
 
     @IBAction func didTapChangePhoneNumber(_ sender: Any) {
@@ -131,6 +134,7 @@ class OtpPinEnterView: UIView {
 
     func configureErrorMessage(message: String){
         labelErrorMessage.text = message
+        labelErrorMessage.isHidden = false
     }
 
     func configure(customButtonAttributes: CustomButtonAttributes, textfieldAttribute: CustomTextfieldAttributes, buttonOtpViaPhoneAttr: CustomButtonAttributes,buttonEditPhoneNumberAttr: CustomButtonAttributes) {

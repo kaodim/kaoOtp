@@ -13,7 +13,6 @@
                 <outlet property="btnEditPhoneNumber" destination="qli-Dc-FD2" id="n9w-U4-VJf"/>
                 <outlet property="buttonOtpViaPhone" destination="MeQ-Hr-eip" id="6Xx-PJ-3XA"/>
                 <outlet property="labelErrorMessage" destination="kqX-FP-JNm" id="7uF-y0-NUC"/>
-                <outlet property="pinStackviews" destination="ZeZ-Z8-9e4" id="Cdg-2Z-b5u"/>
                 <outlet property="pinView" destination="d6u-mt-Tgm" id="sIx-uz-yZg"/>
                 <outlet property="resetButton" destination="ePd-fN-9Uf" id="Jw4-dK-0Id"/>
             </connections>
@@ -24,24 +23,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qli-Dc-FD2">
-                    <rect key="frame" x="166" y="4" width="46" height="48"/>
+                    <rect key="frame" x="166" y="4" width="46" height="57"/>
                     <state key="normal" title="Button"/>
                     <connections>
                         <action selector="didTapChangePhoneNumber:" destination="-1" eventType="touchUpInside" id="4uv-65-Ou2"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6u-mt-Tgm" customClass="SVPinView" customModule="KaoOtp">
-                    <rect key="frame" x="36" y="110" width="306" height="90"/>
+                    <rect key="frame" x="36" y="113" width="306" height="93"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="90" id="cc6-aq-a4l"/>
+                        <constraint firstAttribute="height" constant="93" id="cc6-aq-a4l"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZeZ-Z8-9e4">
-                    <rect key="frame" x="36" y="110" width="306" height="90"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="90" id="IOX-y7-ymf"/>
-                    </constraints>
-                </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePd-fN-9Uf">
                     <rect key="frame" x="0.0" y="234" width="378" height="15"/>
                     <constraints>
@@ -67,7 +60,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqX-FP-JNm">
-                    <rect key="frame" x="187" y="208" width="4" height="18"/>
+                    <rect key="frame" x="187" y="200" width="4" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.73537057640000003" green="0.18174093960000001" blue="0.14505788680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
@@ -75,22 +68,19 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ZeZ-Z8-9e4" firstAttribute="top" secondItem="qli-Dc-FD2" secondAttribute="bottom" constant="58" id="0kf-Xz-2eg"/>
                 <constraint firstItem="MeQ-Hr-eip" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5KM-oN-zTC"/>
                 <constraint firstItem="kqX-FP-JNm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="73v-Mo-I3g"/>
-                <constraint firstItem="ePd-fN-9Uf" firstAttribute="top" secondItem="kqX-FP-JNm" secondAttribute="bottom" constant="8" id="99g-da-0tK"/>
+                <constraint firstItem="ePd-fN-9Uf" firstAttribute="top" secondItem="kqX-FP-JNm" secondAttribute="bottom" constant="16" id="99g-da-0tK"/>
                 <constraint firstItem="ePd-fN-9Uf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BWf-7Z-XGy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="d6u-mt-Tgm" secondAttribute="trailing" constant="36" id="JZ4-fp-M00"/>
                 <constraint firstItem="qli-Dc-FD2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MZe-rR-8tl"/>
-                <constraint firstItem="kqX-FP-JNm" firstAttribute="top" secondItem="ZeZ-Z8-9e4" secondAttribute="bottom" constant="8" id="Ma6-m5-SoO"/>
                 <constraint firstItem="qli-Dc-FD2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="OTN-FV-QS6"/>
                 <constraint firstItem="MeQ-Hr-eip" firstAttribute="top" secondItem="ePd-fN-9Uf" secondAttribute="bottom" constant="24" id="YdS-6o-Sfi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ePd-fN-9Uf" secondAttribute="trailing" id="bxg-Kw-pze"/>
-                <constraint firstItem="ZeZ-Z8-9e4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="eFK-n0-Psc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="MeQ-Hr-eip" secondAttribute="bottom" constant="20" id="ePf-aN-ztP"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZeZ-Z8-9e4" secondAttribute="trailing" constant="36" id="mQn-62-tvE"/>
+                <constraint firstItem="kqX-FP-JNm" firstAttribute="top" secondItem="d6u-mt-Tgm" secondAttribute="bottom" constant="-6" id="lMZ-Jp-1BQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MeQ-Hr-eip" secondAttribute="trailing" id="oRW-MQ-RPZ"/>
-                <constraint firstItem="d6u-mt-Tgm" firstAttribute="top" secondItem="qli-Dc-FD2" secondAttribute="bottom" constant="58" id="xJZ-PA-XUq"/>
+                <constraint firstItem="d6u-mt-Tgm" firstAttribute="top" secondItem="qli-Dc-FD2" secondAttribute="bottom" constant="52" id="xJZ-PA-XUq"/>
                 <constraint firstItem="d6u-mt-Tgm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="yQj-Pn-lCb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

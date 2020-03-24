@@ -35,7 +35,8 @@ public class SVPinView: UIView {
     
     @IBInspectable public var borderLineColor:UIColor = UIColor.black
     @IBInspectable public var activeBorderLineColor:UIColor = UIColor.black
-    
+    @IBInspectable public var errorBorderLineColor:UIColor = UIColor.red
+
     @IBInspectable public var borderLineThickness:CGFloat = 2
     @IBInspectable public var activeBorderLineThickness:CGFloat = 4
     
@@ -49,16 +50,7 @@ public class SVPinView: UIView {
     
     public var font:UIFont = UIFont.systemFont(ofSize: 15)
     public var keyboardType:UIKeyboardType = UIKeyboardType.phonePad
-    public var becomeFirstResponderAtIndex:Int? = nil {
-        didSet{
-            let index = becomeFirstResponderAtIndex ?? 0
-            if let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)),
-                let textField = cell.viewWithTag(101 + index) as? SVPinField{
-              textField.becomeFirstResponder()
-            }
-        }
-    }
-
+    public var becomeFirstResponderAtIndex:Int = 0
     public var isContentTypeOneTimeCode:Bool = true
     public var shouldDismissKeyboardOnEmptyFirstField:Bool = false
     public var pinInputAccessoryView:UIView? {
@@ -153,8 +145,6 @@ public class SVPinView: UIView {
         let passwordIndex = index - 1
         if password.count > (passwordIndex) {
             // delete if space
-
-            //ONE password[passwordIndex] = text == " " ? "" : text
             password[passwordIndex] = text == "" ? "" : text
         } else {
             password.append(text)
@@ -195,8 +185,11 @@ public class SVPinView: UIView {
             containerView.layer.borderWidth = 0
             containerView.layer.borderColor = UIColor.clear.cgColor
         case .underline:
-            if isActive { setupUnderline(color: activeBorderLineColor, withThickness: activeBorderLineThickness) }
-            else { setupUnderline(color: borderLineColor, withThickness: borderLineThickness) }
+            if isActive {
+                setupUnderline(color: activeBorderLineColor, withThickness: activeBorderLineThickness)
+            } else {
+                setupUnderline(color: borderLineColor, withThickness: borderLineThickness)
+            }
             containerView.layer.borderWidth = 0
             containerView.layer.borderColor = UIColor.clear.cgColor
         case .box:
@@ -222,7 +215,6 @@ public class SVPinView: UIView {
     public func getPin() -> String {
         
         guard !isLoading else { return "" }
-        //ONE guard password.count == pinLength && password.joined().trimmingCharacters(in: CharacterSet(charactersIn: " ")).count == pinLength else {
         guard password.count == pinLength && password.joined().trimmingCharacters(in: CharacterSet(charactersIn: "")).count == pinLength else {
             return ""
         }
@@ -234,11 +226,29 @@ public class SVPinView: UIView {
     public func clearPin() {
         
         guard !isLoading else { return }
-        
+        becomeFirstResponderAtIndex = 0
         password.removeAll()
         refreshPinView()
     }
-    
+    @objc
+    public func wrongOtpTyped() {
+        let lastIndex = becomeFirstResponderAtIndex
+
+        for index in (0...pinLength) {
+
+            guard let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) else {return}
+
+            guard let textField = cell.viewWithTag(101 + index) as? SVPinField else {return}
+
+            if index == lastIndex{
+                textField.becomeFirstResponder()
+            }
+
+            guard  let containerView = cell.viewWithTag(51),let underLine = cell.viewWithTag(50) else {return}
+            stylePinField(containerView: containerView, underLine: underLine, isActive: true)
+
+        }
+    }
     /// Pastes the PIN onto the PinView
     ///
     /// - Parameter pin: The pin which is to be entered onto the PinView.
@@ -261,7 +271,7 @@ public class SVPinView: UIView {
             //secure text after a bit
             DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
                 if textField.text == "" {
-                    textField.text = textField.tag == 101 ? "" : " "
+                    //textField.text = textField.tag == 101 ? "" : " "
                     placeholderLabel.isHidden = false
                 } else {
                     if self.shouldSecureText { textField.text = self.secureCharacter } else {}
@@ -292,7 +302,6 @@ extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICo
         
         // Setting up textField
         textField.tag = 101 + indexPath.row
-        //OLD textField.text = " "
         textField.text = ""
         textField.layer.sublayerTransform = CATransform3DMakeTranslation(-4, 0, 0)
         textField.isSecureTextEntry = false
@@ -314,9 +323,9 @@ extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICo
         stylePinField(containerView: containerView, underLine: underLine, isActive: false)
         
         // Make the Pin field the first responder
-        if let firstResponderIndex = becomeFirstResponderAtIndex, firstResponderIndex == indexPath.item {
-            textField.becomeFirstResponder()
-        }
+            if becomeFirstResponderAtIndex == indexPath.item {
+                textField.becomeFirstResponder()
+            }
         }
         // Finished loading pinView
         if indexPath.row == pinLength - 1 && isLoading {
@@ -375,7 +384,6 @@ extension SVPinView : UITextFieldDelegate
         
         if text.count == 0 {
             textField.isSecureTextEntry = false
-            //OLD textField.text =  " "
             textField.text =  textField.tag == 101 ? "" : " "
             placeholderLabel.isHidden = false
         }
