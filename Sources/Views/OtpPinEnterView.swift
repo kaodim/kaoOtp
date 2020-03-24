@@ -119,6 +119,12 @@ class OtpPinEnterView: UIView {
         pinReset?()
     }
 
+    public func wrongOtpTyped(){
+        print("wrongOtpTyped \(pinView.pinLength - 1)")
+        pinView.becomeFirstResponderAtIndex = pinView.pinLength - 1
+        //pinView.clearLastPin()
+    }
+
     @IBAction func didTapChangePhoneNumber(_ sender: Any) {
         tapPhoneNumberChange?()
     }

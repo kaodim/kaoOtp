@@ -49,7 +49,16 @@ public class SVPinView: UIView {
     
     public var font:UIFont = UIFont.systemFont(ofSize: 15)
     public var keyboardType:UIKeyboardType = UIKeyboardType.phonePad
-    public var becomeFirstResponderAtIndex:Int? = nil
+    public var becomeFirstResponderAtIndex:Int? = nil {
+        didSet{
+            let index = becomeFirstResponderAtIndex ?? 0
+            if let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)),
+                let textField = cell.viewWithTag(101 + index) as? SVPinField{
+              textField.becomeFirstResponder()
+            }
+        }
+    }
+
     public var isContentTypeOneTimeCode:Bool = true
     public var shouldDismissKeyboardOnEmptyFirstField:Bool = false
     public var pinInputAccessoryView:UIView? {
@@ -226,6 +235,20 @@ public class SVPinView: UIView {
         password.removeAll()
         refreshPinView()
     }
+
+    @objc
+      public func clearLastPin() {
+       // guard !isLoading else { return }
+
+        var newPin = getPin()
+
+        if let pin = newPin.popLast(){
+            //clearPin()
+            //refreshPinView()
+            //pastePin(pin: String(pin))
+        }
+        //refreshPinView()
+    }
     
     /// Pastes the PIN onto the PinView
     ///
@@ -273,7 +296,7 @@ extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICo
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
-        let textField = cell.viewWithTag(100) as! SVPinField
+        if let textField = cell.viewWithTag(100) as? SVPinField {
         let containerView = cell.viewWithTag(51)!
         let underLine = cell.viewWithTag(50)!
         let placeholderLabel = cell.viewWithTag(400) as! UILabel
@@ -304,7 +327,7 @@ extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICo
         if let firstResponderIndex = becomeFirstResponderAtIndex, firstResponderIndex == indexPath.item {
             textField.becomeFirstResponder()
         }
-        
+        }
         // Finished loading pinView
         if indexPath.row == pinLength - 1 && isLoading {
             isLoading = false
@@ -312,7 +335,7 @@ extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICo
                 if !self.placeholder.isEmpty { self.setPlaceholder() }
             }
         }
-        
+
         return cell
     }
     

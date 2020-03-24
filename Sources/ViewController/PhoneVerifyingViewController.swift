@@ -34,12 +34,12 @@ open class PhoneVerifyingViewController: UIViewController {
         return view
     }()
 
-    private lazy var bottomView: OtpBottomView = {
-        let view = OtpBottomView()
-        view.didTapNext = nextButtonTapped
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+//    private lazy var bottomView: OtpBottomView = {
+//        let view = OtpBottomView()
+//        view.didTapNext = nextButtonTapped
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        return view
+//    }()
 
     private var pins: String = "" {
         didSet {
@@ -73,11 +73,11 @@ open class PhoneVerifyingViewController: UIViewController {
             pinEnterView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
             pinEnterView.topAnchor.constraint(equalTo: headerView.bottomAnchor)
             ])
-        NSLayoutConstraint.activate([
-            bottomView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            bottomView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            bottomView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-            ])
+//        NSLayoutConstraint.activate([
+//            bottomView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+//            bottomView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+//            bottomView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+//            ])
     }
 
     override open func viewDidLoad() {
@@ -85,7 +85,7 @@ open class PhoneVerifyingViewController: UIViewController {
         view.addSubview(contentView)
         contentView.addSubview(headerView)
         contentView.addSubview(pinEnterView)
-        contentView.addSubview(bottomView)
+        //contentView.addSubview(bottomView)
         configureLayout()
         reloadData()
         
@@ -128,6 +128,7 @@ open class PhoneVerifyingViewController: UIViewController {
 
     public func configureErrorMessage(message: String){
         pinEnterView.configureErrorMessage(message: message)
+        wrongOtpTyped()
     }
 
     public func reloadData() {
@@ -141,16 +142,18 @@ open class PhoneVerifyingViewController: UIViewController {
         {
             pinEnterView.configure(customButtonAttributes: resendButtonParams, textfieldAttribute: textfieldParams, buttonOtpViaPhoneAttr: phoneOtpParams, buttonEditPhoneNumberAttr: editParams)
         }
-        if let buttonParams = phoneVerifyDataSource?.bottomViewButtonText(in: self) {
-            bottomView.configure(customButtonAttributes: buttonParams)
-        }
+//        if let buttonParams = phoneVerifyDataSource?.bottomViewButtonText(in: self) {
+//            bottomView.configure(customButtonAttributes: buttonParams)
+//        }
         configureBottomButton()
     }
     
     public func restartTimer() {
-        countdownTimer.invalidate()
-        countdownTimer = nil
-        startResendTimer()
+        if(countdownTimer != nil){
+            countdownTimer.invalidate()
+            countdownTimer = nil
+            startResendTimer()
+        }
     }
 
     public func startResendTimer() {
@@ -158,6 +161,10 @@ open class PhoneVerifyingViewController: UIViewController {
             countdown = phoneVerifyDataSource?.resendCodeDelay(in: self) ?? 0
             countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateResendButton), userInfo: nil, repeats: true)
         }
+    }
+
+    public func wrongOtpTyped(){
+        pinEnterView.wrongOtpTyped()
     }
 
     @objc private func updateResendButton() {
@@ -172,11 +179,11 @@ open class PhoneVerifyingViewController: UIViewController {
     }
 
     private func configureBottomButton() {
-        if !pins.isEmpty {
-            bottomView.enableNextButton()
-        } else {
-            bottomView.enableNextButton(enable: false)
-        }
+//        if !pins.isEmpty {
+//            bottomView.enableNextButton()
+//        } else {
+//            bottomView.enableNextButton(enable: false)
+//        }
     }
 
     private func animateLayout() {
@@ -210,6 +217,7 @@ open class PhoneVerifyingViewController: UIViewController {
 
     private func pinCompleted(_ completePin: String) {
         pins = completePin
+        phoneVerifyDelegate?.verifyTapped(in: self, pins: pins)
     }
 
     private func pinReseted() {
