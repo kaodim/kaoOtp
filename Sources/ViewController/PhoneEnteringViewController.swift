@@ -85,7 +85,6 @@ open class PhoneEnteringViewController: UIViewController {
             bottomView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             bottomConstraint
             ])
-        bottomView.isHidden = true
     }
     
     override open func viewDidLoad() {
