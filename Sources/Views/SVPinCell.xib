@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="87" height="81"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3uN-C8-dyg" customClass="SVPinField" customModule="KaoOtp">
-                                <rect key="frame" x="0.0" y="0.0" width="87" height="62"/>
+                                <rect key="frame" x="0.0" y="0.0" width="87" height="68"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -40,7 +40,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IyR-2y-k2j" firstAttribute="top" secondItem="3uN-C8-dyg" secondAttribute="bottom" constant="16" id="569-6Q-ucN"/>
+                            <constraint firstItem="IyR-2y-k2j" firstAttribute="top" secondItem="3uN-C8-dyg" secondAttribute="bottom" constant="10" id="569-6Q-ucN"/>
                             <constraint firstAttribute="trailing" secondItem="ADb-pc-6id" secondAttribute="trailing" id="7Ak-mM-5hR"/>
                             <constraint firstAttribute="bottom" secondItem="IyR-2y-k2j" secondAttribute="bottom" id="GTc-VQ-7ZK"/>
                             <constraint firstAttribute="bottom" secondItem="ADb-pc-6id" secondAttribute="bottom" id="I5U-0r-08Q"/>

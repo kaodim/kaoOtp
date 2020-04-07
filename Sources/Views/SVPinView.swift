@@ -318,7 +318,7 @@ extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICo
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         placeholderLabel.text = ""
-        placeholderLabel.textColor = self.textColor.withAlphaComponent(0.5)
+        placeholderLabel.textColor = self.textColor
         
         stylePinField(containerView: containerView, underLine: underLine, isActive: false)
         
