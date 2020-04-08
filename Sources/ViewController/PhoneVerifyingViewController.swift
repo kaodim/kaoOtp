@@ -23,7 +23,7 @@ open class PhoneVerifyingViewController: UIViewController {
         return view
     }()
 
-    private lazy var pinEnterView: OtpPinEnterView = {
+    private lazy var pinEnterView: OtpPinEnterView = { 
         let view = OtpPinEnterView()
         view.pinCompleted = pinCompleted
         view.pinReset = pinReseted
@@ -34,18 +34,8 @@ open class PhoneVerifyingViewController: UIViewController {
         return view
     }()
 
-//    private lazy var bottomView: OtpBottomView = {
-//        let view = OtpBottomView()
-//        view.didTapNext = nextButtonTapped
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        return view
-//    }()
 
-    private var pins: String = "" {
-        didSet {
-           configureBottomButton()
-        }
-    }
+    private var pins: String = ""
 
     private var countdownTimer: Timer!
     private var countdown: Int = 0
@@ -73,11 +63,6 @@ open class PhoneVerifyingViewController: UIViewController {
             pinEnterView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
             pinEnterView.topAnchor.constraint(equalTo: headerView.bottomAnchor)
             ])
-//        NSLayoutConstraint.activate([
-//            bottomView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-//            bottomView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-//            bottomView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-//            ])
     }
 
     override open func viewDidLoad() {
@@ -142,10 +127,7 @@ open class PhoneVerifyingViewController: UIViewController {
         {
             pinEnterView.configure(customButtonAttributes: resendButtonParams, textfieldAttribute: textfieldParams, buttonOtpViaPhoneAttr: phoneOtpParams, buttonEditPhoneNumberAttr: editParams)
         }
-//        if let buttonParams = phoneVerifyDataSource?.bottomViewButtonText(in: self) {
-//            bottomView.configure(customButtonAttributes: buttonParams)
-//        }
-        configureBottomButton()
+
     }
     
     public func restartTimer() {
@@ -178,13 +160,6 @@ open class PhoneVerifyingViewController: UIViewController {
         }
     }
 
-    private func configureBottomButton() {
-//        if !pins.isEmpty {
-//            bottomView.enableNextButton()
-//        } else {
-//            bottomView.enableNextButton(enable: false)
-//        }
-    }
 
     private func animateLayout() {
         UIView.animate(withDuration: 0.5) {

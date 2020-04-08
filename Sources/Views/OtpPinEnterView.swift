@@ -88,8 +88,8 @@ class OtpPinEnterView: UIView {
         pinView.becomeFirstResponderAtIndex = 0
         pinView.font = UIFont.systemFont(ofSize: 36,weight: .medium)
 
-        pinView.didFinishCallback = { pin in
-
+        pinView.didFinishCallback = { [weak self] pin in
+            guard let self = self else {return}
             self.labelErrorMessage.isHidden = true
             if(pin.isEmpty){
                 self.pinReset?()
@@ -100,7 +100,8 @@ class OtpPinEnterView: UIView {
             }
         }
 
-        pinView.didChangeCallback = { pin in
+        pinView.didChangeCallback = { [weak self] pin in
+            guard let self = self else {return}
             
             self.labelErrorMessage.isHidden = true
             if(pin.isEmpty){
