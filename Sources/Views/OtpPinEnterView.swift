@@ -8,39 +8,33 @@
 
 import Foundation
 import UIKit
+import KaoDesign
 
 class OtpPinEnterView: UIView {
 
-    @IBOutlet private weak var pinStacktouchView: UIView!
     @IBOutlet private weak var pinStackviews: UIStackView!
     @IBOutlet private weak var resetButton: UIButton!
-    @IBOutlet weak var editNumberButton: UIButton!
-
+    @IBOutlet private weak var buttonOtpViaPhone: UIButton!
+    @IBOutlet weak var btnEditPhoneNumber: UIButton!
+    @IBOutlet weak var pinView: SVPinView!
+    
+    @IBOutlet weak var labelErrorMessage: UILabel!
     private var contentView: UIView!
     private var resetButtonAttr = CustomButtonAttributes()
-    private var textfieldAttr = CustomTextfieldAttributes() {
+    private var textfieldAttr = CustomTextfieldAttributes()
+
+    private var buttonOtpViaPhoneAttr = CustomButtonAttributes(){
         didSet {
-            for view in pinStackviews.arrangedSubviews {
-                guard let textfield = view as? OtpPinTextfield else { return }
-                textfield.font = textfieldAttr.font
-                textfield.textColor = textfieldAttr.color
-                textfield.underLineColor = textfieldAttr.disableLineColor
-            }
-        }
-    }
-    
-    private var editNumberAttr = CustomButtonAttributes(){
-        didSet {
-            let attributes = NSAttributedString(string: editNumberAttr.text,
+            let attributes = NSAttributedString(string: buttonOtpViaPhoneAttr.text,
                                                 attributes: [
-                                                    NSAttributedStringKey.foregroundColor: editNumberAttr.color,
-                                                    NSAttributedStringKey.font: editNumberAttr.font])
-            editNumberButton.setAttributedTitle(attributes, for: .normal)
+                                                    NSAttributedStringKey.foregroundColor: buttonOtpViaPhoneAttr.color,
+                                                    NSAttributedStringKey.font: buttonOtpViaPhoneAttr.font])
+            buttonOtpViaPhone.setAttributedTitle(attributes, for: .normal)
         }
     }
 
-    var tapEditNumber: (() -> Void)?
-    var lastActiveTextfield: OtpPinTextfield?
+    var tapPhoneNumberChange: (() -> Void)?
+    var tapOtpViaPhoneCall: (() -> Void)?
     var tapResend: (() -> Void)?
     var pinCompleted: ((_ pins:String) -> Void)?
     var pinReset: (() -> Void)?
@@ -53,6 +47,7 @@ class OtpPinEnterView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configureViews()
+        
     }
 
     private func loadFromNib() -> UIView {
@@ -74,54 +69,91 @@ class OtpPinEnterView: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
-        configurePinTextfield()
-        resetButton.setTitle("", for: .normal)
-        pinStacktouchView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapStackview)))
-        editNumberButton.isHidden = true
-    }
 
-    private func configurePinTextfield() {
-        pinStackviews.isUserInteractionEnabled = false
-        for (index, view) in pinStackviews.arrangedSubviews.enumerated() {
-            guard let textfield = view as? OtpPinTextfield else { return }
-            textfield.text = ""
-            textfield.tag = index + 1
-            textfield.keyboardType = .numberPad
-            textfield.becomeFirstResponder()
-            textfield.delegate = self
+        buttonOtpViaPhone.isHidden = true
+        resetButton.setTitle("", for: .normal)
+        btnEditPhoneNumber.isHidden = true
+        
+        pinView.pinLength = 6
+        pinView.textColor = UIColor.kaoColor(.black)
+        pinView.borderLineColor = UIColor.kaoColor(.dustyGray2)
+        pinView.activeBorderLineColor = UIColor.kaoColor(.crimson)
+        pinView.errorBorderLineColor = UIColor.kaoColor(.crimson)
+        pinView.fieldBackgroundColor = UIColor.clear
+        pinView.activeFieldBackgroundColor = UIColor.clear
+        pinView.borderLineThickness = 1
+        pinView.activeBorderLineThickness = 2
+        pinView.shouldSecureText = false
+        pinView.allowsWhitespaces = false
+        pinView.becomeFirstResponderAtIndex = 0
+        pinView.font = UIFont.systemFont(ofSize: 36,weight: .medium)
+
+        pinView.didFinishCallback = { [weak self] pin in
+            guard let self = self else {return}
+            self.labelErrorMessage.isHidden = true
+            if(pin.isEmpty){
+                self.pinReset?()
+            }
+
+            if(pin.count == self.pinView.pinLength){
+                self.pinCompleted?(pin)
+            }
+        }
+
+        pinView.didChangeCallback = { [weak self] pin in
+            guard let self = self else {return}
+            
+            self.labelErrorMessage.isHidden = true
+            if(pin.isEmpty){
+                self.pinReset?()
+            }
         }
     }
-    
+
     @IBAction func didTappedResend() {
         tapResend?()
-    }
-    
-    @IBAction private func didTapEditNumber () {
-        tapEditNumber?()
-    }
-    
-    @objc private func didTapStackview() {
-        lastActiveTextfield?.becomeFirstResponder()
+        configureErrorMessage(message: " ")
+        pinView.clearPin()
+        pinReset?()
     }
 
-    private func verifyPinComplete() {
-        var pins: String = ""
-        for view in pinStackviews.arrangedSubviews {
-            guard // extra checking moght not need it
-                let textfield = view as? OtpPinTextfield,
-                let text = textfield.text,
-                !text.isEmpty
-                else { return }
-
-            pins.append(text)
-        }
-        pinCompleted?(pins)
+    @IBAction func didTapOtpViaPhone(_ sender: Any) {
+        tapOtpViaPhoneCall?()
+        configureErrorMessage(message: " ")
+        pinView.clearPin()
+        pinReset?()
     }
 
-    func configure(customButtonAttributes: CustomButtonAttributes, textfieldAttribute: CustomTextfieldAttributes, editNumberAttribute: CustomButtonAttributes) {
+    public func wrongOtpTyped(){
+        pinView.becomeFirstResponderAtIndex = pinView.pinLength - 1
+        pinView.wrongOtpTyped()
+    }
+
+    @IBAction func didTapChangePhoneNumber(_ sender: Any) {
+        tapPhoneNumberChange?()
+    }
+
+    func configureErrorMessage(message: String){
+        labelErrorMessage.text = message
+        labelErrorMessage.isHidden = false
+    }
+
+    func configure(customButtonAttributes: CustomButtonAttributes, textfieldAttribute: CustomTextfieldAttributes, buttonOtpViaPhoneAttr: CustomButtonAttributes,buttonEditPhoneNumberAttr: CustomButtonAttributes) {
         resetButtonAttr = customButtonAttributes
         textfieldAttr = textfieldAttribute
-        editNumberAttr = editNumberAttribute
+
+        btnEditPhoneNumber.setAttributedTitle( NSAttributedString(string: buttonEditPhoneNumberAttr.text,
+                                            attributes: [
+                                                NSAttributedStringKey.foregroundColor: buttonEditPhoneNumberAttr.color,
+                                                NSAttributedStringKey.font: buttonEditPhoneNumberAttr.font]), for: .normal)
+
+        buttonOtpViaPhone.setAttributedTitle( NSAttributedString(string: buttonOtpViaPhoneAttr.text,
+        attributes: [
+            NSAttributedStringKey.foregroundColor: buttonOtpViaPhoneAttr.color,
+            NSAttributedStringKey.font: buttonOtpViaPhoneAttr.font]), for: .normal)
+        configureErrorMessage(message: " ")
+        pinView.clearPin()
+        pinReset?()
     }
 
     func enableResetButton(enable: Bool = true, countDownStr: String = "") {
@@ -132,44 +164,8 @@ class OtpPinEnterView: UIView {
                                                 NSAttributedStringKey.foregroundColor: enable ? resetButtonAttr.color : resetButtonAttr.disableColor
             ])
         resetButton.setAttributedTitle(attributes, for: .normal)
-    }
-}
 
-extension OtpPinEnterView: UITextFieldDelegate, OtpPinTextFieldDelegate {
+        buttonOtpViaPhone.isHidden = !enable
 
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        lastActiveTextfield = textField as? OtpPinTextfield
-        UIView.setAnimationsEnabled(false)
-    }
-
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard
-            CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)),
-            let currentPinTextfield = textField as? OtpPinTextfield else {
-                return false
-        }
-        currentPinTextfield.text = string
-        currentPinTextfield.underLineColor = textfieldAttr.lineColor
-
-        if string != "" { // to handle backpress
-            guard
-                let pinTextfield = pinStackviews.viewWithTag(textField.tag + 1) as? OtpPinTextfield
-                else {
-                    verifyPinComplete()
-                    return false
-            }
-            pinTextfield.becomeFirstResponder()
-        } else {
-            pinReset?()
-        }
-        return false
-    }
-
-    func didPressBackspace(textField: OtpPinTextfield) {
-        guard let pinTextfield = pinStackviews.viewWithTag(textField.tag - 1) as? OtpPinTextfield else { return }
-        textField.underLineColor = textfieldAttr.disableLineColor
-        pinReset?()
-        pinTextfield.text = ""
-        pinTextfield.becomeFirstResponder()
     }
 }

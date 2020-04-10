@@ -23,29 +23,19 @@ open class PhoneVerifyingViewController: UIViewController {
         return view
     }()
 
-    private lazy var pinEnterView: OtpPinEnterView = {
+    private lazy var pinEnterView: OtpPinEnterView = { 
         let view = OtpPinEnterView()
         view.pinCompleted = pinCompleted
         view.pinReset = pinReseted
         view.tapResend = resendCode
-        view.tapEditNumber = changeNumber
-        view.editNumberButton.isHidden = true
+        view.tapOtpViaPhoneCall = otpViaPhone
+        view.tapPhoneNumberChange = changeNumber
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    private lazy var bottomView: OtpBottomView = {
-        let view = OtpBottomView()
-        view.didTapNext = nextButtonTapped
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
 
-    private var pins: String = "" {
-        didSet {
-           configureBottomButton()
-        }
-    }
+    private var pins: String = ""
 
     private var countdownTimer: Timer!
     private var countdown: Int = 0
@@ -73,11 +63,6 @@ open class PhoneVerifyingViewController: UIViewController {
             pinEnterView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
             pinEnterView.topAnchor.constraint(equalTo: headerView.bottomAnchor)
             ])
-        NSLayoutConstraint.activate([
-            bottomView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            bottomView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            bottomView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-            ])
     }
 
     override open func viewDidLoad() {
@@ -85,7 +70,7 @@ open class PhoneVerifyingViewController: UIViewController {
         view.addSubview(contentView)
         contentView.addSubview(headerView)
         contentView.addSubview(pinEnterView)
-        contentView.addSubview(bottomView)
+        //contentView.addSubview(bottomView)
         configureLayout()
         reloadData()
         
@@ -96,7 +81,7 @@ open class PhoneVerifyingViewController: UIViewController {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow , object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide , object: nil)
-        beginEditing()
+        //beginEditing()
     }
 
     override open func viewWillDisappear(_ animated: Bool) {
@@ -122,12 +107,13 @@ open class PhoneVerifyingViewController: UIViewController {
         bottomConstraint.constant = 0
     }
 
-    public func beginEditing(_ begin: Bool = true) {
-        if begin {
-            pinEnterView.lastActiveTextfield?.becomeFirstResponder()
-        } else {
-            pinEnterView.lastActiveTextfield?.resignFirstResponder()
-        }
+    public func handleEditButtonVisiblity(isHidden: Bool){
+        pinEnterView.btnEditPhoneNumber.isHidden = isHidden
+    }
+
+    public func configureErrorMessage(message: String){
+        pinEnterView.configureErrorMessage(message: message)
+        wrongOtpTyped()
     }
 
     public func reloadData() {
@@ -135,14 +121,21 @@ open class PhoneVerifyingViewController: UIViewController {
             headerView.configure(headerViewParams: headerParams)
         }
         if let textfieldParams = phoneVerifyDataSource?.pinTextFieldAttribute(in: self),
-            let buttonParams = phoneVerifyDataSource?.resendButtonAttribute(in: self),
-             let editParams = phoneVerifyDataSource?.editNumberAttributes(in: self){
-            pinEnterView.configure(customButtonAttributes: buttonParams, textfieldAttribute: textfieldParams, editNumberAttribute: editParams)
+            let resendButtonParams = phoneVerifyDataSource?.resendButtonAttribute(in: self),
+            let phoneOtpParams = phoneVerifyDataSource?.otpViaPhoneAttributes(in: self),
+            let editParams = phoneVerifyDataSource?.editNumberAttributes(in: self)
+        {
+            pinEnterView.configure(customButtonAttributes: resendButtonParams, textfieldAttribute: textfieldParams, buttonOtpViaPhoneAttr: phoneOtpParams, buttonEditPhoneNumberAttr: editParams)
         }
-        if let buttonParams = phoneVerifyDataSource?.bottomViewButtonText(in: self) {
-            bottomView.configure(customButtonAttributes: buttonParams)
+
+    }
+    
+    public func restartTimer() {
+        if(countdownTimer != nil){
+            countdownTimer.invalidate()
+            countdownTimer = nil
+            startResendTimer()
         }
-        configureBottomButton()
     }
 
     public func startResendTimer() {
@@ -150,6 +143,10 @@ open class PhoneVerifyingViewController: UIViewController {
             countdown = phoneVerifyDataSource?.resendCodeDelay(in: self) ?? 0
             countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateResendButton), userInfo: nil, repeats: true)
         }
+    }
+
+    public func wrongOtpTyped(){
+        pinEnterView.wrongOtpTyped()
     }
 
     @objc private func updateResendButton() {
@@ -163,13 +160,6 @@ open class PhoneVerifyingViewController: UIViewController {
         }
     }
 
-    private func configureBottomButton() {
-        if !pins.isEmpty {
-            bottomView.enableNextButton()
-        } else {
-            bottomView.enableNextButton(enable: false)
-        }
-    }
 
     private func animateLayout() {
         UIView.animate(withDuration: 0.5) {
@@ -196,8 +186,13 @@ open class PhoneVerifyingViewController: UIViewController {
         phoneVerifyDelegate?.changeNumberTapped(in: self)
     }
 
+    private func otpViaPhone() {
+        phoneVerifyDelegate?.otpViaPhoneTapped(in: self)
+    }
+
     private func pinCompleted(_ completePin: String) {
         pins = completePin
+        phoneVerifyDelegate?.verifyTapped(in: self, pins: pins)
     }
 
     private func pinReseted() {

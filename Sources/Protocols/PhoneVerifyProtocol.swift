@@ -22,6 +22,7 @@ public protocol PhoneVerifyDataSource: class {
 
     func resendCodeDelay(in view: PhoneVerifyingViewController) -> Int
     
+    func otpViaPhoneAttributes(in view: PhoneVerifyingViewController) -> CustomButtonAttributes
     func editNumberAttributes(in view: PhoneVerifyingViewController) -> CustomButtonAttributes
 }
 
@@ -32,4 +33,6 @@ public protocol PhoneVerifyDelegate: class {
     func resendCodeTapped(in view: PhoneVerifyingViewController)
 
     func changeNumberTapped(in view: PhoneVerifyingViewController)
+    func otpViaPhoneTapped(in view: PhoneVerifyingViewController)
+
 }

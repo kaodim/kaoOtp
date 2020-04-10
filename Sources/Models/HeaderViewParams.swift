@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 public struct HeaderViewParams {
-    let title: String
+    let title: String?
     let titleAttr: CustomLabelAttributes
     let message: String
     let messageAttr: CustomLabelAttributes
     let phoneNumberText: String
     let phoneNumberTextAttr: CustomLabelAttributes
 
-    public init(title: String = "",
+    public init(title: String? = nil,
                 titleAttr: CustomLabelAttributes = CustomLabelAttributes(),
                 message: String = "",
                 messageAttr: CustomLabelAttributes = CustomLabelAttributes() ,

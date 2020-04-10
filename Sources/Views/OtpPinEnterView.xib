@@ -1,147 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina3_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpPinEnterView" customModule="KaoOtp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpPinEnterView" customModule="KaoOtp">
             <connections>
-                <outlet property="editNumberButton" destination="MeQ-Hr-eip" id="w76-X7-2Ug"/>
-                <outlet property="pinStacktouchView" destination="Hwq-ir-AKu" id="e8P-BC-KxQ"/>
-                <outlet property="pinStackviews" destination="ZeZ-Z8-9e4" id="Cdg-2Z-b5u"/>
+                <outlet property="btnEditPhoneNumber" destination="qli-Dc-FD2" id="n9w-U4-VJf"/>
+                <outlet property="buttonOtpViaPhone" destination="MeQ-Hr-eip" id="6Xx-PJ-3XA"/>
+                <outlet property="labelErrorMessage" destination="kqX-FP-JNm" id="7uF-y0-NUC"/>
+                <outlet property="pinView" destination="d6u-mt-Tgm" id="sIx-uz-yZg"/>
                 <outlet property="resetButton" destination="ePd-fN-9Uf" id="Jw4-dK-0Id"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="285" height="298"/>
+            <rect key="frame" x="0.0" y="0.0" width="378" height="308"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZeZ-Z8-9e4">
-                    <rect key="frame" x="0.0" y="41" width="280" height="150"/>
-                    <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCG-rM-j0r" customClass="OtpPinTextfield" customModule="KaoOtp">
-                            <rect key="frame" x="0.0" y="57" width="30" height="36"/>
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
-                                    <real key="value" value="2"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
-                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Bc-C5-IJm" customClass="OtpPinTextfield" customModule="KaoOtp">
-                            <rect key="frame" x="50" y="57" width="30" height="36"/>
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="30" id="tdL-6O-qbz"/>
-                            </constraints>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
-                                    <real key="value" value="2"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
-                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFx-g0-DFS" customClass="OtpPinTextfield" customModule="KaoOtp">
-                            <rect key="frame" x="100" y="57" width="30" height="36"/>
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="30" id="Mye-qa-PbJ"/>
-                            </constraints>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
-                                    <real key="value" value="2"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
-                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdp-Fx-99p" customClass="OtpPinTextfield" customModule="KaoOtp">
-                            <rect key="frame" x="150" y="57" width="30" height="36"/>
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="30" id="fS6-nD-d6U"/>
-                            </constraints>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
-                                    <real key="value" value="2"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
-                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cw3-UK-yjX" customClass="OtpPinTextfield" customModule="KaoOtp">
-                            <rect key="frame" x="200" y="57" width="30" height="36"/>
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="30" id="gDc-cM-IoM"/>
-                            </constraints>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
-                                    <real key="value" value="2"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
-                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIx-Vf-FD8" customClass="OtpPinTextfield" customModule="KaoOtp">
-                            <rect key="frame" x="250" y="57" width="30" height="36"/>
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="30" id="6z9-tJ-2Bi"/>
-                            </constraints>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="underLineWidth">
-                                    <real key="value" value="2"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="underLineColor">
-                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                    </subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qli-Dc-FD2">
+                    <rect key="frame" x="166" y="4" width="46" height="57"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didTapChangePhoneNumber:" destination="-1" eventType="touchUpInside" id="4uv-65-Ou2"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6u-mt-Tgm" customClass="SVPinView" customModule="KaoOtp">
+                    <rect key="frame" x="36" y="113" width="306" height="93"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="Mg5-dt-u1J"/>
+                        <constraint firstAttribute="height" constant="93" id="cc6-aq-a4l"/>
                     </constraints>
-                </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hwq-ir-AKu">
-                    <rect key="frame" x="0.0" y="41" width="280" height="150"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePd-fN-9Uf">
-                    <rect key="frame" x="0.0" y="236" width="285" height="15"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePd-fN-9Uf">
+                    <rect key="frame" x="0.0" y="234" width="378" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="aXO-sM-1Pt"/>
                     </constraints>
@@ -152,8 +47,8 @@
                         <action selector="didTappedResend" destination="-1" eventType="touchUpInside" id="Qsa-Ev-dVv"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-Hr-eip">
-                    <rect key="frame" x="0.0" y="263" width="285" height="15"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-Hr-eip">
+                    <rect key="frame" x="0.0" y="273" width="378" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="u6C-Iy-22o"/>
                     </constraints>
@@ -161,30 +56,36 @@
                         <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="didTapEditNumber" destination="-1" eventType="touchUpInside" id="3AB-ss-hCx"/>
+                        <action selector="didTapOtpViaPhone:" destination="-1" eventType="touchUpInside" id="vYK-TO-jGj"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqX-FP-JNm">
+                    <rect key="frame" x="187" y="200" width="4" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.73537057640000003" green="0.18174093960000001" blue="0.14505788680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ZeZ-Z8-9e4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0UI-Bq-GGa"/>
                 <constraint firstItem="MeQ-Hr-eip" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5KM-oN-zTC"/>
+                <constraint firstItem="kqX-FP-JNm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="73v-Mo-I3g"/>
+                <constraint firstItem="ePd-fN-9Uf" firstAttribute="top" secondItem="kqX-FP-JNm" secondAttribute="bottom" constant="16" id="99g-da-0tK"/>
                 <constraint firstItem="ePd-fN-9Uf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BWf-7Z-XGy"/>
-                <constraint firstItem="ePd-fN-9Uf" firstAttribute="top" secondItem="ZeZ-Z8-9e4" secondAttribute="bottom" constant="45" id="HbO-Ko-ymB"/>
-                <constraint firstItem="Hwq-ir-AKu" firstAttribute="leading" secondItem="ZeZ-Z8-9e4" secondAttribute="leading" id="JPx-JB-bMk"/>
-                <constraint firstItem="MeQ-Hr-eip" firstAttribute="top" secondItem="ePd-fN-9Uf" secondAttribute="bottom" constant="12" id="YdS-6o-Sfi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="d6u-mt-Tgm" secondAttribute="trailing" constant="36" id="JZ4-fp-M00"/>
+                <constraint firstItem="qli-Dc-FD2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MZe-rR-8tl"/>
+                <constraint firstItem="qli-Dc-FD2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="OTN-FV-QS6"/>
+                <constraint firstItem="MeQ-Hr-eip" firstAttribute="top" secondItem="ePd-fN-9Uf" secondAttribute="bottom" constant="24" id="YdS-6o-Sfi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ePd-fN-9Uf" secondAttribute="trailing" id="bxg-Kw-pze"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="MeQ-Hr-eip" secondAttribute="bottom" constant="20" id="ePf-aN-ztP"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ZeZ-Z8-9e4" secondAttribute="trailing" constant="10" id="fpe-fz-Vx8"/>
-                <constraint firstItem="Hwq-ir-AKu" firstAttribute="bottom" secondItem="ZeZ-Z8-9e4" secondAttribute="bottom" id="oGw-Wf-C99"/>
+                <constraint firstItem="kqX-FP-JNm" firstAttribute="top" secondItem="d6u-mt-Tgm" secondAttribute="bottom" constant="-6" id="lMZ-Jp-1BQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MeQ-Hr-eip" secondAttribute="trailing" id="oRW-MQ-RPZ"/>
-                <constraint firstItem="ZeZ-Z8-9e4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="41" id="r4Z-Z7-6zn"/>
-                <constraint firstItem="Hwq-ir-AKu" firstAttribute="top" secondItem="ZeZ-Z8-9e4" secondAttribute="top" id="sVI-MP-gre"/>
-                <constraint firstItem="Hwq-ir-AKu" firstAttribute="trailing" secondItem="ZeZ-Z8-9e4" secondAttribute="trailing" id="wNV-Ok-ias"/>
+                <constraint firstItem="d6u-mt-Tgm" firstAttribute="top" secondItem="qli-Dc-FD2" secondAttribute="bottom" constant="52" id="xJZ-PA-XUq"/>
+                <constraint firstItem="d6u-mt-Tgm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="yQj-Pn-lCb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-29.600000000000001" y="-192.85714285714286"/>
+            <point key="canvasLocation" x="56.25" y="-187.5"/>
         </view>
     </objects>
 </document>
