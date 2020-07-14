@@ -37,7 +37,7 @@ public class OtpPinTextfield: UITextField {
 
     private func applyUnderLine() {
         // Apply underline only if the text view's has no borders
-        if borderStyle == UITextBorderStyle.none {
+        if borderStyle == UITextField.BorderStyle.none {
             underLineLayer.removeFromSuperlayer()
             updateUnderLineFrame()
             updateUnderLineUI()

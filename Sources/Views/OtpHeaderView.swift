@@ -66,9 +66,9 @@ class OtpHeaderView: UIView {
         // phone number
         if headerViewParams.phoneNumberText != "" {
             let phoneRange = NSMakeRange(headerViewParams.message.count+1, headerViewParams.phoneNumberText.count)
-            let phoneAttr: [NSAttributedStringKey : Any] = [
-                NSAttributedStringKey.foregroundColor : headerViewParams.phoneNumberTextAttr.color,
-                NSAttributedStringKey.font : headerViewParams.phoneNumberTextAttr.font
+            let phoneAttr: [NSAttributedString.Key : Any] = [
+                NSAttributedString.Key.foregroundColor : headerViewParams.phoneNumberTextAttr.color,
+                NSAttributedString.Key.font : headerViewParams.phoneNumberTextAttr.font
             ]
             attrString.addAttributes(phoneAttr, range: phoneRange)
         }

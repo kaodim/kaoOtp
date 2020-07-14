@@ -27,8 +27,8 @@ class OtpPinEnterView: UIView {
         didSet {
             let attributes = NSAttributedString(string: buttonOtpViaPhoneAttr.text,
                                                 attributes: [
-                                                    NSAttributedStringKey.foregroundColor: buttonOtpViaPhoneAttr.color,
-                                                    NSAttributedStringKey.font: buttonOtpViaPhoneAttr.font])
+                                                    NSAttributedString.Key.foregroundColor: buttonOtpViaPhoneAttr.color,
+                                                    NSAttributedString.Key.font: buttonOtpViaPhoneAttr.font])
             buttonOtpViaPhone.setAttributedTitle(attributes, for: .normal)
         }
     }
@@ -144,13 +144,13 @@ class OtpPinEnterView: UIView {
 
         btnEditPhoneNumber.setAttributedTitle( NSAttributedString(string: buttonEditPhoneNumberAttr.text,
                                             attributes: [
-                                                NSAttributedStringKey.foregroundColor: buttonEditPhoneNumberAttr.color,
-                                                NSAttributedStringKey.font: buttonEditPhoneNumberAttr.font]), for: .normal)
+                                                NSAttributedString.Key.foregroundColor: buttonEditPhoneNumberAttr.color,
+                                                NSAttributedString.Key.font: buttonEditPhoneNumberAttr.font]), for: .normal)
 
         buttonOtpViaPhone.setAttributedTitle( NSAttributedString(string: buttonOtpViaPhoneAttr.text,
         attributes: [
-            NSAttributedStringKey.foregroundColor: buttonOtpViaPhoneAttr.color,
-            NSAttributedStringKey.font: buttonOtpViaPhoneAttr.font]), for: .normal)
+            NSAttributedString.Key.foregroundColor: buttonOtpViaPhoneAttr.color,
+            NSAttributedString.Key.font: buttonOtpViaPhoneAttr.font]), for: .normal)
         configureErrorMessage(message: " ")
         pinView.clearPin()
         pinReset?()
@@ -160,8 +160,8 @@ class OtpPinEnterView: UIView {
         resetButton.isEnabled = enable
         let attributes = NSAttributedString(string: enable ? resetButtonAttr.text : (resetButtonAttr.disableText + " \(countDownStr)"),
                                             attributes: [
-                                                NSAttributedStringKey.font: resetButtonAttr.font,
-                                                NSAttributedStringKey.foregroundColor: enable ? resetButtonAttr.color : resetButtonAttr.disableColor
+                                                NSAttributedString.Key.font: resetButtonAttr.font,
+                                                NSAttributedString.Key.foregroundColor: enable ? resetButtonAttr.color : resetButtonAttr.disableColor
             ])
         resetButton.setAttributedTitle(attributes, for: .normal)
 
