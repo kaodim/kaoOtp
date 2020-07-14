@@ -20,7 +20,7 @@ KaoOtpFlow provide complete ui for otp and allow you to inject your own endpoint
   }
 
   s.dependency 'MaterialTextField', '~> 0.2'
-  s.dependency 'KaoDesign', '~> 0.4.0'
+  s.dependency 'KaoDesign'
 
   s.pod_target_xcconfig = {
      "SWIFT_VERSION" => "5.0",
