@@ -25,7 +25,7 @@ KaoOtpFlow provide complete ui for otp and allow you to inject your own endpoint
   s.pod_target_xcconfig = {
      "SWIFT_VERSION" => "5.0",
   }
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.0'
   s.requires_arc = true
  
 end
