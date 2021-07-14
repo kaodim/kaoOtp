@@ -11,15 +11,9 @@ import MaterialTextField
 
 class NumberField: UIView {
 
-    @IBOutlet weak private var flagImageView: UIImageView!
-    @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var countryLabel: UILabel!
-    @IBOutlet weak private var numberField: MFTextField!
-
+    @IBOutlet weak private var textField: KaoBorderedTextField!
+    
     var didChangedText: ((_ text: String?) -> Void)?
-    var countryPhone: CountryPhone?
-    var countryCode: String?
-    var valueUpdate: ((_ value: String) -> Void)?
     
     private var contentView: UIView!
 
@@ -52,47 +46,29 @@ class NumberField: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
-
-        numberField.delegate = self
-        numberField.keyboardType = .numberPad
-        numberField.textAlignment = .left
-        valueUpdate = didChangedText
-    }
-
-    func configureView(with selectedCountry: CountryPhone?) {
-        countryPhone = selectedCountry
-        countryCode = selectedCountry?.phoneExtension
-        flagImageView.image = selectedCountry?.icon
-        countryLabel.text = "\(selectedCountry?.phoneExtension ?? "")"
+        textField.delegate = self
+        textField.changeHandler = didChangedText
     }
     
-    func configureTextFieldLabel(with title: CustomTextfieldAttributes){
-        titleLabel.text = title.label
-        titleLabel.font = title.labelFont
-        numberField.tintColor = title.color
-        numberField.textColor = title.color
-        numberField.underlineColor = title.lineColor
+    func configureView(data: KaoTextFieldInputData){
+        textField.configure(data, nil)
     }
 
     func textfieldBecomeResponder() {
-        numberField.becomeFirstResponder()
+        textField.becomeFirstResponder()
     }
     
     func setText(with text: CustomTextfieldAttributes) {
-        numberField.text = text.label
+//        numberField.text = text.label
     }
 }
 
 extension NumberField : UITextFieldDelegate {
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
-        let mfTextFiled = (textField as? MFTextField)
-        mfTextFiled?.setError(nil, animated: true)
+        let mfTextFiled = (textField as? KaoBorderedTextField)
+        mfTextFiled?.setErrorMessage("")
         UIView.setAnimationsEnabled(false)
-    }
-    
-    @IBAction private func textFieldChanged(_ sender: UITextField) {
-        didChangedText?(sender.text)
     }
 }
 

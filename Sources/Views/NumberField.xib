@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberField" customModule="KaoOtp" customModuleProvider="target">
             <connections>
-                <outlet property="countryLabel" destination="rZC-0K-OGY" id="dHg-i0-X5l"/>
-                <outlet property="flagImageView" destination="IBH-nz-auA" id="wbx-GZ-Shy"/>
-                <outlet property="numberField" destination="4sc-81-mgJ" id="WLc-Gb-i3X"/>
-                <outlet property="titleLabel" destination="LRk-y8-rb1" id="4y5-4j-6HP"/>
+                <outlet property="textField" destination="Tfs-UD-IcG" id="58H-rS-riz"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,82 +18,12 @@
             <rect key="frame" x="0.0" y="0.0" width="318" height="75"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfs-UD-IcG">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfs-UD-IcG" customClass="KaoBorderedTextField" customModule="KaoDesign">
                     <rect key="frame" x="0.0" y="0.0" width="318" height="75"/>
-                    <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-81-mgJ" userLabel="Number Field" customClass="MFTextField">
-                            <rect key="frame" x="15" y="22" width="289" height="30"/>
-                            <color key="tintColor" red="0.066086955370000006" green="0.1884613037" blue="0.33336359259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="O3C-V0-tkW"/>
-                            </constraints>
-                            <color key="textColor" red="0.066086955370000006" green="0.1884613037" blue="0.33336359259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
-                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="leftSpacer">
-                                    <real key="value" value="80"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="textFieldChanged:" destination="-1" eventType="editingChanged" id="pQk-pu-vSz"/>
-                                <outlet property="delegate" destination="-1" id="e9l-NL-MYn"/>
-                            </connections>
-                        </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRk-y8-rb1">
-                            <rect key="frame" x="15" y="22" width="29" height="14"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="14" id="ZdB-cG-AoJ"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
-                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gs7-WX-edQ">
-                            <rect key="frame" x="15" y="54" width="29" height="0.0"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IBH-nz-auA">
-                                    <rect key="frame" x="10" y="-6.5" width="22" height="13"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="13" id="LNT-JV-ruc"/>
-                                        <constraint firstAttribute="width" constant="22" id="bzh-2b-Qkh"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZC-0K-OGY">
-                                    <rect key="frame" x="10" y="0.0" width="26" height="0.0"/>
-                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="rZC-0K-OGY" firstAttribute="leading" secondItem="IBH-nz-auA" secondAttribute="leading" id="NMc-xH-XjJ"/>
-                                <constraint firstAttribute="trailing" secondItem="rZC-0K-OGY" secondAttribute="trailing" constant="-7" id="SQQ-Sg-OoZ"/>
-                                <constraint firstItem="rZC-0K-OGY" firstAttribute="centerY" secondItem="gs7-WX-edQ" secondAttribute="centerY" id="TVp-cz-RVF"/>
-                                <constraint firstItem="IBH-nz-auA" firstAttribute="leading" secondItem="gs7-WX-edQ" secondAttribute="leading" constant="10" id="cPa-tF-SST"/>
-                                <constraint firstItem="IBH-nz-auA" firstAttribute="centerY" secondItem="gs7-WX-edQ" secondAttribute="centerY" id="nCR-6r-0Ty"/>
-                            </constraints>
-                        </view>
-                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="gs7-WX-edQ" firstAttribute="leading" secondItem="LRk-y8-rb1" secondAttribute="leading" id="3vd-2g-xpD"/>
-                        <constraint firstItem="gs7-WX-edQ" firstAttribute="top" secondItem="LRk-y8-rb1" secondAttribute="bottom" constant="18" id="7Y4-Un-EAW"/>
-                        <constraint firstItem="4sc-81-mgJ" firstAttribute="top" secondItem="Tfs-UD-IcG" secondAttribute="top" constant="22" id="FMN-1n-fgh"/>
-                        <constraint firstAttribute="bottom" secondItem="4sc-81-mgJ" secondAttribute="bottom" constant="23" id="IMg-2d-SsV"/>
-                        <constraint firstItem="4sc-81-mgJ" firstAttribute="leading" secondItem="Tfs-UD-IcG" secondAttribute="leading" constant="15" id="IWr-OW-Ldt"/>
-                        <constraint firstItem="LRk-y8-rb1" firstAttribute="top" secondItem="4sc-81-mgJ" secondAttribute="top" id="J0t-hd-V0A"/>
-                        <constraint firstItem="gs7-WX-edQ" firstAttribute="trailing" secondItem="LRk-y8-rb1" secondAttribute="trailing" id="MCY-Kj-dZf"/>
-                        <constraint firstItem="LRk-y8-rb1" firstAttribute="leading" secondItem="4sc-81-mgJ" secondAttribute="leading" id="aLw-Xl-hri"/>
-                        <constraint firstAttribute="bottom" secondItem="gs7-WX-edQ" secondAttribute="bottom" constant="21" id="tCq-Gp-QMI"/>
-                        <constraint firstAttribute="trailing" secondItem="4sc-81-mgJ" secondAttribute="trailing" constant="14" id="zlW-yK-kMJ"/>
-                    </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Tfs-UD-IcG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8ZS-XV-G1y"/>
@@ -112,7 +32,6 @@
                 <constraint firstItem="Tfs-UD-IcG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="kWy-1B-EuJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-417.60000000000002" y="-370.16491754122939"/>
         </view>
     </objects>
