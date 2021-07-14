@@ -12,6 +12,8 @@ import MaterialTextField
 class NumberField: UIView {
 
     @IBOutlet weak private var textField: KaoBorderedTextField!
+    @IBOutlet weak private var infoIcon: UIImageView!
+    @IBOutlet weak private var infoLabel: UILabel!
     
     var didChangedText: ((_ text: String?) -> Void)?
     
@@ -48,10 +50,13 @@ class NumberField: UIView {
         addSubview(contentView)
         textField.delegate = self
         textField.changeHandler = didChangedText
+        infoLabel.font = UIFont.kaoFont(style: .regular, size: 15)
     }
     
     func configureView(data: KaoTextFieldInputData){
         textField.configure(data, nil)
+        infoLabel.text = data.titleLabel
+        infoIcon.image = UIImage.imageFromDesignIos(data.rightIcon)
     }
 
     func textfieldBecomeResponder() {

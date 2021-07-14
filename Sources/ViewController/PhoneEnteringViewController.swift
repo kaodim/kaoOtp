@@ -24,11 +24,13 @@ open class PhoneEnteringViewController: UIViewController {
         return view
     }()
     
-    private lazy var textFieldView: KaoBorderedTextField = {
-        let view = KaoBorderedTextField()
+    private lazy var textFieldView: NumberField = {
+        let view = NumberField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.changeHandler = phoneTextChanged
-        
+        view.didChangedText = { [weak self] text in
+            self?.phoneTextChanged(text)
+        }
+
         return view
     }()
     
@@ -42,7 +44,7 @@ open class PhoneEnteringViewController: UIViewController {
     private var countryList: [CountryPhone] = []
     private var selectedCountry: CountryPhone? {
         didSet {
-            reloadData()
+//            reloadData()
         }
     }
     private var phoneNumber: String = ""
@@ -147,7 +149,7 @@ open class PhoneEnteringViewController: UIViewController {
         
         if let customTextfieldAttr = phoneEnterDataSource?.textFieldAttribute(in: self) {
 //            textFieldView.configureTextFieldLabel(with: customTextfieldAttr)
-            textFieldView.configure(customTextfieldAttr, nil)
+            textFieldView.configureView(data: customTextfieldAttr)
         }
         
         if let textFieldValue = phoneEnterDataSource?.textFieldValue(in: self){
