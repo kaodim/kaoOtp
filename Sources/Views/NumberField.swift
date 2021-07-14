@@ -49,7 +49,9 @@ class NumberField: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
-        textField.changeHandler = didChangedText
+        textField.changeHandler = { [weak self] text in
+            self?.didChangedText?(text)
+        }
     }
     
     func configureView(data: KaoTextFieldInputData){
@@ -65,6 +67,6 @@ class NumberField: UIView {
     }
     
     func setText(with text: CustomTextfieldAttributes) {
-        textField.text = text.label
+        textField.textField.text = text.label
     }
 }
