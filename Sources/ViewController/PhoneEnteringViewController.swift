@@ -148,12 +148,11 @@ open class PhoneEnteringViewController: UIViewController {
         }
         
         if let customTextfieldAttr = phoneEnterDataSource?.textFieldAttribute(in: self) {
-//            textFieldView.configureTextFieldLabel(with: customTextfieldAttr)
             textFieldView.configureView(data: customTextfieldAttr)
         }
         
         if let textFieldValue = phoneEnterDataSource?.textFieldValue(in: self){
-//            textFieldView.setText(with: textFieldValue)
+            textFieldView.setText(with: textFieldValue)
         }
     }
     

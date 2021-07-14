@@ -48,15 +48,15 @@ class NumberField: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
-        textField.delegate = self
         textField.changeHandler = didChangedText
-        infoLabel.font = UIFont.kaoFont(style: .regular, size: 15)
     }
     
     func configureView(data: KaoTextFieldInputData){
         textField.configure(data, nil)
         infoLabel.text = data.titleLabel
-        infoIcon.image = UIImage.imageFromDesignIos(data.rightIcon)
+        if let icon = data.rightIcon {
+            infoIcon.image = UIImage.imageFromDesignIos(icon)
+        }
     }
 
     func textfieldBecomeResponder() {
@@ -64,20 +64,6 @@ class NumberField: UIView {
     }
     
     func setText(with text: CustomTextfieldAttributes) {
-//        numberField.text = text.label
+        textField.text = text.label
     }
 }
-
-extension NumberField : UITextFieldDelegate {
-    
-    public func textFieldDidBeginEditing(_ textField: UITextField) {
-        let mfTextFiled = (textField as? KaoBorderedTextField)
-        mfTextFiled?.setErrorMessage("")
-        UIView.setAnimationsEnabled(false)
-    }
-}
-
-
-
-
-
