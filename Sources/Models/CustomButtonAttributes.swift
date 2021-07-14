@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import KaoDesign
 
 public struct CustomButtonAttributes {
     let text: String
@@ -18,9 +19,9 @@ public struct CustomButtonAttributes {
     let highlightedColor: UIColor
 
     public init(text: String = "",
-                font: UIFont = .systemFont(ofSize: 14),
-                color: UIColor = .red,
-                disableColor: UIColor = .gray,
+                font: UIFont = UIFont.kaoFont(style: .semibold, size: 16),
+                color: UIColor = .kaoColor(.kaodimBrand),
+                disableColor: UIColor = .kaoColor(.kaodimRed40),
                 disableText: String = "",
                 highlightedColor: UIColor = .white) {
         self.text = text
