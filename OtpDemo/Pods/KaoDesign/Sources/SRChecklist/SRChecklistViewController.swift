@@ -42,10 +42,10 @@ class SRChecklistViewController: KaoSlideUpViewController {
     private var viewModel: SRChecklistViewModel!
     private var helpCallback: (() -> Void)?
 
-    init(checklists: [SRChecklist], helpCallback: (() -> Void)?) {
+    init(checklists: [SRChecklist], localizedStrings: KaoCalendarLocalize, helpCallback: (() -> Void)?) {
         super.init(nibName: nil, bundle: nil)
         self.helpCallback = helpCallback
-        viewModel = SRChecklistViewModel(checklists)
+        viewModel = SRChecklistViewModel(checklists, localizedStrings: localizedStrings)
         viewModel.eventDelegate = self
     }
 
@@ -77,8 +77,8 @@ extension SRChecklistViewController: SRChecklistVMEventDelegate {
 
 // MARK: - Extension
 public extension UIViewController {
-    func presentSRChecklistVC(checklists: [SRChecklist], helpCallback: (() -> Void)?) {
-        let view = SRChecklistViewController(checklists: checklists, helpCallback: helpCallback)
+    func presentSRChecklistVC(checklists: [SRChecklist], localizedStrings: KaoCalendarLocalize, helpCallback: (() -> Void)?) {
+        let view = SRChecklistViewController(checklists: checklists, localizedStrings: localizedStrings, helpCallback: helpCallback)
         view.modalPresentationStyle = .overFullScreen
         present(view, animated: false, completion: nil)
     }

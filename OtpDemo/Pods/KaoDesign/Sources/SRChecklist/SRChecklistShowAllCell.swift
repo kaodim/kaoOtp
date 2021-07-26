@@ -20,7 +20,10 @@ public class SRChecklistShowAllCell: UITableViewCell, NibLoadableView {
         cardView.addBorderLine(color: .kaoColor(.veryLightPink))
         titleLabel.font = .kaoFont(style: .regular, size: 15)
         titleLabel.textColor = .kaoColor(.vividBlue)
-        titleLabel.text = NSLocalizedString("show_all_items", comment: "")
-        iconView.image = UIImage.imageFromDesignIos("icon_chevron_link_down")?.withRenderingMode(.alwaysOriginal)
+    }
+    
+    func configureView(_ isExpanded: Bool, localizedStrings: KaoCalendarLocalize) {
+        titleLabel.text = isExpanded ? localizedStrings.localize(.showLessItems) : localizedStrings.localize(.showAllItems)
+        iconView.image = isExpanded ? UIImage.imageFromDesignIos("icon_chevron_link_up") : UIImage.imageFromDesignIos("icon_chevron_link_down")
     }
 }

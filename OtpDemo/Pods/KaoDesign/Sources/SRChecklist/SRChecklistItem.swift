@@ -18,7 +18,8 @@ open class SRChecklistItem: SRChecklistProtocolItem {
     }
 
     private var needShowMore = false
-    private var maxShowList = 4 // update here for number of list shown first time
+    private var isExpanded = false
+    private var maxShowList = 2 // update here for number of list shown first time
 
     public weak var eventDelegate: SRChecklistItemEventDelegate?
 
@@ -34,20 +35,22 @@ open class SRChecklistItem: SRChecklistProtocolItem {
     }()
 
     public var checklist: SRChecklist!
+    private var localizedStrings: KaoCalendarLocalize!
 
     public var rowCount: Int {
         return configureRowCount()
     }
 
     // MARK: - init methods
-    public init(_ checklist: SRChecklist) {
+    public init(_ checklist: SRChecklist, localizedStrings: KaoCalendarLocalize) {
         self.checklist = checklist
+        self.localizedStrings = localizedStrings
         self.needShowMore = checklist.tasks.count > maxShowList
     }
 
     open func configureRowCount() -> Int {
         if needShowMore {
-            return maxShowList + 1
+            return isExpanded ? checklist.tasks.count + 1 : maxShowList + 1
         } else {
             return checklist.tasks.count
         }
@@ -55,9 +58,10 @@ open class SRChecklistItem: SRChecklistProtocolItem {
 
     // MARK: - TableView DataSource & Delegates
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let isShowMore = indexPath.row == maxShowList
+        let isShowMore = isExpanded ? indexPath.row == checklist.tasks.count : indexPath.row == maxShowList
         if needShowMore, isShowMore {
             let cell: SRChecklistShowAllCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+            cell.configureView(isExpanded, localizedStrings: localizedStrings)
             return cell
         } else {
             let cell: SRChecklistItemCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
@@ -69,9 +73,9 @@ open class SRChecklistItem: SRChecklistProtocolItem {
 
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if needShowMore {
-            let isShowMore = indexPath.row == maxShowList
+            let isShowMore = isExpanded ? indexPath.row == checklist.tasks.count : indexPath.row == maxShowList
             if isShowMore {
-                needShowMore = false
+                isExpanded.toggle()
                 eventDelegate?.reloadItem(self)
             }
         }

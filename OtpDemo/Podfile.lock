@@ -2,7 +2,7 @@ PODS:
   - AZYCalendarView (0.0.21)
   - DZNEmptyDataSet (1.8.1)
   - FontAwesome.swift (1.9.0)
-  - KaoDesign (0.4.36):
+  - KaoDesign (0.4.37):
     - AZYCalendarView (= 0.0.21)
     - DZNEmptyDataSet (= 1.8.1)
     - FontAwesome.swift (= 1.9.0)
@@ -123,7 +123,7 @@ SPEC CHECKSUMS:
   AZYCalendarView: 3e15b80d12589a00a2536a1b41292ecd145023ed
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FontAwesome.swift: a403b88cec950511745ba8f2decd1b6a07346d13
-  KaoDesign: 4599ff5421b723f1a694c3c2c621672a233342c5
+  KaoDesign: 5ee053f3b704ccc32fbe326090fa0b5d900a5c8c
   KaoOtp: 33439c0e2af8e7c2bc63304535939ddd5dad9043
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d

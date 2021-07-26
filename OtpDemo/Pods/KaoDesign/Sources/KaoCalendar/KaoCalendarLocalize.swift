@@ -14,6 +14,7 @@ public enum KaoCalendarLocalizeKey: String {
     case reset,done
     case selectStartDate,selectEndDate,startDate,endDate
     case morning, afternoon, evening
+    case showAllItems, showLessItems
 }
 
 public struct KaoCalendarLocalize {

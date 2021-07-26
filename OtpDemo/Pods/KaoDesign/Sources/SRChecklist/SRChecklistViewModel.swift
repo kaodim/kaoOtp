@@ -16,15 +16,17 @@ protocol SRChecklistProtocolItem: TableViewVMProtocol, Equatable { }
 class SRChecklistViewModel: TableViewModel {
 
     private var checklists: [SRChecklist] = []
+    private var localizedStrings: KaoCalendarLocalize!
 
     private var vmEventDelegate: SRChecklistVMEventDelegate? {
         return eventDelegate as? SRChecklistVMEventDelegate
     }
 
     // MARK: - init methods
-    init(_ checklists: [SRChecklist]) {
+    init(_ checklists: [SRChecklist], localizedStrings: KaoCalendarLocalize) {
         super.init()
         self.checklists = checklists
+        self.localizedStrings = localizedStrings
         self.reloadView()
     }
 
@@ -39,7 +41,7 @@ class SRChecklistViewModel: TableViewModel {
 
     private func reloadView() {
         checklists.forEach({
-            let checklistItem = SRChecklistItem($0)
+            let checklistItem = SRChecklistItem($0, localizedStrings: localizedStrings)
             checklistItem.eventDelegate = self
             self.items.append(checklistItem)
         })
