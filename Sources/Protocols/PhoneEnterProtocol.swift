@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import KaoDesign
 
 public protocol PhoneEnterDataSource: class {
 
@@ -15,7 +16,7 @@ public protocol PhoneEnterDataSource: class {
 
     func headerViewText(in view: PhoneEnteringViewController) -> HeaderViewParams
 
-    func textFieldAttribute(in view: PhoneEnteringViewController) -> CustomTextfieldAttributes
+    func textFieldAttribute(in view: PhoneEnteringViewController) -> KaoTextFieldInputData
 
     func bottomViewButtonText(in view: PhoneEnteringViewController) -> CustomButtonAttributes
     

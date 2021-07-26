@@ -8,18 +8,15 @@
 
 import Foundation
 import MaterialTextField
+import KaoDesign
 
 class NumberField: UIView {
 
-    @IBOutlet weak private var flagImageView: UIImageView!
-    @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var countryLabel: UILabel!
-    @IBOutlet weak private var numberField: MFTextField!
-
+    @IBOutlet weak private var textField: KaoBorderedTextField!
+    @IBOutlet weak private var infoIcon: UIImageView!
+    @IBOutlet weak private var infoLabel: UILabel!
+    
     var didChangedText: ((_ text: String?) -> Void)?
-    var countryPhone: CountryPhone?
-    var countryCode: String?
-    var valueUpdate: ((_ value: String) -> Void)?
     
     private var contentView: UIView!
 
@@ -52,51 +49,24 @@ class NumberField: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
-
-        numberField.delegate = self
-        numberField.keyboardType = .numberPad
-        numberField.textAlignment = .left
-        valueUpdate = didChangedText
-    }
-
-    func configureView(with selectedCountry: CountryPhone?) {
-        countryPhone = selectedCountry
-        countryCode = selectedCountry?.phoneExtension
-        flagImageView.image = selectedCountry?.icon
-        countryLabel.text = "\(selectedCountry?.phoneExtension ?? "")"
+        textField.changeHandler = { [weak self] text in
+            self?.didChangedText?(text)
+        }
     }
     
-    func configureTextFieldLabel(with title: CustomTextfieldAttributes){
-        titleLabel.text = title.label
-        titleLabel.font = title.labelFont
-        numberField.tintColor = title.color
-        numberField.textColor = title.color
-        numberField.underlineColor = title.lineColor
+    func configureView(data: KaoTextFieldInputData){
+        textField.configure(data, nil)
+        infoLabel.text = data.titleLabel
+        if let icon = data.rightIcon {
+            infoIcon.image = UIImage.imageFromDesignIos(icon)
+        }
     }
 
     func textfieldBecomeResponder() {
-        numberField.becomeFirstResponder()
+        textField.becomeFirstResponder()
     }
     
     func setText(with text: CustomTextfieldAttributes) {
-        numberField.text = text.label
+        textField.textField.text = text.label
     }
 }
-
-extension NumberField : UITextFieldDelegate {
-    
-    public func textFieldDidBeginEditing(_ textField: UITextField) {
-        let mfTextFiled = (textField as? MFTextField)
-        mfTextFiled?.setError(nil, animated: true)
-        UIView.setAnimationsEnabled(false)
-    }
-    
-    @IBAction private func textFieldChanged(_ sender: UITextField) {
-        didChangedText?(sender.text)
-    }
-}
-
-
-
-
-

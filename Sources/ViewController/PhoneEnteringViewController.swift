@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import KaoDesign
 
 open class PhoneEnteringViewController: UIViewController {
     
@@ -26,7 +27,10 @@ open class PhoneEnteringViewController: UIViewController {
     private lazy var textFieldView: NumberField = {
         let view = NumberField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.didChangedText = phoneTextChanged
+        view.didChangedText = { [weak self] text in
+            self?.phoneTextChanged(text)
+        }
+
         return view
     }()
     
@@ -38,12 +42,7 @@ open class PhoneEnteringViewController: UIViewController {
     }()
     
     private var countryList: [CountryPhone] = []
-    private var selectedCountry: CountryPhone? {
-        didSet {
-            guard let safeCountry = selectedCountry else { return }
-            textFieldView.configureView(with: safeCountry)
-        }
-    }
+    private var selectedCountry: CountryPhone?
     private var phoneNumber: String = ""
     private var bottomConstraint: NSLayoutConstraint!
 
@@ -69,20 +68,16 @@ open class PhoneEnteringViewController: UIViewController {
                 ])
         }
         NSLayoutConstraint.activate([
-            headerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            headerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            headerView.topAnchor.constraint(equalTo: contentView.topAnchor)
-            ])
-        NSLayoutConstraint.activate([
             textFieldView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             textFieldView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            textFieldView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
-            textFieldView.heightAnchor.constraint(equalToConstant: 75)
+            textFieldView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            textFieldView.heightAnchor.constraint(equalToConstant: 140)
             ])
         bottomConstraint = bottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         NSLayoutConstraint.activate([
             bottomView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             bottomView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            bottomView.heightAnchor.constraint(equalToConstant: 65),
             bottomConstraint
             ])
     }
@@ -145,7 +140,7 @@ open class PhoneEnteringViewController: UIViewController {
         }
         
         if let customTextfieldAttr = phoneEnterDataSource?.textFieldAttribute(in: self) {
-            textFieldView.configureTextFieldLabel(with: customTextfieldAttr)
+            textFieldView.configureView(data: customTextfieldAttr)
         }
         
         if let textFieldValue = phoneEnterDataSource?.textFieldValue(in: self){
