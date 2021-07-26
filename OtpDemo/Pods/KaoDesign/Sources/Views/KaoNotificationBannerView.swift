@@ -23,7 +23,7 @@ public class KaoNotificationBannerView: UIView {
     @IBOutlet private weak var titleLeading: NSLayoutConstraint!
 
     private var contentView: UIView!
-    private var defaultSpaceHeight: CGFloat = 33
+    private var defaultSpaceHeight: CGFloat = 35
     private var defaultSpaceWidth: CGFloat = 55
     public var dismissTapped: (() -> Void)?
 

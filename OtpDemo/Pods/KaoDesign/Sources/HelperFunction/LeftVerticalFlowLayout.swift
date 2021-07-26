@@ -7,9 +7,9 @@
 
 import Foundation
 
-class LeftVerticalFlowLayout: UICollectionViewFlowLayout {
+public class LeftVerticalFlowLayout: UICollectionViewFlowLayout {
 
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let attributes = super.layoutAttributesForElements(in: rect)
         var leftMargin = sectionInset.left
         var maxY: CGFloat = -1.0

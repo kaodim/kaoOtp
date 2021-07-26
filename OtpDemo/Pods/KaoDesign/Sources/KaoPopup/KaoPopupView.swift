@@ -22,14 +22,19 @@ public class KaoPopupView: UIView {
 
     @IBOutlet private weak var cardView: UIView!
     @IBOutlet private weak var icon: UIImageView!
-    @IBOutlet private weak var message: UILabel!
+    @IBOutlet private var message: UITextView!
     @IBOutlet private weak var firstButton: KaoButton!
     @IBOutlet private weak var secondButton: KaoButton!
     @IBOutlet private weak var iconHeight: NSLayoutConstraint!
+    @IBOutlet weak var buttonStackView: UIStackView!
+    @IBOutlet weak var secondButtonConstraint: NSLayoutConstraint!
 
     private var contentView: UIView!
     public var firstButtonTapped: (() -> Void)?
     public var secondButtonTapped: (() -> Void)?
+
+    public var linkTapped: ((_ url: URL) -> Void)?
+
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,24 +61,31 @@ public class KaoPopupView: UIView {
         addSubview(contentView)
         cardView.addCornerRadius()
         message.textColor = .kaoColor(.greyishBrown)
+        message.delegate = self
+        message.linkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.kaoColor(.vividBlue)]
     }
 
-    public func configure(_ image: UIImage? = nil, messageText: NSAttributedString, firstKaoButton: KaoPopupAction? = nil, secondKaoButton: KaoPopupAction? = nil) {
+
+    public func configure(_ image: UIImage? = nil, messageText: NSAttributedString, firstKaoButton: KaoPopupAction? = nil, secondKaoButton: KaoPopupAction? = nil, imageHeight: CGFloat? = nil) {
         message.attributedText = messageText
-        configureIcon(image)
+        configureIcon(image, imageHeight: imageHeight)
         configureButton(kaoPopupButton: firstKaoButton, button: self.firstButton)
         configureButton(kaoPopupButton: secondKaoButton, button: self.secondButton)
-        message.addLineSpacing(3)
     }
 
-    private func configureIcon(_ image: UIImage?) {
+    private func configureIcon(_ image: UIImage?, imageHeight: CGFloat? = nil) {
         guard let image = image else { return }
         icon.isHidden = false
         icon.image = image
-        if image.size.width > icon.bounds.width {
-            iconHeight.constant = image.size.height * (icon.bounds.width / image.size.width)
+
+        if let height = imageHeight {
+            iconHeight.constant = height
         } else {
-            iconHeight.constant = 150
+            if image.size.width > icon.bounds.width {
+                iconHeight.constant = image.size.height * (icon.bounds.width / image.size.width)
+            } else {
+                iconHeight.constant = 150
+            }
         }
     }
 
@@ -88,11 +100,24 @@ public class KaoPopupView: UIView {
         button.reloadInputViews()
     }
 
+    public func configureOrientation(axis: NSLayoutConstraint.Axis) {
+        buttonStackView.axis = axis
+        buttonStackView.addArrangedSubview(self.buttonStackView.subviews[0])
+        secondButtonConstraint.isActive = false
+    }
+
     @IBAction private func firstButtonTap() {
         firstButtonTapped?()
     }
 
     @IBAction private func secondButtonTap() {
         secondButtonTapped?()
+    }
+}
+
+extension KaoPopupView: UITextViewDelegate {
+    public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
+        self.linkTapped?(URL)
+        return false
     }
 }

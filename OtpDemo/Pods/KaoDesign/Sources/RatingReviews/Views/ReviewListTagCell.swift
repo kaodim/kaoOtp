@@ -19,14 +19,16 @@ class ReviewListTagCell: UICollectionViewCell, CollectionCellAutoLayout {
     override func awakeFromNib() {
         super.awakeFromNib()
         icon.makeRoundCorner()
-        icon.addBorderLine(width: 2, color: .white)
-        tagView.addCornerRadius(8)
+        tagView.addCornerRadius(18)
+		tagView.addBorderLine(width: 1.0, color: UIColor.kaoColor(.veryLightPink))
         tagLabel.font = UIFont.kaoFont(style: .regular, size: 13)
         cardViewMaxWidth.constant = UIScreen.main.bounds.width - 104 //16+56+16+16
     }
 
     func configure(_ iconUrl: String, text: String) {
-        icon.cache(withURL: iconUrl)
+		let placeholder = UIImage.imageFromDesignIos("request-default")
+		icon.cache(withURL: iconUrl, placeholder: placeholder)
+
         tagLabel.text = text
 
         self.contentView.setNeedsLayout()

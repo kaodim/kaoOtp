@@ -7,20 +7,23 @@
 
 import Foundation
 
-class ReviewListItems: TableViewVMProtocol {
+public class ReviewListItems: TableViewVMProtocol {
 
-    var rowCount: Int {
+    public var rowCount: Int {
         return reviews.count
     }
 
+    private var showedReview: [Int] = []
     private var reviews: [Review]
     private var totalReview: Int
     private var localization: RatingReviewLocalization
+    public var selectedRating: RatingSorting?
 
     var replyTapped: ReviewListCellCallback
     var editTapped: ReviewListCellCallback
+    public var reloadRow: (() -> Void)?
 
-    init(_ reviews: [Review], totalReview: Int, localization: RatingReviewLocalization, replyTapped: ReviewListCellCallback, editTapped: ReviewListCellCallback) {
+    public init(_ reviews: [Review], totalReview: Int, localization: RatingReviewLocalization, replyTapped: ReviewListCellCallback, editTapped: ReviewListCellCallback) {
         self.reviews = reviews
         self.totalReview = totalReview
         self.localization = localization
@@ -28,28 +31,29 @@ class ReviewListItems: TableViewVMProtocol {
         self.editTapped = editTapped
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let review = self.reviews[indexPath.row]
         let cell: ReviewListCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-        cell.configure(review, localization: localization)
+        cell.configure(review, localization: localization, uniqueID: review.id ?? indexPath.row)
         cell.replyTapped = { (replyText) in
             self.replyTapped?(replyText, indexPath)
         }
         cell.editTapped = { (replyText) in
             self.editTapped?(replyText, indexPath)
         }
+        cell.reloadRow = { id in
+            self.showedReview.append(id)
+            self.reloadRow?()
+        }
+
+        let reviewShown = showedReview.contains(review.id ?? 0)
+        cell.configureShowCompliment(reviewShown)
+        cell.hideComplimentButton(reviewShown)
+
+        if review.rating ?? 0 < 5 || review.reviewTags.count == 0 {
+            cell.hideComplimentButton(true)
+        }
+
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = ReviewListHeaderView()
-        let title = localization.translate(.reviews).capitalized
-        let desc = "• \(totalReview.description) \(localization.translate(.reviews))"
-        view.configure(title, desc: desc)
-        return view
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return UITableViewAutomaticDimension
     }
 }

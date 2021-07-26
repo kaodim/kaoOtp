@@ -13,7 +13,7 @@ public class KaoSettingPermissionViewController: KaoPresenterViewController {
         let view = KaoPopupView()
         let settingButton = KaoPopupAction(title: buttonText, style: .primary)
         let cancelButton = KaoPopupAction(title: cancelText, style: .dismiss)
-        view.configure(UIImage.imageFromDesignIos("img_gotosettings"), messageText: messageText, firstKaoButton: cancelButton, secondKaoButton: settingButton)
+        view.configure(UIImage.imageFromDesignIos("phone_permissions"), messageText: messageText, firstKaoButton: cancelButton, secondKaoButton: settingButton)
         view.firstButtonTapped = { self.dismissAnimation() }
         view.secondButtonTapped = openSettingsScreen
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +47,7 @@ public class KaoSettingPermissionViewController: KaoPresenterViewController {
     }
 
     private func openSettingsScreen() {
-        if let url = URL(string: UIApplicationOpenSettingsURLString) {
+        if let url = URL(string: UIApplication.openSettingsURLString) {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             } else {

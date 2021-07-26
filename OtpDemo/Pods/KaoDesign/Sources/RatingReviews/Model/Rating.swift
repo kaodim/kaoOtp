@@ -35,3 +35,12 @@ public extension Rating {
         return arrayDictionary.compactMap({ Rating(json: $0) })
     }
 }
+
+public enum RatingSorting: Int, CaseIterable {
+    case none
+    case five = 5
+    case four = 4
+    case three = 3
+    case two = 2
+    case one = 1
+}

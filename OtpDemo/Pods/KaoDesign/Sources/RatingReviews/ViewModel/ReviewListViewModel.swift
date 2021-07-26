@@ -16,15 +16,32 @@ open class ReviewListViewModel: TablePaginationViewModel {
     public var editTapped: ReviewListCellCallback = nil
     public var configureHeaderLayout: ((_ rating: Rating) -> Void)?
     public var localization: RatingReviewLocalization = RatingReviewLocalization()
+    public var reloadRow: (() -> Void)?
 
     private var reviewList: [Review] = [] {
         didSet {
-            replaceList(reviewList)
+            let isFirstTime = oldValue.isEmpty
+            replaceList(reviewList, isFirstTime: isFirstTime)
         }
     }
     private var rating: Rating! {
         didSet {
+            totalReviewCount = rating.reviewCount
             configureHeaderLayout?(rating)
+        }
+    }
+    
+    public var totalReviewCount: Int? {
+        didSet {
+            if let value = oldValue {
+                totalReviewCount = value
+            }
+        }
+    }
+    
+    public var selectedSorting: RatingSorting = .none {
+        didSet {
+            load(page: 1)
         }
     }
 
@@ -40,10 +57,20 @@ open class ReviewListViewModel: TablePaginationViewModel {
         configurePagination(reviewListResult.0, object: reviewListResult.1)
     }
 
-    func replaceList(_ reviewList: [Review]) {
+    open func replaceList(_ reviewList: [Review], isFirstTime: Bool) {
         self.items = []
-        let item = ReviewListItems(reviewList, totalReview: self.rating.reviewCount, localization: localization, replyTapped: replyTapped, editTapped: editTapped)
+        let item = ReviewListItems(reviewList, totalReview: self.meta?.totalCount ?? 0, localization: localization, replyTapped: replyTapped, editTapped: editTapped)
+        item.selectedRating = selectedSorting
+        item.reloadRow = reloadRow
         self.items.append(item)
+
+        if isFirstTime {
+            // reload table twice for collection content view issue
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+                self.dataConfigured?()
+            }
+        }
+
         self.dataConfigured?()
     }
 

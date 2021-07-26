@@ -18,6 +18,8 @@ open class KaoUploadAttachmentCell: UICollectionViewCell {
     @IBOutlet private weak var retryView: UIView!
     @IBOutlet private weak var failUploadLabel: KaoLabel!
     @IBOutlet private weak var retryLabel: KaoLabel!
+    @IBOutlet private weak var errorLabel: UILabel!
+    @IBOutlet private weak var errorLabelHeight: NSLayoutConstraint!
 
     public var removeDidTap: (() -> Void)?
     public var retryUploading: ((_ tempAttachment: KaoTempAttachment) -> Void)?
@@ -37,10 +39,9 @@ open class KaoUploadAttachmentCell: UICollectionViewCell {
         retryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(retryUpload)))
         retryView.isHidden = true
         borderView.addCornerRadius()
-        borderView.addBorderLine(width: 1, color: UIColor.kaoColor(.silver))
 
         pdfIcon.image = UIImage.imageFromDesignIos("icon_file")
-        removeButton.setImage(UIImage.imageFromDesignIos("ic_close_light"), for: .normal)
+        removeButton.setImage(UIImage.imageFromDesignIos("ic_imgattch_delete"), for: .normal)
     }
 
     override open func prepareForReuse() {
@@ -73,6 +74,39 @@ open class KaoUploadAttachmentCell: UICollectionViewCell {
         configureAttachmentUI()
     }
 
+    // MARK: - Public method
+    func hideViews(_ removeButton: Bool, _ progressBar: Bool) {
+        self.removeButton.isHidden = removeButton
+        self.progressView.isHidden = progressBar
+    }
+
+    public func hideRemoveButton(_ isHidden: Bool) {
+        self.removeButton.isHidden = isHidden
+    }
+
+    public func configureError(_ text: String? = nil) {
+        if let errorText = text {
+            progressView.isHidden = true
+            errorLabel.isHidden = false
+            borderView.addBorderLine(width: 1.0, color: UIColor.kaoColor(.errorRed))
+            errorLabel.text = errorText
+            errorLabelHeight.constant = 30
+        } else {
+            clearError()
+        }
+    }
+
+    public func clearError() {
+        borderView.addBorderLine(width: 1, color: UIColor.kaoColor(.silver))
+        errorLabel.isHidden = true
+        errorLabel.text = nil
+        errorLabelHeight.constant = 0
+    }
+
+    public func clearBorderColor() {
+        borderView.addBorderLine(width: 1, color: .clear)
+    }
+
     private func configureAttachmentUI() {
         if let image = tempAttachment?.content as? UIImage {
             updateImageAttachment(image)
@@ -89,13 +123,14 @@ open class KaoUploadAttachmentCell: UICollectionViewCell {
 
     private func updateImageAttachment(_ image: UIImage? = nil) {
         let imageExist = image != nil
+        progressView.isHidden = imageExist
         attachmentIcon.image = image
         attachmentIcon.isHidden = !imageExist
         filename.isHidden = imageExist
         pdfIcon.isHidden = imageExist
     }
 
-    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "progress" {
             updateProgress()
         } else if keyPath == "progresState" {

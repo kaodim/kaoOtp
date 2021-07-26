@@ -15,7 +15,7 @@ open class KaoBaseViewController: UIViewController, KaoNetworkProtocol {
     public var hideTabbar: Bool = true
 
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         initialConfiguration()
     }
 
@@ -24,7 +24,7 @@ open class KaoBaseViewController: UIViewController, KaoNetworkProtocol {
         initialConfiguration()
     }
 
-    private func initialConfiguration() {
+    open func initialConfiguration() {
         hidesBottomBarWhenPushed = hideTabbar
         navigationItem.backBarButtonItem = UIBarButtonItem.clearBackButton()
         navigationController?.navigationBar.kaodimStyle()
@@ -33,23 +33,33 @@ open class KaoBaseViewController: UIViewController, KaoNetworkProtocol {
     // MARK: - View cycle
     override open func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .groupTableViewBackground
+        view.backgroundColor = .kaoColor(.veryLightPink)
     }
 
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if needListenToKeyboard {
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         }
     }
 
     override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if needListenToKeyboard {
-            NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-            NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         }
+    }
+
+    // MARK: - rightBar button action default function
+    @objc open func rightBarTapped() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    // MARK: - leftBar button action default function
+    @objc open func leftBarTapped(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
     }
 
     // MARK: - Keyboard listener
@@ -73,5 +83,11 @@ open class KaoBaseViewController: UIViewController, KaoNetworkProtocol {
             errorView.leadingAnchor.constraint(equalTo: safeLeadingAnchor),
             errorView.trailingAnchor.constraint(equalTo: safeTrailingAnchor)
             ])
+    }
+
+    // MARK: - Override Present for xcode11
+    override open func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Swift.Void)? = nil) {
+        viewControllerToPresent.modalPresentationStyle = .overFullScreen
+        super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
 }

@@ -19,6 +19,14 @@ public extension DateFormatter {
 
 public extension Date {
 
+    init(milliseconds: Int64) {
+        self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
+    }
+
+    var millisecondsSince1970: Int64 {
+        return Int64((self.timeIntervalSince1970 * 1000.0).rounded())
+    }
+
     func toLongString() -> String {
         let dateFormatter = DateFormatter.kaoDefault()
         dateFormatter.dateStyle = .long
@@ -57,7 +65,7 @@ public extension Date {
         return dateFormatter.string(from: self)
     }
 
-    func isGreaterThanDate(_ dateToCompare : Date) -> Bool {
+    func isGreaterThanDate(_ dateToCompare: Date) -> Bool {
         var isGreater = false
         if self.compare(dateToCompare) == ComparisonResult.orderedDescending {
             isGreater = true
@@ -65,7 +73,7 @@ public extension Date {
         return isGreater
     }
 
-    func isLessThanDate(_ dateToCompare : Date) -> Bool {
+    func isLessThanDate(_ dateToCompare: Date) -> Bool {
         var isLess = false
         if self.compare(dateToCompare) == ComparisonResult.orderedAscending {
             isLess = true
@@ -73,7 +81,7 @@ public extension Date {
         return isLess
     }
 
-    func isEqualToSelectedDate(_ dateToCompare : Date) -> Bool {
+    func isEqualToSelectedDate(_ dateToCompare: Date) -> Bool {
         var isEqualTo = false
         if self.compare(dateToCompare) == ComparisonResult.orderedSame {
             isEqualTo = true
@@ -81,29 +89,29 @@ public extension Date {
         return isEqualTo
     }
 
-    func addDays(_ daysToAdd : Int) -> Date {
-        let secondsInDays : TimeInterval = Double(daysToAdd) * 60 * 60 * 24
-        let dateWithDaysAdded : Date = self.addingTimeInterval(secondsInDays)
+    func addDays(_ daysToAdd: Int) -> Date {
+        let secondsInDays: TimeInterval = Double(daysToAdd) * 60 * 60 * 24
+        let dateWithDaysAdded: Date = self.addingTimeInterval(secondsInDays)
         return dateWithDaysAdded
     }
 
-    func addHours(_ hoursToAdd : Int) -> Date {
-        let secondsInHours : TimeInterval = Double(hoursToAdd) * 60 * 60
-        let dateWithHoursAdded : Date = self.addingTimeInterval(secondsInHours)
+    func addHours(_ hoursToAdd: Int) -> Date {
+        let secondsInHours: TimeInterval = Double(hoursToAdd) * 60 * 60
+        let dateWithHoursAdded: Date = self.addingTimeInterval(secondsInHours)
         return dateWithHoursAdded
     }
 
-    func roundUpMin(_ roundValue : Float) -> Date {
-        var component = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: self)
+    func roundUpMin(_ roundValue: Float) -> Date {
+        var component = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: self)
         let roundMin = ceil(Float(component.minute ?? 0) / roundValue) * roundValue
         component.minute = Int(roundMin)
         return Calendar.current.date(from: component) ?? self
     }
 
-    func getTime() -> String {
-        let dateFromat = DateFormatter.kaoDefault()
-        dateFromat.dateFormat = "h:mm a"
-        return dateFromat.string(from: self)
+    func getTime(_ format: String = "HHmm") -> String {
+        let dateFormatter = DateFormatter.kaoDefault()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
     }
 
     func getDay() -> String {
@@ -111,6 +119,15 @@ public extension Date {
         dateFromat.dateFormat = "EE"
         return dateFromat.string(from: self)
     }
+
+    /// Returns the amount of days from another date
+    func days(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.day], from: date, to: self).day ?? 0
+    }
+
+	func getLast(from days: Int) -> Date {
+		return (Calendar.current.date(byAdding: .day, value: days, to: self) ?? Date())
+	}
 
     func pickerDateFormat(showTime: Bool) -> String {
         return "\(getDay()), \(toString("dd MMM yyyy")) \(showTime ? "- \(getTime().removeAllWhiteSpace())" : "")"
@@ -130,23 +147,99 @@ public extension Date {
         }
     }
 
-    func messageDateFormat() -> String {
-        var output: String = "\(toMediumString()), \(getTime())"
-        let calendar = Calendar.current
+    func messageDateFormat(withYear: Bool = true) -> String {
+        var output: String = ""
 
-        if calendar.isDateInToday(self) {
-            output = "Today, \(getTime())"
-        } else if calendar.isDateInYesterday(self) {
-            output = "Yesterday, \(getTime())"
+        let dayDifference = daysBetweenDates(startDate: self, endDate: Date())
+        switch dayDifference {
+        case 0:
+            output = "\(getTime("hh:mm a"))"
+        case 1:
+            output = "\(NSLocalizedString("yesterday_title", comment: "")), \(getTime("hh:mm a"))"
+        case 2...6:
+            output = "\(getWeekDay()), \(getTime("hh:mm a"))"
+        default:
+            output = "\(withYear ? toMediumString() : getTime("dd MMM")), \(getTime("hh:mm a"))"
         }
+
         return output
     }
 
-    func resetTimeTo(hour:Int = 0, min:Int = 0, sec:Int = 0) -> Date {
-        var component = NSCalendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: self)
+      func messageMinimalDateFormat(withYear: Bool = true) -> String {
+
+            var output: String = ""
+
+            let dayDifference = daysBetweenDates(startDate: self, endDate: Date())
+            switch dayDifference {
+            case 0:
+                output = "\(getTime("hh:mm a"))"
+            case 1:
+                output = NSLocalizedString("yesterday_title", comment: "")
+            case 2...6:
+                output = "\(getWeekDay())"
+            default:
+                 output = "\(withYear ? toMediumString() : getTime("dd MMM"))"
+            }
+
+            return output
+        }
+
+    func getWeekDay()-> String{
+          let dateFormatter = DateFormatter()
+          dateFormatter.dateFormat = "EEEE"
+          let weekDay = dateFormatter.string(from: self)
+          return weekDay
+    }
+
+    func daysBetweenDates(startDate: Date, endDate: Date) -> Int {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
+        return components.day!
+    }
+
+    func monthsBetweenDates( endDate: Date) -> Int? {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([Calendar.Component.month], from: self, to: endDate)
+        return components.month
+    }
+
+    func resetTimeTo(hour: Int = 0, min: Int = 0, sec: Int = 0) -> Date {
+        var component = NSCalendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: self)
         component.hour = hour
         component.minute = min
         component.second = sec
         return NSCalendar.current.date(from: component) ?? self
+    }
+}
+
+public enum Days: String {
+    case Mon
+    case Tue
+    case Wed
+    case Thu
+    case Fri
+    case Sat
+    case Sun
+}
+
+extension Days {
+    func getEmptyDays() -> Int {
+        switch self {
+
+        case .Mon:
+            return 0
+        case .Tue:
+            return 1
+        case .Wed:
+            return 2
+        case .Thu:
+            return 3
+        case .Fri:
+            return 4
+        case .Sat:
+            return 5
+        case .Sun:
+            return 6
+        }
     }
 }

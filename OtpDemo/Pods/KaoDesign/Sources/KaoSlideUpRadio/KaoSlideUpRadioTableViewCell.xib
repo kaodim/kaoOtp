@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="KaoSlideUpRadioTableViewCell" customModule="KaoDesign">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T54-MH-aNt">
+                        <rect key="frame" x="16" y="50.5" width="304" height="1"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="1xh-cu-XbP"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O68-hM-jPD">
+                        <rect key="frame" x="58" y="15.5" width="262" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpj-f1-T6s">
+                        <rect key="frame" x="16" y="13.5" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="ZmO-Tu-Z6R"/>
+                            <constraint firstAttribute="height" constant="24" id="atW-jB-gBn"/>
+                        </constraints>
+                        <state key="normal" image="slice_radio_off"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="O68-hM-jPD" secondAttribute="trailing" id="03o-3c-Qzc"/>
+                    <constraint firstItem="T54-MH-aNt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1Ad-7B-bMx"/>
+                    <constraint firstAttribute="bottom" secondItem="T54-MH-aNt" secondAttribute="bottom" id="4AT-O6-f1H"/>
+                    <constraint firstItem="O68-hM-jPD" firstAttribute="centerY" secondItem="Dpj-f1-T6s" secondAttribute="centerY" id="IKm-2d-CwG"/>
+                    <constraint firstItem="O68-hM-jPD" firstAttribute="leading" secondItem="Dpj-f1-T6s" secondAttribute="trailing" constant="18" id="Ptu-YD-4yE"/>
+                    <constraint firstAttribute="trailing" secondItem="T54-MH-aNt" secondAttribute="trailing" id="XmO-PL-TSv"/>
+                    <constraint firstItem="Dpj-f1-T6s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="fyE-Sc-lEu"/>
+                    <constraint firstItem="T54-MH-aNt" firstAttribute="top" secondItem="Dpj-f1-T6s" secondAttribute="bottom" constant="13" id="mYd-0d-P1M"/>
+                    <constraint firstItem="Dpj-f1-T6s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ytI-da-1wn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="iconButton" destination="Dpj-f1-T6s" id="DYq-3u-mOA"/>
+                <outlet property="titleLabel" destination="O68-hM-jPD" id="qlf-x1-4I5"/>
+            </connections>
+            <point key="canvasLocation" x="37.681159420289859" y="34.821428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="slice_radio_off" width="24" height="24"/>
+    </resources>
+</document>

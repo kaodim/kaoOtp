@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -73,14 +71,12 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avh-hu-vKh" customClass="KaoButton" customModule="KaoDesign">
                                             <rect key="frame" x="0.0" y="0.0" width="141" height="45"/>
-                                            <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="cancelTap" destination="-1" eventType="touchUpInside" id="hQn-cA-5m4"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhV-Kl-wg5" customClass="KaoButton" customModule="KaoDesign">
                                             <rect key="frame" x="155" y="0.0" width="235" height="45"/>
-                                            <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="sendTap" destination="-1" eventType="touchUpInside" id="hT6-gQ-Vfy"/>
                                             </connections>
@@ -127,4 +123,14 @@
             <point key="canvasLocation" x="133.33333333333334" y="172.76785714285714"/>
         </view>
     </objects>
+    <designables>
+        <designable name="Avh-hu-vKh">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="H0j-UN-VV8"/>
+        <designable name="LhV-Kl-wg5">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="ObS-8q-07e"/>
+    </designables>
 </document>

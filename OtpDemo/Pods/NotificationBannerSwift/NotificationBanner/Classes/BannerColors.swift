@@ -1,7 +1,7 @@
 /*
  
  The MIT License (MIT)
- Copyright (c) 2017 Dalton Hinterscher
+ Copyright (c) 2017-2018 Dalton Hinterscher
  
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
  to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -18,6 +18,7 @@
 
 import UIKit
 
+@objc
 public protocol BannerColorsProtocol {
     func color(for style: BannerStyle) -> UIColor
 }
@@ -28,7 +29,7 @@ public class BannerColors: BannerColorsProtocol {
         switch style {
             case .danger:   return UIColor(red:0.90, green:0.31, blue:0.26, alpha:1.00)
             case .info:     return UIColor(red:0.23, green:0.60, blue:0.85, alpha:1.00)
-            case .none:     return UIColor.clear
+            case .customView:     return UIColor.clear
             case .success:  return UIColor(red:0.22, green:0.80, blue:0.46, alpha:1.00)
             case .warning:  return UIColor(red:1.00, green:0.66, blue:0.16, alpha:1.00)
         }

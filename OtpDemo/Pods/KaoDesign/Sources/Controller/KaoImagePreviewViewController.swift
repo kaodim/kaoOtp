@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Kingfisher
+import UIKit
 
 final class KaoImagePreviewViewController: UIViewController, UIScrollViewDelegate {
 
@@ -27,9 +29,18 @@ final class KaoImagePreviewViewController: UIViewController, UIScrollViewDelegat
         return view
     }()
 
+    private lazy var buttonClose: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage.imageFromDesignIos("ic_close_light"), for: .normal)
+        button.addTarget(self, action: #selector(actionClose), for: .touchUpInside)
+        button.backgroundColor = UIColor.clear
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
     private lazy var loadingIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
-        view.activityIndicatorViewStyle = .whiteLarge
+        view.style = .whiteLarge
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -51,9 +62,15 @@ final class KaoImagePreviewViewController: UIViewController, UIScrollViewDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         configureLayout()
         setupImageView()
-        photoImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapGestureHandler)))
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(imageTapGestureHandler))
+        doubleTap.numberOfTapsRequired = 2
+        photoImageView.addGestureRecognizer(doubleTap)
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeGestureHandler))
+        swipe.direction = .down
+        photoImageView.addGestureRecognizer(swipe)
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,9 +78,18 @@ final class KaoImagePreviewViewController: UIViewController, UIScrollViewDelegat
     }
 
     private func configureLayout() {
+
+        view.addSubview(buttonClose)
+            NSLayoutConstraint.activate([
+                buttonClose.topAnchor.constraint(equalTo: safeTopAnchor),
+                buttonClose.trailingAnchor.constraint(equalTo: safeTrailingAnchor,constant: -16),
+                buttonClose.widthAnchor.constraint(equalToConstant: 24),
+                buttonClose.heightAnchor.constraint(equalToConstant: 24)
+            ])
+
         view.addSubview(scrollView)
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: safeTopAnchor),
+            scrollView.topAnchor.constraint(equalTo: buttonClose.bottomAnchor),
             scrollView.bottomAnchor.constraint(equalTo: safeBottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: safeLeadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: safeTrailingAnchor)
@@ -89,12 +115,22 @@ final class KaoImagePreviewViewController: UIViewController, UIScrollViewDelegat
 
     }
 
+    @objc private func actionClose(){
+        self.dismiss(animated: true, completion: nil)
+    }
+
     @objc private func imageTapGestureHandler() {
         if scrollView.zoomScale == 1.0 {
-            dismiss(animated: true, completion: nil)
+            scrollView.zoomScale = 2.0
         } else {
             scrollView.zoomScale = 1.0
         }
+    }
+
+    @objc private func swipeGestureHandler() {
+        // Avoid dismissal on zooming mode
+        guard (scrollView.zoomScale <= 1.0) else { return }
+        dismiss(animated: true, completion: nil)
     }
 
     private func setupImageView() {
@@ -102,8 +138,14 @@ final class KaoImagePreviewViewController: UIViewController, UIScrollViewDelegat
             loadingIndicator.stopAnimating()
             photoImageView.image = image
         } else if let url = url {
-            photoImageView.cache(withURL: url, placeholder: UIImage(), completion: { (_, _, _, _) in
-                self.loadingIndicator.stopAnimating()
+            
+            photoImageView.cache(withURL: url, placeholder: UIImage(), completion: { [weak self] (_, _, _, imageUrl) in
+                if(imageUrl == nil){
+                    let url = URL(string: url)
+                    self?.photoImageView.kf.indicatorType = .activity
+                    self?.photoImageView.kf.setImage(with: url)
+                }
+                self?.loadingIndicator.stopAnimating()
             })
         } else if let data = data, let image = UIImage.init(data: data) {
             loadingIndicator.stopAnimating()

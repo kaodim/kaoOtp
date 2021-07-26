@@ -7,9 +7,30 @@
 
 import Foundation
 
+ @objc public protocol BaseViewModelEvent: class {
+    @objc func dataConfigured()
+    @objc func dataSourceFail(with errMsg: String)
+}
+
+public protocol PaginationBaseViewModelEvent: BaseViewModelEvent {
+    func setPagination(_ meta: KaoPagination?, object: Any)
+}
+
+open class BaseViewModel: NSObject {
+    public weak var eventDelegate: BaseViewModelEvent?
+    public weak var viewModelDelegate:BaseViewModelEvent?
+}
+
+// MARK: - BELOW TO BE DEPRECATED
+public protocol BaseVMEventDelegate: class {
+    func itemsConfigured()
+}
+
 open class TableViewModel: NSObject, UITableViewDataSource, UITableViewDelegate {
     public var items: [TableViewVMProtocol] = []
     public var dataConfigured: (() -> Void)?
+    public weak var eventDelegate: BaseVMEventDelegate?
+    public weak var viewModelDelegate:BaseViewModelEvent?
 
     // MARK: - Notification Handle
     open func dropError(_ message: String) {
@@ -32,7 +53,9 @@ open class TableViewModel: NSObject, UITableViewDataSource, UITableViewDelegate 
 
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.section]
-        return item.tableView(tableView, cellForRowAt: indexPath)
+        let cell = item.tableView(tableView, cellForRowAt: indexPath)
+        cell.layoutIfNeeded()
+        return cell
     }
 
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

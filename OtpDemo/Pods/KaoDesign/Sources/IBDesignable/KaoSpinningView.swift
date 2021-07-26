@@ -26,6 +26,13 @@ open class KaoSpinningView: UIView {
         }
     }
 
+    @IBInspectable open var strokeColor: CGColor = UIColor.clear.cgColor {
+        didSet {
+            maskLayer.strokeColor = strokeColor
+            setNeedsLayout()
+        }
+    }
+
     /// Set animation to enable/disable animation
     @IBInspectable open var animating: Bool = true {
         didSet {
@@ -38,7 +45,7 @@ open class KaoSpinningView: UIView {
         animation.fromValue = 0
         animation.toValue = 1
         animation.duration = 2
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
 
         let group = CAAnimationGroup()
         group.duration = 2.5
@@ -54,7 +61,7 @@ open class KaoSpinningView: UIView {
         animation.fromValue = 0
         animation.toValue = 1
         animation.duration = 2
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
 
         let group = CAAnimationGroup()
         group.duration = 2.5
@@ -110,7 +117,7 @@ open class KaoSpinningView: UIView {
 
         maskLayer.lineWidth = lineWidth
         maskLayer.fillColor = nil
-        maskLayer.strokeColor = tintColor.withAlphaComponent(0.2).cgColor
+        maskLayer.strokeColor = strokeColor
         layer.addSublayer(maskLayer)
         layer.addSublayer(circleLayer)
         tintColorDidChange()
@@ -133,10 +140,10 @@ open class KaoSpinningView: UIView {
         super.layoutSubviews()
 
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
-        let radius = min(bounds.width, bounds.height) / 2 - circleLayer.lineWidth/2
+        let radius = min(bounds.width, bounds.height) / 2 - circleLayer.lineWidth / 2
 
         let startAngle = -(Double.pi / 2)
-        let endAngle =  startAngle + Double.pi * 2
+        let endAngle = startAngle + Double.pi * 2
 
         let path = UIBezierPath(arcCenter: CGPoint.zero, radius: radius, startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: true)
 
@@ -157,7 +164,7 @@ extension KaoSpinningView {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.fromValue = 0
         animation.toValue = 1
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         animation.duration = duration
         animatedLayer.strokeEnd = 1
         animatedLayer.add(animation, forKey: "animateCheckmark")
@@ -172,7 +179,7 @@ extension KaoSpinningView {
         let scale = frame.width / 100
         let centerX = frame.size.width / 2
         let centerY = frame.size.height / 2
-        let checkmarkPath = UIBezierPath(arcCenter: CGPoint(x: centerX, y: centerY), radius: centerX, startAngle:  0, endAngle: 0, clockwise: true)
+        let checkmarkPath = UIBezierPath(arcCenter: CGPoint(x: centerX, y: centerY), radius: centerX, startAngle: 0, endAngle: 0, clockwise: true)
         checkmarkPath.move(to: CGPoint(x: centerX - 18 * scale, y: centerY - 1 * scale))
         checkmarkPath.addLine(to: CGPoint(x: centerX - 6 * scale, y: centerY + 15.9 * scale))
         checkmarkPath.addLine(to: CGPoint(x: centerX + 22.8 * scale, y: centerY - 23.4 * scale))
@@ -182,8 +189,8 @@ extension KaoSpinningView {
         checkmarkLayer.path = checkmarkPath.cgPath
         checkmarkLayer.strokeEnd = strokeEnd
         checkmarkLayer.strokeColor = strokeColor.cgColor
-        checkmarkLayer.lineCap = kCALineCapRound
-        checkmarkLayer.lineJoin = kCALineJoinRound
+        checkmarkLayer.lineCap = CAShapeLayerLineCap.round
+        checkmarkLayer.lineJoin = CAShapeLayerLineJoin.round
         return checkmarkLayer
     }
 
@@ -223,10 +230,10 @@ extension KaoSpinningView {
             UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseOut, animations: {
                 self.alpha = 0
             }, completion: { _ in
-                self.alpha = 1
-                self.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
-                completion?()
-            })
+                    self.alpha = 1
+                    self.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
+                    completion?()
+                })
         })
     }
 

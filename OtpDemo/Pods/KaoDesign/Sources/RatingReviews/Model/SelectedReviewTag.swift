@@ -7,10 +7,16 @@
 
 import Foundation
 
-public struct SelectedReviewTag {
+public struct SelectedReviewTag: Decodable {
     public let id: String
     public let name: String
-    public var iconUrl: String
+    public var iconUrl: String?
+
+	enum CodingKeys: String, CodingKey {
+		case id
+		case name
+		case iconUrl = "icon_url"
+	}
 }
 
 public extension SelectedReviewTag {

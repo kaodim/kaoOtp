@@ -7,25 +7,47 @@
 
 import Foundation
 
-public struct Review {
+public struct Review: BasicReview {
     public let id: Int?
-    public let description: String
-    public let createdAt: String
-    public let createdAtStr: String
-    public var rating: Int?
-    public var comment: String
+    public var description: String?
+    public let createdAt: String?
+	public var createdAtStr: String
+	public var rating: Int?
+	public var comment: String
     public let serviceMatchId: Int?
-    public let name: String
-    public let avatarUrl: String
-    public let businessName: String
-    public let serviceTypeName: String
-    public let serviceAreaName: String
-    public let reviewTags: [SelectedReviewTag]
-    public let canReply: Bool?
+	public var name: String
+    public var avatarUrl: String?
+    public var businessName: String?
+    public let serviceTypeName: String?
+    public let serviceAreaName: String?
+	public var reviewTags: [SelectedReviewTag]
+    public var canReply: Bool?
     public var reply: ReplyReview?
 }
 
 public extension Review {
+
+	public enum CodingKeys: String, CodingKey {
+		case id
+		case description
+		case createdAt = "created_at"
+		case createdAtStr = "created_at_string"
+		case rating
+		case comment
+		case serviceMatchId = "service_match_id"
+		case name
+		case avatarUrl = "avatar_url"
+		case businessName = "business_profile_name"
+		case serviceTypeName = "service_type_name"
+		case serviceAreaName = "service_area_name"
+		case reviewTags = "review_tags"
+		case canReply = "can_reply"
+		case reply
+	}
+}
+
+public extension Review {
+
     init?(json: [String: Any]) {
         guard
             let id = json["id"] as? Int,
@@ -61,14 +83,14 @@ public extension Review {
 }
 
 public extension Review {
-    static func initList(json: Any?) -> [Review]? {
+	static func initList(json: Any?) -> [Review]? {
         guard let arrayDictionary = json as? [[String: Any]] else { return nil }
         return arrayDictionary.compactMap({ Review(json: $0) })
     }
 }
 
 public extension Review {
-    static func initEmpty() -> Review {
-        return Review(id: nil, description: "", createdAt: "", createdAtStr: "", rating: nil, comment: "", serviceMatchId: nil, name: "", avatarUrl: "", businessName: "", serviceTypeName: "", serviceAreaName: "", reviewTags: [], canReply: nil, reply: nil)
+	static func initEmpty() -> Review {
+		return Review(id: nil, description: "", createdAt: "", createdAtStr: "", rating: nil, comment: "", serviceMatchId: nil, name: "", avatarUrl: "", businessName: nil, serviceTypeName: "", serviceAreaName: "", reviewTags: [], canReply: nil, reply: nil)
     }
 }

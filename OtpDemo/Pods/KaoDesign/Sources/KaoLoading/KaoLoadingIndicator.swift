@@ -15,8 +15,10 @@ public class KaoLoading {
     private var timer: Timer?
 
     public func show() {
-        stopCountDown()
-        startCountDown()
+        DispatchQueue.main.async { [weak self] in
+            self?.stopCountDownImmediately()
+            self?.startCountDown()
+        }
     }
 
     public func hide() {
@@ -25,6 +27,13 @@ public class KaoLoading {
 
     private func stopCountDown() {
         stopLoading()
+        if let timer = timer {
+            timer.invalidate()
+        }
+    }
+
+    private func stopCountDownImmediately() {
+        SVProgressHUD.dismiss()
         if let timer = timer {
             timer.invalidate()
         }

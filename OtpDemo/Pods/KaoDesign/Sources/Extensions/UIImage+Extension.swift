@@ -22,10 +22,10 @@ public extension UIImage {
     }
 
     class func icon(_ type: FontAwesome, color: UIColor = .white, size: CGSize = CGSize(width: 30.0, height: 30.0)) -> UIImage {
-        return UIImage.fontAwesomeIcon(name: type, textColor: color, size: size)
+        return UIImage.fontAwesomeIcon(name: type, style: .light, textColor: color, size: size)
     }
 
-    public func resizeImage(targetHeight: CGFloat) -> UIImage? {
+    func resizeImage(targetHeight: CGFloat) -> UIImage? {
         let size = self.size
         let targetWidth = targetHeight * ( size.width / size.height )
         let newSize = CGSize(width: targetWidth, height: targetHeight)
@@ -41,16 +41,28 @@ public extension UIImage {
         return newImage
     }
 
-    public func compressedImage(_ quality: QualityType) -> UIImage? {
-        if let data = UIImageJPEGRepresentation(self, quality.rawValue) {
+    func compressedImage(_ quality: QualityType) -> UIImage? {
+        if let data = self.jpegData(compressionQuality: quality.rawValue) {
             return UIImage(data: data)
         } else {
             return nil
         }
     }
 
-    public func compressedData(_ quality: QualityType) -> Data? {
-        return UIImageJPEGRepresentation(self, quality.rawValue)
+    func compressedData(_ quality: QualityType) -> Data? {
+        return self.jpegData(compressionQuality: quality.rawValue)
+    }
+
+    static func gradientImageWithBounds(bounds: CGRect, colors: [CGColor]) -> UIImage {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = colors
+
+        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
+        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
     }
 }
 

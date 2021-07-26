@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KaoSlideUpTextViewDialog" customModule="KaoDesign">
+            <connections>
+                <outlet property="bkgView" destination="Dhx-Sb-C4a" id="ONs-Mv-2Dk"/>
+                <outlet property="charCountLabel" destination="VzN-CS-bsI" id="1LS-Ap-zn2"/>
+                <outlet property="kaoTextView" destination="PEc-wh-bTl" id="N6B-lg-3of"/>
+                <outlet property="titleLabel" destination="Ke9-CM-9wE" id="7tI-rb-b6U"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="524"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCz-jT-U17">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="524"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-Sb-C4a">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="532"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Choose a name to be associated with this service area. Only you can see this name." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke9-CM-9wE">
+                                    <rect key="frame" x="16" y="16" width="382" height="315"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEc-wh-bTl" customClass="KaoTextView" customModule="KaoDesign">
+                                    <rect key="frame" x="16" y="351" width="382" height="132"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="132" id="pNc-81-7Ah"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzN-CS-bsI">
+                                    <rect key="frame" x="16" y="495" width="382" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Ke9-CM-9wE" firstAttribute="leading" secondItem="Dhx-Sb-C4a" secondAttribute="leading" constant="16" id="7I8-8e-3Cl"/>
+                                <constraint firstAttribute="trailing" secondItem="PEc-wh-bTl" secondAttribute="trailing" constant="16" id="XsP-6E-5q3"/>
+                                <constraint firstItem="Ke9-CM-9wE" firstAttribute="top" secondItem="Dhx-Sb-C4a" secondAttribute="top" constant="16" id="c6B-qb-yco"/>
+                                <constraint firstAttribute="trailing" secondItem="Ke9-CM-9wE" secondAttribute="trailing" constant="16" id="cAC-JU-DMD"/>
+                                <constraint firstItem="VzN-CS-bsI" firstAttribute="trailing" secondItem="PEc-wh-bTl" secondAttribute="trailing" id="gTA-RH-Qom"/>
+                                <constraint firstItem="PEc-wh-bTl" firstAttribute="leading" secondItem="Dhx-Sb-C4a" secondAttribute="leading" constant="16" id="pcR-CU-beQ"/>
+                                <constraint firstItem="PEc-wh-bTl" firstAttribute="top" secondItem="Ke9-CM-9wE" secondAttribute="bottom" constant="20" id="rn9-ty-ohv"/>
+                                <constraint firstItem="VzN-CS-bsI" firstAttribute="top" secondItem="PEc-wh-bTl" secondAttribute="bottom" constant="12" id="uv4-ZQ-DhS"/>
+                                <constraint firstItem="VzN-CS-bsI" firstAttribute="leading" secondItem="PEc-wh-bTl" secondAttribute="leading" id="vMV-9m-CaB"/>
+                                <constraint firstAttribute="bottom" secondItem="VzN-CS-bsI" secondAttribute="bottom" constant="16" id="xn2-Gc-ai1"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Dhx-Sb-C4a" firstAttribute="top" secondItem="XCz-jT-U17" secondAttribute="top" id="Afi-qe-o42"/>
+                        <constraint firstAttribute="bottom" secondItem="Dhx-Sb-C4a" secondAttribute="bottom" constant="-8" id="Hx5-eP-sCY"/>
+                        <constraint firstItem="Dhx-Sb-C4a" firstAttribute="leading" secondItem="XCz-jT-U17" secondAttribute="leading" id="KDN-2Y-WYU"/>
+                        <constraint firstAttribute="trailing" secondItem="Dhx-Sb-C4a" secondAttribute="trailing" id="Ol9-6g-pj0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XCz-jT-U17" secondAttribute="trailing" id="pWO-Cc-zMe"/>
+                <constraint firstItem="XCz-jT-U17" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="paJ-Pf-eGv"/>
+                <constraint firstAttribute="bottom" secondItem="XCz-jT-U17" secondAttribute="bottom" id="pnX-PW-CJu"/>
+                <constraint firstItem="XCz-jT-U17" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rfb-Ak-EIj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="504.24107142857139"/>
+        </view>
+    </objects>
+</document>

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,18 +62,16 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vjo-Oo-CnE">
-                            <rect key="frame" x="39" y="102" width="116" height="25"/>
+                            <rect key="frame" x="39" y="102" width="68" height="25"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="UTj-4e-swS" customClass="KaoButton" customModule="KaoDesign">
-                                    <rect key="frame" x="0.0" y="0.0" width="54" height="25"/>
-                                    <state key="normal" title="Button"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="25"/>
                                     <connections>
                                         <action selector="firstButtonTap" destination="-1" eventType="touchUpInside" id="aJT-ql-d6v"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfY-Rc-9Vh" customClass="KaoButton" customModule="KaoDesign">
-                                    <rect key="frame" x="62" y="0.0" width="54" height="25"/>
-                                    <state key="normal" title="Button"/>
+                                    <rect key="frame" x="38" y="0.0" width="30" height="25"/>
                                     <connections>
                                         <action selector="secondButtonTap" destination="-1" eventType="touchUpInside" id="3Sc-Vb-rhL"/>
                                     </connections>
@@ -101,6 +97,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="mC0-2A-9Yw"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="i3k-Ps-ztj" firstAttribute="top" secondItem="mC0-2A-9Yw" secondAttribute="top" id="Gjr-WV-zF4"/>
@@ -109,8 +106,17 @@
                 <constraint firstItem="mC0-2A-9Yw" firstAttribute="trailing" secondItem="i3k-Ps-ztj" secondAttribute="trailing" id="fRN-eb-dEc"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="mC0-2A-9Yw"/>
             <point key="canvasLocation" x="0.80000000000000004" y="-310.79460269865069"/>
         </view>
     </objects>
+    <designables>
+        <designable name="0gN-ei-yKt"/>
+        <designable name="UTj-4e-swS">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="lfY-Rc-9Vh">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="ubB-ig-vAO"/>
+    </designables>
 </document>

@@ -25,6 +25,10 @@ public extension UIApplication {
     }
 
     var statusBarView: UIView? {
-        return value(forKey: "statusBar") as? UIView
+        if #available(iOS 13.0, *) {
+            return nil
+        } else {
+            return value(forKey: "statusBar") as? UIView
+        }
     }
 }

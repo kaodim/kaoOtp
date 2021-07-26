@@ -29,7 +29,7 @@ public extension UITableView {
         guard let header = self.tableHeaderView else { return }
         header.setNeedsLayout()
         header.layoutIfNeeded()
-        let height = header.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        let height = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         var frame = header.frame
         frame.size.height = height
         header.frame = frame
@@ -45,7 +45,7 @@ public extension UITableView {
         guard let footer = self.tableFooterView else { return }
         footer.setNeedsLayout()
         footer.layoutIfNeeded()
-        let height = footer.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        let height = footer.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         var frame = footer.frame
         frame.size.height = height
         footer.frame = frame
@@ -78,7 +78,7 @@ public extension UITableView {
         view.dataSource = dataSource
         view.delegate = delegate
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.rowHeight = UITableViewAutomaticDimension
+        view.rowHeight = UITableView.automaticDimension
         view.estimatedRowHeight = 50
         view.backgroundColor = .clear
 

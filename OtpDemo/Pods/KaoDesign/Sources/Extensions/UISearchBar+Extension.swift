@@ -12,19 +12,21 @@ public extension UISearchBar {
         let searchBar = UISearchBar()
         searchBar.backgroundImage = UIImage()
         searchBar.translatesAutoresizingMaskIntoConstraints = false
-        searchBar.setImage(UIImage.icon(.search, color: .kaoColor(.crimson), size: CGSize(width: 18, height: 18)), for: .search, state: .normal)
+        searchBar.setImage(UIImage(named: "icon_mini_search"), for: .search, state: .normal)
+        searchBar.searchBarStyle = .minimal
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
             textfield.textColor = .darkGray
             textfield.textAlignment = .left
             textfield.rightViewMode = .always
             textfield.clearButtonMode = .never
             textfield.font = .kaoFont(style: .regular, size: .regular)
-            textfield.addBorderLine(width: 1.0, color: UIColor(red: 0.9, green: 0.91, blue: 0.91, alpha: 1))
-            textfield.addCornerRadius(4.0)
+            textfield.backgroundColor = UIColor.kaoColor(.veryLightPink)
+            textfield.addCornerRadius(15)
         }
-        if let cancelBarButton = searchBar.value(forKey: "cancelBarButtonItem") as? UIBarButtonItem {
-            cancelBarButton.tintColor = .lightGray
-        }
+
+//        if let cancelBarButton = searchBar.value(forKey: "cancelBarButtonItem") as? UIBarButtonItem {
+//            cancelBarButton.tintColor = .lightGray
+//        }
         return searchBar
     }
 }

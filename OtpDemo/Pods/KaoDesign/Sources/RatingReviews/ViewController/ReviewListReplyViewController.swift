@@ -108,7 +108,7 @@ class ReviewListReplyViewController: KaoBaseViewController {
     // MARK: - Keyboard
     override func keyboardWillShow(_ notification: Notification) {
         super.keyboardWillShow(notification)
-        if let keyboardHeight = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height {
+        if let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height {
             bottomConstraint.constant = -keyboardHeight
         }
     }

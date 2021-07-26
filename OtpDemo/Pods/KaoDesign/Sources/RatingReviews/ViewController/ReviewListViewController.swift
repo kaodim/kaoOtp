@@ -9,7 +9,7 @@ import Foundation
 
 open class ReviewListViewController: KaoBaseViewController {
 
-    private lazy var headerView: RatingAvgHeaderView = {
+    public lazy var headerView: RatingAvgHeaderView = {
         let view = RatingAvgHeaderView()
         return view
     }()
@@ -17,8 +17,8 @@ open class ReviewListViewController: KaoBaseViewController {
     public lazy var tableView: UITableView = {
         let view = UITableView.kaoDefault(style: .grouped, delegate: reviewListViewModel, dataSource: reviewListViewModel, bottomLoading: reviewListViewModel.paginationLoader)
         view.registerFromDesignIos(ReviewListCell.self)
-        view.setAndLayoutTableHeaderView(header: headerView)
         view.separatorStyle = .none
+        view.backgroundColor = .white
         return view
     }()
 
@@ -34,32 +34,52 @@ open class ReviewListViewController: KaoBaseViewController {
 
     open func configureViewModel() {
         // override then initialize bfr call super.configureViewModel
-        reviewListViewModel.replyTapped = replyTapped
-        reviewListViewModel.editTapped = editTapped
-        reviewListViewModel.configureHeaderLayout = configureHeaderLayout
-        reviewListViewModel.dataConfigured = reloadTable
+        reviewListViewModel.reloadRow = { [weak self] in self?.reloadRow() }
+        reviewListViewModel.localization = localization
+        reviewListViewModel.replyTapped = { [weak self] (review, index) in self?.replyTapped(review, index) }
+        reviewListViewModel.editTapped = { [weak self] (review, index) in self?.editTapped(review, index) }
+        reviewListViewModel.configureHeaderLayout = { [weak self] rating in self?.configureHeaderLayout(rating) }
+        reviewListViewModel.dataConfigured = { [weak self] in self?.reloadTable() }
         reviewListViewModel.load(page: 1)
     }
 
     private func configureLayout() {
-        view.addSubview(tableView)
-        view.sendSubview(toBack: tableView)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(headerView)
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: safeTopAnchor),
+        headerView.topAnchor.constraint(equalTo: safeTopAnchor),
+        headerView.leadingAnchor.constraint(equalTo: safeLeadingAnchor),
+        headerView.trailingAnchor.constraint(equalTo: safeTrailingAnchor),
+        headerView.heightAnchor.constraint(equalToConstant: 170)
+        ])
+        
+        
+        view.addSubview(tableView)
+        view.sendSubviewToBack(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
             tableView.bottomAnchor.constraint(equalTo: safeBottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: safeLeadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeTrailingAnchor)
             ])
     }
 
+    private func reloadRow() {
+        UIView.performWithoutAnimation {
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+    }
+
     private func scrollTo(_ indexPath: IndexPath) {
         lastScrollIndex = indexPath
-        tableView.contentInset = UIEdgeInsetsMake(0, 0, 500, 0)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 500, right: 0)
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
 
     private func editViewDidDismiss() {
-        tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 
     private func scrollToLastIndexIfExist() {
@@ -70,8 +90,8 @@ open class ReviewListViewController: KaoBaseViewController {
     }
 
     // MARK: - Callback
-    private func configureHeaderLayout(_ rating: Rating) {
-        headerView.configure(rating, ratingText: localization.translate(.ratings))
+    open func configureHeaderLayout(_ rating: Rating) {
+        headerView.configure(rating, ratingText: localization.translate(.ratings), titleText: "", hideSortButton: true)
     }
 
     open func reloadTable() {

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KaoHeaderMenu" customModule="KaoCustomPod">
+            <connections>
+                <outlet property="divider" destination="YCj-kv-Gps" id="2LN-iJ-s00"/>
+                <outlet property="leftButton" destination="t8D-dV-bl3" id="2L5-LE-PAj"/>
+                <outlet property="leftButtonWidth" destination="9Wx-qa-o1D" id="cVn-Uc-IYf"/>
+                <outlet property="rightButton" destination="kfm-le-kuC" id="7Gz-bF-pbX"/>
+                <outlet property="rightButtonWidth" destination="oJr-Yb-SFy" id="40m-hl-RuP"/>
+                <outlet property="titleLabel" destination="4PA-mM-ol0" id="5Ba-w0-rp7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCj-kv-Gps">
+                    <rect key="frame" x="0.0" y="49" width="352" height="1"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="A7r-Ta-e91"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQP-2p-nFC">
+                    <rect key="frame" x="0.0" y="-1" width="352" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8D-dV-bl3">
+                            <rect key="frame" x="16" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="9Wx-qa-o1D"/>
+                            </constraints>
+                            <connections>
+                                <action selector="leftDidTapped" destination="-1" eventType="touchUpInside" id="4G6-aN-X6h"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PA-mM-ol0">
+                            <rect key="frame" x="76" y="15" width="200" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="eSa-N3-EYR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfm-le-kuC">
+                            <rect key="frame" x="286" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="oJr-Yb-SFy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="rightDidTapped" destination="-1" eventType="touchUpInside" id="KMk-sO-yPk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="t8D-dV-bl3" secondAttribute="bottom" id="8Jt-f8-vhk"/>
+                        <constraint firstItem="t8D-dV-bl3" firstAttribute="centerY" secondItem="4PA-mM-ol0" secondAttribute="centerY" id="Kpx-aK-l5C"/>
+                        <constraint firstItem="t8D-dV-bl3" firstAttribute="top" secondItem="sQP-2p-nFC" secondAttribute="top" id="Mco-lV-aOj"/>
+                        <constraint firstItem="4PA-mM-ol0" firstAttribute="centerY" secondItem="sQP-2p-nFC" secondAttribute="centerY" id="SAo-M6-Zyz"/>
+                        <constraint firstItem="4PA-mM-ol0" firstAttribute="top" secondItem="sQP-2p-nFC" secondAttribute="top" constant="15" id="bMF-n9-6yD"/>
+                        <constraint firstAttribute="trailing" secondItem="kfm-le-kuC" secondAttribute="trailing" constant="16" id="gtl-8H-XWD"/>
+                        <constraint firstItem="kfm-le-kuC" firstAttribute="top" secondItem="sQP-2p-nFC" secondAttribute="top" id="jqY-Vt-VeR"/>
+                        <constraint firstAttribute="bottom" secondItem="kfm-le-kuC" secondAttribute="bottom" id="oRY-CN-o4v"/>
+                        <constraint firstAttribute="height" constant="50" id="pnO-Sv-KB1"/>
+                        <constraint firstItem="4PA-mM-ol0" firstAttribute="centerX" secondItem="sQP-2p-nFC" secondAttribute="centerX" id="t1j-97-gPf"/>
+                        <constraint firstItem="t8D-dV-bl3" firstAttribute="leading" secondItem="sQP-2p-nFC" secondAttribute="leading" constant="16" id="w1V-om-PIo"/>
+                        <constraint firstItem="kfm-le-kuC" firstAttribute="centerY" secondItem="4PA-mM-ol0" secondAttribute="centerY" id="wVg-E2-hC1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sQP-2p-nFC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="S8P-kk-pXa"/>
+                <constraint firstItem="YCj-kv-Gps" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZEL-VV-rkb"/>
+                <constraint firstAttribute="bottom" secondItem="YCj-kv-Gps" secondAttribute="bottom" id="abE-Ai-mMt"/>
+                <constraint firstItem="YCj-kv-Gps" firstAttribute="top" secondItem="sQP-2p-nFC" secondAttribute="bottom" id="fuH-0Q-x3o"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YCj-kv-Gps" secondAttribute="trailing" id="lfW-B2-VwG"/>
+                <constraint firstAttribute="trailing" secondItem="sQP-2p-nFC" secondAttribute="trailing" id="qgK-g7-Krk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="86.956521739130437" y="-133.25892857142856"/>
+        </view>
+    </objects>
+</document>

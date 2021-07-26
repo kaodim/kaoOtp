@@ -8,10 +8,15 @@
 import Foundation
 
 public enum RatingReviewLocalizationKey: String {
-    case ratings, reviews, reply, replied, replyingTo, typeAMessage, cancel, send, editYourComment, update, edit, complimented
+    case ratings, reviews, reply, replied, replyingTo, typeAMessage, cancel, send, editYourComment, update, edit, compliment
 }
 
 public struct RatingReviewLocalization {
+
+    public init() {
+        self.allLocalizations = [:]
+    }
+
     var allLocalizations: [String: String] = [:]
 
     func translate(_ localizationKey: RatingReviewLocalizationKey) -> String {

@@ -7,6 +7,18 @@
 
 import Foundation
 
+public struct KaoSearchBarParam {
+    public var leadingConstant: CGFloat!
+    public var placeholder: String!
+    public var cancelTitle: String!
+
+    public init() {
+        self.leadingConstant = 15.0
+        self.placeholder = NSLocalizedString("search", comment: "")
+        self.cancelTitle = NSLocalizedString("cancel_text", comment: "")
+    }
+}
+
 public extension UINavigationBar {
     func kaodimStyle() {
         /// Navigation bar content
@@ -17,8 +29,8 @@ public extension UINavigationBar {
         barTintColor = .white
         tintColor = .black
         titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: UIColor.kaoColor(.black),
-            NSAttributedStringKey.font: UIFont.kaoFont(style: .semibold, size: .large)
+            NSAttributedString.Key.foregroundColor: UIColor.kaoColor(.black),
+            NSAttributedString.Key.font: UIFont.kaoFont(style: .semibold, size: .large)
         ]
         /// Bottom line
         shadowImage = UIColor.kaoColor(.whiteLilac).as1ptImage()
@@ -40,24 +52,29 @@ public extension UINavigationController {
         return navigationBar.viewWithTag(999) as? UISearchBar
     }
 
-    func showSearchBar(searchBarDelegate: UISearchBarDelegate? = nil) {
+    func showSearchBar(searchBarDelegate: UISearchBarDelegate? = nil, extraParam: KaoSearchBarParam = KaoSearchBarParam()) -> UISearchBar {
         var searchBar: UISearchBar!
         if let previousSearchBar = currentSearchBar() {
             searchBar = previousSearchBar
+            if let constraint = (searchBar.constraints.filter { $0.firstAttribute == .leading }.first) {
+                constraint.constant = extraParam.leadingConstant
+            }
         } else {
             searchBar = UISearchBar.kaoDefault()
-            searchBar.placeholder = NSLocalizedString("search", comment: "")
+            searchBar.placeholder = extraParam.placeholder
+            searchBar.setValue(extraParam.cancelTitle, forKey: "cancelButtonText")
             searchBar.tag = 999
             navigationBar.addSubview(searchBar)
             NSLayoutConstraint.activate([
                 searchBar.trailingAnchor.constraint(equalTo: navigationBar.trailingAnchor, constant: -15.0),
-                searchBar.leadingAnchor.constraint(equalTo: navigationBar.leadingAnchor, constant: 15.0),
+                searchBar.leadingAnchor.constraint(equalTo: navigationBar.leadingAnchor, constant: extraParam.leadingConstant),
                 searchBar.topAnchor.constraint(equalTo: navigationBar.topAnchor),
                 searchBar.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor)
                 ])
         }
         searchBar.delegate = searchBarDelegate
         searchBar.isHidden = false
+        return searchBar
     }
 
     func hideSearchBar() {
@@ -65,6 +82,20 @@ public extension UINavigationController {
             previousSearchBar.isHidden = true
             previousSearchBar.resignFirstResponder()
         }
+    }
+
+    func setTransparentWhiteTintColorTitle(_ isTransparent: Bool = true) {
+        navigationBar.isTranslucent = isTransparent
+        navigationBar.tintColor = .white
+        navigationBar.barStyle = .default
+        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+
+    func setTransparentBlackTintColorTitle(_ isTransparent: Bool = true) {
+        navigationBar.isTranslucent = isTransparent
+        navigationBar.tintColor = .black
+        navigationBar.barStyle = .default
+        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
     }
 }
 

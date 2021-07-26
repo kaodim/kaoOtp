@@ -17,6 +17,9 @@ public protocol TableViewVMProtocol {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView?
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+
 }
 
 public extension TableViewVMProtocol {
@@ -28,4 +31,10 @@ public extension TableViewVMProtocol {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { return 0 }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? { return nil }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { return 0 }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {}
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+           UITableView.automaticDimension
+       }
+
 }

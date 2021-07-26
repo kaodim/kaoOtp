@@ -12,4 +12,13 @@ public extension Encodable {
         guard let data = try? JSONEncoder().encode(self) else { return nil }
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
     }
+
+    func jsonStringify() -> String? {
+        var textData: String?
+        do {
+            let data = try JSONEncoder().encode(self)
+            textData = String(data: data, encoding: .utf8)
+        } catch { return nil }
+        return textData
+    }
 }

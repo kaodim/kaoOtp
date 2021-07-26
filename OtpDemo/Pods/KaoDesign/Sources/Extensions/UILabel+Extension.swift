@@ -18,6 +18,7 @@ public extension UILabel {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = lineSpacing ?? defaultSpace
         paragraphStyle.lineHeightMultiple = lineHeightMultiple ?? 0
+        paragraphStyle.alignment = self.textAlignment
 
         let attributedString:NSMutableAttributedString
         if let labelattributedText = self.attributedText {

@@ -7,11 +7,18 @@
 
 import Foundation
 
-public struct ReplyReview {
+public struct ReplyReview: Decodable {
     public let id: Int
     public let comment: String
     public let createdAt: String
     public let canEdit: Bool?
+
+	enum CodingKeys: String, CodingKey {
+		case id
+		case comment
+		case createdAt = "created_at"
+		case canEdit = "can_edit"
+	}
 }
 
 public extension ReplyReview {

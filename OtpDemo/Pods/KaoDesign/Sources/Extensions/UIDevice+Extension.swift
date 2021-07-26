@@ -41,6 +41,9 @@ public extension UIDevice {
             case "iPhone11,2":                              return "iPhone XS"
             case "iPhone11,4", "iPhone11,6":                return "iPhone XS Max"
             case "iPhone11,8":                              return "iPhone XR"
+            case "iPhone12,1":                              return "iPhone 11"
+            case "iPhone12,3":                              return "iPhone 11 Pro"
+            case "iPhone12,5":                              return "iPhone 11 Pro Max"
             case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return "iPad 2"
             case "iPad3,1", "iPad3,2", "iPad3,3":           return "iPad 3"
             case "iPad3,4", "iPad3,5", "iPad3,6":           return "iPad 4"
@@ -61,7 +64,7 @@ public extension UIDevice {
             case "AppleTV5,3":                              return "Apple TV"
             case "AppleTV6,2":                              return "Apple TV 4K"
             case "AudioAccessory1,1":                       return "HomePod"
-            case "i386", "x86_64":                          return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))"
+            case "i386", "x86_64":                          return "\(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))"
             default:                                        return identifier
             }
             #elseif os(tvOS)

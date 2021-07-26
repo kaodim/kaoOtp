@@ -17,6 +17,7 @@ open class KaoTempAttachment: NSObject {
     public let fileName: String
     public let content: AnyObject
     public var fileId: String?
+    public var editable: Bool? = true
     @objc dynamic public var progresState: KaoAttachmentProgress.RawValue = -1
     @objc dynamic public var progress: Float = 0.0
     public var retryText: String? = nil
@@ -42,5 +43,16 @@ open class KaoTempAttachment: NSObject {
         }
 
         return data
+    }
+}
+
+extension KaoTempAttachment {
+    public func isImage() -> Bool {
+        if let urlString = self.content as? String, let url = URL.init(string: urlString) {
+            let pathExt = url.pathExtension
+            let isImage = ["png", "jpg", "jpeg", "gif"].contains(pathExt.lowercased())
+            return isImage ? true : false
+        }
+        return false
     }
 }

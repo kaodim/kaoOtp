@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KaoPopupToolTipViewController" customModule="KaoDesign">
+            <connections>
+                <outlet property="popUpLabel" destination="gMa-Rd-DiV" id="xNo-LO-o9E"/>
+                <outlet property="tipBottom" destination="DQ3-7C-iQG" id="y1S-Sb-bFJ"/>
+                <outlet property="tipLeading" destination="SFc-mE-y6F" id="xjy-xg-6aQ"/>
+                <outlet property="tipTop" destination="A5w-TY-rOU" id="9Dz-z5-jen"/>
+                <outlet property="tipTrailing" destination="6aM-vN-sYo" id="WdK-vb-fNk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMa-Rd-DiV">
+                    <rect key="frame" x="20" y="10" width="374" height="225"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUH-xu-sS6">
+                    <rect key="frame" x="20" y="10" width="374" height="225"/>
+                    <connections>
+                        <action selector="popUpDidTapped" destination="-1" eventType="touchUpInside" id="nGL-NJ-JNH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gMa-Rd-DiV" secondAttribute="trailing" constant="20" id="6aM-vN-sYo"/>
+                <constraint firstItem="gMa-Rd-DiV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="A5w-TY-rOU"/>
+                <constraint firstItem="OUH-xu-sS6" firstAttribute="top" secondItem="gMa-Rd-DiV" secondAttribute="top" id="AJh-da-BoD"/>
+                <constraint firstAttribute="bottom" secondItem="gMa-Rd-DiV" secondAttribute="bottom" constant="20" id="DQ3-7C-iQG"/>
+                <constraint firstItem="OUH-xu-sS6" firstAttribute="bottom" secondItem="gMa-Rd-DiV" secondAttribute="bottom" id="E4X-xC-Zq5"/>
+                <constraint firstItem="gMa-Rd-DiV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="SFc-mE-y6F"/>
+                <constraint firstItem="OUH-xu-sS6" firstAttribute="leading" secondItem="gMa-Rd-DiV" secondAttribute="leading" id="XEZ-yk-e1p"/>
+                <constraint firstItem="OUH-xu-sS6" firstAttribute="trailing" secondItem="gMa-Rd-DiV" secondAttribute="trailing" id="eQE-Pg-Kf9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="198.54910714285714"/>
+        </view>
+    </objects>
+</document>

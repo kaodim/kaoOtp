@@ -1,38 +1,115 @@
 PODS:
+  - AZYCalendarView (0.0.21)
   - DZNEmptyDataSet (1.8.1)
-  - FontAwesome.swift (1.3.2)
-  - KaoDesign (0.2.2):
+  - FontAwesome.swift (1.9.0)
+  - KaoDesign (0.4.36):
+    - AZYCalendarView (= 0.0.21)
     - DZNEmptyDataSet (= 1.8.1)
-    - FontAwesome.swift (= 1.3.2)
-    - Kingfisher (= 4.6.2)
-    - NotificationBannerSwift (= 1.6.3)
+    - FontAwesome.swift (= 1.9.0)
+    - Kingfisher (= 5.12.0)
+    - "MaterialComponents/TextControls+OutlinedTextFields (= 124.2.0)"
+    - "MaterialComponents/TextControls+OutlinedTextFieldsTheming (= 124.2.0)"
+    - NotificationBannerSwift (= 3.0.2)
     - SVProgressHUD (= 2.2.5)
-    - XLPagerTabStrip (= 8.0.0)
-  - KaoOtp (0.1.14):
-    - KaoDesign (~> 0.2.1)
+    - XLPagerTabStrip (= 9.0)
+  - KaoOtp (0.2.1):
+    - KaoDesign
     - MaterialTextField (~> 0.2)
-  - Kingfisher (4.6.2)
-  - MarqueeLabel/Swift (3.2.1)
+  - Kingfisher (5.12.0):
+    - Kingfisher/Core (= 5.12.0)
+  - Kingfisher/Core (5.12.0)
+  - MarqueeLabel (4.0.5)
+  - MaterialComponents/AnimationTiming (124.2.0)
+  - MaterialComponents/Availability (124.2.0)
+  - MaterialComponents/private/Application (124.2.0)
+  - MaterialComponents/private/Color (124.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (124.2.0)
+  - "MaterialComponents/private/TextControlsPrivate+BaseStyle (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+Shared (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/TextControls+Enums"
+  - "MaterialComponents/private/TextControlsPrivate+TextFields (124.2.0)":
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - MaterialComponents/schemes/Color (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+  - MaterialComponents/schemes/Container (124.2.0):
+    - MaterialComponents/schemes/Color
+    - MaterialComponents/schemes/Shape
+    - MaterialComponents/schemes/Typography
+  - MaterialComponents/schemes/Shape (124.2.0):
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/schemes/Typography (124.2.0):
+    - "MaterialComponents/schemes/Typography+BasicFontScheme"
+    - "MaterialComponents/schemes/Typography+Scheming"
+    - MaterialComponents/Typography
+  - "MaterialComponents/schemes/Typography+BasicFontScheme (124.2.0)"
+  - "MaterialComponents/schemes/Typography+Scheming (124.2.0)"
+  - MaterialComponents/ShadowElevations (124.2.0)
+  - MaterialComponents/ShadowLayer (124.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (124.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (124.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - "MaterialComponents/TextControls+BaseTextFields (124.2.0)":
+    - "MaterialComponents/private/TextControlsPrivate+BaseStyle"
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+    - "MaterialComponents/private/TextControlsPrivate+TextFields"
+    - MDFInternationalization
+  - "MaterialComponents/TextControls+Enums (124.2.0)"
+  - "MaterialComponents/TextControls+OutlinedTextFields (124.2.0)":
+    - MaterialComponents/Availability
+    - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle"
+    - "MaterialComponents/TextControls+BaseTextFields"
+  - "MaterialComponents/TextControls+OutlinedTextFieldsTheming (124.2.0)":
+    - MaterialComponents/schemes/Container
+    - "MaterialComponents/TextControls+OutlinedTextFields"
+  - MaterialComponents/Typography (124.2.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+    - MDFTextAccessibility
   - MaterialTextField (0.2.1)
-  - NotificationBannerSwift (1.6.3):
-    - MarqueeLabel/Swift
-    - SnapKit (~> 4.0)
-  - SnapKit (4.2.0)
+  - MDFInternationalization (3.0.0)
+  - MDFTextAccessibility (2.0.1)
+  - NotificationBannerSwift (3.0.2):
+    - MarqueeLabel (~> 4.0.0)
+    - SnapKit (~> 5.0.0)
+  - SnapKit (5.0.1)
   - SVProgressHUD (2.2.5)
-  - XLPagerTabStrip (8.0.0)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - KaoOtp (from `../`)
 
 SPEC REPOS:
   "git@github.com:kaodim/KaoCocoaPods.git":
+    - AZYCalendarView
     - KaoDesign
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - DZNEmptyDataSet
     - FontAwesome.swift
     - Kingfisher
     - MarqueeLabel
+    - MaterialComponents
     - MaterialTextField
+    - MDFInternationalization
+    - MDFTextAccessibility
     - NotificationBannerSwift
     - SnapKit
     - SVProgressHUD
@@ -43,18 +120,22 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  AZYCalendarView: 3e15b80d12589a00a2536a1b41292ecd145023ed
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  FontAwesome.swift: b4e4c8ccbbecb12f9b592bc533ff237af3706667
-  KaoDesign: d88d5b1f633fece992ff9bc2388558a1c24aaa0e
-  KaoOtp: c99b838a6f18ca06c2b3e0ce5eae3fb0c6ecc5b7
-  Kingfisher: 55b9c395bf8d3949676ad3861111923990ab68cf
-  MarqueeLabel: 2daf039bf916937c8a4c9adfc13577cc5e51b4ce
+  FontAwesome.swift: a403b88cec950511745ba8f2decd1b6a07346d13
+  KaoDesign: 4599ff5421b723f1a694c3c2c621672a233342c5
+  KaoOtp: 33439c0e2af8e7c2bc63304535939ddd5dad9043
+  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
+  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
+  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MaterialTextField: f876a39d571eeece872af6a4da421e3bd065fe0b
-  NotificationBannerSwift: b231e4c3244848ef300e1c53ce027b9756b9b06f
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
+  MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
+  NotificationBannerSwift: 713e20f21b6105f4a36a00e5d9fa414a930d3d8e
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
 PODFILE CHECKSUM: 271b39961e64d4db4735356b011cb0f57c693a43
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.1

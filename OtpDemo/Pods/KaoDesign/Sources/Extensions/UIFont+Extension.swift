@@ -26,46 +26,14 @@ public extension UIFont {
 
     class func kaoFont(style: UIFont.Weight, size: KaoFontSize) -> UIFont {
         return self.kaoFont(style: style, size: size.rawValue)
-
-//        if let font = UIFont(name: style.rawValue, size: size.rawValue) {
-//            return font
-//        } else {
-//            FontLoader.loadFont(style: style)
-//            let font = UIFont(name: style.rawValue, size: size.rawValue)!
-//            return font
-//        }
     }
 
     class func kaoFont(style: UIFont.Weight, size: CGFloat) -> UIFont {
         let font = UIFont.systemFont(ofSize: size, weight: style)
         return font
     }
-}
 
-//private class FontLoader {
-//    class func loadFont(style: KaoFontStyle) {
-//        let bundle = Bundle(for: FontLoader.self)
-//        let identifier = bundle.bundleIdentifier
-//
-//        var fontURL: URL
-//        if identifier?.hasPrefix("org.cocoapods") == true {
-//            // If this framework is added using CocoaPods, resources is placed under a subdirectory
-//            fontURL = bundle.url(forResource: style.rawValue, withExtension: "ttf", subdirectory: "KaoCustomPod.bundle")!
-//        } else {
-//            fontURL = bundle.url(forResource: style.rawValue, withExtension: "ttf")!
-//        }
-//
-//        guard
-//            let data = try? Data(contentsOf: fontURL),
-//            let provider = CGDataProvider(data: data as CFData),
-//            let font = CGFont(provider)
-//            else { return }
-//
-//        var error: Unmanaged<CFError>?
-//        if !CTFontManagerRegisterGraphicsFont(font, &error) {
-//            let errorDescription: CFString = CFErrorCopyDescription(error!.takeUnretainedValue())
-//            guard let nsError = error?.takeUnretainedValue() as AnyObject as? NSError else { return }
-//            NSException(name: NSExceptionName.internalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
-//        }
-//    }
-//}
+    func kaoDescription() -> String {
+        return "font-family: '\(self.familyName)', '\(self.fontName)'; font-size: \(self.pointSize)px; font-style: normal"
+    }
+}

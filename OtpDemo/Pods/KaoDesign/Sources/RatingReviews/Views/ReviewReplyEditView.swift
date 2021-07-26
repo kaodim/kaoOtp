@@ -79,6 +79,8 @@ class ReviewReplyEditView: UIView {
     public func configureForReply(_ review: Review, localization: RatingReviewLocalization) {
         configureSharedLocalization(localization)
         sendButton.setTitle(localization.translate(.send), for: .normal)
+        sendButton.setTitle(localization.translate(.send), for: .highlighted)
+        sendButton.setTitle(localization.translate(.send), for: .disabled)
         replyTo.text = localization.translate(.replyingTo)
         username.text = review.name
         handleTextInput()
@@ -88,6 +90,8 @@ class ReviewReplyEditView: UIView {
         configureSharedLocalization(localization)
         previousText = review.reply?.comment ?? ""
         sendButton.setTitle(localization.translate(.update), for: .normal)
+        sendButton.setTitle(localization.translate(.update), for: .highlighted)
+        sendButton.setTitle(localization.translate(.update), for: .disabled)
         replyTo.text = localization.translate(.editYourComment)
         username.text = ""
         textView.text = review.reply?.comment ?? ""
